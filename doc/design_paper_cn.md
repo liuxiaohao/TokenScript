@@ -7,7 +7,7 @@ There are two primary functions of blockchains that can change the way human int
 正如我们即将阐述的，第一个是创造无摩擦市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)的能力。第二个是集成网络的能力。
 As we will soon elaborate, the first is the capacity to create frictionless markets. The second is the capacity to integrate the web.
 
-本文将从愿景开始，然后，解释架构师需要在区块链上架构的原因吗,接下来关注一个使这个架构成为可能的关键技术，我们把它叫做TBML。
+本文将从愿景开始，然后解释架构师需要在区块链上架构的原因,接下来关注一个使这个架构成为可能的关键技术，我们把它叫做TBML。
 This paper is going to start with the vision, then, reason the architect needed on top of blockchains, then focus on a critical layer of technology that enables this architect to be possible, which we name TBML.
 
 在2017-2018区块链发生了非常引人注目的投机活动把我们的注意集中到了通证上。当我们买卖通证的时候，我们忘记了它的用途。就好像罐头沙丁鱼变成了一种投机资产，人们对罐头沙丁鱼是用来吃的想法不屑一顾。
