@@ -2,30 +2,39 @@
 
 ## Author's note
 
-The remarkable crypto speculations that took place in 2017 - 2018 brought our attention to tokens. As we bought and sold them, we forgot their intended purpose was to be used; this is analogous to the housing bubble in which people forgot that houses were not merely speculative assets but rather a place to live.
+The remarkable blockchain speculations that took place in 2017 - 2018 brought our attention to crypto tokens. As we bought and sold them, we forgot their intended purpose was to be used; this is analogous to the housing bubble in which people forgot that houses were not merely speculative assets but rather a place to live.
 
-To provide a practical use of the blockchain, we must understand its utility to the world economy and the internet. The authors of this paper are technical experts who went through years of study and exploration into its applications in cryptocurrency and finance both via financial institutions and startups. With this experience, we came to realise that the blockchain has two primary functions to which we will elaborate further in this paper.
+To provide a practical use of the blockchain, we must understand its utility to the world economy and the internet. The authors of this paper are technical experts who went through years of study and exploration into its applications both via financial institutions and startups. With this experience, we came to realise that the blockchain has **two primary functions** which we will elaborate further in this paper.
 
 Despite the great folly in 2017-2018, it is not a bad thing to initially focus on tokens. Tokens, as the authors will elaborate, are the enabler of the two primary functions. We define the technique to make it happen in "Tokenisation".
 
-Previous efforts in this industry primarily focused on enriching the capacity of the technology. This paper will focus on tokenisation and provide a standardisation effort known as TBML (Token Behaviour Markup Language) which will make the blockchain technical stack complete and useful for the economy and the internet.
+Previous efforts in this industry primarily focused on enriching the capacity of the technology. This paper will focus on tokenisation and introduce a standardisation effort known as TBML (Token Behaviour Markup Language) which will make the blockchain technical stack complete, providing utility for the economy and the internet.
+
+Just like a house providing a place to live.
 
 \pagebreak
 
 
 ## Introduction
 
-Blockchain technology has two primary functions that serve essential purposes for the future economy and the future Internet. These are providing a frictionless market and integrating the web.
+Blockchain technology has **two primary functions** that serve essential purposes for the future economy and the future Internet:
+
+- providing a frictionless market; and
+- integrating the web.
 
 This paper will address the vision of where we can be and follow up with the design and reasoning behind the architecture needed on top of the blockchain. We will then explain TBML which is a critical missing layer and go over its design principles and how we are building it.
 
 ### Frictionless markets
 
-The 80s' "Back to the Future" featured a world of powerful machines filled with hovering boards and flying cars. It didn't happen. As Peter Thiel once famously lamented, "we were promised flying cars; instead, we got 140 characters". The technological advancement of our time is beyond the imagination of the 80s science fiction movies, albeit not through more powerful machinery, but more efficient use of information.
+The 80s' "Back to the Future" featured a world of powerful machines filled with hovering boards and flying cars. It didn't happen. As Peter Thiel once famously lamented, "we were promised flying cars; instead, we got 140 characters". The technological advancement of our time is beyond the imagination of the 80s science fiction movies, albeit not through more powerful machinery, but efficient use of Internet.
 
 Ride-sharing revolutionised the way we organise our daily lives, and AirBNB changed the way we travel. These are the new, less frictional markets. They incur less cost to operate, are more accessible and have finer operational units.
 
 But despite this web 2.0 revolution, the majority of markets still operate with high costs. The stock market, for example, has so much overhead that it is only justifiable for multi-million dollar businesses which rely on the trust of rules and regulations to operate.
+
+With blockchain, any tokenised asset can be transacted any time, as long as it follows the rules, without middlemen or intermediary, gives us maximum market efficiency - the frictionless market. On top of the benifit of not relying on an intermediary, in a tokenised market model, the buyers and sellers do not need to "enter" the market, instead, tokens are *always on the market*[^market-model], making such a model better than intermediaries.
+
+[^market-model]: With the traditional intermediary-operated market model, a trade is made in two stages: entering the market, making a deal. Blockchain can simplify that into a protocol; therefore the blockchain token assets can be considered always on the market.
 
 #### Can we create a frictionless market through tokenisation?
 
@@ -39,9 +48,15 @@ Can we tokenise the risk and reward of international trades, so that small impor
 
 Can we create an insurance token that depends on cryptographic proofs, so that the insurer can remove from their pricing, the costs incurred by fraudulent documents? Can we decentralise the insurers altogether?
 
-Blockchain technology can provide the foundational layer to achieve these. A lot of work needs to be done to ensure scalability, privacy and quality methods to define how tokens should be used and traded.
+Blockchain can provide the foundational layer to achieve these. A lot of work needs to be done to ensure scalability, privacy and quality methods to define how tokens should be used and traded, but we see the biggest hurdle lies in tokenisation.
 
-This paper does not intend to provide a full solution; instead, it focuses on the last part, on quality methods to define how tokens should be used and traded.
+Tokenisation requires bundling a token with its transaction rules and behaviour patterns, taking them off the system where they initially grew in, free them to be traded or used in different context.
+
+Taking property as an example, its existance as a record in the title deeds office is not useful to an open market, since it's only valid in that database. Tokenising property would require a crypto-record on a blockchain not owned by the title deeds office[^in-house-blockchain].
+
+This paper focuses on the missing layer in the technical stak for tokenisation to happen.
+
+[^in-house-blockchain]: There is the biggest misconception in the traditional government and business sector, that in order to use blockchain, one has to own it in house. TV serie IT Crowds famousely joked such misconception by having a few IT guys presenting to management the Internet as a physical box, fittingly owned in a house.
 
 #### The challenge of tokenisation
 
@@ -87,9 +102,9 @@ It's easy to see the cause of the inconvenience; the web is poorly integrated. W
 
 The answer to an integrated web requires a few building blocks that weren't in the blueprint: authentication, ownership, transfer of value and trading.
 
-The web doesn't have a built-in authentication mechanism[^1]. The add-on "Sign in with Facebook" merely tried to provide authentication through a trusted 3rd party, which, despite privacy and availability concerns, is only good for account authentication and not for business logic.
+The web doesn't have a built-in authentication mechanism[^tls]. The add-on "Sign in with Facebook" merely tried to provide authentication through a trusted 3rd party, which, despite privacy and availability concerns, is only good for account authentication and not for business logic.
 
-[^1]: Despite the excellent efforts on client/server certificates in TLS, these authentication methods are not for processes, but only for sites. It's a delegation model. Imagine a buyer not checking if a title deed is real, but only checks if the seller's name matches the one on the deed. That would be the delegation model used in TLS. In this model, TLS can't guarantee anything on the website is real, only that the website is real. Facebook uses TLS but people put a lot of fake news on it. The unit of trust here is certainly not granular enough for the web to deliver an integrated experience.
+[^tls]: Despite the excellent efforts on client/server certificates in TLS, these authentication methods are not for processes, but only for sites. It's a delegation model. Imagine a buyer not checking if a title deed is real, but only checks if the seller's name matches the one on the deed. That would be the delegation model used in TLS. In this model, TLS can't guarantee anything on the website is real, only that the website is real. Facebook uses TLS but people put a lot of fake news on it. The unit of trust here is certainly not granular enough for the web to deliver an integrated experience.
 
 "Account authentication" is not a substitute for web integration. For example, the simple business logic: "the owner of the property can check its easement information", doesn't require account authentication, and it would be a bad idea to add account authentication on top of it. If you force the "Account authentication" model, when the property is sold, the new property owner would now need to create a new account at the easement service website and secure it with the proof of ownership to the property.
 
@@ -99,7 +114,12 @@ The web also doesn't have an ownership or transfer of value mechanism. If Alice 
 
 It's easy to see that these building blocks are necessary for an integrated web and that blockchains can serve this need, but what's the path to get there?
 
-The short answer is "tokenisation". We assert that the way to get there is a data processing language that defines tokens and their behaviour. In such a design, the token is the integration point and the language is the interface for the integrations. Tokens seamlessly go across systems, exemplified by a property token being used for rent, insurance, pest inspection, mortgages and many other processes. It must define its own behaviour pattern which can be used to interact with users to show the status and allow functions to be natively integrated. In other words, a token must have its own UI and integration logic.
+Tokens seamlessly go across systems, exemplified by a property token being used for rent, insurance, pest inspection, mortgages and many other markets. It must define its own behaviour pattern which can be used to interact with users to show the status and allow functions to be accessible from its integration environment. In other words, a token must have its own UI and integration logic.
+
+We assert that the way to get there is a data processing language that defines tokens and their behaviour. In such a design, the token is the integration point and the language is the interface for the integrations. Tokens seamlessly go across systems, exemplified by a property token being used for rent, insurance, pest inspection, mortgages and many other processes.
+
+
+It must define its own behaviour pattern which can be used to interact with users to show the status and allow functions to be natively integrated. In other words, a token must have its own UI and integration logic.
 
 [a picture of an example of a property token that has two statues side by side]. The left side has an action button (among others) that says Power Connection. The right side has the same token, but with a "Leased" label on it, and the "Power Connection" action button is invalidated because now it is with the lessor]
 
@@ -114,13 +134,13 @@ Unlike most whitepapers in the space, we choose to demonstrate the design by ord
 
 ### address "Frictionless Market" capacity
 
-A market is not a noisy channel overloaded with information. More importantly, it is a place where delivery versus payment happens. On the deliverable side, there are all sorts of things money can buy: assets, goods and services. On the payment side, there are Ether, DAI, Sovereign etc.
+Taking a closer look at "market", a market is not a noisy channel overloaded with information; more importantly, it is a place where delivery versus payment happens. With less reliance on the middlemen, our focus is turned into the tokens being traded, that is, deliverables and payments. On the deliverable side, there are all sorts of things money can buy: assets, goods and services. On the payment side, there are Ether, DAI, Sovereign etc.
 
-With blockchain, any tokenised asset can be transacted any time, as long as it follows the rules, without middlemen or intermediary, gives us maximum market efficiency - the frictionless market.
+Both the deliverables and the payment side requires a framework for tokens to "plug-in" - the TBML token behaviour language we are proposing.
 
-A market is a place where delivery vs payment happens. On the deliverable side, there are all sorts of things money can buy: assets, goods and services. On the payment side, there are Ether, DAI, Sovereign etc. The fact that any blockchain asset can be transacted any time, as long as it follows the rules, without middlemen, gives us maximum market efficiency - the frictionless market. However, both the deliverables and the payment side requires a framework to "plug-in" - the TBML token behaviour language we are proposing.
+Such a framework is essential for tokens to be presented, indexed, traded, auctioned, combined... to form a frictionless market.
 
-However, the tokens require a framework to be presented, indexed, traded, auctioned, combined... to suit the needs of such a market. It's easier to demonstrate the design requirements with an example
+To demonstrate the design requirements we improvised an example of "1% property token".
 
 #### 1% property token
 
@@ -473,14 +493,13 @@ This change illustrated that the business process should decouple from the token
 
 #### Change in the market
 
-Business went on for a while; then, there is an innovation from the blockchain market. Some users bulk-purchased a year's shipping from a delivery company, to enjoy the AmazonPrime-like free shipping privileges without using Amazon[^2]. Seeing an opportunity, a credit card company even went so far as to provide such a privilege to the subscribers of their card, which is also represented by a toke.
+Business went on for a while; then, there is an innovation from the blockchain market. Some users bulk-purchased a year's shipping from a delivery company, to enjoy the AmazonPrime-like free shipping privileges without using Amazon[^last-mile-market]. Seeing an opportunity, a credit card company even went so far as to provide such a privilege to the subscribers of their card, which is also represented by a toke.
 
-[^2]: The market condition for such an innovation might exist, because only the buyer is most familiar with the last-mile delivery experience. Usually, online retailer negotiate bulk delivery contracts since they have the quantity, but they are just a proxy of the buyers' experience. Their interest is not perfectly aligned with the buyers.
+[^last-mile-market]: The market condition for such an innovation might exist, because only the buyer is most familiar with the last-mile delivery experience. Usually, an online retailer negotiates a higher bulk delivery discount than their buyers could, but they are just a proxy of the buyers' experience. Their interest is not perfectly aligned with the buyers. A buyer driving 30 minutes to pick up a parcel knows that the discount is no match for her time. The delivery company can also optimise the process better than the online retailer, for example, by requesting access to the buyer's calendar, which the online retailer couldn't do safely. Ultimately, more value can be created with the collaboration between buyer and the delivery company.
 
+The online retailer decided to join the game to stay competitive. This time, he would need to modify his smart contract, changing the transaction rule that a shipping token can be accepted at the time of purchase. In such a case, the output of the transaction will not have a shipping token, since one is already provided.[^fungible-shipping-token]
 
-The online retailer decided to join the game to stay competitive. This time, he would need to modify his smart contract, changing the transaction rule that a shipping token can be accepted at the time of purchase. In such a case, the output of the transaction will not have a shipping token, since one is already provided.[^3]
-
-[^3]: In practical implementations, bulk-purchased shipping labels, if tokenised, may or may not be the same as shipping tokens. The first might be designed as a semi-fungible token, while the latter must be non-fungible, each mapped to a specific tracking number. The authors of this paper decided to leave out such detail for the clarity of the text.
+[^fungible-shipping-token]: In practical implementations, bulk-purchased shipping labels, if tokenised, may or may not be used as shipment tokens. Shipping labels can be designed as a semi-fungible token, while the shipment token must be non-fungible, each mapped to a specific parcel. The authors of this paper decided to leave out such implementation detail for clarity.
 
 The online retailer will necessarily modify his business process to expect pick-ups from any delivery company the user purchased shipping tokens from.
 
