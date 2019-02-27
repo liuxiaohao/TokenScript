@@ -197,8 +197,10 @@ These missing features of the web are the well-known functions of the blockchain
 通证无缝地跨越系统，承载其交易规则和用户界面以及业务环境。
 Tokens seamlessly go across systems, carries their trading rules and user interfaces and business context.
 
+## 例子：汽车所有权通知
 ## Example: Car Ownership Token
 
+下面是一个例子：汽车所有权通知，已经成功通证化
 The following example, a car ownership token, is a successfully tokenised .... [Edit: explain the elements]
 
     +----------------------------------------------------------+
@@ -264,28 +266,38 @@ The following example, a car ownership token, is a successfully tokenised .... [
     |                                                          |
     +----------------------------------------------------------+
 
+咋一看，它只是一个便利的能够做关于汽车所有事情的门户网站，包括市场功能和实用程序。然而传统的网络模型是不可行的。
 At first glance, it is just a handy portal to do everything about the car, including market functions and utility. However, it's not possible with the traditional web model.
 
+在web2.0模型中，你只能自己处理每个元素。要注册汽车，有一个单独的过程，需要创建一个道路与海洋服务处的账户，并且在没有密码学的帮助下证明所有权。当您想为汽车提供保险时，您必须创建另一个帐户并手动提供其注册到该新服务的证明。（如果发现你不需要这样做，这部分无法支付的保险费用仅仅是隐藏起来了，由市场来承担）同样，如果您想让汽车能通过优步或基于小时的汽车租赁来参与分享经济，那么证明，结算付款和保险成本的工作会给市场带来摩擦。
 In the web 2.0 model, you are restricted to handling every element on its own. To register the car, there is a separate process which involves creating an account with the Road and Maritime Services and proving ownership manually without the aid of cryptography. When you want to provide insurance to the car, you have to create another account and manually offer proof of its registration to that new service. (If you find not needing to do so, the cost of unpayable insurance merely is hidden and borne by the market.) Likewise, if you want to make the car available to share economy through Uber or hour-based car rental, the work of proving and settling payments and insurance cost adds friction to the market.
 
+现在让我们在web3的世界中构想这一点，这些元素能够被通证化。供应商（在这个例子里面是holden）向新的拥有者提供所有权通证，在购买时转移给所有权者的通证又用于获取注册通证。内置的物联网允许骑车通过通证来证明所有权。
 Now let's reimagine this in the web3 world whereby such elements can be tokenised. Vendor (in this case Holden) provides an ownership token to the new owner which can be used to operate the car. The token, transferred to the owner at the time of purchase, is in turn used to acquire the registration token. An inbuilt IoT device allows the car to be operated with proof of ownership via a token.
 
+希望购买保险的所有者只需提供所有权证明和注册通证即可满足保险公司的要求。通过将通证与其要求相匹配来自动满足保险公司标准，并且一旦经过验证，保险公司可以向所有者发送保险通证以换取用户付款。 保险通证具有自己的功能和服务。
 The owner, wishing to purchase insurance, only needs to provide the proof of ownership and registration token to be qualified to fulfil the requirements with the insurance company. The insurance companies standards are met automatically by matching the tokens to their requirements and once validated, the insurance company can send the owner an insurance token in exchange for payment. The insurance token carries its own functions and services.
 
+如果车主希望成为优步司机，她可以通过提供所有权证明，保险轻松证明她的车辆足够好，并且通过通证注册。 优步然后自动向她提供一个Uber通证，根据所有者的需要，可以用来让自己成为Uber司机或允许第三方司机这样做。 这些流程都不需要手动验证或帐户创建。
 If the owner would like to become an Uber driver, she can easily prove her vehicle is good enough by providing proof of ownership, insurance and registration with her tokens. Uber then automatically provides her with an Uber token which, depends on the owner's need, can be used to get himself started as an Uber driver or allow a 3rd party driver to do so. None of these processes requires manual verification or account creation.
 
+更进一步，车主可以一起跳过优步，直接将车租给陌生人。 她不想让她的汽车被一些随意的陌生人破坏。她可以将她的租房者限制在那些拥有“更好的司机局”颁发的证明通证的人身上。 承租人证明他们有这个通证，向所有者支付一笔款项，并且原子性的发放一个临时通证，允许他们解锁并使用汽车一段时间。 这是在没有创建帐户的情况下完成的，或者需要提交大量文档来由车主手动验证。
 Taking this even further, the owner can skip Uber all together and rent her car directly to strangers. Not wanting her car to be trashed by some random stranger, she can restrict her renters to those who have an attestation token issued by the 'better drivers bureau'. The renter proves they have this token, pays a sum to the owner and is atomically issued with a temporary token that allows them to unlock and use the car for a certain period of time. This is done without the creation of an account or need to submit tons of documents to be validated manually by the owner.
 
+如果车主希望出售汽车，她只需要在任何网站上列出价格。 所有权通证和付款可以原子方式交换（确保买方或卖方都不会受到欺骗），新的所有者可以驾车离开，甚至无需面对面地与原始所有者会面。 新买家事先知道汽车是否已经注册，并且仅通过验证其钱包中的原始所有者的所有权通证而合法拥有。 一旦发生交换，原始所有者的通证就会失效，并且她无法再操作汽车。 一旦交换发生，也可以自动使保险单无效，并为原始所有者提供过早取消的折扣。
 If the owner wishes to sell the car, she only has to list it on any website with a price. The ownership token and payment can be swapped atomically (ensuring neither the buyer or seller is cheated) and the new owner can drive away with the car without even meeting the original owner face to face. The new buyer knows in advance whether the car has been registered and is legally owned by merely validating the original owner's ownership token in their wallet. The original owner's token is invalidated once the swap occurs and she can no longer operate the car. It is also possible to automatically void the insurance policy once the exchange has occurred and provide the original owner with a rebate for premature cancellation.
 
+本章用于展示愿景。 我们将在后面的章节中再次检查这种良好集成的通证化的汽车通证的技术层面。
 This chapter serve to present the vision. We will have the opportunity to inspect the technical aspect of this well-integrated well-tokenised car token in later chapters again.
 
 --
+#### 通证化的挑战
+#### The challenge of tokenisation
 
-### The challenge of tokenisation
-
+通证化需要构建一个通证并且与其事务规则和行为模式捆绑在一起，将他们从最初生成的系统中取出，是的他们可以在不同的场景下进行交易和使用。
 Tokenisation requires bundling a token with its transaction rules and behaviour patterns, taking them off the system where they initially grew in, free them to be traded or used in different context.
 
+允许用户通过通证与不同系统进行交互：在汽车这个例子中：汽车通证由制造商Holden发布，因为它包含和智能锁的 *打开*，*启动*，*锁定*  操作和Holden自己的web服务（*定位*），但它需要在其他环境中工作。例如 *拍卖* 动作由第三方拍卖网络服务提供。用户通过通证访问拍卖服务，无需注册和证明所有权。*共享清单* 由第三方服务提供，该服务将汽车的使用通证化为数小时或者数天，并逐个销售。所有者可以通过此通证访问这个市场，买家将通过此通证获得有关汽车的gps位置，开门和使用它的能力。
 Allow users to interact with different systems through the tokens
 :   In the car example, the car token is issued by Holden, the maker, and necessarily so because it contains code to interact with a smart lock (the *Open*, *Start*, *Lock* actions) and Holden's own web service (the *Locate* action), yet it needs to work in other environments. The *Auction* action, for example, is provided by a third party auction web service. The user access auction service through the token without the need of signing up and proving ownership. The *List for sharing* is provided by a third party service which tokenises the usage of the car by hours or days and sells them piecemeal. The owner can access such a market through this Token. The buyers will have information about the car's GPS location, the capacity to unlock the door and use it, through this token as well.
 
@@ -306,9 +318,9 @@ We assert that a descriptive language (TBML) is needed to allow blockchain techn
 
 By virtue of TBML being a solution layer rather than base-layer technologies like Ethereum and Plasma, we choose to introduce the technology by example, and provide rich business-context based discussion for a boarder specturm of audience.
 
-## address "Frictionless Market" capacity
+## Address "Frictionless Market" needs
 
-Taking a closer look at "market", a market is not a noisy channel overloaded with information; more importantly, it is a place where delivery versus payment happens. With less reliance on the middlemen, our focus is turned into the tokens being traded, that is, *deliverables* and *payments*.
+Taking a closer look at "market", a market is not a noisy channel overloaded with information; more importantly, it is a place where delivery versus payment happens. With blockchain relying less on the middlemen, the host of the trades, our focus is turned into the tokens being traded, that is, *deliverables* and *payments*, and their role in market.
 
 deliverables
 :    All sorts of things money can buy: assets, goods and services.
@@ -321,13 +333,13 @@ market
 
 TMML provides both *the deliverable* and *the payment* side tokens to "plug-in" to the *market*. 
 
-Such a framework is essential for tokens to be presented, indexed, transacted, traded, auctioned, combined... to form a frictionless market.
+Such a framework is essential for tokens to be presented, indexed, transacted, traded, auctioned, combined... to work towards a frictionless market.
 
 We will introduce TBML through an example on each of the *deliverable* side and on *payment* side.
 
-### deliverable side example: 1% property token
+### Deliverable side example: 1% property token
 
-Let's imagine a market for "1% property". A property owner can issue many pieces of a token, each represents 1% ownership of the property. He can sell these tokens to obtain cash.
+Let's imagine a market for "1% property". A property owner can issue many pieces of a token, each represents 1% ownership of the property. He can sell these tokens for cash.
 
 A buyer needs to know quite a bit of information. It's easy to understand that such a token would fetch 1% of the sales revenue if the underlying property is sold, but a lot more details are needed:
 
@@ -355,12 +367,14 @@ Specific to blockchain, we also have:
 
 We categorise these trade-sensitive information into three categories:
 
-- product description. Item 2, 3, 5, 6 are in PD
+- product description[^pd]. Item 2, 3, 5, 6 are in PD
 - attested information. Item 1, 4, 6, 7 are in Attestations.
 - reference information. Item 8, 9.
 - action information (how to perform an asset action). Item 10.
 
 Understandablly, the buyers need to access all these for an informed decision.
+
+[^pd] The word is loaned from the financial sector, usually used to describe packaged investment products. It basically means the formular which profit is calculated and the current values of the varibales in the formular.
 
 #### Product description
 
@@ -453,23 +467,27 @@ In a similar fashion, suppose an investors' forum where the members are allowed 
 
 #### Scalability
 
-Horizontally, the same type of asset might have tokens across multiple networks like Plasma Chains. A buyer is likely to be interested only in assets in Australia, and therefore only connected to the Australian 1% Property network. It can be difficult to have an all-knowing node to provided rendered token information for all existing tokens, especially if a network is designed with privacy in mind. Therefore, to scale, the knowledge about the token (TBML) must be detached from the access to the token.
+Horizontally, the same type of asset might have its token instances across multiple networks like Plasma Chains. A buyer is likely to be interested only in assets in Australia, and therefore only connected to the Australian 1% Property network. It can be difficult to have an all-knowing node to provided rendered token information for all existing tokens, especially if a network is designed with privacy in mind. Therefore, to scale, the knowledge about the token (TBML) must be detached from the access to the token.
 
-Vertically, if we desire a token whose makeup is a 1% property token from a sample of 100 global cities, for mid-big size investors to distribute the risk, a computer system that can manipulate such a token must be built with the knowledge about member tokens. It again cannot depend on the availability, security and openness of the original Dapp tied to that asset. TBML would work in the middle for the making of such tokens.
+Vertically - by speaking *vertical*, we mean to build upward, to building structured transactions using a token transaction or creating structured tokens on top of a token. Such transaction and token access the component tokens. For example, if we desire a token whose makeup is a 1% property token from a sample of 100 global cities, for mid-size investors to distribute the risk, a system that can manipulate such a token must be built with the knowledge about member tokens. It again cannot depend on the availability, security and openness of the original Dapp tied to that asset. TBML would work in the middle for the making of such tokens.
+
+If we follow the example of Peter's Pride Property website as a Hello World example, it might need the user to submit a transaction not only purchase a token, but also tips Peter in the meanwhile. If only the token's issuer's DAPP knows how to assemble a token purchase transaction, this will be impractical for Peter.
+
+The vertical stack naturally can be a lot more complicated than this, even in simple scenarios. You will see one revealed in an e-commerce story in the "Integrate the web" section of this chapter.
 
 #### Security
 
-It is impractical to improvise a schema where every transaction the user might sign is rendered in a user-readable format. It's easy to start with such an effort with a transaction data translation tool, translating an enigmatic transaction payload to "user-readable data", but ultimately the system integration and UX needs would surpass what a translation engine can do.
+It is impractical to improvise a schema where every transaction the user might sign is rendered in a user-readable format. It's easy to start with such an effort with a transaction visualiser tool, interpreting an enigmatic transaction payload to the user, similar to Linux's `identify(1)` command, but ultimately the system integration and UX needs would surpass what a dictionary style transaction visualiser can do.
 
 Take the 1% property token as an example; a confirmation might look like this: You are going to purchase 1% of property #802820 with 45 Ethers, are you sure?
 
 The user will be unsure if the glass ceiling designer 2-bedroom house he is watching is #802820.
 
-A translation tool cannot go further because correctly rendering the property token requires more than word processing. This limit is easily hit even without introducing complex integration scenarios where more than one token is involved in a transaction (e.g. purchasing a used car and getting a car token with a warranty token).
+A dictionary based translation visualiser cannot go further because correctly rendering the property token requires more than word processing. This limit is easily hit even without introducing integration scenarios in the "Integrate the web" section of this chapter.
 
-Eventually, a transaction is generated with code, and the user would have to delegate the trust to the code. In a user's words, I am accessing the website tied to this token, so I will trust that this transaction I am signing is generated for the intention I have while using the site.
+Eventually, a transaction is generated with code, and the user would have to delegate the trust to the code. In a user's words, I am accessing the website tied to this token, so I will trust that this transaction I am signing is generated for the intention I have while using the site. This is a broken trust model, a regression to the TLS model of trusting the site instead of the content.
 
-TBML is designed to separate token rendering code, and transaction generating code and package them into its container, signed by a party that the user is likely to trust. There are a few trust levels, which we will detail in later chapters.
+TBML is designed to separate token rendering code, and transaction generating code and package them into its container, signed by a party that the user is likely to trust (often, signed by the same key used for deploying a smart contract). There are a few trust levels, which we will detail in later chapters.
 
 A user who is purchasing a 1% property token from Peter's Pride Property recommendation website can be supplied with a rendering and transaction package, signed by the same group of people who created the holding contract of such tokens. Therefore the user can purchase assets from any website with a similar level of trust, or purchase it from a WeChat or Facebook private message and know it is the real token being rendered and transacted.
 
