@@ -161,7 +161,7 @@ The web doesn't have a built-in authentication mechanism[^tls]. The add-on "Sign
 Facebook使用TLS，但人们在其上放了很多假新闻。 毫无疑问，这里的信任单位不足以提供集成网络的体现。
 [^tls]: Despite the excellent efforts on client/server certificates in TLS, these authentication methods are not for processes, but only for sites. It's a delegation model. Imagine a buyer not checking if a title deed is real, but only checks if the seller's name matches the one on the deed. That would be the delegation model used in TLS. In this model, TLS can't guarantee anything on the website is real; only that the website itself is. Facebook uses TLS, but people put much fake news on it. The unit of trust here is undoubtedly not granular enough for the web to deliver an integrated experience.
 
-“帐户身份验证”不取代Web集成
+“帐户身份验证”不能取代Web集成
 ### "Account authentication" is not a substitute for web integration.
 
 例如，简单的业务逻辑：“汽车的所有者可以检查其服务历史记录”，并不需要帐户。 如果您强行使用“帐户身份验证”模型，就会出现很糟糕的情况：
