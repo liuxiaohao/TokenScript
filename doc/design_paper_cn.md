@@ -161,28 +161,40 @@ The web doesn't have a built-in authentication mechanism[^tls]. The add-on "Sign
 Facebook使用TLS，但人们在其上放了很多假新闻。 毫无疑问，这里的信任单位不足以提供集成网络的体现。
 [^tls]: Despite the excellent efforts on client/server certificates in TLS, these authentication methods are not for processes, but only for sites. It's a delegation model. Imagine a buyer not checking if a title deed is real, but only checks if the seller's name matches the one on the deed. That would be the delegation model used in TLS. In this model, TLS can't guarantee anything on the website is real; only that the website itself is. Facebook uses TLS, but people put much fake news on it. The unit of trust here is undoubtedly not granular enough for the web to deliver an integrated experience.
 
+“帐户身份验证”不取代Web集成
 ### "Account authentication" is not a substitute for web integration.
 
+例如，简单的业务逻辑：“汽车的所有者可以检查其服务历史记录”，并不需要帐户。 如果您强行使用“帐户身份验证”模型，就会出现很糟糕的情况：
 For example, the simple business logic: "the owner of a car can check its service history", doesn't require an account. If you force the "Account authentication" model, bad things happen:
 
+ - 当汽车售出时，新车主现在需要在服务网站上创建一个新帐户，并且加密它，用来证明自己的所有权。 这是繁重且不可靠的。
 - When the car is sold, the new car owner would now need to create a new account at the service website and secure it with the proof of ownership to the car. This is onerous and unreliable.
 
+ - 当车辆改装车间或保险公司等第三方需要访问维修历史记录时，没有简单的方法可以在不泄露帐户的情况下对其进行授权。 这是不灵活的。
 - When a 3rd party like a Vehicle Modification workshop or an insurer needs to access the repair history, there is no easy way to authorise them without giving away the account. This is inflexible.
+
+更多此类示例很容易在医疗保健，零售和网络上的几乎所有业务中找到。 今天，我们不断添加越来越多的帐户来满足这种集成需求。这就像是头疼医头脚疼医脚。以下章节将演示通过通证集成而非帐户是一个可靠的解决方案。
 
 Such integration needs, poorly addressed by adding accounts, are easily found in healthcare, retail and almost every web-based business. Today, we are still adding more and more accounts to address the growing integration needs. It's a case of hammering every problem down as if it is a nail. The following chapters will demonstrate that integration through token, not account, is the solution.
 
+同样，网络没有内置的所有权，价值转移和交易机制。
 Similarly, the web doesn't have a built-in mechanism for ownership, transfer of value and trading.
 
+来看看汽车故事的未来发展，汽车销售商需要在网站上发布汽车信息，在过程中创建另一个帐户。 买方不能点击“购买”并一次性获得所有权证明，强制保险，未使用的服务配额等，并进行付款处理。 所有这些操作都必须使用易于篡改的纸张样张和表格单独完成。 该过程从Web开始，在其他的地结束。
 Taking the car story further, a car seller would need to post the car information on a website, creating yet another account on the way. The buyer cannot click "buy" and acquire the ownership proof, compulsory insurance, unused service quota and so like in one go, and have payment processed. All these actions have to be done separately, using easily-tampered paper proofs and forms. The process starts at the web and ends somewhere else.
-
+相反，同样的过程反正在区块链上是自动的，防伪的[^证明]和原子的。
 In contrast, the same process on blockchain would be automatic, fraud-proof[^attestations] and atomic[^atomic].
 
+[^证明]：提供加密签名的证明作为交易条件的方法将在后面的“证明”章节中讨论。
 [^attestations]: the method to provide cryptographically signed attestations as a condition for a transaction is discussed later in the "Attestation" chapter.
 
+[^ 原子性]：在区块链术语中，原子事务以为着都发生或者都不发生。 如果定义明确，买方不可能成功支付汽车而没有获得所有权令牌，或者只是转让了汽车的所有权而没有强制性保险。
 [^atomic]: In blockchain terms, an atomic transaction either happens or not. If well defined, it's not impossible for a buyer to have successfully paid for a car yet not getting the ownership token, or only have transferred the car's ownership but not the compulsory insurance on it.
 
+网络的这些缺失特征是区块链的众所周知的功能。 这对完美契合夫妇的虚拟婚礼需要虚拟交换通证，或者本文称之为“通证化”。
 These missing features of the web are the well-known functions of the blockchain. The virtual wedding of this perfect fit couple requires a virtual exchange of tokens, or what this paper called "tokenisation".
 
+通证无缝地跨越系统，承载其交易规则和用户界面以及业务环境。
 Tokens seamlessly go across systems, carries their trading rules and user interfaces and business context.
 
 ## Example: Car Ownership Token
@@ -236,7 +248,7 @@ The following example, a car ownership token, is a successfully tokenised .... [
     |                                                          |      |                              |
     |               +------------------------------------+     |      | Access insurance token       |
     |               |                                    |     |      | functions:                   |
-    |               | Issuer: Virgin Car Insurance       |     |  +-> |                              |
+    |               | Issuer: Qantas Car Insurance       |     |  +-> |                              |
     |               | Start Date: 2017 12 30             |     |      | · Claim                      |
     |               |                                    |     |      | · Lump sum discount payment  |
     |               +------------------------------------+     |      | · Upgrade / downgrade        |
@@ -252,94 +264,186 @@ The following example, a car ownership token, is a successfully tokenised .... [
     |                                                          |
     +----------------------------------------------------------+
 
+At first glance, it is just a handy portal to do everything about the car, including market functions and utility. However, it's not possible with the traditional web model.
+
+In the web 2.0 model, you are restricted to handling every element on its own. To register the car, there is a separate process which involves creating an account with the Road and Maritime Services and proving ownership manually without the aid of cryptography. When you want to provide insurance to the car, you have to create another account and manually offer proof of its registration to that new service. (If you find not needing to do so, the cost of unpayable insurance merely is hidden and borne by the market.) Likewise, if you want to make the car available to share economy through Uber or hour-based car rental, the work of proving and settling payments and insurance cost adds friction to the market.
+
+Now let's reimagine this in the web3 world whereby such elements can be tokenised. Vendor (in this case Holden) provides an ownership token to the new owner which can be used to operate the car. The token, transferred to the owner at the time of purchase, is in turn used to acquire the registration token. An inbuilt IoT device allows the car to be operated with proof of ownership via a token.
+
+The owner, wishing to purchase insurance, only needs to provide the proof of ownership and registration token to be qualified to fulfil the requirements with the insurance company. The insurance companies standards are met automatically by matching the tokens to their requirements and once validated, the insurance company can send the owner an insurance token in exchange for payment. The insurance token carries its own functions and services.
+
+If the owner would like to become an Uber driver, she can easily prove her vehicle is good enough by providing proof of ownership, insurance and registration with her tokens. Uber then automatically provides her with an Uber token which, depends on the owner's need, can be used to get himself started as an Uber driver or allow a 3rd party driver to do so. None of these processes requires manual verification or account creation.
+
+Taking this even further, the owner can skip Uber all together and rent her car directly to strangers. Not wanting her car to be trashed by some random stranger, she can restrict her renters to those who have an attestation token issued by the 'better drivers bureau'. The renter proves they have this token, pays a sum to the owner and is atomically issued with a temporary token that allows them to unlock and use the car for a certain period of time. This is done without the creation of an account or need to submit tons of documents to be validated manually by the owner.
+
+If the owner wishes to sell the car, she only has to list it on any website with a price. The ownership token and payment can be swapped atomically (ensuring neither the buyer or seller is cheated) and the new owner can drive away with the car without even meeting the original owner face to face. The new buyer knows in advance whether the car has been registered and is legally owned by merely validating the original owner's ownership token in their wallet. The original owner's token is invalidated once the swap occurs and she can no longer operate the car. It is also possible to automatically void the insurance policy once the exchange has occurred and provide the original owner with a rebate for premature cancellation.
+
+This chapter serve to present the vision. We will have the opportunity to inspect the technical aspect of this well-integrated well-tokenised car token in later chapters again.
 
 --
-
-exemplified by a property token being used for rent, insurance, pest inspection, mortgages and many other markets. It must define its own behaviour pattern which can be used to interact with users to show the status and allow functions to be accessible from its integration environment. In other words, a token must have its own UI and integration logic.
-
-We assert that the way to get there is a data processing language that defines tokens and their behaviour. In such a design, the token is the integration point and the language is the interface for the integrations. Tokens seamlessly go across systems, exemplified by a property token being used for rent, insurance, pest inspection, mortgages and many other processes.
-
-
-It must define its own behaviour pattern which can be used to interact with users to show the status and allow functions to be natively integrated. In other words, a token must have its own UI and integration logic.
-
-[a picture of an example of a property token that has two statues side by side]. The left side has an action button (among others) that says Power Connection. The right side has the same token, but with a "Leased" label on it, and the "Power Connection" action button is invalidated because now it is with the lessor]
 
 ### The challenge of tokenisation
 
 Tokenisation requires bundling a token with its transaction rules and behaviour patterns, taking them off the system where they initially grew in, free them to be traded or used in different context.
 
-Taking property as an example, its existence as a record in the title deeds office is not useful to an open market, since it's only valid in that
-database. Tokenising property would require a crypto-record on a blockchain not owned by the title deeds office[^in-house-blockchain].
+Allow users to interact with different systems through the tokens
+:   In the car example, the car token is issued by Holden, the maker, and necessarily so because it contains code to interact with a smart lock (the *Open*, *Start*, *Lock* actions) and Holden's own web service (the *Locate* action), yet it needs to work in other environments. The *Auction* action, for example, is provided by a third party auction web service. The user access auction service through the token without the need of signing up and proving ownership. The *List for sharing* is provided by a third party service which tokenises the usage of the car by hours or days and sells them piecemeal. The owner can access such a market through this Token. The buyers will have information about the car's GPS location, the capacity to unlock the door and use it, through this token as well.
 
-This paper focuses on the missing layer in the technical stak for tokenisation to happen.
+Rendering a token and associate it with the actions they can perform in the user's wallet
+:   In the car example, if the registration expired, the web component at work would paint the Registration Token red or display a warning. Actions like *List for sharing* will not be available with an expired car rego, and the integrated token interface should clearly pass that message to the user.
 
-[^in-house-blockchain]: There is the biggest misconception in the traditional government and business sector, that in order to use blockchain, one has to own it in house. TV serie IT Crowds famousely joked such misconception by having a few IT guys presenting to management the Internet as a physical box, fittingly owned in a house.
+Allow new protocols to be developed on tokens
+:   In the car example, collateralization might be an additional protocol, an ERC in Ethereum context. The protocol might have its own implementation and the car token might pre-date it. Similarly, there are streaming, communication, staking or other protocols (See "Magic" chapter). The framework must allow them to exist and work with tokens.
 
+Carry trust relationship and business context to 3rd parties
+:   In the car example, the insurance token provides Roadside Assistance service through NRMA, another company not directly contracted by the driver. Yet the driver might access this function through the insurance token and immediately be identified as qualified for help. In this example, *Trust relationship* means that the user indirectly trusts NRMA to provide roadside assistance, to obtain the user's GPS location and identity information at the time of emergency. *Business context* means the customer's qualification for roadside assistance, like insurance paid, location in the range of service and annual cap not reached etc. In this story both *trust relationship* and *business context* has to be in the token, not centralised through the insurance company's web service since the two have different a) availability, b) privacy and c) integration requirements[^abc].
 
-[ these paragraphs should move to the lower level]
-
-With the madness over, it is time to present a framework for describing such token behaviours.
-
-Such a framework must fit tokens into different environments for them to function as use-cases; they must:
-
-- Let the user interact with different IT systems and APIs
-
-- Make them render-able and associated with the actions they can perform in the user's wallet
-
-- Making them fit into listing or auction based general-purpose markets; building one marketplace for one token type would be too inefficient.
-
-- Allow new protocols to be developed on top of them (streaming, communication, staking, collateralization, etc.)
-
+[^abc]: Availability: NRMA is online 24/7 but Qantas Insurance can suspend their services in public holidays or at night. Privacy: NRMA can learn user's GPS location but Qantas Insurance isn't legally allowed to learn it. Integration: Most of NRMA's customers are not obtained through Qantas Insurance, so it would be an additional system to integrate and extra security concern for NRMA to integrate to Virgain Insurance's web service. Of all three, availability might be the most visible. Just imagine how angry a customer will be, having his car breaking down in the middle of the barren Australian outback, and learn that the road-side assistance can't be authorised because the insurer's web service is upgrading "For a better user experience".
 
 # Design requirements
 
-We assert that a descriptive language (TBML) is needed to allow blockchain technology to enable "frictionless markets" and an "integrated web".
+We assert that a descriptive language (TBML) is needed to allow blockchain technology to enable "frictionless markets" and an "integrated web". TBML stands for Token Behaviour Markup Language.
 
-TBML stands for Token Behaviour Markup Language and is our framework for defining such a context for dapps to integrate on their own and with other dapps.
-
-Unlike most whitepapers in the space, we choose to demonstrate the design by order of requirements to make a solution; this is because TBML is a solution layer rather than Ethereum or Plasma which serves as a base layer. It's not feasible to demonstrate the works of TBML or evaluate a design decision without showing use-cases as examples.
+By virtue of TBML being a solution layer rather than base-layer technologies like Ethereum and Plasma, we choose to introduce the technology by example, and provide rich business-context based discussion for a boarder specturm of audience.
 
 ## address "Frictionless Market" capacity
 
-Taking a closer look at "market", a market is not a noisy channel overloaded with information; more importantly, it is a place where delivery versus payment happens. With less reliance on the middlemen, our focus is turned into the tokens being traded, that is, deliverables and payments. On the deliverable side, there are all sorts of things money can buy: assets, goods and services. On the payment side, there are Ether, DAI, Sovereign etc.
+Taking a closer look at "market", a market is not a noisy channel overloaded with information; more importantly, it is a place where delivery versus payment happens. With less reliance on the middlemen, our focus is turned into the tokens being traded, that is, *deliverables* and *payments*.
 
-Both the deliverables and the payment side requires a framework for tokens to "plug-in" - the TBML token behaviour language we are proposing.
+deliverables
+:    All sorts of things money can buy: assets, goods and services.
 
-Such a framework is essential for tokens to be presented, indexed, traded, auctioned, combined... to form a frictionless market.
+payment
+:    Ether, DAI, Sovereign. Anything currency-like. Only programmable currencies are relevant to this paper.
 
-To demonstrate the design requirements we improvised an example of "1% property token".
+market
+:    Market is where delivery versus payment happens. *Market* is an concept, not a marketplace. A user who checks out on a website is accessing a market. She doesn't have to be in a marketplace (e.g. Amazon) to do so.
 
-### 1% property token
+TMML provides both *the deliverable* and *the payment* side tokens to "plug-in" to the *market*. 
+
+Such a framework is essential for tokens to be presented, indexed, transacted, traded, auctioned, combined... to form a frictionless market.
+
+We will introduce TBML through an example on each of the *deliverable* side and on *payment* side.
+
+### deliverable side example: 1% property token
 
 Let's imagine a market for "1% property". A property owner can issue many pieces of a token, each represents 1% ownership of the property. He can sell these tokens to obtain cash.
 
 A buyer needs to know quite a bit of information. It's easy to understand that such a token would fetch 1% of the sales revenue if the underlying property is sold, but a lot more details are needed:
 
-- Where is the property and what status is it in?
+1. Where is the property and what status is it in?
 
-- Can a 1% property token owner vote?  For example, on the purchase decision to insurance against a bush fire?
+2. Can a 1% property token owner vote?  For example, on the purchase decision to insurance against a bush fire?
 
-- Is the 1% automatically converted into currency at the time of property sales, or can the token holder elect to continue holding it?
+3. Is the 1% automatically converted into currency at the time of property sales, or can the token holder elect to continue holding it?
 
-- Is the token properly underwritten to prevent double-collateralization?
+4. Is the token properly underwritten to prevent double-collateralization?
 
-- If the property was collateralized for a mortgage, what is the condition for a liquidation event?
+5. If the property was collateralized for a mortgage, what is the condition for a liquidation event?
 
-- Is providing a buyer's identity attestation a condition of a purchase?
+6. Is providing a buyer's identity attestation a condition of a purchase?
 
-A lot of these details are in the smart contract that holds the asset in question; however, many details are not, such as how to fetch previous sales prices for the land from an online title deed database.
+7. Is the seller the actual owner of the property?
 
-Typically, nowadays those token related information are locally coded in a Dapp in the form of a website. We argue that for it to be effectively marketized, It needs to be abstracted out and placed in a token behaviour language TBML. You can imagine it works like a data processing language that for a given token
+8. What was the performance of similar properties in the region in the past years?
 
-- Fetch token related information from its holding smart contract and 3rd party sources.
-- It has a rendering section where the token is represented in a visual or audio fashion.
-- It has a transaction section where the purpose and condition for trade and transactions are described (a superset of ABI).
+9. What was the historical sales price of this property?
 
-Any party is able to render and apply functions to the token using TBML, including entities like generic marketplaces, user-agents and 3rd party apps.
+Specific to blockchain, we also have:
 
-In general, providing a layered structure, using and reusing it, is better than having a static design where a Dapp is tied to an asset class and has all the knowledge of the asset locally. The reasons for this are interoperability, scalability and security. Specifically, with the 1% property token as an example, the interoperability, scalability and security concerns are demonstrated below.
+10. How to correctly and securely construct a transaction for the assiet (purchase, voting etc)
 
-### Interoperability:
+We categorise these trade-sensitive information into three categories:
+
+- product description. Item 2, 3, 5, 6 are in PD
+- attested information. Item 1, 4, 6, 7 are in Attestations.
+- reference information. Item 8, 9.
+- action information (how to perform an asset action). Item 10.
+
+Understandablly, the buyers need to access all these for an informed decision.
+
+#### Product description
+
+Product description information is typically in the smart contract. In Ethereum cases, these can be obtained by making a few Smart Contract function calls, therefore, the only needed work is to convert them into presentation - usually it means translating to the language user speaks and converting "True" value into a nicely ticked checkbox. This serve to introduce the first functionality of TBML: acting as a presentation layer for smart-contracts.
+
+    <attribute-type id="voting-right">
+       <name xml:lang="en">Voting right</name>
+       <name xml:lang="zh">投標權</name>
+       <origin contract="holding-contract" as="mapping">
+          <function name="getVotingRight">
+	     <inputs>
+	        <uint256 ref="TokenID"/>
+	     </inputs>
+	  </function>
+          <mapping>
+	     <option key="0">
+	         <value xml:lang="en">No Voting Right</value>
+		 <value xml:lang="zh">無投標權</value>
+             </option>
+	     <option key="1">
+	         <value xml:lang="en">Voting rights on sale</value>
+		 <value xml:lang="zh">可投標決定售出</value>
+	     </option>
+	     <option key="2">
+	         <value xml:lang="en">Voting rights on expense (e.g. insurance)</value>
+		 <value xml:lang="zh">可投標決定維護項目如添置保險</value>
+	     </option>
+	  </mapping>
+	</origin>
+    </attribute-type>
+
+This simplified `attribute-type` code snippet allows the value for Voting Right to be fetched from `holding-contract`, which is a smart contract defined somewhere else in the TBML, and present it in one of a few languages.
+
+#### Attested information
+
+Attestation is just a signed message stating a fact. Attestations are often used to satify the conditions of the transactions. More on that in the chapter Attestations.
+
+In the 1% property token example, the involved attestations are:
+
+- by identity authority and title deeds office, to attest the issuer's ownership of the property.
+- by collatorisation authority[^set-operation] to prevent double collatorisation
+- by buyers, for providing identity or capacity to invest in this type of asset
+
+[^set-operation]: Eventually, this could be a cryptographic set operation, but even if that happens, the metadata directing the context (user-agent) to proform the computation still needs to be described in TBML.
+
+The first two attestations are not stored in smart contract for cost (size and number of transactions) and privacy reasons. It's possible to utilise zero knowledge proof to provide a generic proof that the attestation is for the said property and said owner, and it has not expired. What proofs are expected and can be validated is also described in TBML.
+
+Furthermore, the fact that the transaction requires an identity attestation or investment capacity attestation from the buyers. These are described in TBML as well so the context (e.g. user-agent) can prevent the user to submit a transaction without qualifying proof or help the user to select suitable attestations for a purchase transaction.
+
+#### Reference information
+
+Reference information is what relevant to the token and provided by web services, typically through a RESTful API call.[^trusted-information]
+
+[^trusted-information]: Originally we call it "Trusted information", meaning data such as previous property sales price or regional property performance data is just "provided", without blockchain proofs or attestations, hence, it has to be explicitly trusted by the user. As it turned out, this term misfired as some developers think it means "proven information" and provided as trusted already. So we used a less precise term "Reference information", which, unfortunately, feels like a catch-all phrase.
+
+Since TBML is signed by the token issuer (not token owner - the token issuer is often entity that deployed the smart contrat), the reference information sourced from the web apis specified in TBML is assumed trusted. The security chapter will detail different levels of trust.
+
+Today, all such information related to a token is usually held together on a DAPP website made by the same entity that deployed the token. We argue that for tokens to be effectively marketized, It needs to be abstracted out and placed in the token behaviour language TBML.
+
+#### Action information
+
+Dictates the correct method to construct a blockchain transaction, like:
+
+- What attestations are needed to prove the buyer's capacity to purchase.
+- What parameters are needed for a purchase (e.g. number of 1% shares).
+- How to render the purchase form and translate to user's local language.
+- Is the condition all met (e.g. a purchase isn't possible after the underlying property is liquidated).
+
+These information is a super-set of smart contract programmable interface (In Ethereum, called ABI), with the additional part being business logic (e.g. property must be still valid and seller still have it) and presentation logic (e.g. the message "The property is liquidated. Purchase no longer possible").
+
+In conclusion, TBML allows the context (user-agent or trading engine) to:
+
+- Fetch token related information from its holding smart contract, attestations and references.
+- Produce a visual or audio rendering of the token
+- Produce a list of actions that can be performed and how to constrct the transactions.
+
+Any party is able to render and apply functions to the token using TBML, including entities like generic marketplaces, user-agents and 3rd party apps. We call these parties "context" in general.
+
+### Why TBML
+
+With the first example demonstrated, we use the opportunity to articulate why TBML is needed, over the current prevailing way of providing asset access with a host DApp. We argue that the current prevailing method is not suitable for creating a frictionless market, while TBML could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
+
+#### Interoperability:
 
 Suppose a property guru named Peter wishes to create a website called "Peter's Pride Asset", where he selects the best properties available on the market. He can create a listing of those properties with rich information of the current price, location, age of the building and even photos, which the users can purchase with a click. There is no reason that he needs permission to do so because the data of those tokens are on the blockchain and the transaction of those tokens requires no middlemen. However, he would need to obtain the knowledge local to how to render the token on his website, like how to get the expiration of a token from its holding smart contract. If the underlying smart contract has gone through changes, like adding an attribute (e.g. council rate), his website would need to upgrade.
 
@@ -347,13 +451,13 @@ Similarly, the transaction rule might be updated to require the buyer to submit 
 
 In a similar fashion, suppose an investors' forum where the members are allowed to login using their 1% property token, the rendering of the token, under each post, would need to be sourced from the Dapp tied to the token, since it's too much work for a forum to render the token and keep the code updated. Such sourcing would require permission and might be tied to the availability of that Dapp.
 
-### Scalability
+#### Scalability
 
 Horizontally, the same type of asset might have tokens across multiple networks like Plasma Chains. A buyer is likely to be interested only in assets in Australia, and therefore only connected to the Australian 1% Property network. It can be difficult to have an all-knowing node to provided rendered token information for all existing tokens, especially if a network is designed with privacy in mind. Therefore, to scale, the knowledge about the token (TBML) must be detached from the access to the token.
 
 Vertically, if we desire a token whose makeup is a 1% property token from a sample of 100 global cities, for mid-big size investors to distribute the risk, a computer system that can manipulate such a token must be built with the knowledge about member tokens. It again cannot depend on the availability, security and openness of the original Dapp tied to that asset. TBML would work in the middle for the making of such tokens.
 
-### Security
+#### Security
 
 It is impractical to improvise a schema where every transaction the user might sign is rendered in a user-readable format. It's easy to start with such an effort with a transaction data translation tool, translating an enigmatic transaction payload to "user-readable data", but ultimately the system integration and UX needs would surpass what a translation engine can do.
 
@@ -369,7 +473,17 @@ TBML is designed to separate token rendering code, and transaction generating co
 
 A user who is purchasing a 1% property token from Peter's Pride Property recommendation website can be supplied with a rendering and transaction package, signed by the same group of people who created the holding contract of such tokens. Therefore the user can purchase assets from any website with a similar level of trust, or purchase it from a WeChat or Facebook private message and know it is the real token being rendered and transacted.
 
-### Design requirements for a frictionless market
+## payment side example: DAI token
+
+We decide to use a real token in this example thanks to our recent collaboration with MakerDAO project, the issuer of DAI token.
+
+[TODO: fill this chapter before 27th Feb]
+
+---
+
+[Editor: the following served as an outline of the entire chatper and should be checked then safely removed now that the chapter is nearly fully written.]
+
+Design requirements for a frictionless market
 
 The TBML language has to provide:
 
@@ -387,6 +501,8 @@ And it should be usable by:
 - Various user-agents, in rendering and using the assets in the wallet section of mobile and desktop wallets.
 
 We will proceed on addressing the need for "Integrating the Web" and come to a full picture of the design requirements of TBML in the following chapters.
+
+---
 
 ## address the "Integrate the web" need
 
@@ -421,6 +537,8 @@ With the use of a warranty token, the terms and expiration would be easy to find
 Lacking a reliable way to authenticate the purchase, an online purchased product usually cannot be returned to the store but might be returned via online means such as a postback. A token carries the means for authentication sufficient for the process to be done in store.
 
 Despite such a token not being transferable or authorised, it is still useful for 3rd party integrations.  The Tax office will be satisfied that the receipt can't be faked without collaboration from the seller, and allows a swift and easy tax-refund process. If the phone is purchased for work, the employee can easily reclaim the expense from an employer with the trust implied.
+
+[TODO: Farrah is working on an illustration, should be fit here by 26th Feb.]
 
 ---
 
@@ -839,7 +957,3 @@ Product ownership token
 
 
 (The whole concept can be illustrated in a few examples, e.g. this car token)
-
-
-
-
