@@ -10,8 +10,6 @@ Despite the great folly in 2017-2018, it is not a bad thing to initially focus o
 
 Previous efforts in this industry primarily focused on enriching the capacity of the technology. This paper will focus on tokenisation and introduce a standardisation effort known as TBML (Token Behaviour Markup Language) which will make the blockchain technical stack complete, providing utility for the economy and the internet.
 
-
-
 ## Join the game
 
 Please join our work at xxx. A Yellow Paper to guide implementors to use TBML for their tokens and dapps will take months to make, but a work in progress is always available online. Participate now to avoid the draft language specification being made without consideration your token model.
@@ -123,70 +121,17 @@ Tokens seamlessly go across systems, carries their trading rules and user interf
 
 ## Example: Car Ownership Token
 
-The following example, a car ownership token, is a successfully tokenised .... [Edit: explain the elements]
+We will comine the two concepts: frictionless market, achieved by tokenising assets; integrate the web, by using token as integration point for web services. We will demonstrate an example that encompasses both concepts: car token.
 
-    +----------------------------------------------------------+
-    |                                                          |
-    |          Holden Barina 2012 Ownership Token              |
-    |                                                          |
-    |          Make: Holden Year: 2013  Colour: Black          |
-    |          VIN: KL3TA48E9EB541191                          |
-    |                                                          |
-    | +--------+  +--------------------+  +------------------+ |
-    | | Open   |  | Authorise use      |  | List for sale    | |
-    | +--------+  +--------------------+  +------------------+ |
-    |                                                          |
-    | +--------+  +--------------------+  +------------------+ |
-    | | Start  |  | Lend               |  | Auction          | |
-    | +--------+  +--------------------+  +------------------+ |
-    |                                                          |
-    | +--------+  +--------------------+  +------------------+ |
-    | | Lock   |  | Transfer Ownership |  | Collateralise    | |
-    | +--------+  +--------------------+  +------------------+ |
-    |                                                          |
-    | +--------+                          +------------------+ |
-    | | Locate |                          | List for sharing | |
-    | +--------+                          +------------------+ |
-    |                                                          |
-    |               Registration:                              |
-    |                                                          |
-    |               +------------------------------------+     |
-    |               |                                    |     |      +-----------------------------+
-    |               | Issuer: Roads & Maritime Services  |     |      |                             |
-    |               | Rego: CJ41HL   Expiry: 2017+12+03  |     |  +-> | Access rego attestation     |
-    |               |                                    |     |      |                             |
-    |               +------------------------------------+     |      +-----------------------------+
-    |                                                          |
-    |               Holden Capped Service                      |
-    |                                                          |
-    |               +------------------------------------+     |
-    |               |                                    |     |
-    |               | Issuer: Holden Australia           |     |      +-----------------------------+
-    |               | Expiry: 2020-12-09                 |     |      |                             |
-    |               | Last served: 180 days ago          |     |  +-> | Access Invoice Token        |
-    |               |             (due for a service)    |     |      |                             |
-    |               |                                    |     |      +-----------------------------+
-    |               +------------------------------------+     |
-    |                                                          |
-    |               Insurance                                  |      +------------------------------+
-    |                                                          |      |                              |
-    |               +------------------------------------+     |      | Access insurance token       |
-    |               |                                    |     |      | functions:                   |
-    |               | Issuer: Qantas Car Insurance       |     |  +-> |                              |
-    |               | Start Date: 2017 12 30             |     |      | · Claim                      |
-    |               |                                    |     |      | · Lump sum discount payment  |
-    |               +------------------------------------+     |      | · Upgrade / downgrade        |
-    |                                                          |      | · Suspend policy             |
-    |               Purchase:                                  |      | · Access Roadside Assistance |
-    |                                                          |      |                              |
-    |               +------------------------------------+     |      +------------------------------+
-    |               |                                    |     |
-    |               | Issuer: Manheim Auctions           |     |
-    |               | Date: 2015+12+09   Price: $4724.83 |     |
-    |               |                                    |     |
-    |               +------------------------------------+     |
-    |                                                          |
-    +----------------------------------------------------------+
+On the one hand, a car is a tokenised asset, that can be bought, sold, transferred, auctioned, collaborated and insured, all enabled by blockchain.
+
+On the other hand, a car also has utility. A car's ownership token can convert a blockchain wallet into a car key, with additional functions like graphically representing the car's current location. Authorising someone to access your car, or renting it for profit, would be seamlessly done by signing blockchain transactions or attestations, without passing car keys around.
+
+The following screenshot of a car token represents the final stage of tokenisation.
+
+
+![A car token. Four tokens: Rego, Capped Service, Insurance and Purchase, either depeneds or relates to the car ownership token.](car-token.jpeg)
+
 
 At first glance, it is just a handy portal to do everything about the car, including market functions and utility. However, it's not possible with the traditional web model.
 
@@ -403,52 +348,106 @@ TBML is designed to separate token rendering code, and transaction generating co
 
 A user who is purchasing a 1% property token from Peter's Pride Property recommendation website can be supplied with a rendering and transaction package, signed by the same group of people who created the holding contract of such tokens. Therefore the user can purchase assets from any website with a similar level of trust, or purchase it from a WeChat or Facebook private message and know it is the real token being rendered and transacted.
 
-## payment side example: DAI token
+## Payment side example: DAI token
 
-We decide to use a real token in this example thanks to our recent collaboration with MakerDAO project, the issuer of DAI token.
+DAI is a token designed for payment - purchasing security token, purchasing goods and services and so like. It's intended to match USD in value. Not fixing the supply cap, it is not itself an investiment candidate.
 
-[TODO: fill this chapter before 27th Feb]
+In many ways DAI functions like Ether, the base currency in Ethereum. However, it can't be a drop-in replacement for Ether.
 
----
+First, the Dapps written for Ethereum may not be aware that the user has DAI token, unless it explicitly support DAI. A Pizza ordering service that accepts Ether as payment, for example, cannot trivially start to accept DAI token. This is true even if DAI provides a DAI-to-Ether gateway service which, in an atomic fashion, converts DAI to Ether in the same transaction which uses the resulting Ether to purchasing Pizza.
 
-[Editor: the following served as an outline of the entire chatper and should be checked then safely removed now that the chapter is nearly fully written.]
+If Pizza website doesn't upgrade, the user has to convert DAI to Ether first, then, purchase Pizza with a second transaction. Such a process is not only inconvenient, but lack atomicity, meaning that the user could have converted DAI to Ether trough the effort, only to fail the checkout since the Pizza is sold out, and ended up with additional Ethers that she has to deal with.
 
-Design requirements for a frictionless market
+It's worth noticing that the Pizza website cannot upgrade to support DAI without knowing how to discover the user's DAI balance[^balance-is-privacy] (to not to to waste a transaction fee just to find the DAI balance is insufficient), how to construct a DAI withdraw transaction or DAI-Ether gateway transaction and make direct smart contract function calls to the DAI holding contract.
 
-The TBML language has to provide:
+[^balance-is-privacy]: Eventually, the Pizza website would not only be oblivious about how to check balance, since TBML handles it, but also not possible to know the balance. This would require underlying blockchain's support, but ultimately cannot be done if we continue the current trend where website, who should care about business logic, also care about payment logic.
 
-- Where to find the asset (which chain and what smart contract holds the asset)
-- Vocabulary for token assets
-- Methods to render and translate attributes in local languages
-- Ways to obtain 3rd party information and a list of what 3rd parties are trustworthy.
-- A superset of ABI information that informs users the purpose of the transaction.
+Naturally, the Pizza website isn't in the best position to manage these payment-side details. TBML addreses this problem by
 
-And it should be usable by:
+1. Encapsulating the smart contract function calls needed for supporting DAI, along with the javascript to construct needed transactions in TBML, signed by DAI issuer.
 
-- The Dapp created by the token issuer;
-- Any 3rd party Dapp that might use the token;
-- A generic market not owned by the token issuer;
-- Various user-agents, in rendering and using the assets in the wallet section of mobile and desktop wallets.
+2. Providing a browser side implementation and a javascript based implementation for TBML compatibility, so that the Pizza shop could just call a generic action to return Ether (or any acceptable currency) and let the payment logic in TBML work at transaction.
 
-We will proceed on addressing the need for "Integrating the Web" and come to a full picture of the design requirements of TBML in the following chapters.
+TBML's capacity to embed payment logic and presentation means that not only it can display messages in user's language (like balance or "insufficient balance" message), but it can perform functions like pre-checking the balance, pause the checkout flow so that the user can perform a top-up flow and return to the checkout flow to finalise the checkout.
 
----
+To the user, the process resembles a bit like the checkout processs leads the user to Paypal to finalise the transaction, except the process happens locally in an enhanced user-agent.
 
-## address the "Integrate the web" need
+We again argue that current prevailing method is not suitable for creati
+ng a frictionless market, while TBML could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
 
-As we explained earlier, the web is poorly integrated, as the only link between the units of the web, i.e. "websites" are links. It carries no business process, authentication or trust relationship. There are no anchoring points for integration.
+As concluded, Pizza website would not have the necessary payment side logic to handle everything on its own. The traditional approach is to let the Pizaa website use the javascript sourced by MakerDAO project. The javascript may or may not use a RESTful API provided by MakerDAO
+
+This approach solves one problem by introducing quite a few others.
+
+#### Security
+
+When the user makes the purchase attempt, the transaction is created with the combined effort of local javascript (Pizza shop javascript) and the supposedly secure javascript supplied by DAI. The user is presented with a transaction payload that contains both the parameters to access DAI contract, e.g. amount to pay, and the parameters to access the Pizza website contract, e.g. amount of pizzas to buy and the toppings of choice. Apparently such a transaction has to be sent to DAI contract and channeled (proxed) to the Pizza shop contract.
+
+There are two immediate[^minor-security-concerns] security concerns. First is that the website didn't use the MakerDAO javascript library correctly, which has the final transaction builder in it. Second is that it is not MakerDAO's javascript at work, but a version replaced by a hacker.
+
+[^minor-security-concerns]: When two systems plug on the web, usually there are a hoard of security concerns. To give one example, if a side didn't update the code to reflect the other side's change, the resulting malformed transaction might be rejected. Tracing these transactions allow an attacker to target websites not updated.
+
+These issues are addressed by the encapsulation method used in TBML.
+
+First, the transaction forming code is signed by MakeDAO separately and updated separately from user-agent side. The website's code doesn't have to be signed because it just supplies the business logic, not payment logic. Say, if a bug is found, DAI can suspend the payment by updating these signed instructions, and the Pizza website would behave as if it has been updated to address the issue. If the bug is found to be in the DAI holding contract, and a replacement contract is deployed, MakerDAO would update TBML and sign it again, without Pizza website having to do anything.
+
+Second, by explicitly asking the user to trust the TBML signed by MakerDAO, the user would not need to trust Pizza website's rendering of the transaction content, since it would be rendered by the trusted MakerDAO TBML.
+
+![A payment using TBML. Notice that the *Complete Order* button is not on the website, but in the TBML token area generated by Dapp browser, where the code to render the transaction is pre-signed.](payment-in-wallet.jpeg)
+
+Third, if secure protocols needs to be added, for example, an attestation from the website (can re-use the SSL certificate) to certify the transaction receiving smart contract, or the smart contract returning explicit trust of the website by domain name, the additional logic can be a combined effort of upgrading the dapp browser's support of new TBML feature and the token issuer's new TBML code, without touching the website.
+
+#### Interoperatibility
+
+Adding support for DAI itself is trouble enough, not to mention adding other payment side tokens. In the 2017-2018 frenzy, a lot of payment side tokens are invented and heavily invested in. Pretty much anything advertised not as a security token outlines some way their token can be used to pay or co-pay some goods and services. Electricity tokens, for example, is invented as the currency of the future tokenised electricity. Most of them are jokes, but what if they are put to work? Even if only 10% of these tokens are done by sincerer ICO teams, all of them would forsee similiar trouble as the integration of DAI token into the market.
+
+And each payment side currency brings its own payment side logic. Take DAI for example, it has these payment side logic:
+
+1. The creation of DAI tokens requires a set-up phase, called CDP.
+2. The risk level of a CDP changes. Users should receive a notification of their CDP is at liquidation risk. We will cover such case again in the next chapter.
+3. If the balance runs low, but the user has quite a bit of Ethers on his/her account, she may pause the checkout to top up before returning to the checkout.
+
+An architect might read it here and decide these can all be done out of band. Just kick the user back to the MakerDAO website if any of these happens. This would not address payment side innovation like Point+Pay, where the points are selected at the same screen as payment. In fact, you can observe a proliferationDictionary of payment side innovations in China for examples:
+
+- Micro-credit (e.g. 花唄) and collatoralised credit
+
+- Points to use when the shopping behaviour matches the encouraged behaviour of micro-credit, e.g. shopping overseas.
+
+- Cashback when you spent more than ¥1000 in a day.
+
+- Red packet that can only be used in paying consumption.
+
+- Lottery on being the 100th, 200th.. 600th payment.
+
+- Free shipping insurance on selected shopping behaviour (e.g. to encourage shoppers to favour drop-shipping as it loses advantage thanks to its slow delivery).
+
+- Prepaid online shopping payment cards, like the Alipay cards sold in Australia Post.
+
+TBML intends to give room for payment side innovation as well as deliverable side. Traditionally, partner support used to curb payment side innovation. American Express implemented points to pay API but after years only less than 5% of partner e-commerce websites provided this as a checkout option.
+
+#### Scalability
+
+The payment and delivery may not be on the same blockchain.
+
+Rendering user's balance in dapp website is briefly mentioned as a privacy issue a few pages back, but as blockchain scales, the dapp's server side may not have equal access to the client on some data like balance. It's possible that the website only observes the result of the transaction and happy to deliver physical or tokenised goods by rules.
+
+It's unlikely any scalability plan will not involve the participation of dapp browsers and wallets. They results in situation that dapps could not take care of the payment side with whatever advanced javascript they can supply.
+
+## Address the "Integrate the web" need
+
+We trace the reason that the web is poorly integrated to the only link between the units of the web, i.e. URL links. A link carries no business process, authentication or trust relationship. There are no anchoring points for integration on links.
 
 We believe the token is the anchor points for integration. Again, this is best illustrated by examples.
 
 Suppose a user purchases an iPhone from Harvey Norman, an online retailer, using the blockchain. The input of the transaction will be a type of currency; the output, in this case, will be three tokens:
 
 - a shipping token, which can be used to redeem the product from a local pick-up station.
+
 - a warranty token, issued by Apple, which allows the iPhone to be serviced in shops other than Harvey Norman (e.g. Apple Centre).
+
 - A receipt token, issued by Harvey Norman, which allows the product to be returned in 90 days. It's also useful for getting a Tourism Tax Refund if you want to take the phone out of Australia.
 
 If without tokens as the integration anchor, the three different services might be carried out by various means.
-
----
 
 ### The Shipping Token
 
@@ -464,15 +463,13 @@ With the use of a warranty token, the terms and expiration would be easy to find
 
 ### Receipt Token
 
-Lacking a reliable way to authenticate the purchase, an online purchased product usually cannot be returned to the store but might be returned via online means such as a postback. A token carries the means for authentication sufficient for the process to be done in store.
+Lacking a reliable way to authenticate the purchase, an online purchased product usually cannot be returned to the store but might be returned via online means such as a postback. A token carries the methods for authentication sufficient for the process to be done in store.
 
 Despite such a token not being transferable or authorised, it is still useful for 3rd party integrations.  The Tax office will be satisfied that the receipt can't be faked without collaboration from the seller, and allows a swift and easy tax-refund process. If the phone is purchased for work, the employee can easily reclaim the expense from an employer with the trust implied.
 
-[TODO: Farrah is working on an illustration, should be fit here by 26th Feb.]
+![Purchase with one token, getting three tokens. They can be used to access services, like delivery and repair.](purchase-without-shipment-token.jpeg)
 
----
-
-As we can observe by the use of tokens, normally scattered business processes and web experiences can finally be integrated. This ties closely to the other benefit of the blockchain: a frictionless market. In this example:
+As we can observe by the use of tokens, usually scattered business processes and web experiences can finally be integrated. This ties closely to the other benefit of the blockchain: a frictionless market. In this example:
 
 - When the phone traded is second hand, it would be easy to pass the warranty to the next user through a token transfer, opening the market further.
 
@@ -488,96 +485,11 @@ In this insurance case, the blockchain allowed business process innovation that 
 
 The power of integration is further strengthened by the use of the Internet of Things. Let's imagine a future version of AirBNB, where the bookings are tokenised. A traveller can enter a booked AirBNB house by unlocking the smart-lock with his or her token, and the smart-lock would recognise who the current owner of the booking token is.
 
-If Alice owns a token that represents the right to use a room during a certain time window, or "a booking" in user's terms, then the actions she could perform are:
+If Alice owns a token that represents the right to use a room during a specific time window, or "a booking" in user's terms, then the actions she could perform are:
 
 Check-in - either produce a QR code to verify the booking to the landlord or use an NFC-enabled phone to open a smart-lock.
 
-
-      Singapore Telecom  13:45 31 Jan 2018          4G
-     +-----------------------------------------------+
-
-     +-----------------------------------------------+
-     |  AirBNB Booking                               |
-     |               BELONGS EVERYWHERE               |
-     |                                               |
-     | +-------------------------------------------+ |
-     | |                                           | |
-     | | + Create a new booking                    | |
-     | |                                           | |
-     | +-------------------------------------------+ |
-     |                                               |
-     | +-------------------------------------------+ |
-     | | 31 Jan 2018 á 2 Feb 2018                  | |
-     | |                                           | |
-     | |    92 Elias Road, Singpaore, 519951       | |
-     | |                                           | |
-     | |    2 Bedroom unit, check in after 1pm     | |
-     | +-------------------------------------------+ |
-     |                                               |
-     | +-------------------------------------------+ |
-     | | 2 Feb 2018 á 6 Feb 2018                   | |
-     | |                                           | |
-     | |    9 Lemke Street, Muirhead, NT 0810      | |
-     | |                                           | |
-     | |    3 Bedroom house, self-check in         | |
-     | +-------------------------------------------+ |
-     |                                               |
-     | +-------------------------------------------+ |
-     | | 7 Feb 2018 á 13 Feb 2018                  | |
-     | |                                           | |
-     | |    Unit 1519, 28 Harbour Street, NSW 2000 | |
-     | |                                           | |
-     | |    2 Bedroom unit, checkin after 1pm.     | |
-     | +-------------------------------------------+ |
-     |                                               |
-     +-----------------------------------------------+
-               ◀          ◉         ◼
-
-
-
-
-     Singapore Telecom  13:45 31 Jan 2018          4G
-    +-----------------------------------------------+
-
-    +-----------------------------------------------+
-    |                                               |
-    | AirBNB Booking                                |
-    |                                               |
-    |   92 ELIAS ROAD, SINGAPORE, 519951            |
-    |                                               |
-    | Check-in: 31 Jan 2018 1pm + 6pm                |
-    | Checkout: 2 Feb 2018 10am                     |
-    |                                               |
-    |   Landlord: VeryHappyBunny                    |
-    |                                               |
-    | +--------+ +----+ +--------+ +----+ +-------+ |
-    | |Transfer| |Lend| |Check in| |Sell| |Auction| |
-    | +--------+ +----+ +--------+ +----+ +-------+ |
-    |                                               |
-    |                                               |
-    |   Conversation history                        |
-    |                                               |
-    | +-------------------------------------------+ |
-    | |                                           | |
-    | | You: We are travellers form Australia,    | |
-    | |      Judging from the pictures you have   | |
-    | |      a Veranda?                           | |
-    | |                                           | |
-    | | VeryHappyBunny: A patio actually, you     | |
-    | |              can use it anytime.          | |
-    | |                                           | |
-    | | (You confirmed a booking)                 | |
-    | |                                           | |
-    | | You: Good, we will get there after lunch. | |
-    | |                                           | |
-    | +-------------------------------------------+ |
-    |                                               |
-    |                                               |
-    +-----------------------------------------------+
-
-       ◀          ◉         ◼
-
-
+![AirBnB Token integrates IoT, allowing the token to open a smart-lock.](airbnb.jpeg)
 
 Observing the desirable integration, we can see TBML has to satisfy the following needs:
 
@@ -587,25 +499,9 @@ Observing the desirable integration, we can see TBML has to satisfy the followin
 
 - Allow web functions to be accessed in an action
 
-- Allow the token status to be updated, via a web api or signed message (more on that later).
-
-A combined example.
-
-With the example of the 1% property token, we demonstrated that the blockchain can enable a frictionless market via tokenisation of an asset.
-
-With the case of the AirBNB token, we also showed that tokens can have function integration like opening a smart lock during its booking validity. Let's illustrate an example where both uses are combined - a car token.
-
-------------------
-
-On the one hand, a car is an asset, that can be bought, sold, transferred, auctioned, collaborated and insured, all enabled by blockchain.
-
-On the other hand, a car also has utility. A car's ownership token can convert a blockchain wallet into a car key, with additional functions like graphically representing the car's current location. Authorising someone to access your car, or renting it for profit, would be seamlessly done by signing blockchain transactions or attestations, without passing car keys around.
-
-The following picture illustrates the look of such a car token in the user's wallet:
+- Allow the token status to be updated, via a web API or signed message (more on that later).
 
 # The design of TBML
-
-We talked about the design requirements of TBML and let's step in closer to find out how would it work.
 
 ## Relate tokens to smart contract and tokens to web services
 
@@ -746,144 +642,74 @@ To explain the use case when the *revocation* of an attestation has to happen on
 
 # The components of TBML
 
-## Magic Links
+## Actions
 
-Magic links are simply a signed message for an atomic swap. It facilitates one major function of traditional financial institutions, a function called  "Delivery versus Payment", whereby one party, the buyer, pays in a currency and the other delivers an asset to be purchased. In today's financial world, delivery of physical goods is not a concern of the financial institutions. Once the transaction is done on paper or on a computer, it is considered done. This assumption is built on the trust towards financial institutions.
+We seperate the rendering portion of TBML and the actionable portion. Action refer the things you can do with a token. There are generally either:
 
-(Consider deletion: If, for example, the transaction consists of a loan in the form of currency and a car the loan is used to purchase, then the actual delivery of the car is out of concern, and both the buyer and seller are expected to follow what the computer tells them to do.)
+- Use the token to access to a web service
+- Use the token to control IOT devices
+- Transacte with the token.
 
-## Assets
+All examples of these actions can be found in the car example in the first chapter. For example:
 
-In TBML terminology, an asset is something that can be owned and has value. This is a broad definition and doesn't require, like the financial assets, that an asset produces a return, or is anticipated to.
+Car token's actions:
+
+Unlock
+:   The token has enough credential information to answer a challenge-response from a car in order to unlock it while offline.
+
+Authorise
+:   The user can also authorise another person to use it, sending an authorisation (which is an attestation - see Attestation chapter) as easy as sending an instant message.
+
+Lend
+:   The difference between authorising and lending is the latter also authorises the borrower to use Holden Capped Service and to open the garage gate.
+
+Holden Capped Service token's actions
+
+Book a service
+:   This token allows the user to login to any holden service center and book an appointment.
+
+Check-in
+:   He further uses this token to enter the service station (swipe his mobile to enter the sliding gate).
+
+Pay
+:   By including the Holden Capped Service token in a transaction, the service cost is capped, either on the web through pre-pay or on the POS.
+
+Not all actions are provided by the token. Typically:
+
+Transfer
+:   Provided by a generic token's TBML. You can imagine for example the TBML file of ERC721 allows any conforming tokens to be transferred, and the car token might be one of them. In reality it can hardly be the case because car token's transaction rules usually require attestations, such as the buyer is of the legal age to conduct such a transaction, but even in such cases, the rule might be supplied by a TBML regulating the car trade.
+
+Auction
+:   Provided by an auction market. When the user accesses an auction market, using the same mechanism that allows a token to login to a website, the user's agent (wallet) would show a list of tokens that can enjoy the auction service. If the user trusts the auction market, she can then add its action to all of the supported tokens.
+
+List for sharing
+:   A startup company, let's call it CarNextDoor, offers to manage the process so the car owners can safely list the car for sharing and automatically gets income. Once listed, the car owner will obtain a listing token and has to book his use of his own car through it. In exchange, when he is not using it, the car goes out and earn money for him. Naturally, the action is provided by CarNextDoor, not by Holden.
+
+## Magic links
+
+Magic links are simply a shortcut to an action on a specific asset. It's usually sent to the owner of the asset. It comes with required attestations for a transaction (e.g. an atomic swap).
+
+
+## Attestations
 
 Attestations are like Tokens except that they are not transferable, in the case that a smart contract allows them to be transferred, the original attestation is render invalid after the transfer.  This makes it possible for things like friendship to be defined in a way similar to the token, and therefore, we may as well call such attestations "tokens". A token of friendship would be a signed message from someone, recognising someone else as a friend, and it would be an asset in TBML terminology. Apparently a token of friendship from Michael Jackson can be of high value, especially since he cannot produce any more of these tokens, but even a humble token like "Friend of Weiwu" has some value. It, for example, allows a friend of Weiwu to sign a delivery recipt for him, or allows such a friend to get a mate-rate for signing up in the same dojo Weiwu practises in. There is even a neat trick, which, by using secret sharing protocols, having Weiwu's friendship token allows one to learn common friends shared with Weiwu. Notice that this definition does not require the asset to be a blockchain token, nor that it even exists on the blockchain. More on that in the latter chapter "attestation".
 
 Assets and attestations (tokens in general) can have financial value and utility value.
 
-Examples of Assets with financial value:
+## Assets
 
-Rental....
-
-Airbnb ...
-
-## Actions
-
-Actions are things that can be done to an asset.
-
-Regarding the financial properties of an asset, typical actions are transfer, sell, buy, collateralise, combine (e.g. in the case of cross-collateralization), insure, auction and testify (obtain a signature of someone in order to satisfy certain trading requirements).
-
-The other actions depend much on the utility properties of an asset, however, this varies from one type of asset to another. AirBNB token, for example, would allow a user to open the smart-lock of their AirBNB room at the time it is reserved for. That's probably all the utility you can get from the AirBNB token, but game assets, for example, can be equipped, unequipped, transmuted, transmogrified, enchanted, disenchanted, cursed, purged, socketed, unsocketed, broken-down, recycled, consecrated... Imagination is the limit.
-
-Let's start with fungible tokens, as they are somewhat simpler. In the following screen mock-up, the actions are: "Pay anyone", "Request Payment", "Convert to USD".
-
-
-![Rendering of the sovereign token on a mobile phone. Notice the action buttons.](sovereign.png)
-
-[explains the attestations associated with this token.]
-
-The case with non-fungible tokens are more complicated. Let's continue with the AirBNB example.
-
-
-
-# Examples of TBML
-
----
-Authors note:
+In TBML terminology, an asset is something that can be owned and has value. This is a broad definition and doesn't require, like the financial assets, that an asset produces a return, or is anticipated to.
 
 Examples of assets: crypto kitties, FIFA tickets, right to a bottle of wine, 1% ownership of a house, a piece of armour in a video game or dice in a video game.
 
 Examples of attestations: crypto-kitten vouchers, FIFA ticket redeem coupons, American Express Centurion status, Friendship Tokens (a signed message from Michael Jackson saying that Victor Zhang is a friend) or proof of identity.
 
 
-[The concept of delivery vs payment and how it is useful in both investments and consumption.]
+# Join the game
 
-(This section is in the early draft stage, never mind the clutter)
+The work to define TBML as a specification is a work in progress. We aim to produce a yellow paper of the key methods and considerations and extend it from there. More methods of collaborations are being put to work as you read this draft. For now, the contact points are:
 
-In the traditional financial world, transactions usually involve a currency in exchange of something deliverable.
+weiwu.zhang@alphawallet.com
+james.sangalli@alphawallet.com
+victor.zhang@alphawallet.com
 
-
-In the case that the deliverable is an asset, like a property or security, the transaction is considered done when the paper or computer process is complete. It's unlikely that the property owner will refuse to hand over the keys to the new owner or the company will refuse to share the dividend to an individual subscriber.
-
-
-In the case of purchasing common goods and services, the deliverable will usually be physical. If I buy a printer online, a printer gets delivered home; if I order a massage service, someone shows up at the door. Delivery is an essential part of such transactions, and most payment processors like Paypal would not consider the transaction final unless delivery happened.
-
-
-
-[Picture illustration of payment vs goods and services, and payment vs asset]
-
-
-
-In today's economy, the difference between the two kinds is getting smaller. Goods and services can be investment candidates. Typically, old wine is usually purchased as goods but used as an investment asset. Even services, like hotel reservations, can be bought wholesale and speculated upon. On the other hand, properties like buildings can count towards goods and services in some cases.
-
-
-
-We observe that when a purchase happens, the deliverable is often made up of two components: rights and consumables.
-
-
-
-In the case of purchasing a share of a company, the right to enjoy the dividend is the entire delivery. There is no consumable component of that purchase. In the case of purchasing a BigMac, the consumable is the entire delivery. There is no rights component to that purchase. These are purchases purely for rights and consumables, respectively.
-
-
-
-But most transactions fall between these two kinds.
-
-
-
-Online purchases, for example, are usually either an exchange between currency with a promise to deliver physical goods or the right to pick it up from the local post office, which is a right until redeemed. A ticket is a type of consumable that is always sold as a right because the consumable service is not available at the time of purchase. In these examples, the purchaser obtains a right as the result of the transaction which can later be redeemed for consumables.
-
-
-
-There are other rights than the right to redeem. Most purchases involve a receipt which represents the right to return the goods under specific conditions. Many purchases also involve a warranty, insurance or reward points; which represent, respectively, the services to repair the goods, the right to sell broken products back or the entitlement of a discount in future purchases.
-
-
-
-Even the traditional purchase of an investment asset might have a consumable component.  Sometimes, the shareholders might be okay with goods and services produced by the company as a dividend, which may surpass the dividend in value to them. But that structure, otherwise known as co-op, is usually not practical thanks to the lack of a secondary market for those goods and services.
-
-
-
-Table: examples of purchases and input/output of those purchases
-
-
-
-Typical tokens in an e-commerce setting:
-
-
-
-Delivery Token
-
-- Get a notification when the product is delivered.
-
-- Obtain goods from the collection point.
-
-- Authorise someone else to obtain the goods.
-
-
-
-Invoice Token
-
-- Proof to the tax authority (for a tax deduction), if paid.
-
-- Request payment from the employer
-
-
-
-Receipt Token
-
-- Return or change a faulty product
-
-
-
-Insurance token
-
-- Sell the product back
-
-
-
-Product ownership token
-
-- Access warranties and other services.
-
-- Get notified of updates.
-
-
-(The whole concept can be illustrated in a few examples, e.g. this car token)
