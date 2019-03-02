@@ -173,7 +173,7 @@ Carry trust relationship and business context to 3rd parties
 
 We assert that a descriptive language (TBML) is needed to allow blockchain technology to enable "frictionless markets" and an "integrated web". TBML stands for Token Behaviour Markup Language.
 
-By virtue of TBML being a solution layer rather than base-layer technologies like Ethereum and Plasma, we choose to introduce the technology by example, and provide rich business-context based discussion for a boarder specturm of audience.
+By virtue of TBML being a solution layer rather than base-layer technologies like Ethereum and Plasma, we choose to introduce the technology by example and provide rich business-context based discussion for a broader spectrum of audience.
 
 ## Address "Frictionless Market" needs
 
@@ -188,7 +188,7 @@ payment
 market
 :    Market is where delivery versus payment happens. *Market* is an concept, not a marketplace. A user who checks out on a website is accessing a market. She doesn't have to be in a marketplace (e.g. Amazon) to do so.
 
-TMML provides both *the deliverable* and *the payment* side tokens to "plug-in" to the *market*. 
+TBML provides both *the deliverable* and *the payment* side tokens to "plug-in" to the *market*. 
 
 Such a framework is essential for tokens to be presented, indexed, transacted, traded, auctioned, combined... to work towards a frictionless market.
 
@@ -220,9 +220,9 @@ A buyer needs to know quite a bit of information. It's easy to understand that s
 
 Specific to blockchain, we also have:
 
-10. How to correctly and securely construct a transaction for the assiet (purchase, voting etc)
+10. How to correctly and securely construct a transaction for the asset (purchase, voting etc)
 
-We categorise these trade-sensitive information into three categories:
+We categorise these trade-sensitive information into four categories:
 
 - product description[^pd]. Item 2, 3, 5, 6 are in PD
 - attested information. Item 1, 4, 6, 7 are in Attestations.
