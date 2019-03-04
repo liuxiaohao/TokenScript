@@ -267,12 +267,12 @@ This simplified `attribute-type` code snippet allows the value for Voting Right 
 
 #### Attested information
 
-Attestation is just a signed message stating a fact. Attestations are often used to satify the conditions of the transactions. More on that in the chapter Attestations.
+Attestation is just a signed message stating a fact. Attestations are often used to satisfy the conditions of the transactions. More on that in the chapter Attestations.
 
 In the 1% property token example, the involved attestations are:
 
 - by identity authority and title deeds office, to attest the issuer's ownership of the property.
-- by collatorisation authority[^set-operation] to prevent double collatorisation
+- by collateralization authority[^set-operation] to prevent double collateralization
 - by buyers, for providing identity or capacity to invest in this type of asset
 
 [^set-operation]: Eventually, this could be a cryptographic set operation, but even if that happens, the metadata directing the context (user-agent) to proform the computation still needs to be described in TBML.
@@ -326,7 +326,7 @@ In a similar fashion, suppose an investors' forum where the members are allowed 
 
 Horizontally, the same type of asset might have its token instances across multiple networks like Plasma Chains. A buyer is likely to be interested only in assets in Australia, and therefore only connected to the Australian 1% Property network. It can be difficult to have an all-knowing node to provided rendered token information for all existing tokens, especially if a network is designed with privacy in mind. Therefore, to scale, the knowledge about the token (TBML) must be detached from the access to the token.
 
-Vertically - by speaking *vertical*, we mean to build upward, to building structured transactions using a token transaction or creating structured tokens on top of a token. Such transaction and token access the component tokens. For example, if we desire a token whose makeup is a 1% property token from a sample of 100 global cities, for mid-size investors to distribute the risk, a system that can manipulate such a token must be built with the knowledge about member tokens. It again cannot depend on the availability, security and openness of the original Dapp tied to that asset. TBML would work in the middle for the making of such tokens.
+Vertically - by speaking *vertical*, we mean to build upward, to building structured transactions using a token transaction or creating structured tokens on top of a token. Such transaction and token access the component tokens. For example, if we desire a token whose make up is a 1% property token from a sample of 100 global cities, for mid-size investors to distribute the risk, a system that can manipulate such a token must be built with the knowledge about member tokens. It again cannot depend on the availability, security and openness of the original Dapp tied to that asset. TBML would work in the middle for the making of such tokens.
 
 If we follow the example of Peter's Pride Property website as a Hello World example, it might need the user to submit a transaction not only purchase a token, but also tips Peter in the meanwhile. If only the token's issuer's DAPP knows how to assemble a token purchase transaction, this will be impractical for Peter.
 
@@ -375,7 +375,7 @@ To the user, the process resembles a bit like the checkout processs leads the us
 We again argue that current prevailing method is not suitable for creati
 ng a frictionless market, while TBML could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
 
-As concluded, Pizza website would not have the necessary payment side logic to handle everything on its own. The traditional approach is to let the Pizaa website use the javascript sourced by MakerDAO project. The javascript may or may not use a RESTful API provided by MakerDAO
+As concluded, Pizza website would not have the necessary payment side logic to handle everything on its own. The traditional approach is to let the Pizza website use the javascript sourced by MakerDAO project. The javascript may or may not use a RESTful API provided by MakerDAO
 
 This approach solves one problem by introducing quite a few others.
 
@@ -397,7 +397,7 @@ Second, by explicitly asking the user to trust the TBML signed by MakerDAO, the 
 
 Third, if secure protocols needs to be added, for example, an attestation from the website (can re-use the SSL certificate) to certify the transaction receiving smart contract, or the smart contract returning explicit trust of the website by domain name, the additional logic can be a combined effort of upgrading the dapp browser's support of new TBML feature and the token issuer's new TBML code, without touching the website.
 
-#### Interoperatibility
+#### Interoperability
 
 Adding support for DAI itself is trouble enough, not to mention adding other payment side tokens. In the 2017-2018 frenzy, a lot of payment side tokens are invented and heavily invested in. Pretty much anything advertised not as a security token outlines some way their token can be used to pay or co-pay some goods and services. Electricity tokens, for example, is invented as the currency of the future tokenised electricity. Most of them are jokes, but what if they are put to work? Even if only 10% of these tokens are done by sincerer ICO teams, all of them would forsee similiar trouble as the integration of DAI token into the market.
 
@@ -409,7 +409,7 @@ And each payment side currency brings its own payment side logic. Take DAI for e
 
 An architect might read it here and decide these can all be done out of band. Just kick the user back to the MakerDAO website if any of these happens. This would not address payment side innovation like Point+Pay, where the points are selected at the same screen as payment. In fact, you can observe a proliferationDictionary of payment side innovations in China for examples:
 
-- Micro-credit (e.g. 花唄) and collatoralised credit
+- Micro-credit (e.g. 花唄) and collateralized credit
 
 - Points to use when the shopping behaviour matches the encouraged behaviour of micro-credit, e.g. shopping overseas.
 
