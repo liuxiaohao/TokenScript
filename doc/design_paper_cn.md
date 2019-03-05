@@ -4,7 +4,7 @@
 ## Author's note
 
 在2017-2018区块链发生了非常引人注目的投机活动把我们的注意集中到了加密token上。当我们买卖它们时，我们甚至忘记了它们真正的用途; 这类似于房地产泡沫，人们忘记了房屋不仅仅是投机资产，而是居住的地方。
-The remarkable blockchain speculations that took place in 2017 - 2018 brought our attention to crypto tokens. As we bought and sold them, we forgot their intended purpose was to be used; this is analogous to the housing bubble in which people forgot that houses were not merely speculative assets but rather a place to live.
+The remarkable blockchain speculations that took place in 2017 - 2018 brought everyone's attention to crypto tokens. As we bought and sold them, we forgot their intended purpose was to be used; this is analogous to the housing bubble in which people forgot that houses were not merely speculative assets but rather a place to live.
 
 为了给区块链提供实际的用途，我们必须了解他对世界经济和互联网的作用。这篇文章的作者是对金融机构和初创公司进行了长期的学习和探索的技术专家。凭借这些经验，我们逐步意识到区块链有两个主要的功能，我们将在本文中进一步阐述。
 To provide a practical use of the blockchain, we must understand its utility to the world economy and the internet. The authors of this paper are technical experts who went through years of study and exploration into its applications both via financial institutions and startups. With this experience, we came to realise that the blockchain has **two primary functions** which we will elaborate further in this paper.
@@ -18,9 +18,9 @@ Previous efforts in this industry primarily focused on enriching the capacity of
 就像房子是用来住的一样。
 Just like a house providing a place to live.
 
-## Advertisement
+## Join the game
 
- Please join our work at xxx. A yellow paper will be produced to guide implementors to use TBML for their tokens and dapps, but a work in progress is always available online.
+Please join our work at xxx. A Yellow Paper to guide implementors to use TBML for their tokens and dapps will take months to make, but a work in progress is always available online. Participate now to avoid the draft language specification being made without consideration your token model.
 
 
  \pagebreak
@@ -29,52 +29,35 @@ Just like a house providing a place to live.
 # Introduction: What does blockchain *do*?
 \pagebreak
 
-
-区块链主要有两种功能，这两个功能能够改变人与人之间的交互和商业行为.很不幸的是这两个功能都在早期的投机游戏中被忽视了。
-There are two primary functions of blockchains that can change the way human interacts and business conducts. Both were neglected amidst the unfortunate speculative games in the early days of Blockchain.
-
-正如我们即将阐述的，第一个是创造完全市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)的能力。第二个是集成网络的能力。
-As we will soon elaborate, the first is the capacity to create frictionless markets. The second is the capacity to integrate the web.
-
-本文将从愿景开始，然后解释架构师需要在区块链上架构的原因,接下来关注一个使这个架构成为可能的关键技术，我们把它叫做TBML。
-This paper is going to start with the vision, then, reason the architect needed on top of blockchains, then focus on a critical layer of technology that enables this architect to be possible, which we name TBML.
-
-在2017-2018区块链发生了非常引人注目的投机活动把我们的注意集中到了token上。当我们买卖token的时候，我们忘记了它的用途。就好像罐头沙丁鱼变成了一种投机资产，人们对罐头沙丁鱼是用来吃的想法不屑一顾。
-The remarkable blockchain speculations took place in 2017 - 2018 brought our attention to tokens. As we buy and sell tokens, we forgot that it was intended to be used. It was like when canned sardines became a speculative asset, people brush off the idea that it was made to eat.
-
-尽管存在令人遗憾的投机泡沫，但专注于token并不是错误的，因为它是我们将阐述的两个主要功能的推动者：
-Despite the unfortunate speculative bubble, it's not wrong to focus on tokens, as it is the enabler of the two primary functions we will elaborate:
-
-介绍
-## Introduction
-
-区块链技术提供 **两种主要功能** 为未来经济和未来互联网提供基本用途：
+区块链技术具有**两个主要功能**，为未来的经济和互联网提供基本功能：
+ - 提供完全市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)
+ - 整合网络。
 Blockchain technology has **two primary functions** that serve essential purposes for the future economy and the future Internet:
-
- - 提供完全市场; 
- - 集成网络。
 - providing a frictionless market; and
 - integrating the web.
 
-本文将阐述我们的目标，并且了解区块链顶层架构背后的设计和推理。 然后，我们将解释TBML，这是一个关键的缺失层，接下来回顾其设计原则和了解我们将如何构建它。
+本文将从愿景开始，然后解释架构师需要在区块链上架构的原因,接下来关注一个使这个架构成为可能的关键技术，我们把它叫做TBML。
 This paper will address the vision of where we can be and follow up with the design and reasoning behind the architecture needed on top of the blockchain. We will then explain TBML which is a critical missing layer and go over its design principles and how we are building it.
+
 
 ## 区块链提供了一个完全市场
 ## Blockchain provides a frictionless market
 
 上个世纪80年代的“回到未来”描绘了一个强大的机械世界，悬浮滑板，飞行汽车。但是他们并没发生。正如彼得·泰尔曾经注明的哀叹，“我们曾经承诺能飞的汽车，结果只得到140字符。但是我们时代的技术进步依旧超出了80年代科幻电影的想象，尽管不是通过更强大的机器，而是有效利用互联网。
-The 80s' "Back to the Future" featured a world of powerful machines filled with hovering boards and flying cars. It didn't happen. As Peter Thiel once famously lamented, "we were promised flying cars; instead, we got 140 characters". The technological advancement of our time is beyond the imagination of the 80s science fiction movies, albeit not through more powerful machinery, but efficient use of  the  Internet.
+The 80s' "Back to the Future" featured a world of powerful machines filled with hovering boards and flying cars. It didn't happen. As Peter Thiel once famously lamented, "we were promised flying cars; instead, we got 140 characters". The technological advancement of our time is beyond the imagination of the 80s science fiction movies, albeit not through more powerful machinery, but efficient use of the Internet.
 
-共享汽车改变了人们的出行方式，，airbnb改变了我们旅行的方式。这个是一个全新的，摩擦更小的市场市场，它们的运营成本更低，更易于使用，并且拥有更精细的运行单位。
+共享行程彻底改变了我们的日常生活，airbnb改变了我们旅行的方式。这个是一个全新的，摩擦更小的市场市场，它们的运营成本更低，更易于使用，并且拥有精细的运行单位。
 Ride-sharing transformed the way people get around, and AirBNB changed the way we travel. These are the new, less frictional markets. They incur less cost to operate, are more accessible and have finer operational units.
 
 然而，尽管进行了Web 2.0革命，大多数市场仍然以高成本运营。例如，股票市场由于依靠对于规章制度的信任来运作，开销非常大，它只适合价值数百万美元的商业。
-However despite this web 2.0 revolution, the majority of markets still operate with high costs. The stock market, for example, has so much overhead that it is only justifiable for multi-million dollar businesses which rely on the trust of rules and regulations to operate.
+However, despite this web 2.0 revolution, the majority of markets still operate with high costs. The stock market, for example, has so much overhead that it is only justifiable for multi-million dollar businesses which rely on the trust of rules and regulations to operate.
 
 使用区块链，任何token化的资产都可以随时进行交易，只要遵循规则，没有中间商或中间人，给我们提供最大的市场效率-一个完全市场。除了不依赖中间商之外，在token化的市场模型中，买方和卖方不在需要”进入“市场。相反，token总是在市场上【*市场模型】，这样的模型当然比中间商更好
-With blockchain, any tokenised asset can be transacted any time, as long as it follows the rules, without middlemen or intermediary, gives us maximum market efficiency - the frictionless market. On top of the benifits of not relying on an intermediary, in a tokenised market model, the buyers and sellers do not need to "enter" the market; instead, tokens are *always on the market*[^market-model], making such a model better than intermediaries.
+With blockchain, any tokenised asset can be transacted any time, as long as it follows the rules, without middlemen or intermediary, gives us maximum market efficiency - the frictionless market. On top of the benefits of not relying on an intermediary, in a tokenised market model, the buyers and sellers do not need to "enter" the market; instead, tokens are *always on the market*[^market-model], making such a model better than intermediaries.
 
 【*市场模型】: 传统的中介操作市场模式，交易分为两个阶段：进入市场，达成交易。 区块链可以将其简化为协议; 因此，区块链token资产可以被视为始终在市场上。
+
+[^market-model]: With the traditional intermediary-operated market model, a trade is made in two stages: entering the market, making a deal. Blockchain can simplify that into a protocol; therefore the blockchain token assets can be considered always on the market.
 
 我们能够通过token化创造完全市场吗？
 ### Can we create a frictionless market through tokenisation?
@@ -706,6 +689,23 @@ Rendering user's balance in dapp website is briefly mentioned as a privacy issue
 任何可扩展性计划都不太可能不涉及dapp浏览器和钱包的参与。 他们使得dapps使用他们可以提供的任何高级JavaScript来处理付款方面的情况。
 It's unlikely any scalability plan will not involve the participation of dapp browsers and wallets. They results in situation that dapps could not take care of the payment side with whatever advanced javascript they can supply.
 
+## Address the "Integrate the web" need
+
+We trace the reason that the web is poorly integrated to the only link between the units of the web, i.e. URL links. A link carries no business process, authentication or trust relationship. There are no anchoring points for integration on links.
+
+We believe the token is the anchor points for integration. Again, this is best illustrated by examples.
+
+Suppose a user purchases an iPhone from Harvey Norman, an online retailer, using the blockchain. The input of the transaction will be a type of currency; the output, in this case, will be three tokens:
+
+- a shipping token, which can be used to redeem the product from a local pick-up station.
+
+- a warranty token, issued by Apple, which allows the iPhone to be serviced in shops other than Harvey Norman (e.g. Apple Centre).
+
+- A receipt token, issued by Harvey Norman, which allows the product to be returned in 90 days. It's also useful for getting a Tourism Tax Refund if you want to take the phone out of Australia.
+
+If without tokens as the integration anchor, the three different services might be carried out by various means.
+
+### The Shipping Token
 需要解决“集成网络”
 ## Address the "Integrate the web" need
 
