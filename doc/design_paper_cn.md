@@ -18,16 +18,17 @@ Previous efforts in this industry primarily focused on enriching the capacity of
 就像房子是用来住的一样。
 Just like a house providing a place to live.
 
-## Join the game
+##加入游戏
 
+请加入我们在xxx的工作。 一份指导实施者使用TBML作为其代币和dapps的黄皮书将花费数月时间来制作，但正在进行的工作总是在线提供。 现在参与以避免草案语言规范没有考虑到您的token模型。
+
+## Join the game
 Please join our work at xxx. A Yellow Paper to guide implementors to use TBML for their tokens and dapps will take months to make, but a work in progress is always available online. Participate now to avoid the draft language specification being made without consideration your token model.
 
 
- \pagebreak
 
-
+# 简介：区块链 *能做什么*?
 # Introduction: What does blockchain *do*?
-\pagebreak
 
 区块链技术具有**两个主要功能**，为未来的经济和互联网提供基本功能：
  - 提供完全市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)
@@ -77,8 +78,8 @@ Can we tokenise the risk and reward of international trades, so that small impor
 我们是否能够token化依赖于加密证明的保单，以便保险公司减少处理欺诈性文件的成本，我们可以完全去中心化保险公司吗？
 Can we create an insurance token that depends on cryptographic proofs, so that the insurer can remove from their pricing, the costs incurred by fraudulent documents? Can we decentralise the insurers altogether?
 
-区块链可以提供基础层来实现这些。为了定义token应该如何被使用和交易，仍然在可扩展性，隐私方面仍需要完成很多工作。但是我们认为最大的挑战在于token化。
-Blockchain can provide the foundational layer to achieve these. A lot of work needs to be done to ensure scalability, privacy and quality methods to define how tokens should be used and traded, but we see the biggest hurdle lies in tokenisation.
+区块链可以提供基础层来实现这些。虽然区块链的可扩展性和隐私性将得到提高，但一个有效的，无摩擦的市场也依赖于有质量的方法来定义如何使用和交易token - 这是我们TBML工作的重点。
+Blockchain can provide the foundational layer to achieve these. While blockchain scalability and privacy will improve, a working, frictionless market also depends on quality methods to define how tokens should be used and transacted - the focus of our work on TBML.
 
 token具有不同的属性。token是否会过期？ AirBNB预订token当然会，但1％的房产token可能不会。token所有者是否应收到有关特定事件的通知，电力token肯定需要，因为电力是不断变化的。token是否流通？
 Tokens have different properties. Do tokens expire? AirBNB booking tokens certainly do, but 1% ownership of property tokens probably don't. Should the token owner receive a notification on a specific event? Power tokens certainly need that, for the change in the power supply is dynamic. Is a token stream-able?
@@ -92,8 +93,12 @@ If a buyer wants to purchase a tokenised country estate from a seller, how do th
 如果token允许用户在线执行特定操作，用户如何使用token登录特定web服务。
 If a token entitles the user to do specific actions online, how can the user login to the web services with that token?
 
-很容易看出需要一个定义token的框架，让他们适应不同的交易，上市以及评级。我们确实在我们确实在2017-2018期间拥有数百种token，但是他们在同一支付方面-类似货币，ERC20 token。 几乎没有让token在代表 *商品和服务*上做任何努力，这个是一个有效市场的基本需求。
-It's easy to see the need for a framework defining tokens and making them interoperable with different methods of trading, listing and rating. We did end up having hundreds of tokens in 2017-2018, but they are uniformly on the payment side - currency-like, ERC20 tokens. There is nearly zero effort devoted to making tokens represent *goods and services* - a basic need for an efficient market.
+很容易看出需要一个定义token的框架，让他们适应不同的交易，上市以及评级。我们确实在我们确实在2017-2018期间拥有数百种token，但是他们在同一支付方面-类似货币，ERC20 token。 几乎没有让token在代表 *商品和服务*上做任何努力，这个是一个可交付的市场运作的基本需求。
+It's easy to see the need for a framework defining tokens and making them interoperable with different methods of trading, listing and rating. We did end up having hundreds of tokens in 2017-2018, but they are uniformly the currency-like, ERC20 tokens, filling up the payment side of the market[^payment]. There is nearly zero effort devoted to making tokens represent *goods and services* - the deliverable side of market and a fundamental need for a market to work.
+
+
+[^ payment]：在后面的章节中，我们将token分类为付款token和可交付token。 带有*支付代币*标志的ERC20代币只能用tokens填充市场的一面，因此无法提升市场。
+[^payment]: In the later chapters we will categorise tokens as payment tokens and deliverable tokens. ERC20 tokens bearing the hallmarks of *payment tokens* only filles one side of market with tokens, therefore can't lift a market.
 
 举个例子，在2017年的投机泡沫期间，电力token的ICO不需要提供关于如何使用token的任何解释。 所有投机需要知道的是，它们代表了“未来的电力token”。 只要token可以满足投资者的想象力，这对ICO来说就足够了。 因此，除了ERC20接口之外，他们没有任何其他功能。 对于这样的投机电力token来说，它不依赖任何证据，如实际发电量的证明，没有在哪儿提供电力的属性，以及可用的时间长短。
 During the speculative bubble of 2017, a power token ICO does not need to provide any explanation of how the tokens can be used. All speculators need to know is that they represent a "stake in the future world of tokenised electricity". As long as the token can inspire investors with imagination, it's good enough for an ICO. There is, no more functionality needed other than an ERC20 interface. Such a speculative token doesn't depend on attestations - the proof of actual power production - nor does it need properties like where the energy is provided or for how long it is available.
@@ -120,9 +125,9 @@ Therefore the web was built as a giant library where each book is a computer wit
 This design has caused a lot of modern inconveniences. A user would one day receive an email on her monthly statement, yet she couldn't recognise a few entries on them. It says "Amazon". Was it about ordering a pair of shoes? She has to copy the order number and look it up in Amazon. In another occasion, the same user might pause as she books two tickets for an opera, switch to her frequent flyer app, copy that number over and paste it into the order to collect the points. She might struggle a bit installing that frequent flyer app at the outset.
 
 我们为什么要做这么多的复制和粘贴，这些机器特别擅长的动作。因为网络就像一个图书馆设计，我们就像读者一样在袖子上面记录索引号。他们并不像个人助理一样设计。
-Why are we doing so much copy and pasting when machines are exceptionally good at doing this? It's because the web is like a giant library by design, and we are like readers keeping notes of the index numbers under our sleeves. It's not, as we would hope to have, designed like a personal assistant.[^smart-phone]
+Why are we doing so much copy and pasting when machines are exceptionally good at doing this? It's because the web is like a giant library by design, and we are like readers keeping notes of the index numbers under our sleeves. It's not, as we would hope to have, designed like a personal assistant..[^pda]
 
-[^智能手机]：令人惊讶的是，即使是为了充当个人助理（智能手机）的角色而发明的技术仍然失败了，原因同样如此：单靠客户端的努力无法集成网络。必须在基础设施上支持集成， 智能手机的模型类似于拨号互联网连接，每个应用程序代表一个网站。 在进入对话之前，用户仍然需要找出要与之通话的计算机（app），并且在他交换应用程序时仍然可以复制信息。 例如，要求您的智能手机通过在线银行的app汇总你所有的资金是不可能的。
+[^pda]：令人惊讶的是，即使是为了充当个人助理（智能手机）的角色而发明的技术仍然失败了，原因同样如此：单靠客户端的努力无法集成网络。必须在基础设施上支持集成， 智能手机的模型类似于拨号互联网连接，每个应用程序代表一个网站。 在进入对话之前，用户仍然需要找出要与之通话的计算机（app），并且在他交换应用程序时仍然可以复制信息。 例如，要求您的智能手机通过在线银行的app汇总你所有的资金是不可能的。
 [^smart-phone]: Surprisingly, even the technology that was created to fill the role of a personal assistant, the Smart Phone, still failed, for the same reason: the efforts from client side alone can't integrate a Web that is not designed to integrate. The infrastructure has to support integration. A smartphone is modelled like a dial-up Internet connection, with each app representing a website. The users still need to figure out which computer (app) to talk to before entering the conversation, and still copies information around as he swaps apps around. It's not possible, for example, to ask your smartphone to sum up all the money one may access by his online banking apps.
 
 很容易就能看出造成不便的原因：不同的网络之间没有更好的集成。继续举几个不好的例子；
@@ -183,71 +188,21 @@ Tokens seamlessly go across systems, carries their trading rules and user interf
 ## 例子：汽车所有权通知
 ## Example: Car Ownership Token
 
-下面是一个例子：汽车所有权通知，已经成功token化
-The following example, a car ownership token, is a successfully tokenised .... [Edit: explain the elements]
+我们将概括这两个概念：通过token化资产的无摩擦市场; 通过使用toen作为Web服务的集成点来集成Web。 我们将演示一个包含两个概念的示例：汽车token。
 
-    +----------------------------------------------------------+
-    |                                                          |
-    |          Holden Barina 2012 Ownership Token              |
-    |                                                          |
-    |          Make: Holden Year: 2013  Colour: Black          |
-    |          VIN: KL3TA48E9EB541191                          |
-    |                                                          |
-    | +--------+  +--------------------+  +------------------+ |
-    | | Open   |  | Authorise use      |  | List for sale    | |
-    | +--------+  +--------------------+  +------------------+ |
-    |                                                          |
-    | +--------+  +--------------------+  +------------------+ |
-    | | Start  |  | Lend               |  | Auction          | |
-    | +--------+  +--------------------+  +------------------+ |
-    |                                                          |
-    | +--------+  +--------------------+  +------------------+ |
-    | | Lock   |  | Transfer Ownership |  | Collateralise    | |
-    | +--------+  +--------------------+  +------------------+ |
-    |                                                          |
-    | +--------+                          +------------------+ |
-    | | Locate |                          | List for sharing | |
-    | +--------+                          +------------------+ |
-    |                                                          |
-    |               Registration:                              |
-    |                                                          |
-    |               +------------------------------------+     |
-    |               |                                    |     |      +-----------------------------+
-    |               | Issuer: Roads & Maritime Services  |     |      |                             |
-    |               | Rego: CJ41HL   Expiry: 2017+12+03  |     |  +-> | Access rego attestation     |
-    |               |                                    |     |      |                             |
-    |               +------------------------------------+     |      +-----------------------------+
-    |                                                          |
-    |               Holden Capped Service                      |
-    |                                                          |
-    |               +------------------------------------+     |
-    |               |                                    |     |
-    |               | Issuer: Holden Australia           |     |      +-----------------------------+
-    |               | Expiry: 2020-12-09                 |     |      |                             |
-    |               | Last served: 180 days ago          |     |  +-> | Access Invoice Token        |
-    |               |             (due for a service)    |     |      |                             |
-    |               |                                    |     |      +-----------------------------+
-    |               +------------------------------------+     |
-    |                                                          |
-    |               Insurance                                  |      +------------------------------+
-    |                                                          |      |                              |
-    |               +------------------------------------+     |      | Access insurance token       |
-    |               |                                    |     |      | functions:                   |
-    |               | Issuer: Qantas Car Insurance       |     |  +-> |                              |
-    |               | Start Date: 2017 12 30             |     |      | · Claim                      |
-    |               |                                    |     |      | · Lump sum discount payment  |
-    |               +------------------------------------+     |      | · Upgrade / downgrade        |
-    |                                                          |      | · Suspend policy             |
-    |               Purchase:                                  |      | · Access Roadside Assistance |
-    |                                                          |      |                              |
-    |               +------------------------------------+     |      +------------------------------+
-    |               |                                    |     |
-    |               | Issuer: Manheim Auctions           |     |
-    |               | Date: 2015+12+09   Price: $4724.83 |     |
-    |               |                                    |     |
-    |               +------------------------------------+     |
-    |                                                          |
-    +----------------------------------------------------------+
+We will comine the two concepts: frictionless market, achieved by tokenising assets; integrate the web, by using token as integration point for web services. We will demonstrate an example that encompasses both concepts: car token.
+
+一方面，汽车是一种token化的资产，可以通过区块链来购买，出售，转让，拍卖，合作和投保。
+On the one hand, a car is a tokenised asset, that can be bought, sold, transferred, auctioned, collaborated and insured, all enabled by blockchain.
+
+另一方面，汽车也有实用性。 汽车的所有权token可以将区块链钱包转换为汽车钥匙，其他功能如图形化表示汽车的当前位置。 授权某人访问您的汽车或租用它以获取利润，可以通过签署区块链交易或证明无缝地完成，而无需传递车钥匙。
+On the other hand, a car also has utility. A car's ownership token can convert a blockchain wallet into a car key, with additional functions like graphically representing the car's current location. Authorising someone to access your car, or renting it for profit, would be seamlessly done by signing blockchain transactions or attestations, without passing car keys around.
+
+以下汽车token的屏幕截图代表了令牌化的最后阶段。
+The following screenshot of a car token represents the final stage of tokenisation.
+
+[汽车token。 四个token：Rego，上限服务，保险和购买，要么是相关的，要么与汽车所有权token有关。
+![A car token. Four tokens: Rego, Capped Service, Insurance and Purchase, either depeneds or relates to the car ownership token.](car-token.jpeg)
 
 咋一看，它只是一个便利的能够做关于汽车所有事情的门户网站，包括市场功能和实用程序。然而传统的网络模型是不可行的。
 At first glance, it is just a handy portal to do everything about the car, including market functions and utility. However, it's not possible with the traditional web model.
@@ -306,7 +261,7 @@ Carry trust relationship and business context to 3rd parties
 We assert that a descriptive language (TBML) is needed to allow blockchain technology to enable "frictionless markets" and an "integrated web". TBML stands for Token Behaviour Markup Language.
 
 由于TBML是一个解决方案层，而不是像以太坊和等离子(译者注：一种以太坊的二层扩容框架)这样的基础层技术，我们选择通过实例介绍该技术，并为观众的观众提供丰富的商业环境讨论。
-By virtue of TBML being a solution layer rather than base-layer technologies like Ethereum and Plasma, we choose to introduce the technology by example, and provide rich business-context based discussion for a boarder specturm of audience.
+By virtue of TBML being a solution layer rather than base-layer technologies like Ethereum and Plasma, we choose to introduce the technology by example and provide rich business-context based discussion for a broader spectrum of audience.
 
 ## 地址 完全市场的需求
 ## Address "Frictionless Market" needs
@@ -688,24 +643,6 @@ Rendering user's balance in dapp website is briefly mentioned as a privacy issue
 
 任何可扩展性计划都不太可能不涉及dapp浏览器和钱包的参与。 他们使得dapps使用他们可以提供的任何高级JavaScript来处理付款方面的情况。
 It's unlikely any scalability plan will not involve the participation of dapp browsers and wallets. They results in situation that dapps could not take care of the payment side with whatever advanced javascript they can supply.
-
-## Address the "Integrate the web" need
-
-We trace the reason that the web is poorly integrated to the only link between the units of the web, i.e. URL links. A link carries no business process, authentication or trust relationship. There are no anchoring points for integration on links.
-
-We believe the token is the anchor points for integration. Again, this is best illustrated by examples.
-
-Suppose a user purchases an iPhone from Harvey Norman, an online retailer, using the blockchain. The input of the transaction will be a type of currency; the output, in this case, will be three tokens:
-
-- a shipping token, which can be used to redeem the product from a local pick-up station.
-
-- a warranty token, issued by Apple, which allows the iPhone to be serviced in shops other than Harvey Norman (e.g. Apple Centre).
-
-- A receipt token, issued by Harvey Norman, which allows the product to be returned in 90 days. It's also useful for getting a Tourism Tax Refund if you want to take the phone out of Australia.
-
-If without tokens as the integration anchor, the three different services might be carried out by various means.
-
-### The Shipping Token
 需要解决“集成网络”
 ## Address the "Integrate the web" need
 
