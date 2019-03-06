@@ -2,18 +2,37 @@
 
 ## 作者注
 ## Author's note
-
-在2017-2018区块链发生了非常引人注目的投机活动把我们的注意集中到了加密token上。当我们买卖它们时，我们甚至忘记了它们真正的用途; 这类似于房地产泡沫，人们忘记了房屋不仅仅是投机资产，而是居住的地方。
+在2017-2018区块链发生了非常引人注目的投机行为把我们的注意集中到了加密token上。当我们交易时，我们甚至忘记了它们真正的用途; 就像房地产泡沫，一昧的把房屋当作投机资产，忘记了这是居住的地方。
 The remarkable blockchain speculations that took place in 2017 - 2018 brought everyone's attention to crypto tokens. As we bought and sold them, we forgot their intended purpose was to be used; this is analogous to the housing bubble in which people forgot that houses were not merely speculative assets but rather a place to live.
 
-为了给区块链提供实际的用途，我们必须了解他对世界经济和互联网的作用。这篇文章的作者是对金融机构和初创公司进行了长期的学习和探索的技术专家。凭借这些经验，我们逐步意识到区块链有两个主要的功能，我们将在本文中进一步阐述。
-To provide a practical use of the blockchain, we must understand its utility to the world economy and the internet. The authors of this paper are technical experts who went through years of study and exploration into its applications both via financial institutions and startups. With this experience, we came to realise that the blockchain has **two primary functions** which we will elaborate further in this paper.
+为了让区块链提供实际的用途，我们必须了解他对世界经济和互联网的作用。这篇文章的作者是对金融机构和初创公司进行了长期的学习和探索的技术专家。凭借这些经验，我们逐步意识到区块链有两个主要的功能，将在下文中进一步阐述。
+To provide a practical use of the blockchain, we must understand its utility to the world economy and the internet. The authors of this paper are technical experts who went through years of study and exploration into its applications both via financial institutions and startups. With this experience, we came to realise that the blockchain has **two primary functions**：
 
-尽管过去的2017-2018年非常愚蠢，但是开始对于token的关注并不是坏事。token，作者即将详细阐述的，将是两个主要功能的推动者。我们将定义实现“token化”的技术。
+ - 提供完全市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)
+ - 集成网络
+- providing a frictionless market; and
+
+- integrating the web
+
+尽管2017-2018年发生了很多蠢事，但是这对于token获得一开始的关注并不是坏事。token，作者即将详细阐述的，将是两个主要功能的推动者。我们将定义并实现“token化”的技术。
 Despite the great folly in 2017-2018, it is not a bad thing to initially focus on tokens. Tokens, as the authors will elaborate, are the enabler of the two primary functions. We define the technique to make it happen in "Tokenisation".
 
-区块链行业一起的努力主要集中在丰富技术能力上。这篇文章将集中在token化，并且介绍一个称作TBML的标准化工作（token行为标记语言，它将使区块链技术具备完整的技术堆栈，为经济和互联网提供实用性。
+区块链行业共同的努力主要是集中在丰富技术能力上。这篇文章将集中在token化，并且介绍一个称作TBML的标准化工作（token行为标记语言，它将使区块链技术具备完整的技术堆栈，为经济和互联网提供实用性。
 Previous efforts in this industry primarily focused on enriching the capacity of the technology. This paper will focus on tokenisation and introduce a standardisation effort known as TBML (Token Behaviour Markup Language) which will make the blockchain technical stack complete, providing utility for the economy and the internet.
+
+
+Please join our work at tokenscript.org - when it is set-up of course. A Yellow Paper to guide implementors to use Tokenscript for their tokens and dapps will take months to make. However, we keep the process open. Participate now to avoid the draft language specification being made without consideration your token model.
+
+
+## Abstract
+
+We recognise the blockchain technology's utility in providing a frictionless market and integrating the web. This is done through tokenization. Tokenized rights can be traded on the market and integrated across systems, forming a frictionless market and allowing free integration.
+
+
+Today, the way tokens are accessed, rendered and transacted are scattered across Dapps and Smart Contracts. If all knowledge about a token is in a dapp, the dapp has to participate in the marketization and all integrations of that token, recreating data interoperability, security and availability barrier - exactly the same set of issues that prevented tokenisation before blockchain was invented.
+
+Tokenscript is a method to abstract out the token information, access methods and UI rendering so that they can be efficiently marketized and used for integration.
+
 
 就像房子是用来住的一样。
 Just like a house providing a place to live.
@@ -32,7 +51,7 @@ Please join our work at xxx. A Yellow Paper to guide implementors to use TBML fo
 
 区块链技术具有**两个主要功能**，为未来的经济和互联网提供基本功能：
  - 提供完全市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)
- - 整合网络。
+ - 集成网络。
 Blockchain technology has **two primary functions** that serve essential purposes for the future economy and the future Internet:
 - providing a frictionless market; and
 - integrating the web.
