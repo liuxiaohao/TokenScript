@@ -17,29 +17,28 @@ To provide a practical use of the blockchain, we must understand its utility to 
 尽管2017-2018年发生了很多蠢事，但是这对于token获得一开始的关注并不是坏事。token，作者即将详细阐述的，将是两个主要功能的推动者。我们将定义并实现“token化”的技术。
 Despite the great folly in 2017-2018, it is not a bad thing to initially focus on tokens. Tokens, as the authors will elaborate, are the enabler of the two primary functions. We define the technique to make it happen in "Tokenisation".
 
-区块链行业共同的努力主要是集中在丰富技术能力上。这篇文章将集中在token化，并且介绍一个称作TBML的标准化工作（token行为标记语言，它将使区块链技术具备完整的技术堆栈，为经济和互联网提供实用性。
+区块链行业共同的努力主要是集中在丰富技术能力上。这篇文章将集中在token化，并且介绍一个称作TBML(token行为标记语言)的标准化工作，它将使区块链技术具备完整的技术堆栈，为经济和互联网提供实用性。
 Previous efforts in this industry primarily focused on enriching the capacity of the technology. This paper will focus on tokenisation and introduce a standardisation effort known as TBML (Token Behaviour Markup Language) which will make the blockchain technical stack complete, providing utility for the economy and the internet.
 
-
+等tokenscript.org搭建好时，欢迎加入我们的工作。 一本指导操作者使用Tokenscript作为其tokens和dapps的黄皮书将花费数月时间。 但是，我们一直保持流程开放。 现在参与可避免我们制定的语言规范草案没有考虑到你的token模型。
 Please join our work at tokenscript.org - when it is set-up of course. A Yellow Paper to guide implementors to use Tokenscript for their tokens and dapps will take months to make. However, we keep the process open. Participate now to avoid the draft language specification being made without consideration your token model.
 
 
 ## Abstract
 
+我们认识到区块链技术的真正应用是提供完全市场和集成网络方面的实用性。 这是通过标记化完成的。 被Tokenized的股权可以在市场上交易并集成到系统中，形成完全市场并允许自由集成。
 We recognise the blockchain technology's utility in providing a frictionless market and integrating the web. This is done through tokenization. Tokenized rights can be traded on the market and integrated across systems, forming a frictionless market and allowing free integration.
 
-
+如今，访问、呈现和交易的token的方式分散在Dapps和Smart Contracts中。 如果所有关于一个token的知识都在dapp中，那么dapp必须参与该token的市场和所有集成，重建数据并提供互操作性，安全性和可用性 - 同样的问题在区块链发明之前就已出现，并阻碍了tokenisation。
 Today, the way tokens are accessed, rendered and transacted are scattered across Dapps and Smart Contracts. If all knowledge about a token is in a dapp, the dapp has to participate in the marketization and all integrations of that token, recreating data interoperability, security and availability barrier - exactly the same set of issues that prevented tokenisation before blockchain was invented.
 
+Tokenscript是一种抽象出token信息，访问模式和UI呈现的方法，以便它们可以有效地进行市场化并用于集成。
 Tokenscript is a method to abstract out the token information, access methods and UI rendering so that they can be efficiently marketized and used for integration.
 
 
-就像房子是用来住的一样。
-Just like a house providing a place to live.
-
 ##加入游戏
 
-请加入我们在xxx的工作。 一份指导实施者使用TBML作为其代币和dapps的黄皮书将花费数月时间来制作，但正在进行的工作总是在线提供。 现在参与以避免草案语言规范没有考虑到您的token模型。
+请加入我们在xxx的工作。 一份指导实施者使用TBML作为其tokens和dapps的黄皮书将花费数月时间来制作，但工作进程会一直在网上公开。现在参与以避免制定的语言规范草案没有考虑到您的token模型。
 
 ## Join the game
 Please join our work at xxx. A Yellow Paper to guide implementors to use TBML for their tokens and dapps will take months to make, but a work in progress is always available online. Participate now to avoid the draft language specification being made without consideration your token model.
@@ -56,23 +55,23 @@ Blockchain technology has **two primary functions** that serve essential purpose
 - providing a frictionless market; and
 - integrating the web.
 
-本文将从愿景开始，然后解释架构师需要在区块链上架构的原因,接下来关注一个使这个架构成为可能的关键技术，我们把它叫做TBML。
+本文将从愿景开始，然后解释架构师需要在区块链上架构的原因,随后我们将解释TBML，这是一个关键的缺失层，并回顾其设计原则以及我们是如何构建它的。
 This paper will address the vision of where we can be and follow up with the design and reasoning behind the architecture needed on top of the blockchain. We will then explain TBML which is a critical missing layer and go over its design principles and how we are building it.
 
 
 ## 区块链提供了一个完全市场
 ## Blockchain provides a frictionless market
 
-上个世纪80年代的“回到未来”描绘了一个强大的机械世界，悬浮滑板，飞行汽车。但是他们并没发生。正如彼得·泰尔曾经注明的哀叹，“我们曾经承诺能飞的汽车，结果只得到140字符。但是我们时代的技术进步依旧超出了80年代科幻电影的想象，尽管不是通过更强大的机器，而是有效利用互联网。
+上世纪80年代的“回到未来”描绘了一个拥有悬浮滑板和飞行汽车的强大机械世界。但是他们并没发生。正如彼得·泰尔曾经著名的哀叹，“我们曾经承诺飞行汽车，结果只得到140字符。但是我们所处时代的技术进步依旧超出了80年代科幻电影的想象，不是通过更强大的机器，而是有效利用互联网。
 The 80s' "Back to the Future" featured a world of powerful machines filled with hovering boards and flying cars. It didn't happen. As Peter Thiel once famously lamented, "we were promised flying cars; instead, we got 140 characters". The technological advancement of our time is beyond the imagination of the 80s science fiction movies, albeit not through more powerful machinery, but efficient use of the Internet.
 
-共享行程彻底改变了我们的日常生活，airbnb改变了我们旅行的方式。这个是一个全新的，摩擦更小的市场市场，它们的运营成本更低，更易于使用，并且拥有精细的运行单位。
+共享行程彻底改变了我们的日常生活，airbnb改变了我们旅行的方式。这个是一个全新的，更完全的市场，它们的运营成本更低，更易于使用，并且拥有精细的运行单位。
 Ride-sharing transformed the way people get around, and AirBNB changed the way we travel. These are the new, less frictional markets. They incur less cost to operate, are more accessible and have finer operational units.
 
 然而，尽管进行了Web 2.0革命，大多数市场仍然以高成本运营。例如，股票市场由于依靠对于规章制度的信任来运作，开销非常大，它只适合价值数百万美元的商业。
 However, despite this web 2.0 revolution, the majority of markets still operate with high costs. The stock market, for example, has so much overhead that it is only justifiable for multi-million dollar businesses which rely on the trust of rules and regulations to operate.
 
-使用区块链，任何token化的资产都可以随时进行交易，只要遵循规则，没有中间商或中间人，给我们提供最大的市场效率-一个完全市场。除了不依赖中间商之外，在token化的市场模型中，买方和卖方不在需要”进入“市场。相反，token总是在市场上【*市场模型】，这样的模型当然比中间商更好
+使用区块链，任何token化的资产都可以随时进行交易，只要遵循规则，没有中间商或中间人，给我们提供最高的市场效率-完全市场。除了不依赖中间商之外，在token化的市场模型中，买方和卖方不在需要”进入“市场。相反，token总是在市场上【*市场模型】，这样的模式当然比中间商更好。
 With blockchain, any tokenised asset can be transacted any time, as long as it follows the rules, without middlemen or intermediary, gives us maximum market efficiency - the frictionless market. On top of the benefits of not relying on an intermediary, in a tokenised market model, the buyers and sellers do not need to "enter" the market; instead, tokens are *always on the market*[^market-model], making such a model better than intermediaries.
 
 【*市场模型】: 传统的中介操作市场模式，交易分为两个阶段：进入市场，达成交易。 区块链可以将其简化为协议; 因此，区块链token资产可以被视为始终在市场上。
@@ -82,19 +81,19 @@ With blockchain, any tokenised asset can be transacted any time, as long as it f
 我们能够通过token化创造完全市场吗？
 ### Can we create a frictionless market through tokenisation?
 
-我们是否可以token化，举个例子，1%的资产，这样的房地产市场是否可以比长达一个月的房地产购买-销售周期更快？ 
+我们是否可以tokenise，举个例子，1％的房产，以便地产市场能够比传统的长达一个月的房地产购买 - 销售周期更快地做出反应？ 
 Can we tokenise, for example, 1% of a property, so that the property market can react faster than the typical month-long property purchase-sales cycle?
 
-我们是否可以token化电力，让电力用户能够从更精细的安排中受益，家庭能够从更多的太阳能收集受益。
+我们是否可以tokenise电力，让电力用户能够从更精细的安排中受益，家庭从收集剩余太阳能中受益。
 Can we tokenise electricity, allowing power users to benefit from finer scheduling of the use of resources, and households to benefit from collecting surplus sun energy?
 
-我们是否可以token化Airbnb的预订，以便房屋主人可以从市场上获得有保证的现金流，而投机者可以通过预测旅行需求获利
+我们是否可以tokenise Airbnb的预订，以便房屋主人可以从市场上获得有保证的现金流，而市场分析者可以通过预测旅行需求获利。
 Can we tokenise AirBNB bookings, so that hosts can purchase a guaranteed cash flow from the market, while speculators profit from predicting the travel needs?
 
-我们是否能够token化国际贸易的风险和回报，让没有足够信用的，小型进口商和出口商，能够在国际市场上参与竞争，也许能够超过像Airbnb这样的传统供应商。
+我们是否能够tokenise国际贸易的风险和回报，让没有足够信用的小型进口商和出口商，能够在国际市场上参与竞争，也许能够超过像Airbnb这样的传统供应商。
 Can we tokenise the risk and reward of international trades, so that small importers and exports, not significant enough to obtain letters of credit, can compete in global markets and perhaps eventually outcompete the traditional model like AirBNB outcompetes hotels?
 
-我们是否能够token化依赖于加密证明的保单，以便保险公司减少处理欺诈性文件的成本，我们可以完全去中心化保险公司吗？
+我们是否可以创建一个依赖于加密证据的保险token，以便保险公司可以从其定价中删除欺诈性文件所产生的费用？ 我们可以完全去中心化保险公司吗？
 Can we create an insurance token that depends on cryptographic proofs, so that the insurer can remove from their pricing, the costs incurred by fraudulent documents? Can we decentralise the insurers altogether?
 
 区块链可以提供基础层来实现这些。虽然区块链的可扩展性和隐私性将得到提高，但一个有效的，无摩擦的市场也依赖于有质量的方法来定义如何使用和交易token - 这是我们TBML工作的重点。
