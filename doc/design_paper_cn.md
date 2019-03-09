@@ -17,7 +17,7 @@ To provide a practical use of the blockchain, we must understand its utility to 
 尽管2017-2018年发生了很多蠢事，但是这对于token获得一开始的关注并不是坏事。token，作者即将详细阐述的，将是两个主要功能的推动者。我们将定义并实现“token化”的技术。
 Despite the great folly in 2017-2018, it is not a bad thing to initially focus on tokens. Tokens, as the authors will elaborate, are the enabler of the two primary functions. We define the technique to make it happen in "Tokenisation".
 
-区块链行业共同的努力主要是集中在丰富技术能力上。这篇文章将集中在token化，并且介绍一个称作Tokenscript(token行为标记语言)的标准化工作，它将使区块链技术具备完整的技术堆栈，为经济和互联网提供实用性。
+区块链行业共同的努力主要是集中在丰富技术能力上。这篇文章将集中在token化，并且介绍一个称作Tokenscript(token行为标记语言)的标准化工作，它将使区块链技术具备完整的技术栈，为经济和互联网提供实用性。
 Previous efforts in this industry primarily focused on enriching the capacity of the technology. This paper will focus on tokenisation and introduce a standardisation effort known as Tokenscript (Token Behaviour Markup Language) which will make the blockchain technical stack complete, providing utility for the economy and the internet.
 
 等tokenscript.org搭建好时，欢迎加入我们的工作。 一本指导操作者使用Tokenscript作为其tokens和dapps的黄皮书将花费数月时间。 但是，我们一直保持流程开放。 现在参与可避免我们制定的语言规范草案没有考虑到你的token模型。
@@ -105,7 +105,7 @@ Tokens have different properties. Do tokens expire? AirBNB booking tokens certai
 它如何在用户的手机上显示，用户如何使用？
 How does it look on the user's mobile, and how is it called in a users language?
 
-如果买家想要从卖家那里采购被token的乡村庄园，他们如何进行有效的沟通？
+如果买家想要从卖家那里采购被token化的乡村庄园，他们如何进行有效的沟通？
 If a buyer wants to purchase a tokenised country estate from a seller, how do they establish a trusted method of communication?
 
 如果token允许用户在线执行特定操作，用户如何使用token登录特定web服务？
@@ -202,14 +202,14 @@ These missing features of the web are the well-known functions of the blockchain
 token无缝地跨越系统，承载其交易规则和用户界面以及业务环境。
 Tokens seamlessly go across systems, carries their trading rules and user interfaces and business context.
 
-## 例子：汽车所有权通知
+## 例子：汽车所有权token
 ## Example: Car Ownership Token
 
 我们将概括这两个概念：通过token资产的无摩擦市场; 通过使用token作为Web服务的集成点来集成Web。 我们将演示一个包含这两个概念的示例：汽车token。
 
 We will comine the two concepts: frictionless market, achieved by tokenising assets; integrate the web, by using token as integration point for web services. We will demonstrate an example that encompasses both concepts: car token.
 
-一方面，汽车是一种被token的资产，可以通过区块链来购买，出售，转让，拍卖，合作和投保。
+一方面，汽车是一种被token化的资产，可以通过区块链来购买，出售，转让，拍卖，合作和投保。
 On the one hand, a car is a tokenised asset, that can be bought, sold, transferred, auctioned, collaborated and insured, all enabled by blockchain.
 
 另一方面，汽车也有实用性。 汽车的所有权token可以将区块链钱包转换为汽车钥匙，其他功能如图形化表示汽车的当前位置。 授权某人访问您的汽车或租用它以获取利润，可以通过签署区块链交易或证明无缝完成，而无需传递车钥匙。
@@ -219,7 +219,7 @@ On the other hand, a car also has utility. A car's ownership token can convert a
 The following screenshot of a car token represents the final stage of tokenisation.
 
 [汽车token。 四个token：Rego，上限服务，保险和购买，要么是相关的，要么与汽车所有权token有关。
-![A car token. Four tokens: Rego, Capped Service, Insurance and Purchase, either depeneds or relates to the car ownership token.](car-token.jpeg)
+![A car token. Four tokens: Rego, Capped Service, Insurance and Purchase, either depeneds or relates to the car ownership token.](img/car-token.jpeg)
 
 咋一看，它只是一个便捷的能够做关于汽车所有事情的门户网站，包括市场功能和实用程序。然而传统的网络模型是不可行的。
 At first glance, it is just a handy portal to do everything about the car, including market functions and utility. However, it's not possible with the traditional web model.
@@ -252,7 +252,7 @@ This chapter serve to present the vision. We will have the opportunity to inspec
 token化需要构建一个token并且与其事务规则和行为模式捆绑在一起，将他们从最初生成的系统中取出，他们可以在不同的场景下进行交易和使用。
 Tokenisation requires bundling a token with its transaction rules and behaviour patterns, taking them off the system where they initially grew in, free them to be traded or used in different context.
 
-允许用户通过token与不同系统进行交互：在汽车示例中，汽车token由制造商Holden发布，因为它包含与智能锁（*打开*，*开始*，*锁住*操作）和Holden自己的Web服务（ *定位*行为）相互作用的代码，但它需要在其他环境中工作。例如 *拍卖* 动作由第三方拍卖网络服务提供。用户通过token访问拍卖服务，无需注册和证明所有权。*共享清单* 由第三方服务提供，该服务将汽车的使用token化为数小时或者数天，并逐个销售。所有者可以通过此token访问这个市场，买家将通过此token获得知晓汽车gps位置，开门和使用它的能力。
+允许用户通过token与不同系统进行交互：在汽车示例中，汽车token由制造商Holden发布，因为它包含与智能锁（*开锁*，*发送*，*锁住* 操作）和Holden自己的Web服务（ *定位* 行为）相互作用的代码，但它需要在其他环境中工作。例如 *拍卖* 动作由第三方拍卖网络服务提供。用户通过token访问拍卖服务，无需注册和证明所有权。*共享清单* 由第三方服务提供，该服务将汽车的使用token化为数小时或者数天，并逐个销售。所有者可以通过此token访问这个市场，买家将通过此token获得知晓汽车gps位置，开门和使用它的能力。
 Allow users to interact with different systems through the tokens
 :   In the car example, the car token is issued by Holden, the maker, and necessarily so because it contains code to interact with a smart lock (the *Open*, *Start*, *Lock* actions) and Holden's own web service (the *Locate* action), yet it needs to work in other environments. The *Auction* action, for example, is provided by a third party auction web service. The user access auction service through the token without the need of signing up and proving ownership. The *List for sharing* is provided by a third party service which tokenises the usage of the car by hours or days and sells them piecemeal. The owner can access such a market through this Token. The buyers will have information about the car's GPS location, the capacity to unlock the door and use it, through this token as well.
 
@@ -271,7 +271,7 @@ Carry trust relationship and business context to 3rd parties
 [^abc]: 可用性：NRMA 7*24小时在线，但是澳航保险可以在公众假期或者晚上展厅服务。隐私：NRMA可以获取用户的GPR，但是澳航保险在法律上不允许。集成：大多数NRMA的客户不是通过Qantas Insurance 获得的，因此它将成为NRMA集成和额外安全问题的附加系统，以集成到Virgain Insurance的网络服务。在这三个小时中，可用性可能是最明显的。想象一下客户会有多生气，当他的汽车在澳大利亚贫瘠的内陆地区抛锚，这个时候发现无法或者道路援助，因为保险公司的网络服务器正在为了 ”更好的服务用户“ 升级。
 [^abc]: Availability: NRMA is online 24/7 but Qantas Insurance can suspend their services in public holidays or at night. Privacy: NRMA can learn user's GPS location but Qantas Insurance isn't legally allowed to learn it. Integration: Most of NRMA's customers are not obtained through Qantas Insurance, so it would be an additional system to integrate and extra security concern for NRMA to integrate to Virgain Insurance's web service. Of all three, availability might be the most visible. Just imagine how angry a customer will be, having his car breaking down in the middle of the barren Australian outback, and learn that the road-side assistance can't be authorised because the insurer's web service is upgrading "For a better user experience".
 
-＃设计要求
+# 设计需求
 # Design requirements
 
 我们断言需要一种描述性语言（Tokenscript）来允许区块链技术实现“完全市场”和“集成网络”。 Tokenscript代表token行为标记语言。
@@ -426,6 +426,7 @@ In the 1% property token example, the involved attestations are:
 
 [^ set-operation]：最终，这可能是一个加密集合操作，但即使发生这种情况，也需要在Tokenscript中描述指示上下文（用户代理）进行计算的元数据。
 [^set-operation]: Eventually, this could be a cryptographic set operation, but even if that happens, the metadata directing the context (user-agent) to proform the computation still needs to be described in Tokenscript.
+
 前两个证明并未存储在智能合约中，由于成本（交易的大小和数量）和隐私的原因。可以采用零知识证明来证明该证明适用于所述财产和所述所有者的通用证据，并且它尚未过期。 Tokenscript中还描述了预期和可验证的证据。
 The first two attestations are not stored in smart contract for cost (size and number of transactions) and privacy reasons. It's possible to utilise zero knowledge proof to provide a generic proof that the attestation is for the said property and said owner, and it has not expired. What proofs are expected and can be validated is also described in Tokenscript.
 
@@ -488,11 +489,12 @@ With the first example demonstrated, we use the opportunity to articulate why To
 #### 互操作性：
 #### Interoperability:
 
-假设名为Peter的房产大佬希望创建一个名为“Peter's Pride Asset”的网站，在那里有市场上最好的房产。他可以创建这些房产的列表，其中包含当前价格，位置，建筑物年龄甚至照片的丰富信息，用户可以通过点击购买。但是他没有理由必须要这样做，因为token的数据在区块链上并且交易不需要中间人就能执行。但是，他需要获得如何在其网站上呈现token的本地知识，例如如何从其持有智能合约中获得token的到期。如果基础智能合约经历了变化，例如添加属性（例如议会费率），他的网站将需要升级。
+假设名为Peter的房产大亨希望创建一个名为“Peter's Pride Asset”的网站，在那里有市场上最好的房产。他可以创建这些房产的列表，其中包含当前价格，位置，建筑物年龄甚至照片的丰富信息，用户可以通过点击购买。但是他没有理由必须要这样做，因为token的数据在区块链上并且交易不需要中间人就能执行。但是，他需要获得如何在其网站上呈现token的本地知识，例如如何从其持有智能合约中获得token的到期。如果基础智能合约经历了变化，例如添加属性（例如议会费率），他的网站将需要升级。
 Suppose a property guru named Peter wishes to create a website called "Peter's Pride Asset", where he selects the best properties available on the market. He can create a listing of those properties with rich information of the current price, location, age of the building and even photos, which the users can purchase with a click. There is no reason that he needs permission to do so because the data of those tokens are on the blockchain and the transaction of those tokens requires no middlemen. However, he would need to obtain the knowledge local to how to render the token on his website, like how to get the expiration of a token from its holding smart contract. If the underlying smart contract has gone through changes, like adding an attribute (e.g. council rate), his website would need to upgrade.
 
 同样，交易规则也可能会更新，要求买房提者供身份证明作为交易环节的一部分。如果没有快速升级，他的用户将提交不符合要求的交易，并且在接下来的区块中被拒绝。最终，他会将token的呈现和交易，交给与该token绑定的Dapp，这会恢复到中心化状态并限制该领域的创新和竞争。
 Similarly, the transaction rule might be updated to require the buyer to submit an identity attestation as part of a purchase. Without a speedy upgrade, his users would submit transactions not conforming and get rejected later in the blockchain. In the end, he would resort to passing the rendering and trading of the token to the Dapp tied to this token, returning to a centralised status and limit the innovation and competition in this space.
+
 类似的方式，假设一个投资者论坛允许成员使用他们的1%房产token登录，每个帖子下的token呈现都需要来自与token绑定的Dapp。这将会是一个非常大的工作量，为论坛提供token并且保持代码更新，并且这个将会和Dapp的可用性强耦合。
 In a similar fashion, suppose an investors' forum where the members are allowed to login using their 1% property token, the rendering of the token, under each post, would need to be sourced from the Dapp tied to the token, since it's too much work for a forum to render the token and keep the code updated. Such sourcing would require permission and might be tied to the availability of that Dapp.
 
@@ -502,7 +504,7 @@ In a similar fashion, suppose an investors' forum where the members are allowed 
 水平情况，相同类型的资产可能在多个网络（如等离子链）上具有其token实例。买方可能只对澳大利亚的资产感兴趣，因此仅与澳大利亚1％房地产网络相关联。可能难以拥有一个全知的节点来为所有现有token提供呈现的token信息，尤其是在设计网络时考虑到隐私的情况。因此，为了扩展，必须从对token的访问中分离关于token（Tokenscript）的知识。
 Horizontally, the same type of asset might have its token instances across multiple networks like Plasma Chains. A buyer is likely to be interested only in assets in Australia, and therefore only connected to the Australian 1% Property network. It can be difficult to have an all-knowing node to provided rendered token information for all existing tokens, especially if a network is designed with privacy in mind. Therefore, to scale, the knowledge about the token (Tokenscript) must be detached from the access to the token.
 
-垂直 - 通过说* vertical *，我们的意思是向上构建，使用token交易构建结构化的交易或在token之上创建结构化token。此类事务和token访问组件token。例如，如果我们想要一个token，其组成是来自100个全球城市的样本的1％资产token，对于中型投资者来分摊风险，必须使用关于成员的知识构建可以操纵此类token的系统token。它再次不能依赖于与该资产相关的原始Dapp的可用性，安全性和开放性。 Tokenscript可以在中间用于制作这样的token。
+垂直情况 - 通过说* vertical *，我们的意思是向上构建，使用token交易构建结构化的交易或在token之上创建结构化token。此类事务和token访问组件token。例如，如果我们想要一个token，其组成是来自100个全球城市的样本的1％资产token，对于中型投资者来分摊风险，必须使用关于成员的知识构建可以操纵此类token的系统token。它再次不能依赖于与该资产相关的原始Dapp的可用性，安全性和开放性。 Tokenscript可以在中间用于制作这样的token。
 Vertically - by speaking *vertical*, we mean to build upward, to building structured transactions using a token transaction or creating structured tokens on top of a token. Such transaction and token access the component tokens. For example, if we desire a token whose make up is a 1% property token from a sample of 100 global cities, for mid-size investors to distribute the risk, a system that can manipulate such a token must be built with the knowledge about member tokens. It again cannot depend on the availability, security and openness of the original Dapp tied to that asset. Tokenscript would work in the middle for the making of such tokens.
 
 如果我们以Peter's Pride Property网站的例子作为Hello World示例，可能需要用户提交交易，不仅要购买token，还要提示彼得。如果只有token发行人的DAPP知道如何组装代币购买交易，这对彼得来说是不切实际的。
@@ -520,10 +522,10 @@ It is impractical to improvise a schema where every transaction the user might s
 以1％房产token为例; 确认信息可能会是这样的：您打算用45个Ethers购买1％的房产＃802820，您确定吗？
 Take the 1% property token as an example; a confirmation might look like this: You are going to purchase 1% of property #802820 with 45 Ethers, are you sure?
 
-用户不确定他正在观看的玻璃天花板设计的两居室的房子是＃802820。
+用户不确定他正在观看的玻璃天花板设计的两居室的房子是否是＃802820。
 The user will be unsure if the glass ceiling designer 2-bedroom house he is watching is #802820.
 
-基于字典的翻译可视化器不能做的更好，因为正确呈现属性标记需要的不仅仅是文字处理。这个限制很容易发现，即使没有在本章的“集成Web”部分中介绍集成方案。
+基于字典的翻译可视化器不能做的更好，因为正确呈现属性标记需要的不仅仅是文字处理。这个限制很容易发现，即使没有在本章的“集成网络”部分中介绍集成方案。
 A dictionary based translation visualiser cannot go further because correctly rendering the property token requires more than word processing. This limit is easily hit even without introducing integration scenarios in the "Integrate the web" section of this chapter.
 
 最终，使用代码生成交易，用户必须将信任委托给代码。用用户的话说，我正在访问与此token绑定的网站，所以我相信我签署的这个交易是为了我在使用网站时的意图而生成的。这是一个破碎的信任模型，就像的TLS模型一样是对网站的信任而不是内容。
@@ -570,7 +572,7 @@ Tokenscript's capacity to embed payment logic and presentation means that not on
 对于用户来说，该过程类似于结账过程引导用户到Paypal来完成交易，唯一的区别是该过程在更强大的本地用户代理中发生。
 To the user, the process resembles a bit like the checkout processs leads the user to Paypal to finalise the transaction, except the process happens locally in an enhanced user-agent.
 
-我们再次强调，目前的方法不适合创造完全市场，但是Tokenscript可以，通过提供*互操作性*，*可扩展性*和*安全性*来创造完全市场。
+我们再次强调，目前的方法不适合创造完全市场，但是Tokenscript可以，通过提供*互操作性*，*可扩展性*和 *安全性* 来创造完全市场。
 We again argue that current prevailing method is not suitable for creati
 ng a frictionless market, while Tokenscript could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
 
@@ -601,8 +603,8 @@ First, the transaction forming code is signed by MakeDAO separately and updated 
 其次，通过明确要求用户信任MakerDAO签署的Tokenscript，用户不需要信任Pizza网站对交易内容的呈现，因为它将由受信任的MakerDAO Tokenscript呈现
 Second, by explicitly asking the user to trust the Tokenscript signed by MakerDAO, the user would not need to trust Pizza website's rendering of the transaction content, since it would be rendered by the trusted MakerDAO Tokenscript.
 
-！[使用Tokenscript付款。 请注意，* Complete Order *按钮不在网站上，而是在Dapp浏览器生成的Tokenscript令牌区域中，其中呈现交易的代码已预先签名。]（payment-in-wallet.jpeg）
-![A payment using Tokenscript. Notice that the *Complete Order* button is not on the website, but in the Tokenscript token area generated by Dapp browser, where the code to render the transaction is pre-signed.](payment-in-wallet.jpeg)
+！[使用Tokenscript付款。 请注意，* Complete Order *按钮不在网站上，而是在Dapp浏览器生成的Tokenscript令牌区域中，其中呈现交易的代码已预先签名。](img/ayment-in-wallet.jpeg)
+![A payment using Tokenscript. Notice that the *Complete Order* button is not on the website, but in the Tokenscript token area generated by Dapp browser, where the code to render the transaction is pre-signed.](img/payment-in-wallet.jpeg)
 
 第三，如果需要添加安全协议，例如，来自网站的证明（可以重新使用SSL证书）来证明接收智能合约的交易，或智能合约通过域名返回网站的明确信任， 额外的逻辑是升级dapp浏览器来提供对新的Tokenscript功能的支持和token发现者对新Tokenscript代码的更新，而无需触及网站。
 Third, if secure protocols needs to be added, for example, an attestation from the website (can re-use the SSL certificate) to certify the transaction receiving smart contract, or the smart contract returning explicit trust of the website by domain name, the additional logic can be a combined effort of upgrading the dapp browser's support of new Tokenscript feature and the token issuer's new Tokenscript code, without touching the website.
@@ -812,7 +814,7 @@ There is no need to change the smart contract transaction rules. The online reta
 此更改说明业务流程应与token分离，并且通过token集成。
 This change illustrated that the business process should decouple from the token, instead, integrated through the token.
 
-###市场变化
+### 市场变化
 ### Change in the market
 
 生意持续了一段时间，伴随区块链市场有一项创新，一些用户从从运输公司批量购买了一年的运输服务，以享受AmazonPrime般的免费送货特权而无需使用亚马逊（最后一公里）。看到机会，信用卡公司甚至为他们的卡的订户提供了这样的特权，这也将是一个代表。
@@ -823,7 +825,7 @@ Business went on for a while; then, there is an innovation from the blockchain m
 在线零售商决定加入其中以保持竞争力。 这一次，他需要修改他的智能合约，更改交易规则，即在购买时可以接受交货token。 在这种情况下，交易的输出将没有交货token，因为已经提供了一个。[^可替代的物流服务兑换token]
 The online retailer decided to join the game to stay competitive. This time, he would need to modify his smart contract, changing the transaction rule that a shipping token can be accepted at the time of purchase. In such a case, the output of the transaction will not have a shipping token, since one is already provided.[^fungible-shipping-token]
 
-[^可替代的物流服务兑换token]：在实际实施中，批量购买的运输标签，如果被token话，可能会也可能不会被用作运输token。 物流服务兑换token可以设计为半可替代的token，而运输token必须是不可替代的，每个都映射到特定的包裹。 本文的作者为了清晰起见，决定省略这样的实现细节。
+[^可替代的物流服务兑换token]：在实际实施中，批量购买的运输标签，如果被token化话，可能会也可能不会被用作运输token。 物流服务兑换token可以设计为半可替代的token，而运输token必须是不可替代的，每个都映射到特定的包裹。 本文的作者为了清晰起见，决定省略这样的实现细节。
 [^fungible-shipping-token]: In practical implementations, bulk-purchased shipping labels, if tokenised, may or may not be used as shipment tokens. Shipping labels can be designed as a semi-fungible token, while the shipment token must be non-fungible, each mapped to a specific parcel. The authors of this paper decided to leave out such implementation detail for clarity.
 
 在线零售商必须修改他的业务流程，以期望用户购买的物流服务兑换token支持任何交付公司提取货物。
@@ -880,7 +882,7 @@ We will demonstrate the portion of Tokenscript related to messaging.
 '`<states> ... </ states>`之间的部分给出了状态列表，这是定义允许token持有者接收的消息的基础。
 The section between `<states>...</states>` gives a list of states which is the basis of defining messages the token holder is allowed to receive.
 
-第一个`<trust> ... </ trust>`结构使得用户代理接受并显示来自token发行者的任何签名消息，在这种情况下是在线零售商，展示通知和消息历史记录中的条目，当通证的状态是已经被初始化的时候。
+第一个`<trust> ... </ trust>`结构使得用户代理接受并显示来自token发行者的任何签名消息，在这种情况下是在线零售商，展示通知和消息历史记录中的条目，当token的状态是已经被初始化的时候。
 The first `<trust>...</trust>` structure causes the user agent to accept and display any signed messages from the token issuer, in this case the online retailer, as notification and an entry in message history, when the token's state is initialised.
 
 第二个`<trust> ... </ trust>`结构使用户代理接受并显示任何签名消息，其签名验证密钥由token的颁发者证明，展示通知和消息历史记录中的条目， 当token的状态是dispatched时。 这有效地允许token发行者明确信任的任何实体以“dispatched”状态发出消息。
@@ -915,7 +917,7 @@ Fungible tokens refer to the currency-like token with a balance, typically imple
 不可替代的token是指加密小猫，通常每个token有一个单位。
 Non-fungible tokens refer to crypto-kittens and typically have one unit per token.
 
-分类并未包含我们可能的所有token，并且在某些情况下可能会重复。 以我们之前演示的1％的房产token为例，每个这样的token都可以与同一发行人为同一财产发行的另一个token互换。 也许除了华人社区通常会高估序列号为88的token，但如果我们允许任何百分比数字被通证化，比如允许购买0.88％，那么序列号将被重构。 同样，使相同属性的每个部分所有权token都可以完全互换。 然而，显然，财产A的所有权百分比和财产B的所有权百分比彼此不可互换。
+分类并未包含我们可能的所有token，并且在某些情况下可能会重复。 以我们之前演示的1％的房产token为例，每个这样的token都可以与同一发行人为同一财产发行的另一个token互换。 也许除了华人社区通常会高估序列号为88的token，但如果我们允许任何百分比数字被token化，比如允许购买0.88％，那么序列号将被重构。 同样，使相同属性的每个部分所有权token都可以完全互换。 然而，显然，财产A的所有权百分比和财产B的所有权百分比彼此不可互换。
 The categorisation isn't capturing the full spectrum of the tokens we could and may overlap in some cases. Taking the 1% per cent property token we demonstrated earlier as an example, each of such token is fungible with another issued by the same issuer for the same property. Maybe with the exception of the Chinese community which usually overvalue the token with a sequence number of 88, but if we allow any percentage number to be tokenised, say, allowing one to purchase 0.88%, then the sequence number will be refactored out of the way too, making each partial ownership token of the same property strictly fungible. However, apparently, a percentage of ownership of property A  and a percentage of ownership of property B are not fungible with each other.
 
 本文重新介绍了证明的概念 - 它已存在数十年但尚未得到充分利用。 从那里开始，本文将标记分类为“区块链token”和“证明”。 前者包括可互换和不可替代的token。 后面的类型“证明”将在这里解释。
@@ -958,7 +960,7 @@ To explain the use case where the *issuing* of attestation has to happen on the 
 为了解释在区块链上必须发生凭证的*撤销*时的案例，让我们来看看一个名为FIFA票证的凭证。 由活动组织者发布，它证明了所有者进入场地的权利，通常是在用户付款或赠送门票之后。 假设90％的门票都是使用非加密货币购买的，因此这些门票不会对区块链进行跟踪。 但是，如果票证所有者决定按照相应的智能合约规则在区块链上出售他的票证，则票证必须用作此类交易的输入并被视为已消耗，而代表相同权利的区块链令牌将被创建并且成交。 本文的写作在2018年中期组织了一次FIFA门票实验来测试这些概念，在内部我们将这种认证称为“一个可产生的”，因为它的使用产生了一个区块链token。 该实验的细节可以在另一篇论文[引用]中找到。
 To explain the use case when the *revocation* of an attestation has to happen on the blockchain, let's consider an attestation called FIFA ticket.  Issued by the event's organiser, it attests the owner's right to enter the venue, usually after the user has paid or was gifted the ticket. Let's assume 90% of the tickets are purchased with non-crypto currency, therefore these tickets would not have a trace on the blockchain. However, if a ticket's owner decides to sell his tickets on the blockchain following the corresponding smart contract rules, the ticket has to be used as the input of such a transaction and considered consumed, while a blockchain token representing the same entitlement would be created and traded. The writes of this paper organised a FIFA ticket experiment in mid-2018 to test the concepts, and internally we call such an attestation "a spawnable" as its use spawns a blockchain token. The detail of that experiment can be found in another paper [cite].
 
-#Tokenscript的组件
+# Tokenscript的组件
 # The components of Tokenscript
 
 ## 行动
@@ -991,7 +993,6 @@ Unlock
 Authorise
 :   The user can also authorise another person to use it, sending an authorisation (which is an attestation - see Attestation chapter) as easy as sending an instant message.
 
-152/5000
 借
 ：授权和出借之间的区别是后者还要授权借款人使用Holden Capped Service并打开车库门。
 Lend
@@ -1033,7 +1034,7 @@ Auction
 List for sharing
 :   A startup company, let's call it CarNextDoor, offers to manage the process so the car owners can safely list the car for sharing and automatically gets income. Once listed, the car owner will obtain a listing token and has to book his use of his own car through it. In exchange, when he is not using it, the car goes out and earn money for him. Naturally, the action is provided by CarNextDoor, not by Holden.
 
-##魔术链接
+## 魔术链接
 
 魔术链接只是特定资产上操作的快捷方式。 它通常发送给资产所有者。 它带有事务所需的证明（例如原子交换）。
 ## Magic links
@@ -1066,7 +1067,7 @@ Examples of assets: crypto kitties, FIFA tickets, right to a bottle of wine, 1% 
 Examples of attestations: crypto-kitten vouchers, FIFA ticket redeem coupons, American Express Centurion status, Friendship Tokens (a signed message from Michael Jackson saying that Victor Zhang is a friend) or proof of identity.
 
 
-＃加入游戏
+# 加入游戏
 
 将Tokenscript定义为规范的工作正在进行中。 我们的目标是制作关键方法和考虑因素的黄皮书，并从那里开始扩展它。 当您阅读本草案时，更多的协作方法正在付诸实施。 目前，联系人是：
 
