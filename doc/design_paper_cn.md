@@ -268,13 +268,13 @@ Allow new protocols to be developed on tokens
 Carry trust relationship and business context to 3rd parties
 :   In the car example, the insurance token provides Roadside Assistance service through NRMA, another company not directly contracted by the driver. Yet the driver might access this function through the insurance token and immediately be identified as qualified for help. In this example, *Trust relationship* means that the user indirectly trusts NRMA to provide roadside assistance, to obtain the user's GPS location and identity information at the time of emergency. *Business context* means the customer's qualification for roadside assistance, like insurance paid, location in the range of service and annual cap not reached etc. In this story both *trust relationship* and *business context* has to be in the token, not centralised through the insurance company's web service since the two have different a) availability, b) privacy and c) integration requirements[^abc].
 
-[^abc]: 可用性：NRMA 7*24小时在线，但是澳航保险 可以再公众假期或者晚上展厅服务。隐私：NRMA可以获取用户的GPR，但是澳航保险在法律上不可以。集成：大多数NRMA的客户不是通过Qantas Insurance 获得的，因此它将成为NRMA集成和额外安全问题的附加系统，以集成到Virgain Insurance的网络服务。在所有的三个钟，可用性可能是最明显的。想象一哈客户会有多生气，当他的汽车在澳大利亚贫瘠的内陆地区抛锚，这个时候发现无法或者道路援助，因为保险公司的网络服务器正在为了 ”更好的服务用户“ 升级。
+[^abc]: 可用性：NRMA 7*24小时在线，但是澳航保险可以在公众假期或者晚上展厅服务。隐私：NRMA可以获取用户的GPR，但是澳航保险在法律上不允许。集成：大多数NRMA的客户不是通过Qantas Insurance 获得的，因此它将成为NRMA集成和额外安全问题的附加系统，以集成到Virgain Insurance的网络服务。在这三个小时中，可用性可能是最明显的。想象一下客户会有多生气，当他的汽车在澳大利亚贫瘠的内陆地区抛锚，这个时候发现无法或者道路援助，因为保险公司的网络服务器正在为了 ”更好的服务用户“ 升级。
 [^abc]: Availability: NRMA is online 24/7 but Qantas Insurance can suspend their services in public holidays or at night. Privacy: NRMA can learn user's GPS location but Qantas Insurance isn't legally allowed to learn it. Integration: Most of NRMA's customers are not obtained through Qantas Insurance, so it would be an additional system to integrate and extra security concern for NRMA to integrate to Virgain Insurance's web service. Of all three, availability might be the most visible. Just imagine how angry a customer will be, having his car breaking down in the middle of the barren Australian outback, and learn that the road-side assistance can't be authorised because the insurer's web service is upgrading "For a better user experience".
 
 ＃设计要求
 # Design requirements
 
-我们断言需要一种描述性语言（TBML）来允许区块链技术实现“完成市场”和“集成网络”。 TBML代表令牌行为标记语言。
+我们断言需要一种描述性语言（TBML）来允许区块链技术实现“完全市场”和“集成网络”。 TBML代表token行为标记语言。
 We assert that a descriptive language (TBML) is needed to allow blockchain technology to enable "frictionless markets" and an "integrated web". TBML stands for Token Behaviour Markup Language.
 
 由于TBML是一个解决方案层，而不是像以太坊和等离子(译者注：一种以太坊的二层扩容框架)这样的基础层技术，我们选择通过实例介绍该技术，并为观众的观众提供丰富的商业环境讨论。
@@ -283,7 +283,7 @@ By virtue of TBML being a solution layer rather than base-layer technologies lik
 ## 地址 完全市场的需求
 ## Address "Frictionless Market" needs
 
-仔细研究“市场”，市场并不是一个超载信息的嘈杂渠道; 更重要的是，这是一个交付与付款的地方。 由于区块链不依赖于中间商，即交易主机，我们的重点转变为交易的token，即 *可交付成果* 和 *支付* ，以及他们在市场中的角色。
+仔细研究“市场”，市场并不是一个拥有超载信息的嘈杂渠道; 更重要的是，这是一个交割与付款的地方。 由于区块链不依赖于中间商，即交易主机，我们的重点转变为交易的token，即 *可交付成果* 和 *支付* ，以及他们在市场中的角色。
 Taking a closer look at "market", a market is not a noisy channel overloaded with information; more importantly, it is a place where delivery versus payment happens. With blockchain relying less on the middlemen, the host of the trades, our focus is turned into the tokens being traded, that is, *deliverables* and *payments*, and their role in market.
 
 交付
@@ -315,7 +315,7 @@ We will introduce TBML through an example on each of the *deliverable* side and 
 让我们想象一下“1％房产”的市场。房产所有者可以发放许多token，每个token代表1％的房产所有权。他可以出售这些token以换取现金。
 Let's imagine a market for "1% property". A property owner can issue many pieces of a token, each represents 1% ownership of the property. He can sell these tokens for cash.
 
-买家需要了解相当多的信息。很容易理解，如果基础token被出售，这样的token将获得1％的销售收入，但需要更多细节
+买家需要了解相当多的信息。很容易理解，如果基础token被出售，这样的token将获得1％的销售收入，但这中间还有很多细节问题。
 A buyer needs to know quite a bit of information. It's easy to understand that such a token would fetch 1% of the sales revenue if the underlying property is sold, but a lot more details are needed:
 
 1.房产在哪里以及它的状态如何？
@@ -327,7 +327,7 @@ A buyer needs to know quite a bit of information. It's easy to understand that s
 3. 1％是否在房产销售时自动转换为货币，或者代币持有人是否可以选择继续持有？
 3. Is the 1% automatically converted into currency at the time of property sales, or can the token holder elect to continue holding it?
 
-4. 是否正确承保了令牌以防止双重抵押？
+4. 是否正确承保了token以防止双重抵押？
 4. Is the token properly underwritten to prevent double-collateralization?
 
 5. 如果房产是抵押贷款的抵押品，清算事件的条件是什么？
@@ -342,9 +342,9 @@ A buyer needs to know quite a bit of information. It's easy to understand that s
 8. 过去几年该地区类似物业的表现如何？
 8. What was the performance of similar properties in the region in the past years?
 
-
 9. 这家酒店的历史销售价格是多少？
 9. What was the historical sales price of this property?
+
 具体到区块链，我们还有：
 Specific to blockchain, we also have:
 
@@ -375,7 +375,7 @@ Understandablly, the buyers need to access all these for an informed decision.
 #### 产品描述
 #### Product description
 
-产品描述信息通常在智能合约中。 在以太坊的情况下，这些可以通过进行一些智能合约函数调用来获得，因此，唯一需要的工作是将它们转换为演示文稿 - 通常意味着转换为用户语言并将“实际”值转换为精心打勾的复选框。 这有助于介绍TBML的第一个功能：充当智能合约的表示层。
+产品描述信息通常在智能合约中。 在以太坊的情况下，这些可以通过进行一些智能合约函数调用来获得，因此，唯一需要的工作是将它们转换为演示文稿 - 通常意味着转换成为用户语言并将“实际”值转换为精心打勾的复选框。 这有助于介绍TBML的第一个功能：充当智能合约的表示层。
 Product description information is typically in the smart contract. In Ethereum cases, these can be obtained by making a few Smart Contract function calls, therefore, the only needed work is to convert them into presentation - usually it means translating to the language user speaks and converting "True" value into a nicely ticked checkbox. This serve to introduce the first functionality of TBML: acting as a presentation layer for smart-contracts.
 
     <attribute-type id="voting-right">
@@ -438,7 +438,7 @@ Furthermore, the fact that the transaction requires an identity attestation or i
 参考信息与token相关，由Web服务提供，通常通过RESTful API调用。[^ trusted-information]
 Reference information is what relevant to the token and provided by web services, typically through a RESTful API call.[^trusted-information]
 
-[^ trusted-information] 最初我们将其称为“可信信息”，这意味着以前的房产销售价格或区域性能数据等数据只是“提供”，没有区块链证明或证明，因此，必须由用户自己信任。 事实证明，这个术语是错误的，因为一些开发人员认为它意味着“经过验证的信息”，并且已经提供了可靠信息。 因此，我们使用了一个不太精确的术语“参考信息”，遗憾的是，它就像一个包罗万象的短语。
+[^ trusted-information] 最初我们将其称为“可信信息”，这意味着以前的房产销售价格或区域性能数据等数据只是“提供”，没有区块链证明或证明，因此，必须由用户自己信任。 事实证明，这个用语是错误的，因为一些开发人员认为它意味着“经过验证的信息”，并且已经提供了可靠信息。 因此，我们使用了一个不太精确的用语“参考信息”，遗憾的是，它就像一个包罗万象的短语。
 [^trusted-information]: Originally we call it "Trusted information", meaning data such as previous property sales price or regional property performance data is just "provided", without blockchain proofs or attestations, hence, it has to be explicitly trusted by the user. As it turned out, this term misfired as some developers think it means "proven information" and provided as trusted already. So we used a less precise term "Reference information", which, unfortunately, feels like a catch-all phrase.
 
 由于TBML由token发行者签署（不是token所有者 - token发行者通常是部署智能合约的实体），因此假定来自TBML中指定的web apis的参考信息是可信的。 安全章节将详细说明不同的信任级别。
@@ -462,7 +462,7 @@ Dictates the correct method to construct a blockchain transaction, like:
 - How to render the purchase form and translate to user's local language.
 - Is the condition all met (e.g. a purchase isn't possible after the underlying property is liquidated).
 
-这些信息是一套超级智能合约可编程接口（In Ethereum，称为ABI），附加部分是业务逻辑（例如财产必须仍然有效且卖方仍然拥有它）和表示逻辑（例如消息“The property” 被清算。不再购买“）。
+这些信息是一套超级智能合约可编程接口（In Ethereum，称为ABI），附加部分是业务逻辑（例如财产必须仍然有效且卖方仍然拥有它）和表示逻辑（例如消息“该物业已被清算，不再出售“）。
 These information is a super-set of smart contract programmable interface (In Ethereum, called ABI), with the additional part being business logic (e.g. property must be still valid and seller still have it) and presentation logic (e.g. the message "The property is liquidated. Purchase no longer possible").
 
 总之，TBML允许上下文（用户代理或交易引擎）：
@@ -482,33 +482,33 @@ Any party is able to render and apply functions to the token using TBML, includi
 ### 为什么需要TBML
 ### Why TBML
 
-通过演示的第一个示例，我们利用这个机会阐明了为什么需要TBML，而不是目前通过DApp提供资产访问的主流方式。 我们认为目前流行的方法不适合创建无摩擦市场，而TBML可以提供 *互操作性*，*可扩展性*和*安全*等保障。
+通过演示的第一个示例，我们利用这个机会阐明了为什么需要TBML，而不是目前通过DApp提供资产访问的主流方式。我们认为目前流行的方法不适合创建完全市场，而TBML可以提供 *互操作性*，*可扩展性*和*安全*等保障。
 With the first example demonstrated, we use the opportunity to articulate why TBML is needed, over the current prevailing way of providing asset access with a host DApp. We argue that the current prevailing method is not suitable for creating a frictionless market, while TBML could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
 
 #### 互操作性：
 #### Interoperability:
 
-假设名为Peter的房产大师希望创建一个名为“Peter's Pride Asset”的网站，在那里有市场上最好的房产。他可以创建这些房产的列表，其中包含当前价格，位置，建筑物年龄甚至照片的丰富信息，用户可以通过点击购买。但是他没有理由必须要这样做，因为token的数据在区块链上并且交易不需要中间人就能执行。然而，他需要如何在他网站上呈现令牌的只是，比如如何持有智能合约中获取token的到期时间。如果基础智能合约经历了变化，例如添加属性（费率），他的网站将需要升级。
+假设名为Peter的房产大佬希望创建一个名为“Peter's Pride Asset”的网站，在那里有市场上最好的房产。他可以创建这些房产的列表，其中包含当前价格，位置，建筑物年龄甚至照片的丰富信息，用户可以通过点击购买。但是他没有理由必须要这样做，因为token的数据在区块链上并且交易不需要中间人就能执行。但是，他需要获得如何在其网站上呈现token的本地知识，例如如何从其持有智能合约中获得token的到期。如果基础智能合约经历了变化，例如添加属性（例如议会费率），他的网站将需要升级。
 Suppose a property guru named Peter wishes to create a website called "Peter's Pride Asset", where he selects the best properties available on the market. He can create a listing of those properties with rich information of the current price, location, age of the building and even photos, which the users can purchase with a click. There is no reason that he needs permission to do so because the data of those tokens are on the blockchain and the transaction of those tokens requires no middlemen. However, he would need to obtain the knowledge local to how to render the token on his website, like how to get the expiration of a token from its holding smart contract. If the underlying smart contract has gone through changes, like adding an attribute (e.g. council rate), his website would need to upgrade.
 
-同样，交易规则也可能会更新，要求买房提供身份证明作为购买的一部分。如果没有快速升级，他的用户将提交不符合要求的交易，并且在接下来的区块中被拒绝。最终，他会将token的呈现和交易，交给与该token绑定的Dapp，这会恢复到中心化状态并限制该领域的创新和竞争。
+同样，交易规则也可能会更新，要求买房提者供身份证明作为交易环节的一部分。如果没有快速升级，他的用户将提交不符合要求的交易，并且在接下来的区块中被拒绝。最终，他会将token的呈现和交易，交给与该token绑定的Dapp，这会恢复到中心化状态并限制该领域的创新和竞争。
 Similarly, the transaction rule might be updated to require the buyer to submit an identity attestation as part of a purchase. Without a speedy upgrade, his users would submit transactions not conforming and get rejected later in the blockchain. In the end, he would resort to passing the rendering and trading of the token to the Dapp tied to this token, returning to a centralised status and limit the innovation and competition in this space.
-类似的方式，假设一个投资者论坛允许成员使用它们的1%房产token登录，每个帖子下的token呈现都需要来自与token绑定的Dapp。这将会是一个非常大的工作量，为论坛提供token并且保持代码更新，并且这个将会和Dapp的可用性强耦合。
+类似的方式，假设一个投资者论坛允许成员使用他们的1%房产token登录，每个帖子下的token呈现都需要来自与token绑定的Dapp。这将会是一个非常大的工作量，为论坛提供token并且保持代码更新，并且这个将会和Dapp的可用性强耦合。
 In a similar fashion, suppose an investors' forum where the members are allowed to login using their 1% property token, the rendering of the token, under each post, would need to be sourced from the Dapp tied to the token, since it's too much work for a forum to render the token and keep the code updated. Such sourcing would require permission and might be tied to the availability of that Dapp.
 
 #### 可扩展性
 #### Scalability
 
-水平地，相同类型的资产可能在多个网络（如等离子链）上具有其token实例。买方可能只对澳大利亚的资产感兴趣，因此仅与澳大利亚1％房地产网络相关联。可能难以拥有一个全知的节点来为所有现有token提供呈现的令牌信息，尤其是在设计网络时考虑到隐私的情况。因此，为了扩展，必须从对token的访问中分离关于token（TBML）的知识。
+水平情况，相同类型的资产可能在多个网络（如等离子链）上具有其token实例。买方可能只对澳大利亚的资产感兴趣，因此仅与澳大利亚1％房地产网络相关联。可能难以拥有一个全知的节点来为所有现有token提供呈现的token信息，尤其是在设计网络时考虑到隐私的情况。因此，为了扩展，必须从对token的访问中分离关于token（TBML）的知识。
 Horizontally, the same type of asset might have its token instances across multiple networks like Plasma Chains. A buyer is likely to be interested only in assets in Australia, and therefore only connected to the Australian 1% Property network. It can be difficult to have an all-knowing node to provided rendered token information for all existing tokens, especially if a network is designed with privacy in mind. Therefore, to scale, the knowledge about the token (TBML) must be detached from the access to the token.
 
 垂直 - 通过说* vertical *，我们的意思是向上构建，使用token交易构建结构化的交易或在token之上创建结构化token。此类事务和token访问组件token。例如，如果我们想要一个token，其组成是来自100个全球城市的样本的1％资产token，对于中型投资者来分摊风险，必须使用关于成员的知识构建可以操纵此类token的系统token。它再次不能依赖于与该资产相关的原始Dapp的可用性，安全性和开放性。 TBML可以在中间用于制作这样的token。
 Vertically - by speaking *vertical*, we mean to build upward, to building structured transactions using a token transaction or creating structured tokens on top of a token. Such transaction and token access the component tokens. For example, if we desire a token whose make up is a 1% property token from a sample of 100 global cities, for mid-size investors to distribute the risk, a system that can manipulate such a token must be built with the knowledge about member tokens. It again cannot depend on the availability, security and openness of the original Dapp tied to that asset. TBML would work in the middle for the making of such tokens.
 
-如果我们以Peter's Pride Property网站的例子作为Hello World示例，可能需要用户提交交易，不仅要购买token，还要提示Pride。 如果只有停止的发行人的DAPP知道如何组装token购买交易，这对彼得来说是不切实际的。
+如果我们以Peter's Pride Property网站的例子作为Hello World示例，可能需要用户提交交易，不仅要购买token，还要提示彼得。如果只有token发行人的DAPP知道如何组装代币购买交易，这对彼得来说是不切实际的。
 If we follow the example of Peter's Pride Property website as a Hello World example, it might need the user to submit a transaction not only purchase a token, but also tips Peter in the meanwhile. If only the token's issuer's DAPP knows how to assemble a token purchase transaction, this will be impractical for Peter.
 
-即使在简单的场景中，垂直情况自然也会比这复杂得多。 您将在本章“基础网络”部分的电子商务故事中看到一个例子。
+即使在简单的场景中，垂直情况自然也会比这复杂得多。您将在本章“基础网络”部分的电子商务故事中看到一个例子。
 The vertical stack naturally can be a lot more complicated than this, even in simple scenarios. You will see one revealed in an e-commerce story in the "Integrate the web" section of this chapter.
 
 #### 安全性
@@ -517,28 +517,28 @@ The vertical stack naturally can be a lot more complicated than this, even in si
 即兴创建一种模型是不切实际的，其中用户可能签署的每个事务都以用户可读的格式呈现。使用事务可视化工具开始这样的工作很简单，向用户解释一个神秘的事务负载，类似于Linux的`identify（1）`命令，但最终系统集成和UX需求将超过字典样式事务可视化器能够完成的范围。
 It is impractical to improvise a schema where every transaction the user might sign is rendered in a user-readable format. It's easy to start with such an effort with a transaction visualiser tool, interpreting an enigmatic transaction payload to the user, similar to Linux's `identify(1)` command, but ultimately the system integration and UX needs would surpass what a dictionary style transaction visualiser can do.
 
-以1％房产token为例; 确认可能如下所示：您打算用45个Ethers购买1％的房产＃802820，您确定吗？
+以1％房产token为例; 确认信息可能会是这样的：您打算用45个Ethers购买1％的房产＃802820，您确定吗？
 Take the 1% property token as an example; a confirmation might look like this: You are going to purchase 1% of property #802820 with 45 Ethers, are you sure?
 
 用户不确定他正在观看的玻璃天花板设计的两居室的房子是＃802820。
 The user will be unsure if the glass ceiling designer 2-bedroom house he is watching is #802820.
 
-基于字典的翻译可视化器不能做的更好，因为正确呈现属性标记需要的不仅仅是文字处理。 这个限制很容易发现，即使没有在本章的“集成Web”部分中介绍集成方案。
+基于字典的翻译可视化器不能做的更好，因为正确呈现属性标记需要的不仅仅是文字处理。这个限制很容易发现，即使没有在本章的“集成Web”部分中介绍集成方案。
 A dictionary based translation visualiser cannot go further because correctly rendering the property token requires more than word processing. This limit is easily hit even without introducing integration scenarios in the "Integrate the web" section of this chapter.
 
-最终，使用代码生成交易，用户必须将信任委托给代码。 用用户的话说，我正在访问与此token绑定的网站，所以我相信我签署的这个交易是为了我在使用网站时的意图而生成的。 这是一个破碎的信任模型，就像的TLS模型一样是对网站的信任而不是内容。
+最终，使用代码生成交易，用户必须将信任委托给代码。用用户的话说，我正在访问与此token绑定的网站，所以我相信我签署的这个交易是为了我在使用网站时的意图而生成的。这是一个破碎的信任模型，就像的TLS模型一样是对网站的信任而不是内容。
 Eventually, a transaction is generated with code, and the user would have to delegate the trust to the code. In a user's words, I am accessing the website tied to this token, so I will trust that this transaction I am signing is generated for the intention I have while using the site. This is a broken trust model, a regression to the TLS model of trusting the site instead of the content.
 
-TBML旨在分离token呈现代码和交易生成代码，并将它们打包到其容器中，由用户可能信任的一方签名（通常由用于部署智能合约的相同密钥签名）。 有不同的信任级别，我们将在后面的章节中详细介绍。
+TBML旨在分离token呈现代码和交易生成代码，并将它们打包到其容器中，由用户可能信任的一方签名（通常由用于部署智能合约的相同密钥签名）。有不同的信任级别，我们将在后面的章节中详细介绍。
 TBML is designed to separate token rendering code, and transaction generating code and package them into its container, signed by a party that the user is likely to trust (often, signed by the same key used for deploying a smart contract). There are a few trust levels, which we will detail in later chapters.
 
-从Peter's Pride Property推荐网站购买1％房产token的用户可以获得一个渲染和交易包，由创建此类代币的持有合同的同一组人签名。 因此，用户可以从具有类似信任级别的任何网站购买资产，或者从微信或Facebook私人消息购买资产，并且知道它是正在呈现和交易的真实交易。
+从Peter's Pride Property推荐网站购买1％房产token的用户可以获得一个渲染和交易包，由创建此类代币的持有合同的同一组人签名。因此，用户可以从具有类似信任级别的任何网站购买资产，或者从微信或Facebook私人消息购买资产，并且知道它是正在呈现和交易的真实token。
 A user who is purchasing a 1% property token from Peter's Pride Property recommendation website can be supplied with a rendering and transaction package, signed by the same group of people who created the holding contract of such tokens. Therefore the user can purchase assets from any website with a similar level of trust, or purchase it from a WeChat or Facebook private message and know it is the real token being rendered and transacted.
 
 ## 付款方示例：DAItoken
 ## Payment side example: DAI token
 
-DAI是一种用于支付的代币 - 购买加密货币，购买商品和服务等等。 它锚定美元的价值。 没有固定供应上限，它本身不是一个投资品种。
+DAI是一种用于支付的代币 - 购买加密货币，购买商品和服务等等。它锚定美元的价格。没有固定供应上限，它本身不是一个投资品。
 DAI is a token designed for payment - purchasing security token, purchasing goods and services and so like. It's intended to match USD in value. Not fixing the supply cap, it is not itself an investiment candidate.
 
 在许多方面，DAI的功能类似以太网，它是以太坊的基础货币。 但是，它不能成为Ether的替代品。
