@@ -553,10 +553,10 @@ If Pizza website doesn't upgrade, the user has to convert DAI to Ether first, th
 值得注意的是，披萨网站无法升级到支持DAI，而不知道如何获取用户的DAI余额[^ balance-is-privacy]（为了不浪费交易费结果只发现DAI余额不足），如何构建DAI撤销事务或DAI-Ether网关事务，并对DAI持有合同进行直接智能合约函数调用。
 It's worth noticing that the Pizza website cannot upgrade to support DAI without knowing how to discover the user's DAI balance[^balance-is-privacy] (to not to to waste a transaction fee just to find the DAI balance is insufficient), how to construct a DAI withdraw transaction or DAI-Ether gateway transaction and make direct smart contract function calls to the DAI holding contract.
 
-[^balance-is-privacy]:最终，披萨网站不仅不需要检查余额，因为TBML处理它，也不需要知道余额。 这将需要底层区块链的支持，但如果我们继续当前的趋势，继续关注业务逻辑的网站也关心支付逻辑，这最终无法完成。
+[^balance-is-privacy]:最终，披萨网站不仅不需要检查余额，因为TBML会处理它，也不需要知道余额。 这将需要底层区块链的支持，但如果我们继续当前的趋势，继续关注业务逻辑的网站也关心支付逻辑，这最终无法完成。
 [^balance-is-privacy]: Eventually, the Pizza website would not only be oblivious about how to check balance, since TBML handles it, but also not possible to know the balance. This would require underlying blockchain's support, but ultimately cannot be done if we continue the current trend where website, who should care about business logic, also care about payment logic.
 
-当然，Pizza网站不是管理这些付款方详细信息的最佳位置。 TBML通过以下方式解决了这个问题
+当然，Pizza网站不是管理这些付款方详细信息的最佳位置。 TBML通过以下方式解决了这个问题：
 Naturally, the Pizza website isn't in the best position to manage these payment-side details. TBML addreses this problem by
 
 1.封装支持DAI所需的智能合约函数调用，以及用于在TBML中构建所需事务的javascript，由DAI发行者签名。
@@ -564,13 +564,13 @@ Naturally, the Pizza website isn't in the best position to manage these payment-
 2.TBML，兼容性提供浏览器端实现和基于javascript的实现，以便Pizza商店可以调用泛型操作来返回ETH（或任何可接受的货币）并使用TBML中的支付逻辑来交易。
 2. Providing a browser side implementation and a javascript based implementation for TBML compatibility, so that the Pizza shop could just call a generic action to return Ether (or any acceptable currency) and let the payment logic in TBML work at transaction.
 
-TBML嵌入支付逻辑和表示的能力意味着它不仅可以用用户的语言显示消息（如余额或“余额不足”消息），而且可以执行预检余额等功能，暂停结账流程以便用户 可以执行充值流程并返回结帐流程以完成结账。
+TBML嵌入支付逻辑和表示的能力意味着它不仅可以用用户的语言显示消息（如余额或“余额不足”消息），而且可以执行预检余额等功能，暂停结账流程以便用户可以执行充值流程并返回结帐流程以完成结账。
 TBML's capacity to embed payment logic and presentation means that not only it can display messages in user's language (like balance or "insufficient balance" message), but it can perform functions like pre-checking the balance, pause the checkout flow so that the user can perform a top-up flow and return to the checkout flow to finalise the checkout.
 
 对于用户来说，该过程类似于结账过程引导用户到Paypal来完成交易，唯一的区别是该过程在更强大的本地用户代理中发生。
 To the user, the process resembles a bit like the checkout processs leads the user to Paypal to finalise the transaction, except the process happens locally in an enhanced user-agent.
 
-我们再次抢到，目前的方法不适合创造完全市场，但是TBML可以，通过提供*互操作性*，*可扩展性*和*安全性*来创造完全市场。
+我们再次强调，目前的方法不适合创造完全市场，但是TBML可以，通过提供*互操作性*，*可扩展性*和*安全性*来创造完全市场。
 We again argue that current prevailing method is not suitable for creati
 ng a frictionless market, while TBML could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
 
@@ -582,14 +582,14 @@ This approach solves one problem by introducing quite a few others.
 
 #### 安全性
 #### Security
-当用户进行购买尝试时，使用本地javascript（Pizza shop javascript）和DAI提供的所谓安全javascript的组合来创建交易。 向用户呈现交易载荷，该交易的载荷包含访问DAI合同的参数，例如， 支付金额，以及访问比萨网站合同的参数，例如 购买比萨饼的数量和选择的浇头。 显然，这样的交易必须发送到DAI合同并通过（代理）到披萨店合同。
+当用户尝试进行购买时时，使用本地javascript（Pizza shop javascript）和DAI提供的所谓安全javascript的组合来创建交易。 向用户呈现交易载荷，该交易的载荷包含访问DAI合同的参数，例如，支付金额，以及访问比萨网站合同的参数，例如购买比萨饼的数量和选择的浇头。 显然，这样的交易必须发送到DAI合同并通过（代理）到披萨店合同。
 When the user makes the purchase attempt, the transaction is created with the combined effort of local javascript (Pizza shop javascript) and the supposedly secure javascript supplied by DAI. The user is presented with a transaction payload that contains both the parameters to access DAI contract, e.g. amount to pay, and the parameters to access the Pizza website contract, e.g. amount of pizzas to buy and the toppings of choice. Apparently such a transaction has to be sent to DAI contract and channeled (proxed) to the Pizza shop contract.
 
 
-有两个直接[^minor-security-concerns]安全问题。 首先，网站没有正确使用MakerDAO javascript库，其中包含最终的交易构建器。 其次，它不是MakerDAO真正的的javascript，而是由黑客取代的版本。
+存在两个直接[^minor-security-concerns]安全问题。 首先，网站没有正确使用MakerDAO javascript库，其中包含最终的交易构建器。 其次，它不是MakerDAO真正的的javascript，而是由黑客取代的版本。
 There are two immediate[^minor-security-concerns] security concerns. First is that the website didn't use the MakerDAO javascript library correctly, which has the final transaction builder in it. Second is that it is not MakerDAO's javascript at work, but a version replaced by a hacker.
 
-[^ minor-security-concerns]：当两个系统集成网络上时，通常存在大量安全问题。 举一个例子，如果一方未更新代码以反映另一方的更改，则可能会生成格式错误的交易。 跟踪这些交易允许攻击者定位未更新的网站。
+[^ minor-security-concerns]：当两个系统集成在网络上时，通常存在大量安全问题。 举一个例子，如果一方未更新代码以反映另一方的更改，则可能会生成格式错误的交易。 跟踪这些交易允许攻击者定位未更新的网站。
 [^minor-security-concerns]: When two systems plug on the web, usually there are a hoard of security concerns. To give one example, if a side didn't update the code to reflect the other side's change, the resulting malformed transaction might be rejected. Tracing these transactions allow an attacker to target websites not updated.
 
 这些问题通过TBML中使用的封装方法解决。
@@ -610,7 +610,7 @@ Third, if secure protocols needs to be added, for example, an attestation from t
 #### 互操作性
 #### Interoperability
 
-添加对DAI本身的支持是很麻烦的，更不用说添加其他付款方token了。 在2017-2018年的狂热中，许多支付方token被发明并投入大量资金。几乎任何宣传不作为加密货币的东西都概述了他们的token可用于支付或共同支付某些商品和服务的某种方式。 例如，电力token被发明为未来象征化电力的货币。 他们中的大多数只是笑话，但如果他们开始工作呢？ 即使这些token中只有10％由自己的ICO团队完成，但所有这些token都会在将DAItoken集成到市场中时遇到类似的麻烦。
+添加对DAI本身的支持是很麻烦的，更不用说添加其他付款方token了。 在2017-2018年的狂热中，许多支付方token被发明并投入大量资金。就连是不安全的token，也在宣传他们的token可用于支付或共同支付某些商品和服务的某种方式。 例如，电力token被发明为未来象征化电力的货币。 他们中的大多数只是笑话，但如果他们开始工作呢？ 即使这些token中只有10％由自己的ICO团队完成，但所有这些token都会在将DAItoken集成到市场中时遇到类似的麻烦。
 Adding support for DAI itself is trouble enough, not to mention adding other payment side tokens. In the 2017-2018 frenzy, a lot of payment side tokens are invented and heavily invested in. Pretty much anything advertised not as a security token outlines some way their token can be used to pay or co-pay some goods and services. Electricity tokens, for example, is invented as the currency of the future tokenised electricity. Most of them are jokes, but what if they are put to work? Even if only 10% of these tokens are done by sincerer ICO teams, all of them would forsee similiar trouble as the integration of DAI token into the market.
 
 每种付款方货币都有自己的付款方逻辑。以DAI为例，它具有以下支付方逻辑：
@@ -623,7 +623,7 @@ And each payment side currency brings its own payment side logic. Take DAI for e
 2. The risk level of a CDP changes. Users should receive a notification of their CDP is at liquidation risk. We will cover such case again in the next chapter.
 3. If the balance runs low, but the user has quite a bit of Ethers on his/her account, she may pause the checkout to top up before returning to the checkout.
 
-当架构师读到这里的时候，他可能会决定这些都在外部完成。如果发生任何这些情况，只需将用户踢回MakerDAO网站即可。这不不是像Point + Pay这样的支付方创新，其中选择与支付在同一屏幕上选择。 事实上，您可以观察到中国支付方创新的大量例子，例如：
+当架构师读到这里的时候，他可能会绝的这些都可以在外部完成。如果发生任何这些情况，只需将用户踢回MakerDAO网站即可。这不是像Point + Pay这样的支付方创新，其中选择与支付在同一屏幕上选择。 事实上，您可以观察到中国支付方创新的大量例子，例如：
 An architect might read it here and decide these can all be done out of band. Just kick the user back to the MakerDAO website if any of these happens. This would not address payment side innovation like Point+Pay, where the points are selected at the same screen as payment. In fact, you can observe a proliferationDictionary of payment side innovations in China for examples:
 
 - 小额信贷和抵押贷款
@@ -666,10 +666,10 @@ It's unlikely any scalability plan will not involve the participation of dapp br
 我们发现网络很难集成的原因是各个网站之间只有一个链接，即URL链接。 链接不包含业务流程，身份验证或信任关系。 链接上没有集成锚点。
 We trace the reason that the web is poorly integrated to the only link between the units of the web, i.e. URL links. A link carries no business process, authentication or trust relationship. There are no anchoring points for integration on links.
 
-我们相信令牌是集成的锚点。 同样，最好可以通过示例来说明
+我们相信token是集成的锚点。 同样，最好可以通过示例来说明。
 We believe the token is the anchor points for integration. Again, this is best illustrated by examples.
 
-假设用户使用区块链从在线零售商Harvey Norman购买iPhone。 交易的输入将是一种货币; 在这种情况下，输出将是三个令牌：
+假设用户使用区块链从在线零售商Harvey Norman购买iPhone。 交易的输入将是一种货币; 在这种情况下，将输出三个token：
 Suppose a user purchases an iPhone from Harvey Norman, an online retailer, using the blockchain. The input of the transaction will be a type of currency; the output, in this case, will be three tokens:
 
 - 物流服务兑换token，可用于从本地提货站兑换产品。
@@ -695,7 +695,8 @@ With the use of a shipping token, the token status can be remotely updated by th
 ### 保修token
 ### Warranty Token
 
-如果没有此token，用户可能需要序列号和在线注册过程来激活保修。 她甚至可能需要为此创建一个帐户，她密码可能很快就会忘记密码。Without this token, a user might need the serial number and an online registration process to activate the warranty. She might even need to create an account for that, whose password she will probably soon forget.
+如果没有此token，用户可能需要序列号和在线注册过程来激活保修。 她甚至可能需要为此创建一个帐户，她可能很快就会忘记密码。
+Without this token, a user might need the serial number and an online registration process to activate the warranty. She might even need to create an account for that, whose password she will probably soon forget.
 
 通过使用保修token，可以轻松找到条款和到期日期，因为它是token属性。 用户可以使用token登录保修服务网站，放弃帐户。 token以被编程为接收诸如产品召回或紧急安全更新之类的消息。
 With the use of a warranty token, the terms and expiration would be easy to find, as it is token properties. The user can log in to the warranty service website with the token, forgoing an account. The token can be programmed to receive messages like product call back or emergency security updates.
@@ -722,7 +723,7 @@ As we can observe by the use of tokens, usually scattered business processes and
  - 由于运输能够被token化，买方很容易选择他最喜欢的运输公司，而无需手动提供商业信息（地址，产品，重量，日期），这将会进一步打开竞争市场。
 - Since shipping can be tokenised, it would be easy for the buyer to choose his favourite shipping company without having to supply it with business context (address, product, weight, dates) manually, further opening the market for competition.
 
-可以进一步扩展此示例以解决复杂和创新的业务案例。 假设购买不是使用法定货币，而是使用美国运通积分。 iPhone具有屏幕损坏保险，因此，交易将有第4个保险token作为输出。
+可以进一步扩展此示例以解决复杂和创新的业务案例。 假设购买不是使用法定货币，而是使用美国运通积分。 iPhone具有屏幕损坏保险，因此，交易将输出第四个保险token。
 This example can be further extended to solve complicated and innovative business cases. Suppose the purchase is not made with fiat currency but with American Express points. The iPhone purchase will be insured for screen damage, and as a result, the transaction will have a 4th insurance token as the output.
 
 当手机被修复屏幕损坏时，会发出有关手机购买记录的发票，以证明它是与积分一起购买的手机，从而可以当场支付保险费。
@@ -734,7 +735,7 @@ Without such tokens, the user will have to submit a billing statement, invoice a
 在这种保险案例中，区块链允许业务流程创新，否则用户将会因为仅涉及太多方并且缺乏集成锚点这一点。牺牲便利性，
 In this insurance case, the blockchain allowed business process innovation that otherwise would require the user to sacrifice convenience, for the mere fact that too many parties are involved and there lacks an integration anchor.
 
-使用物联网进一步加强集成的能力。 让我们想象一下AirBNB的未来版本，其中预订被token化。 旅行者可以通过用他或她的令牌解锁智能锁来进入预订的AirBNB房屋，并且智能锁将识别预订token的当前所有者是谁。
+使用物联网进一步加强集成的能力。 让我们想象一下AirBNB的未来版本，其中预订被token化。 旅行者可以通过用他或她的token解锁智能锁来进入预订的AirBNB房屋，并且智能锁将识别预订token的当前所有者是谁。
 The power of integration is further strengthened by the use of the Internet of Things. Let's imagine a future version of AirBNB, where the bookings are tokenised. A traveller can enter a booked AirBNB house by unlocking the smart-lock with his or her token, and the smart-lock would recognise who the current owner of the booking token is.
 
 如果Alice拥有在特定时间窗口内使用房间的权利的token，或者用户的条款中的“预订”，那么她可以执行的操作是：
@@ -774,7 +775,7 @@ Early public blockchain projects attempted to implement both token logic and bus
 使用类比来证明这个并不是合适的做法，假设一个宜家经理决定格式化家具销售合同，以包括一个信息，哪一个顾客会去取家具包裹，它能在现实生活中运作吗？ 当然不会，合同必须反复修改以反映宜家库存管理状态，那个顾客拥有产品对贸易的有效性没有影响。
 Using an analogy to demonstrate the inappropriate method, suppose an IKEA manager decides to format the furniture sales contract to include information like which aisle a patron should go to fetch the furniture package, would it work in real life? Of course not, the contract would have to be modified too many times to reflect Ikea warehouse management; which aisle has the product has no impact on the validity of the trade.
 
-当这些尝试不起作用的时候，不顾一切撞墙的开发人员，开始抱怨当前一代区块链中的性能和隐私问题。确实，当前一代的区块链在性能和隐私方面存在很大的缺陷，但扩展它们来解决业务流程是解决问题的错误方法。 意识到当前的以太坊不适合作为业务引擎，ICO骗子在2017年吹捧了新一代区块链的想法，每秒有数万笔交易。 2018年，将区块链的虚假信息更新为“新云”，这是AWS功能的超集。 根本的想法是，区块链作为一种新技术必须是比以前更快更强的版本：云; 很像我们想象的2000年代运输的解决方案是飞行汽车，而不是优步。
+当这些尝试不起作用的时候，不顾一切撞墙的开发人员，开始抱怨当前一代区块链中的性能和隐私问题。确实，当前一代的区块链在性能和隐私方面存在很大的缺陷，但扩展它们来解决业务流程是解决问题的错误方法。 意识到当前的以太坊不适合作为业务引擎，ICO骗子在2017年吹捧了新一代区块链的想法，每秒有数万笔交易。 2018年，将区块链的虚假信息更新为“新云”，这是AWS功能的超集。 根本的想法是，区块链作为一种新技术必须是比以前更快更强的版本：云; 很像我们憧憬的2000年代运输的解决方案是飞行汽车，而不是优步。
 When these attempts failed to work, developers, in a resolved effort pounding heads against the wall, complained about the performance and privacy issues in current generation blockchains. It is true that the current generation blockchains lack greatly in performance and privacy, but extending them would be the wrong approach to address business process problems. Realising that current Ethereum does not fit to be a business engine, ICO hustlers in 2017 touted the idea of new generations of blockchains with tens of thousands of transactions per seconds. 2018 saw the renewal of such disinformation picturing blockchain as "the new cloud", a superset of AWS' functionalities. The underlying thinking is that blockchain as a new technology must be a faster and stronger version of the previous ones: the Cloud; much akin to the way we imagined the 2000s transportation solution being flying cars, not Uber.
 
 由于其额外的安全假设，拜占庭容错区块链永远不会超越AWS的业务引擎。 此外，围绕区块链业务流程构建防火墙是不切实际的。 如果性能，隐私和安全性原因不够具有说服力，那么本文提供的令人信服的论点在于生命周期管理：用户持有的token反映的契约关系将保留很长时间，而业务流程在理想情况下，每天都在完善。
@@ -808,12 +809,13 @@ The first change is that the online retailer found a better shipment company. In
 无需更改智能合约交易规则。 当产品无法在首次完全交付在线零售商甚至可以更改运输公司而无需用户更改其token。
 There is no need to change the smart contract transaction rules. The online retailer can even change the shipping company when the product is first under-delivered without the user changing his token.
 
+此更改说明业务流程应与token分离，并且通过令牌集成。
 This change illustrated that the business process should decouple from the token, instead, integrated through the token.
 
 ###市场变化
 ### Change in the market
 
-生意持续了一段时间，然后区块链市场有一项创新，一些用户从从运输公司批量购买了一年的运输服务，以享受AmazonPrime般的免费送货特权而无需使用亚马逊（最后一公里）。看到机会，信用卡公司甚至为他们的卡的订户提供了这样的特权，这也将是一个代表。
+生意持续了一段时间，伴随区块链市场有一项创新，一些用户从从运输公司批量购买了一年的运输服务，以享受AmazonPrime般的免费送货特权而无需使用亚马逊（最后一公里）。看到机会，信用卡公司甚至为他们的卡的订户提供了这样的特权，这也将是一个代表。
 Business went on for a while; then, there is an innovation from the blockchain market. Some users bulk-purchased a year's shipping from a delivery company, to enjoy the AmazonPrime-like free shipping privileges without using Amazon[^last-mile-market]. Seeing an opportunity, a credit card company even went so far as to provide such a privilege to the subscribers of their card, which is also represented by a toke.
 [^ 最后一公里市场]：这种创新的市场是可能存在的，因为只有买方最熟悉最后一英里的交付体验。通常，在线零售商通过谈判获得比买家更高的批量交付折扣，但它们只是买家体验的代表。 他们的关注点并不完全与买家保持一致。一个买主开车30分钟去取包裹这个折扣和她的时间并不匹配。送货公司还可以比在线零售商更好的优化工程，例如，通过请求访问买家的日历，在线零售商并不能安全做这件事。最终，通过买方和交付公司之间的协作，可以创造更多价值。
 [^last-mile-market]: The market condition for such an innovation might exist, because only the buyer is most familiar with the last-mile delivery experience. Usually, an online retailer negotiates a higher bulk delivery discount than their buyers could, but they are just a proxy of the buyers' experience. Their interest is not perfectly aligned with the buyers. A buyer driving 30 minutes to pick up a parcel knows that the discount is no match for her time. The delivery company can also optimise the process better than the online retailer, for example, by requesting access to the buyer's calendar, which the online retailer couldn't do safely. Ultimately, more value can be created with the collaboration between buyer and the delivery company.
@@ -821,7 +823,7 @@ Business went on for a while; then, there is an innovation from the blockchain m
 在线零售商决定加入其中以保持竞争力。 这一次，他需要修改他的智能合约，更改交易规则，即在购买时可以接受交货token。 在这种情况下，交易的输出将没有交货token，因为已经提供了一个。[^可替代的物流服务兑换token]
 The online retailer decided to join the game to stay competitive. This time, he would need to modify his smart contract, changing the transaction rule that a shipping token can be accepted at the time of purchase. In such a case, the output of the transaction will not have a shipping token, since one is already provided.[^fungible-shipping-token]
 
-[^可替代的物流服务兑换token]：在实际实施中，批量购买的运输标签，如果被token话，可能会也可能不会被用作运输token。 物流服务兑换token可以设计为半可替代的令牌，而运输token必须是不可替代的，每个都映射到特定的包裹。 本文的作者为了清楚起见，决定省略这样的实现细节。
+[^可替代的物流服务兑换token]：在实际实施中，批量购买的运输标签，如果被token话，可能会也可能不会被用作运输token。 物流服务兑换token可以设计为半可替代的token，而运输token必须是不可替代的，每个都映射到特定的包裹。 本文的作者为了清晰起见，决定省略这样的实现细节。
 [^fungible-shipping-token]: In practical implementations, bulk-purchased shipping labels, if tokenised, may or may not be used as shipment tokens. Shipping labels can be designed as a semi-fungible token, while the shipment token must be non-fungible, each mapped to a specific parcel. The authors of this paper decided to leave out such implementation detail for clarity.
 
 在线零售商必须修改他的业务流程，以期望用户购买的物流服务兑换token支持任何交付公司提取货物。
@@ -833,7 +835,7 @@ This change illustrated that a new transaction rule would result in a change of 
 ### 业务流程可能不会改变智能合约。 市场可能会。
 ### Business processes may not change smart contract. Market condition may.
 
-总而言之，业务流程变更不应导致智能合约变更。 以交易规则变化的形式改善自由市场自然应该导致智能合约的变化。 区块链用于提供无摩擦的市场，而不是优化业务流程。
+总而言之，业务流程变更不应导致智能合约变更。 以交易规则变化的形式改善自由市场自然应该导致智能合约的变化。 区块链用于提供完全市场，而不是优化业务流程。
 To recap, business process changes should not lead to a smart contract change. An improvement in a free market, in the form of a transaction rule change, should naturally lead to a smart contract change. Blockchain serves to provide a frictionless market, not to optimise business processes.
 
 通过TBML实现这一愿景。 没有它，就很难将集成需求和业务流程需求明确分开，结果将无法实现互操作。
@@ -922,22 +924,22 @@ This paper re-introduces the concept of attestations - it has been there for dec
 ## 证明
 ## Attestations
 
-证明是一种加密签名的消息，用于证明某个主题 - 某人，某个token或其他证明。 由于它是特定于某主题的证明，因此它不能在区块链上自行转移。
+凭证是一种用于证明某个主题加密签名的消息， - 某人，某个token或其他证明。 由于它是特定于某主题的凭证，因此它不能在区块链上自行转移。
 Attestation is a cryptographically signed message testifying something on a subject - a person, a token, or another attestation. Since it is specific to that subject being attested, it is not transferrable on its own on the blockchain.
 
-在我们之前的汽车所有权token示例中，汽车所有权token将是区块链token，其中可以应用典型的买入，卖出和转移规则。 但是，它上面的保险toen不是区块链token。 如果保险是强制性的，则是对该车的认证，因此不能自行转让。 如果保险是全面的，它是对汽车和司机的证明，即使汽车被转移也不能无缝转移。
+在我们之前的汽车所有权token示例中，汽车所有权token将是区块链token，其中可以应用典型的买入，卖出和转移规则。 但是，它上面的保险toen不是区块链token。 如果保险是强制性的，则是对该车的认证，因此不能自行转让。 如果保险是全面的，它是对汽车和司机的凭证，即使汽车被转移也不能无缝转移。
 In our previous car ownership token example, the car ownership token would be a blockchain token, where the typical buy, sell and transfer rules can apply. The insurance token on it, however, is not a blockchain token. If the insurance is compulsory, it is an attestation on that car, therefore cannot be transferred on its own. If the insurance is comprehensive, it is an attestation on the car and the driver, and cannot be seamlessly transferred even if the car is transferred.
 
-如果证明不可转让，那为什么它必须在区块链上呢？ 答案是不必须。
+如果凭证不可转让，那为什么它必须在区块链上吗？ 答案是否定的。
 If an attestation is not transferable, then why does it have to be on the blockchain? The answer is it doesn't.
 
 以个人身份证明为例。 除非它被用于区块链交易或由于某种原因而被撤销，否则它没有理由对像公共以太坊这样的区块链进行任何追踪。 它们仍然是用户钱包中的一个项目，因为它们可能需要延长，由于个人身份的变化而重新证明或者用于登录服务，比如爱沙尼亚电子居住证明可用于登录网页服务。
 Take a person identity attestation for example. Unless it is used for a blockchain transaction or revoked for some reason, there is no reason that it should have any trace on blockchains like public Ethereum. They are, still, an item in the user's wallet, since they might need to be prolonged, re-attested due to change of a person's identity or used to login to services the same way Estonian e-residency attestation can be used to login to web services.
 
-证明可能会影响交易。 例如，VIP会员可享受10％的服务折扣 - 此类商业规则要求VIP会员证明用于加密货币交易以购买服务。 Holden Capped Car服务的证明有效期为5年，允许汽车在到期前将账单上限到一定金额。
+凭证可能会影响交易。 例如，VIP会员可享受10％的服务折扣 - 此类商业规则要求VIP会员证明用于加密货币交易以购买服务。 Holden Capped Car服务的证明有效期为5年，允许汽车在到期前将账单上限到一定金额。
 An attestation can affect transactions. For example, a VIP member can enjoy a 10% discount on services - such business rule would require a VIP member attestation to be used for the cryptocurrency transaction for purchasing the service. An attestation of Holden Capped Car services, which is valid for 5 years, allow the car to be serviced with the bill capped to a certain amount before its expiry.
 
-有时，证明决定了交易可能发生的事情。
+有时，凭证决定了交易可能发生的事情。
 Sometimes, an attestation dictates what transactions can happen.
 
 作为* The Economist *的订阅者，我承诺在每个发行时付费。 这是通过我发送预授权从我的以太坊帐户中每两周提取一次订阅费来完成的。 这种预授权将是 Economist 钱包中的证明，它提供了 Economist 可以每两周使用一次 “charge” 行动。
@@ -947,13 +949,13 @@ As a subscriber of *The Economist*, I commit to paying for each issue as they ar
 
 For privacy reasons, or to combat linkability (the subject of an attestation being identified by the public use of such an attestation), the attestation used in transactions is of a different form than the one that lies in a user's wallet. The authors of this paper addressed this issue in another paper [cite].
 
-在前面的所有示例中，证明只在事务需要时留下痕迹。有些情况下，证明在创建或撤销时会在区块链上留下痕迹。
+在前面的所有示例中，凭证只在事务需要时留下痕迹。有些情况下，证明在创建或撤销时会在区块链上留下痕迹。
 In all of the previous examples, attestations only leave traces when a transaction needs it. There are cases when attestations leave traces on the blockchain when they are created, or revoked.
 
-为了解释 必须在区块链或区块链跟踪上发出*颁发证明*的用例，以飞机引擎为例，具有巨大的转售价值，该引擎的修理情况，以证明的形式，显著影响着估值。 这种证明存在于卖方的钱包中，但是每当发动机进行维护时，飞机服务提供商必须添加这种证明的散列。 如果没有提供与区块链记录匹配的证明，买家将不会购买。
+为了解释必须在区块链或区块链跟踪上发出*颁发证明*的用例，以飞机引擎为例，具有巨大的转售价值，该引擎的修理情况，以证明的形式，显著影响着估值。 这种证明存在于卖方的钱包中，但是每当发动机进行维护时，飞机服务提供商必须添加这种凭证的散列。 如果没有提供与区块链记录匹配的证明，买家将不会购买。
 To explain the use case where the *issuing* of attestation has to happen on the blockchain or with blockchain trace, take the aeroplane engine for example, with a substantial resale value, the repair facts of this engine, in the form of attestations, affects valuation significantly. Such attestations are in the seller's wallet, but an aeroplane service provider must add a hash of such an attestation each time the engine undergoes maintenance. The buyers would not purchase if they are not presented with these attestations that match the blockchain records.
 
-为了解释在区块链上必须发生证明的*撤销*时的用例，让我们考虑一个名为FIFA票证的证明。 由活动组织者发布，它证明了所有者进入场地的权利，通常是在用户付款或赠送门票之后。 假设90％的门票都是使用非加密货币购买的，因此这些门票不会对区块链进行跟踪。 但是，如果票证所有者决定按照相应的智能合约规则在区块链上出售他的票证，则票证必须用作此类交易的输入并被视为已消耗，而代表相同权利的区块链令牌将被创建并且成交。 本文的写作在2018年中期组织了一次FIFA门票实验来测试这些概念，在内部我们将这种认证称为“一个可产生的”，因为它的使用产生了一个区块链令牌。 该实验的细节可以在另一篇论文[引用]中找到。
+为了解释在区块链上必须发生凭证的*撤销*时的案例，让我们来看看一个名为FIFA票证的凭证。 由活动组织者发布，它证明了所有者进入场地的权利，通常是在用户付款或赠送门票之后。 假设90％的门票都是使用非加密货币购买的，因此这些门票不会对区块链进行跟踪。 但是，如果票证所有者决定按照相应的智能合约规则在区块链上出售他的票证，则票证必须用作此类交易的输入并被视为已消耗，而代表相同权利的区块链令牌将被创建并且成交。 本文的写作在2018年中期组织了一次FIFA门票实验来测试这些概念，在内部我们将这种认证称为“一个可产生的”，因为它的使用产生了一个区块链token。 该实验的细节可以在另一篇论文[引用]中找到。
 To explain the use case when the *revocation* of an attestation has to happen on the blockchain, let's consider an attestation called FIFA ticket.  Issued by the event's organiser, it attests the owner's right to enter the venue, usually after the user has paid or was gifted the ticket. Let's assume 90% of the tickets are purchased with non-crypto currency, therefore these tickets would not have a trace on the blockchain. However, if a ticket's owner decides to sell his tickets on the blockchain following the corresponding smart contract rules, the ticket has to be used as the input of such a transaction and considered consumed, while a blockchain token representing the same entitlement would be created and traded. The writes of this paper organised a FIFA ticket experiment in mid-2018 to test the concepts, and internally we call such an attestation "a spawnable" as its use spawns a blockchain token. The detail of that experiment can be found in another paper [cite].
 
 #TBML的组件
@@ -962,7 +964,7 @@ To explain the use case when the *revocation* of an attestation has to happen on
 ## 行动
 ## Actions
 
-我们将TBML的渲染部分和可操作部分分开。 操作引用您可以使用令牌执行的操作。 通常有：
+我们将TBML的渲染部分和可操作部分分开。 操作引用您可以使用token执行的操作。 通常有：
 We seperate the rendering portion of TBML and the actionable portion. Action refer the things you can do with a token. There are generally either:
 
  - 使用token访问Web服务
@@ -991,7 +993,7 @@ Authorise
 
 152/5000
 借
-：授权和出借之间的区别是后者还授权借款人使用Holden Capped Service并打开车库门。
+：授权和出借之间的区别是后者还要授权借款人使用Holden Capped Service并打开车库门。
 Lend
 :   The difference between authorising and lending is the latter also authorises the borrower to use Holden Capped Service and to open the garage gate.
 
@@ -1017,7 +1019,7 @@ Pay
 Not all actions are provided by the token. Typically:
 
 转移
-由通用令牌的TBML提供。 您可以想象，例如，ERC721的TBML文件允许传输任何符合标记的token，并且汽车token可能是其中之一。 实际上很难出现这种情况，因为汽车代币的交易规则通常需要证明，例如买方是进行此类交易的法定年龄，但即使在这种情况下，规则也可能由规范汽车贸易的TBML提供。。
+由通用token的TBML提供。你可以想象，例如ERC721的TBML文件允许传输任何符合标记的token，并且汽车token可能是其中之一。 实际上很难出现这种情况，因为汽车代币的交易规则通常需要证明，例如买方是进行此类交易的法定年龄，但即使在这种情况下，规则也可能由规范汽车贸易的TBML提供。。
 Transfer
 :   Provided by a generic token's TBML. You can imagine for example the TBML file of ERC721 allows any conforming tokens to be transferred, and the car token might be one of them. In reality it can hardly be the case because car token's transaction rules usually require attestations, such as the buyer is of the legal age to conduct such a transaction, but even in such cases, the rule might be supplied by a TBML regulating the car trade.
 
@@ -1027,7 +1029,7 @@ Auction
 :   Provided by an auction market. When the user accesses an auction market, using the same mechanism that allows a token to login to a website, the user's agent (wallet) would show a list of tokens that can enjoy the auction service. If the user trusts the auction market, she can then add its action to all of the supported tokens.
 
 分享清单
-：一家初创公司，我们称之为CarNextDoor，提供管理流程，以便车主可以安全地列出汽车进行分享并自动获得收入。 一旦列出，车主将获得一个上市token，并且必须通过它预订,来使用自己的车。 作为交换，当他不使用它时，汽车会外出并为他赚钱。 当然，这个动作是由CarNextDoor提供的，而不是由Holden提供的。
+：一家初创公司，我们称之为CarNextDoor，提供管理流程，以便车主可以安全地列出汽车进行分享并自动获得收入。 一旦列出，车主将获得一个上市token，并且必须通过它预订,来使用自己的车。 作为交换，当他不使用它时，汽车会外借并为他赚钱。 当然，这个动作是由CarNextDoor提供的，而不是由Holden提供的。
 List for sharing
 :   A startup company, let's call it CarNextDoor, offers to manage the process so the car owners can safely list the car for sharing and automatically gets income. Once listed, the car owner will obtain a listing token and has to book his use of his own car through it. In exchange, when he is not using it, the car goes out and earn money for him. Naturally, the action is provided by CarNextDoor, not by Holden.
 
@@ -1039,8 +1041,8 @@ List for sharing
 Magic links are simply a shortcut to an action on a specific asset. It's usually sent to the owner of the asset. It comes with required attestations for a transaction (e.g. an atomic swap).
 
 
-## 证明
-证明就像token，除了它们不可转让，如果智能合约允许转让，原始证明在转让后无效。这使得友谊之类的东西可以以类似于token的方式定义，因此，我们也可以将这些证明称为“token”。友谊的象征将是来自某人的签名消息，将其他人视为朋友，并且它将成为TBML术语中的资产。显然，迈克尔·杰克逊的友谊的象征可能具有很高的价值，特别是因为他不能再生产这些代币，但即使像“weiwu之友”这样的卑微的代币也具有一定的价值。例如，它允许weiwu的一个朋友为他签署一张收货单，或者允许这样的朋友在weiwu练习道场中成为队友。甚至有一个巧妙的伎俩，通过使用秘密共享协议，拥有威武的友情令牌可以让人们知道与weiwu一样的共同还有。请注意，此定义不要求资产是区块链token，也不要求它甚至存在于区块链中。更多内容将在后一章“证明”中阐述。
+## 凭据
+证明就像token，除了它们不可转让，如果智能合约允许转让，原始证明在转让后无效。这使得友谊之类的东西可以以类似于token的方式定义，因此，我们也可以将这些证明称为“token”。友谊的象征将是来自某人的签名消息，将其他人视为朋友，并且它将成为TBML术语中的资产。显然，迈克尔·杰克逊的友谊的象征可能具有很高的价值，特别是因为他不能再生产这些代币，但即使像“weiwu之友”这样的卑微的代币也具有一定的价值。例如，它允许weiwu的一个朋友为他签署一张收货单，或者允许这样的朋友在weiwu练习道场中成为队友。甚至有一个巧妙的伎俩，通过使用秘密共享协议，拥有威武的友情令牌可以让人们知道与weiwu一样的共同还有。请注意，此定义不要求资产是区块链token，也不要求它甚至存在于区块链中。更多内容将在后一章“凭据”中阐述。
 
 ## Attestations
 
