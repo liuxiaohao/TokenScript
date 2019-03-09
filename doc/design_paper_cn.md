@@ -17,8 +17,8 @@ To provide a practical use of the blockchain, we must understand its utility to 
 尽管2017-2018年发生了很多蠢事，但是这对于token获得一开始的关注并不是坏事。token，作者即将详细阐述的，将是两个主要功能的推动者。我们将定义并实现“token化”的技术。
 Despite the great folly in 2017-2018, it is not a bad thing to initially focus on tokens. Tokens, as the authors will elaborate, are the enabler of the two primary functions. We define the technique to make it happen in "Tokenisation".
 
-区块链行业共同的努力主要是集中在丰富技术能力上。这篇文章将集中在token化，并且介绍一个称作TBML(token行为标记语言)的标准化工作，它将使区块链技术具备完整的技术堆栈，为经济和互联网提供实用性。
-Previous efforts in this industry primarily focused on enriching the capacity of the technology. This paper will focus on tokenisation and introduce a standardisation effort known as TBML (Token Behaviour Markup Language) which will make the blockchain technical stack complete, providing utility for the economy and the internet.
+区块链行业共同的努力主要是集中在丰富技术能力上。这篇文章将集中在token化，并且介绍一个称作Tokenscript(token行为标记语言)的标准化工作，它将使区块链技术具备完整的技术堆栈，为经济和互联网提供实用性。
+Previous efforts in this industry primarily focused on enriching the capacity of the technology. This paper will focus on tokenisation and introduce a standardisation effort known as Tokenscript (Token Behaviour Markup Language) which will make the blockchain technical stack complete, providing utility for the economy and the internet.
 
 等tokenscript.org搭建好时，欢迎加入我们的工作。 一本指导操作者使用Tokenscript作为其tokens和dapps的黄皮书将花费数月时间。 但是，我们一直保持流程开放。 现在参与可避免我们制定的语言规范草案没有考虑到你的token模型。
 Please join our work at tokenscript.org - when it is set-up of course. A Yellow Paper to guide implementors to use Tokenscript for their tokens and dapps will take months to make. However, we keep the process open. Participate now to avoid the draft language specification being made without consideration your token model.
@@ -29,8 +29,8 @@ Please join our work at tokenscript.org - when it is set-up of course. A Yellow 
 我们认识到区块链技术的真正应用是提供完全市场和集成网络方面的实用性。 这是通过标记化完成的。 被Tokenized的股权可以在市场上交易并集成到系统中，形成完全市场并允许自由集成。
 We recognise the blockchain technology's utility in providing a frictionless market and integrating the web. This is done through tokenization. Tokenized rights can be traded on the market and integrated across systems, forming a frictionless market and allowing free integration.
 
-如今，访问、呈现和交易的token的方式分散在Dapps和Smart Contracts中。 如果所有关于一个token的知识都在dapp中，那么dapp必须参与该token的市场和所有集成，重建数据并提供互操作性，安全性和可用性 - 同样的问题在区块链发明之前就已出现，并阻碍了tokenisation。
-Today, the way tokens are accessed, rendered and transacted are scattered across Dapps and Smart Contracts. If all knowledge about a token is in a dapp, the dapp has to participate in the marketization and all integrations of that token, recreating data interoperability, security and availability barrier - exactly the same set of issues that prevented tokenisation before blockchain was invented.
+如今，访问、呈现和交易的token的方式分散在Dapps和智能合约中。 如果所有关于一个token的知识都在dapp中，那么dapp必须参与该token的市场和所有集成，重建数据并提供互操作性，安全性和可用性 - 同样的问题在区块链发明之前就已出现，并阻碍了tokenisation。
+Today, the way tokens are accessed, rendered and transacted are scattered across Dapps and Smart Contracts. If all knowledge about a token is in a dapp, the dapp has to participate in the marketization and all integrations of that token, recreating data interoperability, security and availability barrier - exactly the same set of issues that prevented tokenisation before blockchain was invented.exactly the same set of issues that prevented tokenisation before blockchain was invented.
 
 Tokenscript是一种抽象出token信息，访问模式和UI呈现的方法，以便它们可以有效地进行市场化并用于集成。
 Tokenscript is a method to abstract out the token information, access methods and UI rendering so that they can be efficiently marketized and used for integration.
@@ -38,10 +38,10 @@ Tokenscript is a method to abstract out the token information, access methods an
 
 ##加入游戏
 
-请加入我们在xxx的工作。 一份指导实施者使用TBML作为其tokens和dapps的黄皮书将花费数月时间来制作，但工作进程会一直在网上公开。现在参与以避免制定的语言规范草案没有考虑到您的token模型。
+请加入我们在xxx的工作。 一份指导实施者使用Tokenscript作为其tokens和dapps的黄皮书将花费数月时间来制作，但工作进程会一直在网上公开。现在参与以避免制定的语言规范草案没有考虑到您的token模型。
 
 ## Join the game
-Please join our work at xxx. A Yellow Paper to guide implementors to use TBML for their tokens and dapps will take months to make, but a work in progress is always available online. Participate now to avoid the draft language specification being made without consideration your token model.
+Please join our work at xxx. A Yellow Paper to guide implementors to use Tokenscript for their tokens and dapps will take months to make, but a work in progress is always available online. Participate now to avoid the draft language specification being made without consideration your token model.
 
 
 
@@ -55,8 +55,8 @@ Blockchain technology has **two primary functions** that serve essential purpose
 - providing a frictionless market; and
 - integrating the web.
 
-本文将从愿景开始，然后解释架构师需要在区块链上架构的原因,随后我们将解释TBML，这是一个关键的缺失层，并回顾其设计原则以及我们是如何构建它的。
-This paper will address the vision of where we can be and follow up with the design and reasoning behind the architecture needed on top of the blockchain. We will then explain TBML which is a critical missing layer and go over its design principles and how we are building it.
+本文将从愿景开始，然后解释架构师需要在区块链上架构的原因,随后我们将解释Tokenscript，这是一个关键的缺失层，并回顾其设计原则以及我们是如何构建它的。
+This paper will address the vision of where we can be and follow up with the design and reasoning behind the architecture needed on top of the blockchain. We will then explain Tokenscript which is a critical missing layer and go over its design principles and how we are building it.
 
 
 ## 区块链提供了一个完全市场
@@ -96,8 +96,8 @@ Can we tokenise the risk and reward of international trades, so that small impor
 我们是否可以创建一个依赖于加密证据的保险token，以便保险公司可以从其定价中删除欺诈性文件所产生的费用？ 我们可以完全去中心化保险公司吗？
 Can we create an insurance token that depends on cryptographic proofs, so that the insurer can remove from their pricing, the costs incurred by fraudulent documents? Can we decentralise the insurers altogether?
 
-区块链可以提供基础层来实现这些。虽然区块链的可扩展性和隐私性有待提高，但一个有效的，无摩擦的市场也依赖于有质量的方法来定义如何使用和交易token - 这是我们TBML工作的重点。
-Blockchain can provide the foundational layer to achieve these. While blockchain scalability and privacy will improve, a working, frictionless market also depends on quality methods to define how tokens should be used and transacted - the focus of our work on TBML.
+区块链可以提供基础层来实现这些。虽然区块链的可扩展性和隐私性有待提高，但一个有效的，无摩擦的市场也依赖于有质量的方法来定义如何使用和交易token - 这是我们Tokenscript工作的重点。
+Blockchain can provide the foundational layer to achieve these. While blockchain scalability and privacy will improve, a working, frictionless market also depends on quality methods to define how tokens should be used and transacted - the focus of our work on Tokenscript.
 
 token具有不同的属性。token是否会过期？ AirBNB预订token当然会，但1％的房产token可能不会。token所有者是否应收到有关特定事件的通知？电力token肯定需要，因为电力是不断变化的。token是否流通？
 Tokens have different properties. Do tokens expire? AirBNB booking tokens certainly do, but 1% ownership of property tokens probably don't. Should the token owner receive a notification on a specific event? Power tokens certainly need that, for the change in the power supply is dynamic. Is a token stream-able?
@@ -274,11 +274,11 @@ Carry trust relationship and business context to 3rd parties
 ＃设计要求
 # Design requirements
 
-我们断言需要一种描述性语言（TBML）来允许区块链技术实现“完全市场”和“集成网络”。 TBML代表token行为标记语言。
-We assert that a descriptive language (TBML) is needed to allow blockchain technology to enable "frictionless markets" and an "integrated web". TBML stands for Token Behaviour Markup Language.
+我们断言需要一种描述性语言（Tokenscript）来允许区块链技术实现“完全市场”和“集成网络”。 Tokenscript代表token行为标记语言。
+We assert that a descriptive language (Tokenscript) is needed to allow blockchain technology to enable "frictionless markets" and an "integrated web". Tokenscript stands for Token Behaviour Markup Language.
 
-由于TBML是一个解决方案层，而不是像以太坊和等离子(译者注：一种以太坊的二层扩容框架)这样的基础层技术，我们选择通过实例介绍该技术，并为观众的观众提供丰富的商业环境讨论。
-By virtue of TBML being a solution layer rather than base-layer technologies like Ethereum and Plasma, we choose to introduce the technology by example and provide rich business-context based discussion for a broader spectrum of audience.
+由于Tokenscript是一个解决方案层，而不是像以太坊和等离子(译者注：一种以太坊的二层扩容框架)这样的基础层技术，我们选择通过实例介绍该技术，并为观众的观众提供丰富的商业环境讨论。
+By virtue of Tokenscript being a solution layer rather than base-layer technologies like Ethereum and Plasma, we choose to introduce the technology by example and provide rich business-context based discussion for a broader spectrum of audience.
 
 ## 地址 完全市场的需求
 ## Address "Frictionless Market" needs
@@ -302,12 +302,12 @@ market
 :    Market is where delivery versus payment happens. *Market* is an concept, not a marketplace. A user who checks out on a website is accessing a market. She doesn't have to be in a marketplace (e.g. Amazon) to do so.
 
 向* market *提供*可交付*和*付款*方标记“插件”。
-TBML provides both *the deliverable* and *the payment* side tokens to "plug-in" to the *market*. 
+Tokenscript provides both *the deliverable* and *the payment* side tokens to "plug-in" to the *market*. 
 这样的框架对于token的呈现，索引，交易，交易，拍卖，组合......以实现完全市场至关重要。
 Such a framework is essential for tokens to be presented, indexed, transacted, traded, auctioned, combined... to work towards a frictionless market.
 
-我们将通过每个 *可交付* 方面和 *付款* 方面的示例介绍TBML。
-We will introduce TBML through an example on each of the *deliverable* side and on *payment* side.
+我们将通过每个 *可交付* 方面和 *付款* 方面的示例介绍Tokenscript。
+We will introduce Tokenscript through an example on each of the *deliverable* side and on *payment* side.
 
 ## 可交付方面的示例 1% 房产token
 ### Deliverable side example: 1% property token
@@ -375,8 +375,8 @@ Understandablly, the buyers need to access all these for an informed decision.
 #### 产品描述
 #### Product description
 
-产品描述信息通常在智能合约中。 在以太坊的情况下，这些可以通过进行一些智能合约函数调用来获得，因此，唯一需要的工作是将它们转换为演示文稿 - 通常意味着转换成为用户语言并将“实际”值转换为精心打勾的复选框。 这有助于介绍TBML的第一个功能：充当智能合约的表示层。
-Product description information is typically in the smart contract. In Ethereum cases, these can be obtained by making a few Smart Contract function calls, therefore, the only needed work is to convert them into presentation - usually it means translating to the language user speaks and converting "True" value into a nicely ticked checkbox. This serve to introduce the first functionality of TBML: acting as a presentation layer for smart-contracts.
+产品描述信息通常在智能合约中。 在以太坊的情况下，这些可以通过进行一些智能合约函数调用来获得，因此，唯一需要的工作是将它们转换为演示文稿 - 通常意味着转换成为用户语言并将“实际”值转换为精心打勾的复选框。 这有助于介绍Tokenscript的第一个功能：充当智能合约的表示层。
+Product description information is typically in the smart contract. In Ethereum cases, these can be obtained by making a few Smart Contract function calls, therefore, the only needed work is to convert them into presentation - usually it means translating to the language user speaks and converting "True" value into a nicely ticked checkbox. This serve to introduce the first functionality of Tokenscript: acting as a presentation layer for smart-contracts.
 
     <attribute-type id="voting-right">
        <name xml:lang="en">Voting right</name>
@@ -404,9 +404,9 @@ Product description information is typically in the smart contract. In Ethereum 
 	</origin>
     </attribute-type>
 
-这个简化的`attribute-type`代码片段允许从“holding-contract”获取投票权的值，这是一个在TBML中其他地方定义的智能合约，并以几种语言之一呈现。
+这个简化的`attribute-type`代码片段允许从“holding-contract”获取投票权的值，这是一个在Tokenscript中其他地方定义的智能合约，并以几种语言之一呈现。
 
-This simplified `attribute-type` code snippet allows the value for Voting Right to be fetched from `holding-contract`, which is a smart contract defined somewhere else in the TBML, and present it in one of a few languages.
+This simplified `attribute-type` code snippet allows the value for Voting Right to be fetched from `holding-contract`, which is a smart contract defined somewhere else in the Tokenscript, and present it in one of a few languages.
 
 #### 证明信息
 #### Attested information
@@ -424,13 +424,13 @@ In the 1% property token example, the involved attestations are:
  - 由买方提供投资此类资产的身份或能力
 - by buyers, for providing identity or capacity to invest in this type of asset
 
-[^ set-operation]：最终，这可能是一个加密集合操作，但即使发生这种情况，也需要在TBML中描述指示上下文（用户代理）进行计算的元数据。
-[^set-operation]: Eventually, this could be a cryptographic set operation, but even if that happens, the metadata directing the context (user-agent) to proform the computation still needs to be described in TBML.
-前两个证明并未存储在智能合约中，由于成本（交易的大小和数量）和隐私的原因。可以采用零知识证明来证明该证明适用于所述财产和所述所有者的通用证据，并且它尚未过期。 TBML中还描述了预期和可验证的证据。
-The first two attestations are not stored in smart contract for cost (size and number of transactions) and privacy reasons. It's possible to utilise zero knowledge proof to provide a generic proof that the attestation is for the said property and said owner, and it has not expired. What proofs are expected and can be validated is also described in TBML.
+[^ set-operation]：最终，这可能是一个加密集合操作，但即使发生这种情况，也需要在Tokenscript中描述指示上下文（用户代理）进行计算的元数据。
+[^set-operation]: Eventually, this could be a cryptographic set operation, but even if that happens, the metadata directing the context (user-agent) to proform the computation still needs to be described in Tokenscript.
+前两个证明并未存储在智能合约中，由于成本（交易的大小和数量）和隐私的原因。可以采用零知识证明来证明该证明适用于所述财产和所述所有者的通用证据，并且它尚未过期。 Tokenscript中还描述了预期和可验证的证据。
+The first two attestations are not stored in smart contract for cost (size and number of transactions) and privacy reasons. It's possible to utilise zero knowledge proof to provide a generic proof that the attestation is for the said property and said owner, and it has not expired. What proofs are expected and can be validated is also described in Tokenscript.
 
-此外，交易需要来自买方的身份证明或投资能力证明。 这些也在TBML中描述，因此上下文（例如，用户代理）可以防止用户在没有限定证据的情况下提交交易或帮助用户为购买交易选择合适的证明。
-Furthermore, the fact that the transaction requires an identity attestation or investment capacity attestation from the buyers. These are described in TBML as well so the context (e.g. user-agent) can prevent the user to submit a transaction without qualifying proof or help the user to select suitable attestations for a purchase transaction.
+此外，交易需要来自买方的身份证明或投资能力证明。 这些也在Tokenscript中描述，因此上下文（例如，用户代理）可以防止用户在没有限定证据的情况下提交交易或帮助用户为购买交易选择合适的证明。
+Furthermore, the fact that the transaction requires an identity attestation or investment capacity attestation from the buyers. These are described in Tokenscript as well so the context (e.g. user-agent) can prevent the user to submit a transaction without qualifying proof or help the user to select suitable attestations for a purchase transaction.
 
 #### 参考信息
 #### Reference information
@@ -441,11 +441,11 @@ Reference information is what relevant to the token and provided by web services
 [^ trusted-information] 最初我们将其称为“可信信息”，这意味着以前的房产销售价格或区域性能数据等数据只是“提供”，没有区块链证明或证明，因此，必须由用户自己信任。 事实证明，这个用语是错误的，因为一些开发人员认为它意味着“经过验证的信息”，并且已经提供了可靠信息。 因此，我们使用了一个不太精确的用语“参考信息”，遗憾的是，它就像一个包罗万象的短语。
 [^trusted-information]: Originally we call it "Trusted information", meaning data such as previous property sales price or regional property performance data is just "provided", without blockchain proofs or attestations, hence, it has to be explicitly trusted by the user. As it turned out, this term misfired as some developers think it means "proven information" and provided as trusted already. So we used a less precise term "Reference information", which, unfortunately, feels like a catch-all phrase.
 
-由于TBML由token发行者签署（不是token所有者 - token发行者通常是部署智能合约的实体），因此假定来自TBML中指定的web apis的参考信息是可信的。 安全章节将详细说明不同的信任级别。
-Since TBML is signed by the token issuer (not token owner - the token issuer is often entity that deployed the smart contrat), the reference information sourced from the web apis specified in TBML is assumed trusted. The security chapter will detail different levels of trust.
+由于Tokenscript由token发行者签署（不是token所有者 - token发行者通常是部署智能合约的实体），因此假定来自Tokenscript中指定的web apis的参考信息是可信的。 安全章节将详细说明不同的信任级别。
+Since Tokenscript is signed by the token issuer (not token owner - the token issuer is often entity that deployed the smart contrat), the reference information sourced from the web apis specified in Tokenscript is assumed trusted. The security chapter will detail different levels of trust.
 
-今天，与token相关的所有此类信息通常一起保存在由部署token的同一实体制作的DAPP网站上。 我们认为，要使token有效地市场化，需要将其抽象出来并置于token行为语言TBML中。
-Today, all such information related to a token is usually held together on a DAPP website made by the same entity that deployed the token. We argue that for tokens to be effectively marketized, It needs to be abstracted out and placed in the token behaviour language TBML.
+今天，与token相关的所有此类信息通常一起保存在由部署token的同一实体制作的DAPP网站上。 我们认为，要使token有效地市场化，需要将其抽象出来并置于token行为语言Tokenscript中。
+Today, all such information related to a token is usually held together on a DAPP website made by the same entity that deployed the token. We argue that for tokens to be effectively marketized, It needs to be abstracted out and placed in the token behaviour language Tokenscript.
 
 #### 行为信息
 #### Action information
@@ -465,25 +465,25 @@ Dictates the correct method to construct a blockchain transaction, like:
 这些信息是一套超级智能合约可编程接口（In Ethereum，称为ABI），附加部分是业务逻辑（例如财产必须仍然有效且卖方仍然拥有它）和表示逻辑（例如消息“该物业已被清算，不再出售“）。
 These information is a super-set of smart contract programmable interface (In Ethereum, called ABI), with the additional part being business logic (e.g. property must be still valid and seller still have it) and presentation logic (e.g. the message "The property is liquidated. Purchase no longer possible").
 
-总之，TBML允许上下文（用户代理或交易引擎）：
+总之，Tokenscript允许上下文（用户代理或交易引擎）：
 
  - 从持有智能合约，证明和参考资料中获取token相关信息。
  - 生成token的视觉或音频呈现
  - 生成可执行的操作列表以及如何构建交易。
-In conclusion, TBML allows the context (user-agent or trading engine) to:
+In conclusion, Tokenscript allows the context (user-agent or trading engine) to:
 
 - Fetch token related information from its holding smart contract, attestations and references.
 - Produce a visual or audio rendering of the token
 - Produce a list of actions that can be performed and how to constrct the transactions.
 
-任何一方都能够使用TBML渲染和应用函数到token，包括通用市场，用户代理和第三方应用等实体。 我们将这部分称为“上下文”。
-Any party is able to render and apply functions to the token using TBML, including entities like generic marketplaces, user-agents and 3rd party apps. We call these parties "context" in general.
+任何一方都能够使用Tokenscript渲染和应用函数到token，包括通用市场，用户代理和第三方应用等实体。 我们将这部分称为“上下文”。
+Any party is able to render and apply functions to the token using Tokenscript, including entities like generic marketplaces, user-agents and 3rd party apps. We call these parties "context" in general.
 
-### 为什么需要TBML
-### Why TBML
+### 为什么需要Tokenscript
+### Why Tokenscript
 
-通过演示的第一个示例，我们利用这个机会阐明了为什么需要TBML，而不是目前通过DApp提供资产访问的主流方式。我们认为目前流行的方法不适合创建完全市场，而TBML可以提供 *互操作性*，*可扩展性*和*安全*等保障。
-With the first example demonstrated, we use the opportunity to articulate why TBML is needed, over the current prevailing way of providing asset access with a host DApp. We argue that the current prevailing method is not suitable for creating a frictionless market, while TBML could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
+通过演示的第一个示例，我们利用这个机会阐明了为什么需要Tokenscript，而不是目前通过DApp提供资产访问的主流方式。我们认为目前流行的方法不适合创建完全市场，而Tokenscript可以提供 *互操作性*，*可扩展性*和*安全*等保障。
+With the first example demonstrated, we use the opportunity to articulate why Tokenscript is needed, over the current prevailing way of providing asset access with a host DApp. We argue that the current prevailing method is not suitable for creating a frictionless market, while Tokenscript could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
 
 #### 互操作性：
 #### Interoperability:
@@ -499,11 +499,11 @@ In a similar fashion, suppose an investors' forum where the members are allowed 
 #### 可扩展性
 #### Scalability
 
-水平情况，相同类型的资产可能在多个网络（如等离子链）上具有其token实例。买方可能只对澳大利亚的资产感兴趣，因此仅与澳大利亚1％房地产网络相关联。可能难以拥有一个全知的节点来为所有现有token提供呈现的token信息，尤其是在设计网络时考虑到隐私的情况。因此，为了扩展，必须从对token的访问中分离关于token（TBML）的知识。
-Horizontally, the same type of asset might have its token instances across multiple networks like Plasma Chains. A buyer is likely to be interested only in assets in Australia, and therefore only connected to the Australian 1% Property network. It can be difficult to have an all-knowing node to provided rendered token information for all existing tokens, especially if a network is designed with privacy in mind. Therefore, to scale, the knowledge about the token (TBML) must be detached from the access to the token.
+水平情况，相同类型的资产可能在多个网络（如等离子链）上具有其token实例。买方可能只对澳大利亚的资产感兴趣，因此仅与澳大利亚1％房地产网络相关联。可能难以拥有一个全知的节点来为所有现有token提供呈现的token信息，尤其是在设计网络时考虑到隐私的情况。因此，为了扩展，必须从对token的访问中分离关于token（Tokenscript）的知识。
+Horizontally, the same type of asset might have its token instances across multiple networks like Plasma Chains. A buyer is likely to be interested only in assets in Australia, and therefore only connected to the Australian 1% Property network. It can be difficult to have an all-knowing node to provided rendered token information for all existing tokens, especially if a network is designed with privacy in mind. Therefore, to scale, the knowledge about the token (Tokenscript) must be detached from the access to the token.
 
-垂直 - 通过说* vertical *，我们的意思是向上构建，使用token交易构建结构化的交易或在token之上创建结构化token。此类事务和token访问组件token。例如，如果我们想要一个token，其组成是来自100个全球城市的样本的1％资产token，对于中型投资者来分摊风险，必须使用关于成员的知识构建可以操纵此类token的系统token。它再次不能依赖于与该资产相关的原始Dapp的可用性，安全性和开放性。 TBML可以在中间用于制作这样的token。
-Vertically - by speaking *vertical*, we mean to build upward, to building structured transactions using a token transaction or creating structured tokens on top of a token. Such transaction and token access the component tokens. For example, if we desire a token whose make up is a 1% property token from a sample of 100 global cities, for mid-size investors to distribute the risk, a system that can manipulate such a token must be built with the knowledge about member tokens. It again cannot depend on the availability, security and openness of the original Dapp tied to that asset. TBML would work in the middle for the making of such tokens.
+垂直 - 通过说* vertical *，我们的意思是向上构建，使用token交易构建结构化的交易或在token之上创建结构化token。此类事务和token访问组件token。例如，如果我们想要一个token，其组成是来自100个全球城市的样本的1％资产token，对于中型投资者来分摊风险，必须使用关于成员的知识构建可以操纵此类token的系统token。它再次不能依赖于与该资产相关的原始Dapp的可用性，安全性和开放性。 Tokenscript可以在中间用于制作这样的token。
+Vertically - by speaking *vertical*, we mean to build upward, to building structured transactions using a token transaction or creating structured tokens on top of a token. Such transaction and token access the component tokens. For example, if we desire a token whose make up is a 1% property token from a sample of 100 global cities, for mid-size investors to distribute the risk, a system that can manipulate such a token must be built with the knowledge about member tokens. It again cannot depend on the availability, security and openness of the original Dapp tied to that asset. Tokenscript would work in the middle for the making of such tokens.
 
 如果我们以Peter's Pride Property网站的例子作为Hello World示例，可能需要用户提交交易，不仅要购买token，还要提示彼得。如果只有token发行人的DAPP知道如何组装代币购买交易，这对彼得来说是不切实际的。
 If we follow the example of Peter's Pride Property website as a Hello World example, it might need the user to submit a transaction not only purchase a token, but also tips Peter in the meanwhile. If only the token's issuer's DAPP knows how to assemble a token purchase transaction, this will be impractical for Peter.
@@ -529,8 +529,8 @@ A dictionary based translation visualiser cannot go further because correctly re
 最终，使用代码生成交易，用户必须将信任委托给代码。用用户的话说，我正在访问与此token绑定的网站，所以我相信我签署的这个交易是为了我在使用网站时的意图而生成的。这是一个破碎的信任模型，就像的TLS模型一样是对网站的信任而不是内容。
 Eventually, a transaction is generated with code, and the user would have to delegate the trust to the code. In a user's words, I am accessing the website tied to this token, so I will trust that this transaction I am signing is generated for the intention I have while using the site. This is a broken trust model, a regression to the TLS model of trusting the site instead of the content.
 
-TBML旨在分离token呈现代码和交易生成代码，并将它们打包到其容器中，由用户可能信任的一方签名（通常由用于部署智能合约的相同密钥签名）。有不同的信任级别，我们将在后面的章节中详细介绍。
-TBML is designed to separate token rendering code, and transaction generating code and package them into its container, signed by a party that the user is likely to trust (often, signed by the same key used for deploying a smart contract). There are a few trust levels, which we will detail in later chapters.
+Tokenscript旨在分离token呈现代码和交易生成代码，并将它们打包到其容器中，由用户可能信任的一方签名（通常由用于部署智能合约的相同密钥签名）。有不同的信任级别，我们将在后面的章节中详细介绍。
+Tokenscript is designed to separate token rendering code, and transaction generating code and package them into its container, signed by a party that the user is likely to trust (often, signed by the same key used for deploying a smart contract). There are a few trust levels, which we will detail in later chapters.
 
 从Peter's Pride Property推荐网站购买1％房产token的用户可以获得一个渲染和交易包，由创建此类代币的持有合同的同一组人签名。因此，用户可以从具有类似信任级别的任何网站购买资产，或者从微信或Facebook私人消息购买资产，并且知道它是正在呈现和交易的真实token。
 A user who is purchasing a 1% property token from Peter's Pride Property recommendation website can be supplied with a rendering and transaction package, signed by the same group of people who created the holding contract of such tokens. Therefore the user can purchase assets from any website with a similar level of trust, or purchase it from a WeChat or Facebook private message and know it is the real token being rendered and transacted.
@@ -553,26 +553,26 @@ If Pizza website doesn't upgrade, the user has to convert DAI to Ether first, th
 值得注意的是，披萨网站无法升级到支持DAI，而不知道如何获取用户的DAI余额[^ balance-is-privacy]（为了不浪费交易费结果只发现DAI余额不足），如何构建DAI撤销事务或DAI-Ether网关事务，并对DAI持有合同进行直接智能合约函数调用。
 It's worth noticing that the Pizza website cannot upgrade to support DAI without knowing how to discover the user's DAI balance[^balance-is-privacy] (to not to to waste a transaction fee just to find the DAI balance is insufficient), how to construct a DAI withdraw transaction or DAI-Ether gateway transaction and make direct smart contract function calls to the DAI holding contract.
 
-[^balance-is-privacy]:最终，披萨网站不仅不需要检查余额，因为TBML会处理它，也不需要知道余额。 这将需要底层区块链的支持，但如果我们继续当前的趋势，继续关注业务逻辑的网站也关心支付逻辑，这最终无法完成。
-[^balance-is-privacy]: Eventually, the Pizza website would not only be oblivious about how to check balance, since TBML handles it, but also not possible to know the balance. This would require underlying blockchain's support, but ultimately cannot be done if we continue the current trend where website, who should care about business logic, also care about payment logic.
+[^balance-is-privacy]:最终，披萨网站不仅不需要检查余额，因为Tokenscript会处理它，也不需要知道余额。 这将需要底层区块链的支持，但如果我们继续当前的趋势，继续关注业务逻辑的网站也关心支付逻辑，这最终无法完成。
+[^balance-is-privacy]: Eventually, the Pizza website would not only be oblivious about how to check balance, since Tokenscript handles it, but also not possible to know the balance. This would require underlying blockchain's support, but ultimately cannot be done if we continue the current trend where website, who should care about business logic, also care about payment logic.
 
-当然，Pizza网站不是管理这些付款方详细信息的最佳位置。 TBML通过以下方式解决了这个问题：
-Naturally, the Pizza website isn't in the best position to manage these payment-side details. TBML addreses this problem by
+当然，Pizza网站不是管理这些付款方详细信息的最佳位置。 Tokenscript通过以下方式解决了这个问题：
+Naturally, the Pizza website isn't in the best position to manage these payment-side details. Tokenscript addreses this problem by
 
-1.封装支持DAI所需的智能合约函数调用，以及用于在TBML中构建所需事务的javascript，由DAI发行者签名。
-1. Encapsulating the smart contract function calls needed for supporting DAI, along with the javascript to construct needed transactions in TBML, signed by DAI issuer.
-2.TBML，兼容性提供浏览器端实现和基于javascript的实现，以便Pizza商店可以调用泛型操作来返回ETH（或任何可接受的货币）并使用TBML中的支付逻辑来交易。
-2. Providing a browser side implementation and a javascript based implementation for TBML compatibility, so that the Pizza shop could just call a generic action to return Ether (or any acceptable currency) and let the payment logic in TBML work at transaction.
+1.封装支持DAI所需的智能合约函数调用，以及用于在Tokenscript中构建所需事务的javascript，由DAI发行者签名。
+1. Encapsulating the smart contract function calls needed for supporting DAI, along with the javascript to construct needed transactions in Tokenscript, signed by DAI issuer.
+2.Tokenscript，兼容性提供浏览器端实现和基于javascript的实现，以便Pizza商店可以调用泛型操作来返回ETH（或任何可接受的货币）并使用Tokenscript中的支付逻辑来交易。
+2. Providing a browser side implementation and a javascript based implementation for Tokenscript compatibility, so that the Pizza shop could just call a generic action to return Ether (or any acceptable currency) and let the payment logic in Tokenscript work at transaction.
 
-TBML嵌入支付逻辑和表示的能力意味着它不仅可以用用户的语言显示消息（如余额或“余额不足”消息），而且可以执行预检余额等功能，暂停结账流程以便用户可以执行充值流程并返回结帐流程以完成结账。
-TBML's capacity to embed payment logic and presentation means that not only it can display messages in user's language (like balance or "insufficient balance" message), but it can perform functions like pre-checking the balance, pause the checkout flow so that the user can perform a top-up flow and return to the checkout flow to finalise the checkout.
+Tokenscript嵌入支付逻辑和表示的能力意味着它不仅可以用用户的语言显示消息（如余额或“余额不足”消息），而且可以执行预检余额等功能，暂停结账流程以便用户可以执行充值流程并返回结帐流程以完成结账。
+Tokenscript's capacity to embed payment logic and presentation means that not only it can display messages in user's language (like balance or "insufficient balance" message), but it can perform functions like pre-checking the balance, pause the checkout flow so that the user can perform a top-up flow and return to the checkout flow to finalise the checkout.
 
 对于用户来说，该过程类似于结账过程引导用户到Paypal来完成交易，唯一的区别是该过程在更强大的本地用户代理中发生。
 To the user, the process resembles a bit like the checkout processs leads the user to Paypal to finalise the transaction, except the process happens locally in an enhanced user-agent.
 
-我们再次强调，目前的方法不适合创造完全市场，但是TBML可以，通过提供*互操作性*，*可扩展性*和*安全性*来创造完全市场。
+我们再次强调，目前的方法不适合创造完全市场，但是Tokenscript可以，通过提供*互操作性*，*可扩展性*和*安全性*来创造完全市场。
 We again argue that current prevailing method is not suitable for creati
-ng a frictionless market, while TBML could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
+ng a frictionless market, while Tokenscript could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
 
 总之，Pizza网站没有必要自行处理支付方逻辑的所有事情。 传统方法是让Pizaa网站使用MakerDAO项目提供的javascript。 javascript可能使用也可能不使用MakerDAO提供的RESTful API
 As concluded, Pizza website would not have the necessary payment side logic to handle everything on its own. The traditional approach is to let the Pizza website use the javascript sourced by MakerDAO project. The javascript may or may not use a RESTful API provided by MakerDAO
@@ -592,20 +592,20 @@ There are two immediate[^minor-security-concerns] security concerns. First is th
 [^ minor-security-concerns]：当两个系统集成在网络上时，通常存在大量安全问题。 举一个例子，如果一方未更新代码以反映另一方的更改，则可能会生成格式错误的交易。 跟踪这些交易允许攻击者定位未更新的网站。
 [^minor-security-concerns]: When two systems plug on the web, usually there are a hoard of security concerns. To give one example, if a side didn't update the code to reflect the other side's change, the resulting malformed transaction might be rejected. Tracing these transactions allow an attacker to target websites not updated.
 
-这些问题通过TBML中使用的封装方法解决。
-These issues are addressed by the encapsulation method used in TBML.
+这些问题通过Tokenscript中使用的封装方法解决。
+These issues are addressed by the encapsulation method used in Tokenscript.
 
-首先，交易生成代码由MakeDAO单独签名，并与用户代理方分开更新。 网站的代码不必签名，因为它只提供业务逻辑，而不是支付逻辑。 比如，如果发现错误，DAI可以通过更新这些签名的指令来暂停付款，而且Pizza网站的行为就像已经更新并解决问题一样。 如果发现该错误存在于DAI控股合同中，并且部署了替换合同，MakerDAO将更新TBML并再次签署，而Pizza网站不需要任何事情。
-First, the transaction forming code is signed by MakeDAO separately and updated separately from user-agent side. The website's code doesn't have to be signed because it just supplies the business logic, not payment logic. Say, if a bug is found, DAI can suspend the payment by updating these signed instructions, and the Pizza website would behave as if it has been updated to address the issue. If the bug is found to be in the DAI holding contract, and a replacement contract is deployed, MakerDAO would update TBML and sign it again, without Pizza website having to do anything.
+首先，交易生成代码由MakeDAO单独签名，并与用户代理方分开更新。 网站的代码不必签名，因为它只提供业务逻辑，而不是支付逻辑。 比如，如果发现错误，DAI可以通过更新这些签名的指令来暂停付款，而且Pizza网站的行为就像已经更新并解决问题一样。 如果发现该错误存在于DAI控股合同中，并且部署了替换合同，MakerDAO将更新Tokenscript并再次签署，而Pizza网站不需要任何事情。
+First, the transaction forming code is signed by MakeDAO separately and updated separately from user-agent side. The website's code doesn't have to be signed because it just supplies the business logic, not payment logic. Say, if a bug is found, DAI can suspend the payment by updating these signed instructions, and the Pizza website would behave as if it has been updated to address the issue. If the bug is found to be in the DAI holding contract, and a replacement contract is deployed, MakerDAO would update Tokenscript and sign it again, without Pizza website having to do anything.
 
-其次，通过明确要求用户信任MakerDAO签署的TBML，用户不需要信任Pizza网站对交易内容的呈现，因为它将由受信任的MakerDAO TBML呈现
-Second, by explicitly asking the user to trust the TBML signed by MakerDAO, the user would not need to trust Pizza website's rendering of the transaction content, since it would be rendered by the trusted MakerDAO TBML.
+其次，通过明确要求用户信任MakerDAO签署的Tokenscript，用户不需要信任Pizza网站对交易内容的呈现，因为它将由受信任的MakerDAO Tokenscript呈现
+Second, by explicitly asking the user to trust the Tokenscript signed by MakerDAO, the user would not need to trust Pizza website's rendering of the transaction content, since it would be rendered by the trusted MakerDAO Tokenscript.
 
-！[使用TBML付款。 请注意，* Complete Order *按钮不在网站上，而是在Dapp浏览器生成的TBML令牌区域中，其中呈现交易的代码已预先签名。]（payment-in-wallet.jpeg）
-![A payment using TBML. Notice that the *Complete Order* button is not on the website, but in the TBML token area generated by Dapp browser, where the code to render the transaction is pre-signed.](payment-in-wallet.jpeg)
+！[使用Tokenscript付款。 请注意，* Complete Order *按钮不在网站上，而是在Dapp浏览器生成的Tokenscript令牌区域中，其中呈现交易的代码已预先签名。]（payment-in-wallet.jpeg）
+![A payment using Tokenscript. Notice that the *Complete Order* button is not on the website, but in the Tokenscript token area generated by Dapp browser, where the code to render the transaction is pre-signed.](payment-in-wallet.jpeg)
 
-第三，如果需要添加安全协议，例如，来自网站的证明（可以重新使用SSL证书）来证明接收智能合约的交易，或智能合约通过域名返回网站的明确信任， 额外的逻辑是升级dapp浏览器来提供对新的TBML功能的支持和token发现者对新TBML代码的更新，而无需触及网站。
-Third, if secure protocols needs to be added, for example, an attestation from the website (can re-use the SSL certificate) to certify the transaction receiving smart contract, or the smart contract returning explicit trust of the website by domain name, the additional logic can be a combined effort of upgrading the dapp browser's support of new TBML feature and the token issuer's new TBML code, without touching the website.
+第三，如果需要添加安全协议，例如，来自网站的证明（可以重新使用SSL证书）来证明接收智能合约的交易，或智能合约通过域名返回网站的明确信任， 额外的逻辑是升级dapp浏览器来提供对新的Tokenscript功能的支持和token发现者对新Tokenscript代码的更新，而无需触及网站。
+Third, if secure protocols needs to be added, for example, an attestation from the website (can re-use the SSL certificate) to certify the transaction receiving smart contract, or the smart contract returning explicit trust of the website by domain name, the additional logic can be a combined effort of upgrading the dapp browser's support of new Tokenscript feature and the token issuer's new Tokenscript code, without touching the website.
 
 #### 互操作性
 #### Interoperability
@@ -646,8 +646,8 @@ An architect might read it here and decide these can all be done out of band. Ju
  - 预付费网上购物支付卡，如在澳大利亚邮政中销售的支付宝卡。
 - Prepaid online shopping payment cards, like the Alipay cards sold in Australia Post.
 
-TBML打算为支付方创新和可交付方提供空间。 传统上，合作伙伴支持抑制了支付方创新。 美国运通实施了支付API的积分，但在过去几年中，只有不到5％的合作伙伴电子商务网站将此作为结账选项提供。
-TBML intends to give room for payment side innovation as well as deliverable side. Traditionally, partner support used to curb payment side innovation. American Express implemented points to pay API but after years only less than 5% of partner e-commerce websites provided this as a checkout option.
+Tokenscript打算为支付方创新和可交付方提供空间。 传统上，合作伙伴支持抑制了支付方创新。 美国运通实施了支付API的积分，但在过去几年中，只有不到5％的合作伙伴电子商务网站将此作为结账选项提供。
+Tokenscript intends to give room for payment side innovation as well as deliverable side. Traditionally, partner support used to curb payment side innovation. American Express implemented points to pay API but after years only less than 5% of partner e-commerce websites provided this as a checkout option.
 
 #### 可扩展性
 #### Scalability
@@ -747,9 +747,9 @@ Check-in - either produce a QR code to verify the booking to the landlord or use
 ！[AirBnB token集成了物联网，允许token打开智能锁。]
 ![AirBnB Token integrates IoT, allowing the token to open a smart-lock.](airbnb.jpeg)
 
-观察到理想化的集成，我们可以看到TBML必须满足以下需求：
+观察到理想化的集成，我们可以看到Tokenscript必须满足以下需求：
 
-Observing the desirable integration, we can see TBML has to satisfy the following needs:
+Observing the desirable integration, we can see Tokenscript has to satisfy the following needs:
 
 - 允许定义token操作。 在运送token的情况下，将存在“兑换”动作（通过QR代码或NFC）和“授权”动作，其将允许其他人接收交付。
 - Allow token actions to be defined. In the case of a shipping token, there would be a "redeem" action (via a QR code or NFC) and an "authorise" action which would allow someone else to pick up a delivery.
@@ -763,8 +763,8 @@ Observing the desirable integration, we can see TBML has to satisfy the followin
 - 允许通过Web API或签名消息更新token状态（稍后将详细介绍）
 - Allow the token status to be updated, via a web API or signed message (more on that later).
 
-# TBML的设计
-# The design of TBML
+# Tokenscript的设计
+# The design of Tokenscript
 
 ## 将token关联到智能合约和Web服务
 ## Relate tokens to smart contract and tokens to web services
@@ -809,7 +809,7 @@ The first change is that the online retailer found a better shipment company. In
 无需更改智能合约交易规则。 当产品无法在首次完全交付在线零售商甚至可以更改运输公司而无需用户更改其token。
 There is no need to change the smart contract transaction rules. The online retailer can even change the shipping company when the product is first under-delivered without the user changing his token.
 
-此更改说明业务流程应与token分离，并且通过令牌集成。
+此更改说明业务流程应与token分离，并且通过token集成。
 This change illustrated that the business process should decouple from the token, instead, integrated through the token.
 
 ###市场变化
@@ -838,14 +838,14 @@ This change illustrated that a new transaction rule would result in a change of 
 总而言之，业务流程变更不应导致智能合约变更。 以交易规则变化的形式改善自由市场自然应该导致智能合约的变化。 区块链用于提供完全市场，而不是优化业务流程。
 To recap, business process changes should not lead to a smart contract change. An improvement in a free market, in the form of a transaction rule change, should naturally lead to a smart contract change. Blockchain serves to provide a frictionless market, not to optimise business processes.
 
-通过TBML实现这一愿景。 没有它，就很难将集成需求和业务流程需求明确分开，结果将无法实现互操作。
-This vision is made possible through TBML. Without which the clear separation of integration needs and business process needs would be difficult and the result would be not interoperable.
+通过Tokenscript实现这一愿景。 没有它，就很难将集成需求和业务流程需求明确分开，结果将无法实现互操作。
+This vision is made possible through Tokenscript. Without which the clear separation of integration needs and business process needs would be difficult and the result would be not interoperable.
 
-在第一种情况下，TBML描述了能够接收消息的物流服务兑换token。 在简化形式中，将消息委托并呈现给用户界面
-In the first case, TBML described a shipping token to be able to receive messages. In the simplist form, the message is entrusted and rendered to the user interface
+在第一种情况下，Tokenscript描述了能够接收消息的物流服务兑换token。 在简化形式中，将消息委托并呈现给用户界面
+In the first case, Tokenscript described a shipping token to be able to receive messages. In the simplist form, the message is entrusted and rendered to the user interface
 
-我们将演示与消息传递相关的TBML部分。
-We will demonstrate the portion of TBML related to messaging.
+我们将演示与消息传递相关的Tokenscript部分。
+We will demonstrate the portion of Tokenscript related to messaging.
 
     <token>
       <name xml:lang="en">Shipment</name>
@@ -890,8 +890,8 @@ The second `<trust>...</trust>` structure causes the user agent to accept and di
 
 When the online retailer changes his delivery company, the retailer could issue a certificate on the public key of the new delivery company, thereby authorising them to send messages to the token holders (buyers) to update them the delivery status, yet restricting the messages to only certain stages of business process.
 
-此代码片段表明，通过提供这种灵活性，TBML连接到新的业务流程，而无需更改智能合约或影响用户体验。 它还允许与token持有者进行通信，而无需通过智能合约发送消息。
-This code snippet shows that by giving such flexibility TBML connected to a new business process without requiring change in the smart contract or affecting user experience. It also allowed communication to the token holder without sending messages through smart contracts.
+此代码片段表明，通过提供这种灵活性，Tokenscript连接到新的业务流程，而无需更改智能合约或影响用户体验。 它还允许与token持有者进行通信，而无需通过智能合约发送消息。
+This code snippet shows that by giving such flexibility Tokenscript connected to a new business process without requiring change in the smart contract or affecting user experience. It also allowed communication to the token holder without sending messages through smart contracts.
 
 实际通信的方法保持开放以由区块链技术的其他层实现，例如消息队列或甚至分布式消息队列。
 The method of actual communication is left open to be implemented by other layers of blockchain technology like a message queue or even a distributed message queue.
@@ -899,9 +899,9 @@ The method of actual communication is left open to be implemented by other layer
 值得注意的是，消息传递并不是与业务流程相关的唯一部分。 我们将在“Web集成”一章中解释更广泛的集成范围。
 It's worth noting that messaging is not the only part connected to the business process. We will explain a broader scope of integration in the "Web integration" chapter.
 
-还可以以这样的方式编写TBML，即只有来自在线零售商的消息被信任和显示，因此，任何新的递送公司必须将其递送状态消息发送到在线零售商的系统以转发给买方。 由于可用性和隐私原因这可能不是一个好主意。 例如，当在线零售商离线时，交付公司应该能够运营; 用户可能会将门入口密码发送给在线零售商而不是递送公司。
+还可以以这样的方式编写Tokenscript，即只有来自在线零售商的消息被信任和显示，因此，任何新的递送公司必须将其递送状态消息发送到在线零售商的系统以转发给买方。 由于可用性和隐私原因这可能不是一个好主意。 例如，当在线零售商离线时，交付公司应该能够运营; 用户可能会将门入口密码发送给在线零售商而不是递送公司。
 
-It's also possible to write TBML in such a way that only messages from the online retailer is trusted and displayed, therefore, any new delivery company must send their delivery status message to the online retailer's systems to be forwarded to the buyer. There are availability and privacy reasons why this may not be a good idea. For example, a delivery company should be able to operate when the online retailer is offline; the user might send the door entrance passcode to the delivery company which the online retailer should not learn.
+It's also possible to write Tokenscript in such a way that only messages from the online retailer is trusted and displayed, therefore, any new delivery company must send their delivery status message to the online retailer's systems to be forwarded to the buyer. There are availability and privacy reasons why this may not be a good idea. For example, a delivery company should be able to operate when the online retailer is offline; the user might send the door entrance passcode to the delivery company which the online retailer should not learn.
 
 ##  token的种类
 ##  Types of tokens
@@ -958,14 +958,14 @@ To explain the use case where the *issuing* of attestation has to happen on the 
 为了解释在区块链上必须发生凭证的*撤销*时的案例，让我们来看看一个名为FIFA票证的凭证。 由活动组织者发布，它证明了所有者进入场地的权利，通常是在用户付款或赠送门票之后。 假设90％的门票都是使用非加密货币购买的，因此这些门票不会对区块链进行跟踪。 但是，如果票证所有者决定按照相应的智能合约规则在区块链上出售他的票证，则票证必须用作此类交易的输入并被视为已消耗，而代表相同权利的区块链令牌将被创建并且成交。 本文的写作在2018年中期组织了一次FIFA门票实验来测试这些概念，在内部我们将这种认证称为“一个可产生的”，因为它的使用产生了一个区块链token。 该实验的细节可以在另一篇论文[引用]中找到。
 To explain the use case when the *revocation* of an attestation has to happen on the blockchain, let's consider an attestation called FIFA ticket.  Issued by the event's organiser, it attests the owner's right to enter the venue, usually after the user has paid or was gifted the ticket. Let's assume 90% of the tickets are purchased with non-crypto currency, therefore these tickets would not have a trace on the blockchain. However, if a ticket's owner decides to sell his tickets on the blockchain following the corresponding smart contract rules, the ticket has to be used as the input of such a transaction and considered consumed, while a blockchain token representing the same entitlement would be created and traded. The writes of this paper organised a FIFA ticket experiment in mid-2018 to test the concepts, and internally we call such an attestation "a spawnable" as its use spawns a blockchain token. The detail of that experiment can be found in another paper [cite].
 
-#TBML的组件
-# The components of TBML
+#Tokenscript的组件
+# The components of Tokenscript
 
 ## 行动
 ## Actions
 
-我们将TBML的渲染部分和可操作部分分开。 操作引用您可以使用token执行的操作。 通常有：
-We seperate the rendering portion of TBML and the actionable portion. Action refer the things you can do with a token. There are generally either:
+我们将Tokenscript的渲染部分和可操作部分分开。 操作引用您可以使用token执行的操作。 通常有：
+We seperate the rendering portion of Tokenscript and the actionable portion. Action refer the things you can do with a token. There are generally either:
 
  - 使用token访问Web服务
  - 使用token控制物联网设备
@@ -1019,9 +1019,9 @@ Pay
 Not all actions are provided by the token. Typically:
 
 转移
-由通用token的TBML提供。你可以想象，例如ERC721的TBML文件允许传输任何符合标记的token，并且汽车token可能是其中之一。 实际上很难出现这种情况，因为汽车代币的交易规则通常需要证明，例如买方是进行此类交易的法定年龄，但即使在这种情况下，规则也可能由规范汽车贸易的TBML提供。。
+由通用token的Tokenscript提供。你可以想象，例如ERC721的Tokenscript文件允许传输任何符合标记的token，并且汽车token可能是其中之一。 实际上很难出现这种情况，因为汽车代币的交易规则通常需要证明，例如买方是进行此类交易的法定年龄，但即使在这种情况下，规则也可能由规范汽车贸易的Tokenscript提供。。
 Transfer
-:   Provided by a generic token's TBML. You can imagine for example the TBML file of ERC721 allows any conforming tokens to be transferred, and the car token might be one of them. In reality it can hardly be the case because car token's transaction rules usually require attestations, such as the buyer is of the legal age to conduct such a transaction, but even in such cases, the rule might be supplied by a TBML regulating the car trade.
+:   Provided by a generic token's Tokenscript. You can imagine for example the Tokenscript file of ERC721 allows any conforming tokens to be transferred, and the car token might be one of them. In reality it can hardly be the case because car token's transaction rules usually require attestations, such as the buyer is of the legal age to conduct such a transaction, but even in such cases, the rule might be supplied by a Tokenscript regulating the car trade.
 
 拍卖
 由拍卖市场提供。 当用户访问拍卖市场时，使用允许token登录网站的相同机制，用户的代理（钱包）将显示可以享受拍卖服务的token列表。 如果用户信任拍卖市场，则可以将其操作添加到所有支持的token。
@@ -1042,24 +1042,24 @@ Magic links are simply a shortcut to an action on a specific asset. It's usually
 
 
 ## 凭据
-证明就像token，除了它们不可转让，如果智能合约允许转让，原始证明在转让后无效。这使得友谊之类的东西可以以类似于token的方式定义，因此，我们也可以将这些证明称为“token”。友谊的象征将是来自某人的签名消息，将其他人视为朋友，并且它将成为TBML术语中的资产。显然，迈克尔·杰克逊的友谊的象征可能具有很高的价值，特别是因为他不能再生产这些代币，但即使像“weiwu之友”这样的卑微的代币也具有一定的价值。例如，它允许weiwu的一个朋友为他签署一张收货单，或者允许这样的朋友在weiwu练习道场中成为队友。甚至有一个巧妙的伎俩，通过使用秘密共享协议，拥有威武的友情令牌可以让人们知道与weiwu一样的共同还有。请注意，此定义不要求资产是区块链token，也不要求它甚至存在于区块链中。更多内容将在后一章“凭据”中阐述。
+证明就像token，除了它们不可转让，如果智能合约允许转让，原始证明在转让后无效。这使得友谊之类的东西可以以类似于token的方式定义，因此，我们也可以将这些证明称为“token”。友谊的象征将是来自某人的签名消息，将其他人视为朋友，并且它将成为Tokenscript术语中的资产。显然，迈克尔·杰克逊的友谊的象征可能具有很高的价值，特别是因为他不能再生产这些代币，但即使像“weiwu之友”这样的卑微的代币也具有一定的价值。例如，它允许weiwu的一个朋友为他签署一张收货单，或者允许这样的朋友在weiwu练习道场中成为队友。甚至有一个巧妙的伎俩，通过使用秘密共享协议，拥有威武的友情令牌可以让人们知道与weiwu一样的共同还有。请注意，此定义不要求资产是区块链token，也不要求它甚至存在于区块链中。更多内容将在后一章“凭据”中阐述。
 
 ## Attestations
 
-Attestations are like Tokens except that they are not transferable, in the case that a smart contract allows them to be transferred, the original attestation is render invalid after the transfer.  This makes it possible for things like friendship to be defined in a way similar to the token, and therefore, we may as well call such attestations "tokens". A token of friendship would be a signed message from someone, recognising someone else as a friend, and it would be an asset in TBML terminology. Apparently a token of friendship from Michael Jackson can be of high value, especially since he cannot produce any more of these tokens, but even a humble token like "Friend of Weiwu" has some value. It, for example, allows a friend of Weiwu to sign a delivery recipt for him, or allows such a friend to get a mate-rate for signing up in the same dojo Weiwu practises in. There is even a neat trick, which, by using secret sharing protocols, having Weiwu's friendship token allows one to learn common friends shared with Weiwu. Notice that this definition does not require the asset to be a blockchain token, nor that it even exists on the blockchain. More on that in the latter chapter "attestation".
+Attestations are like Tokens except that they are not transferable, in the case that a smart contract allows them to be transferred, the original attestation is render invalid after the transfer.  This makes it possible for things like friendship to be defined in a way similar to the token, and therefore, we may as well call such attestations "tokens". A token of friendship would be a signed message from someone, recognising someone else as a friend, and it would be an asset in Tokenscript terminology. Apparently a token of friendship from Michael Jackson can be of high value, especially since he cannot produce any more of these tokens, but even a humble token like "Friend of Weiwu" has some value. It, for example, allows a friend of Weiwu to sign a delivery recipt for him, or allows such a friend to get a mate-rate for signing up in the same dojo Weiwu practises in. There is even a neat trick, which, by using secret sharing protocols, having Weiwu's friendship token allows one to learn common friends shared with Weiwu. Notice that this definition does not require the asset to be a blockchain token, nor that it even exists on the blockchain. More on that in the latter chapter "attestation".
 
 Assets and attestations (tokens in general) can have financial value and utility value.
 
 ##资产
 
-在TBML术语中，资产是可以拥有并具有价值的东西。 这是一个广义的定义，并不像金融资产那样要求资产产生回报或预期回报。
+在Tokenscript术语中，资产是可以拥有并具有价值的东西。 这是一个广义的定义，并不像金融资产那样要求资产产生回报或预期回报。
 
 资产示例：加密小猫，国际足联门票，一瓶葡萄酒，1％房屋所有权，视频游戏中的盔甲或视频游戏中的骰子。
 
 证明的例子：加密小猫代金券，国际足联门票兑换优惠券，美国运通百夫长身份，友谊代币（迈克尔杰克逊的签名消息说Victor Zhang是朋友）或身份证明。
 ## Assets
 
-In TBML terminology, an asset is something that can be owned and has value. This is a broad definition and doesn't require, like the financial assets, that an asset produces a return, or is anticipated to.
+In Tokenscript terminology, an asset is something that can be owned and has value. This is a broad definition and doesn't require, like the financial assets, that an asset produces a return, or is anticipated to.
 
 Examples of assets: crypto kitties, FIFA tickets, right to a bottle of wine, 1% ownership of a house, a piece of armour in a video game or dice in a video game.
 
@@ -1068,10 +1068,10 @@ Examples of attestations: crypto-kitten vouchers, FIFA ticket redeem coupons, Am
 
 ＃加入游戏
 
-将TBML定义为规范的工作正在进行中。 我们的目标是制作关键方法和考虑因素的黄皮书，并从那里开始扩展它。 当您阅读本草案时，更多的协作方法正在付诸实施。 目前，联系人是：
+将Tokenscript定义为规范的工作正在进行中。 我们的目标是制作关键方法和考虑因素的黄皮书，并从那里开始扩展它。 当您阅读本草案时，更多的协作方法正在付诸实施。 目前，联系人是：
 
 # Join the game
-The work to define TBML as a specification is a work in progress. We aim to produce a yellow paper of the key methods and considerations and extend it from there. More methods of collaborations are being put to work as you read this draft. For now, the contact points are:
+The work to define Tokenscript as a specification is a work in progress. We aim to produce a yellow paper of the key methods and considerations and extend it from there. More methods of collaborations are being put to work as you read this draft. For now, the contact points are:
 
 weiwu.zhang@alphawallet.com
 james.sangalli@alphawallet.com
