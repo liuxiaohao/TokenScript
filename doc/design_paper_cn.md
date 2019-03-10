@@ -14,10 +14,10 @@ To provide a practical use of the blockchain, we must understand its utility to 
 
 - integrating the web
 
-尽管2017-2018年发生了很多蠢事，但是这对于token获得一开始的关注并不是坏事。token，作者即将详细阐述的，将是两个主要功能的推动者。我们将定义并实现“token化”的技术。
+尽管2017-2018年发生了很多蠢事，但是这对于token获得一开始的关注并不是坏事。token，作者即将详细阐述的，将是两个主要功能的推动者。我们将定义并实现“Tokenisation”的技术。
 Despite the great folly in 2017-2018, it is not a bad thing to initially focus on tokens. Tokens, as the authors will elaborate, are the enabler of the two primary functions. We define the technique to make it happen in "Tokenisation".
 
-区块链行业共同的努力主要是集中在丰富技术能力上。这篇文章将集中在token化，并且介绍一个称作Tokenscript(token行为标记语言)的标准化工作，它将使区块链技术具备完整的技术栈，为经济和互联网提供实用性。
+区块链行业共同的努力主要是集中在丰富技术能力上。这篇文章将集中在Tokenisation，并且介绍一个称作Tokenscript(token行为标记语言)的标准化工作，它将使区块链技术具备完整的技术栈，为经济和互联网提供实用性。
 Previous efforts in this industry primarily focused on enriching the capacity of the technology. This paper will focus on tokenisation and introduce a standardisation effort known as Tokenscript (Token Behaviour Markup Language) which will make the blockchain technical stack complete, providing utility for the economy and the internet.
 
 等tokenscript.org搭建好时，欢迎加入我们的工作。 一本指导操作者使用Tokenscript作为其tokens和dapps的黄皮书将花费数月时间。 但是，我们一直保持流程开放。 现在参与可避免我们制定的语言规范草案没有考虑到你的token模型。
@@ -71,14 +71,14 @@ Ride-sharing transformed the way people get around, and AirBNB changed the way w
 然而，尽管进行了Web 2.0革命，大多数市场仍然以高成本运营。例如，股票市场由于依靠对于规章制度的信任来运作，开销非常大，它只适合价值数百万美元的商业。
 However, despite this web 2.0 revolution, the majority of markets still operate with high costs. The stock market, for example, has so much overhead that it is only justifiable for multi-million dollar businesses which rely on the trust of rules and regulations to operate.
 
-使用区块链，任何token化的资产都可以随时进行交易，只要遵循规则，没有中间商或中间人，给我们提供最高的市场效率-完全市场。除了不依赖中间商之外，在token化的市场模型中，买方和卖方不在需要”进入“市场。相反，token总是在市场上【*市场模型】，这样的模式当然比中间商更好。
+使用区块链，任何Tokenisation的资产都可以随时进行交易，只要遵循规则，没有中间商或中间人，给我们提供最高的市场效率-完全市场。除了不依赖中间商之外，在Tokenisation的市场模型中，买方和卖方不在需要”进入“市场。相反，token总是在市场上【*市场模型】，这样的模式当然比中间商更好。
 With blockchain, any tokenised asset can be transacted any time, as long as it follows the rules, without middlemen or intermediary, gives us maximum market efficiency - the frictionless market. On top of the benefits of not relying on an intermediary, in a tokenised market model, the buyers and sellers do not need to "enter" the market; instead, tokens are *always on the market*[^market-model], making such a model better than intermediaries.
 
 【*市场模型】: 传统的中介操作市场模式，交易分为两个阶段：进入市场，达成交易。 区块链可以将其简化为协议; 因此，区块链token资产可以被视为始终在市场上。
 
 [^market-model]: With the traditional intermediary-operated market model, a trade is made in two stages: entering the market, making a deal. Blockchain can simplify that into a protocol; therefore the blockchain token assets can be considered always on the market.
 
-我们能够通过token化创造完全市场吗？
+我们能够通过Tokenisation创造完全市场吗？
 ### Can we create a frictionless market through tokenisation?
 
 我们是否可以tokenise房产，举个例子，1％的房产，以便地产市场能够比传统的长达一个月的房地产购买 - 销售周期更快地做出反应？ 
@@ -105,7 +105,7 @@ Tokens have different properties. Do tokens expire? AirBNB booking tokens certai
 它如何在用户的手机上显示，用户如何使用？
 How does it look on the user's mobile, and how is it called in a users language?
 
-如果买家想要从卖家那里采购被token化的乡村庄园，他们如何进行有效的沟通？
+如果买家想要从卖家那里采购被Tokenisation的乡村庄园，他们如何进行有效的沟通？
 If a buyer wants to purchase a tokenised country estate from a seller, how do they establish a trusted method of communication?
 
 如果token允许用户在线执行特定操作，用户如何使用token登录特定web服务？
@@ -209,7 +209,7 @@ Tokens seamlessly go across systems, carries their trading rules and user interf
 
 We will comine the two concepts: frictionless market, achieved by tokenising assets; integrate the web, by using token as integration point for web services. We will demonstrate an example that encompasses both concepts: car token.
 
-一方面，汽车是一种被token化的资产，可以通过区块链来购买，出售，转让，拍卖，合作和投保。
+一方面，汽车是一种被Tokenisation的资产，可以通过区块链来购买，出售，转让，拍卖，合作和投保。
 On the one hand, a car is a tokenised asset, that can be bought, sold, transferred, auctioned, collaborated and insured, all enabled by blockchain.
 
 另一方面，汽车也有实用性。 汽车的所有权token可以将区块链钱包转换为汽车钥匙，其他功能如图形化表示汽车的当前位置。 授权某人访问您的汽车或租用它以获取利润，可以通过签署区块链交易或证明无缝完成，而无需传递车钥匙。
@@ -246,13 +246,13 @@ If the owner wishes to sell the car, she only has to list it on any website with
 This chapter serve to present the vision. We will have the opportunity to inspect the technical aspect of this well-integrated well-tokenised car token in later chapters again.
 
 --
-#### token化的挑战
+#### Tokenisation的挑战
 #### The challenge of tokenisation
 
-token化需要构建一个token并且与其事务规则和行为模式捆绑在一起，将他们从最初生成的系统中取出，他们可以在不同的场景下进行交易和使用。
+Tokenisation需要构建一个token并且与其事务规则和行为模式捆绑在一起，将他们从最初生成的系统中取出，他们可以在不同的场景下进行交易和使用。
 Tokenisation requires bundling a token with its transaction rules and behaviour patterns, taking them off the system where they initially grew in, free them to be traded or used in different context.
 
-允许用户通过token与不同系统进行交互：在汽车示例中，汽车token由制造商Holden发布，因为它包含与智能锁（*开锁*，*发送*，*锁住* 操作）和Holden自己的Web服务（ *定位* 行为）相互作用的代码，但它需要在其他环境中工作。例如 *拍卖* 动作由第三方拍卖网络服务提供。用户通过token访问拍卖服务，无需注册和证明所有权。*共享清单* 由第三方服务提供，该服务将汽车的使用token化为数小时或者数天，并逐个销售。所有者可以通过此token访问这个市场，买家将通过此token获得知晓汽车gps位置，开门和使用它的能力。
+允许用户通过token与不同系统进行交互：在汽车示例中，汽车token由制造商Holden发布，因为它包含与智能锁（*开锁*，*发送*，*锁住* 操作）和Holden自己的Web服务（ *定位* 行为）相互作用的代码，但它需要在其他环境中工作。例如 *拍卖* 动作由第三方拍卖网络服务提供。用户通过token访问拍卖服务，无需注册和证明所有权。*共享清单* 由第三方服务提供，该服务将汽车的使用Tokenisation为数小时或者数天，并逐个销售。所有者可以通过此token访问这个市场，买家将通过此token获得知晓汽车gps位置，开门和使用它的能力。
 Allow users to interact with different systems through the tokens
 :   In the car example, the car token is issued by Holden, the maker, and necessarily so because it contains code to interact with a smart lock (the *Open*, *Start*, *Lock* actions) and Holden's own web service (the *Locate* action), yet it needs to work in other environments. The *Auction* action, for example, is provided by a third party auction web service. The user access auction service through the token without the need of signing up and proving ownership. The *List for sharing* is provided by a third party service which tokenises the usage of the car by hours or days and sells them piecemeal. The owner can access such a market through this Token. The buyers will have information about the car's GPS location, the capacity to unlock the door and use it, through this token as well.
 
@@ -722,7 +722,7 @@ As we can observe by the use of tokens, usually scattered business processes and
  - 当手机进行二手交易的时候，很容易通过token转账将保修转给下一位用户，进一步打开市场。
  - When the phone traded is second hand, it would be easy to pass the warranty to the next user through a token transfer, opening the market further.
 
- - 由于运输能够被token化，买方很容易选择他最喜欢的运输公司，而无需手动提供商业信息（地址，产品，重量，日期），这将会进一步打开竞争市场。
+ - 由于运输能够被Tokenisation，买方很容易选择他最喜欢的运输公司，而无需手动提供商业信息（地址，产品，重量，日期），这将会进一步打开竞争市场。
 - Since shipping can be tokenised, it would be easy for the buyer to choose his favourite shipping company without having to supply it with business context (address, product, weight, dates) manually, further opening the market for competition.
 
 可以进一步扩展此示例以解决复杂和创新的业务案例。 假设购买不是使用法定货币，而是使用美国运通积分。 iPhone具有屏幕损坏保险，因此，交易将输出第四个保险token。
@@ -737,7 +737,7 @@ Without such tokens, the user will have to submit a billing statement, invoice a
 在这种保险案例中，区块链允许业务流程创新，否则用户将会因为仅涉及太多方并且缺乏集成锚点这一点。牺牲便利性，
 In this insurance case, the blockchain allowed business process innovation that otherwise would require the user to sacrifice convenience, for the mere fact that too many parties are involved and there lacks an integration anchor.
 
-使用物联网进一步加强集成的能力。 让我们想象一下AirBNB的未来版本，其中预订被token化。 旅行者可以通过用他或她的token解锁智能锁来进入预订的AirBNB房屋，并且智能锁将识别预订token的当前所有者是谁。
+使用物联网进一步加强集成的能力。 让我们想象一下AirBNB的未来版本，其中预订被Tokenisation。 旅行者可以通过用他或她的token解锁智能锁来进入预订的AirBNB房屋，并且智能锁将识别预订token的当前所有者是谁。
 The power of integration is further strengthened by the use of the Internet of Things. Let's imagine a future version of AirBNB, where the bookings are tokenised. A traveller can enter a booked AirBNB house by unlocking the smart-lock with his or her token, and the smart-lock would recognise who the current owner of the booking token is.
 
 如果Alice拥有在特定时间窗口内使用房间的权利的token，或者用户的条款中的“预订”，那么她可以执行的操作是：
@@ -825,7 +825,7 @@ Business went on for a while; then, there is an innovation from the blockchain m
 在线零售商决定加入其中以保持竞争力。 这一次，他需要修改他的智能合约，更改交易规则，即在购买时可以接受交货token。 在这种情况下，交易的输出将没有交货token，因为已经提供了一个。[^可替代的物流服务兑换token]
 The online retailer decided to join the game to stay competitive. This time, he would need to modify his smart contract, changing the transaction rule that a shipping token can be accepted at the time of purchase. In such a case, the output of the transaction will not have a shipping token, since one is already provided.[^fungible-shipping-token]
 
-[^可替代的物流服务兑换token]：在实际实施中，批量购买的运输标签，如果被token化话，可能会也可能不会被用作运输token。 物流服务兑换token可以设计为半可替代的token，而运输token必须是不可替代的，每个都映射到特定的包裹。 本文的作者为了清晰起见，决定省略这样的实现细节。
+[^可替代的物流服务兑换token]：在实际实施中，批量购买的运输标签，如果被Tokenisation话，可能会也可能不会被用作运输token。 物流服务兑换token可以设计为半可替代的token，而运输token必须是不可替代的，每个都映射到特定的包裹。 本文的作者为了清晰起见，决定省略这样的实现细节。
 [^fungible-shipping-token]: In practical implementations, bulk-purchased shipping labels, if tokenised, may or may not be used as shipment tokens. Shipping labels can be designed as a semi-fungible token, while the shipment token must be non-fungible, each mapped to a specific parcel. The authors of this paper decided to leave out such implementation detail for clarity.
 
 在线零售商必须修改他的业务流程，以期望用户购买的物流服务兑换token支持任何交付公司提取货物。
@@ -917,7 +917,7 @@ Fungible tokens refer to the currency-like token with a balance, typically imple
 不可替代的token是指加密小猫，通常每个token有一个单位。
 Non-fungible tokens refer to crypto-kittens and typically have one unit per token.
 
-分类并未包含我们可能的所有token，并且在某些情况下可能会重复。 以我们之前演示的1％的房产token为例，每个这样的token都可以与同一发行人为同一财产发行的另一个token互换。 也许除了华人社区通常会高估序列号为88的token，但如果我们允许任何百分比数字被token化，比如允许购买0.88％，那么序列号将被重构。 同样，使相同属性的每个部分所有权token都可以完全互换。 然而，显然，财产A的所有权百分比和财产B的所有权百分比彼此不可互换。
+分类并未包含我们可能的所有token，并且在某些情况下可能会重复。 以我们之前演示的1％的房产token为例，每个这样的token都可以与同一发行人为同一财产发行的另一个token互换。 也许除了华人社区通常会高估序列号为88的token，但如果我们允许任何百分比数字被Tokenisation，比如允许购买0.88％，那么序列号将被重构。 同样，使相同属性的每个部分所有权token都可以完全互换。 然而，显然，财产A的所有权百分比和财产B的所有权百分比彼此不可互换。
 The categorisation isn't capturing the full spectrum of the tokens we could and may overlap in some cases. Taking the 1% per cent property token we demonstrated earlier as an example, each of such token is fungible with another issued by the same issuer for the same property. Maybe with the exception of the Chinese community which usually overvalue the token with a sequence number of 88, but if we allow any percentage number to be tokenised, say, allowing one to purchase 0.88%, then the sequence number will be refactored out of the way too, making each partial ownership token of the same property strictly fungible. However, apparently, a percentage of ownership of property A  and a percentage of ownership of property B are not fungible with each other.
 
 本文重新介绍了证明的概念 - 它已存在数十年但尚未得到充分利用。 从那里开始，本文将标记分类为“区块链token”和“证明”。 前者包括可互换和不可替代的token。 后面的类型“证明”将在这里解释。
