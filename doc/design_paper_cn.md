@@ -552,7 +552,7 @@ First, the Dapps written for Ethereum may not be aware that the user has DAI tok
 如果Pizza网站没有升级，用户必须首先将DAI转换为Ether，然后通过第二次交易购买Pizza。 这样的过程不仅不方便，而且缺乏原子性，这意味着用户需要通过努力将DAI转换为Ether，但是由于Pizza已经售罄而无法结账，用户必须处理他已经购买的eth
 If Pizza website doesn't upgrade, the user has to convert DAI to Ether first, then, purchase Pizza with a second transaction. Such a process is not only inconvenient, but lack atomicity, meaning that the user could have converted DAI to Ether trough the effort, only to fail the checkout since the Pizza is sold out, and ended up with additional Ethers that she has to deal with.
 
-值得注意的是，披萨网站无法升级到支持DAI，而不知道如何获取用户的DAI余额[^ balance-is-privacy]（为了不浪费交易费结果只发现DAI余额不足），如何构建DAI撤销事务或DAI-Ether网关事务，并对DAI持有合同进行直接智能合约函数调用。
+值得注意的是，披萨网站无法升级到支持DAI，因为不知道如何获取用户的DAI余额[^ balance-is-privacy]（为了不浪费交易费结果只发现DAI余额不足），如何构建DAI撤销事务或DAI-Ether网关事务，并对DAI持有合同进行直接智能合约函数调用。
 It's worth noticing that the Pizza website cannot upgrade to support DAI without knowing how to discover the user's DAI balance[^balance-is-privacy] (to not to to waste a transaction fee just to find the DAI balance is insufficient), how to construct a DAI withdraw transaction or DAI-Ether gateway transaction and make direct smart contract function calls to the DAI holding contract.
 
 [^balance-is-privacy]:最终，披萨网站不仅不需要检查余额，因为Tokenscript会处理它，也不需要知道余额。 这将需要底层区块链的支持，但如果我们继续当前的趋势，继续关注业务逻辑的网站也关心支付逻辑，这最终无法完成。
@@ -713,9 +713,9 @@ Lacking a reliable way to authenticate the purchase, an online purchased product
 Despite such a token not being transferable or authorised, it is still useful for 3rd party integrations.  The Tax office will be satisfied that the receipt can't be faked without collaboration from the seller, and allows a swift and easy tax-refund process. If the phone is purchased for work, the employee can easily reclaim the expense from an employer with the trust implied.
 
 ！[购买一个token，获得三个token。 它们可用于访问服务，如交付和维修。]（
-![Purchase with one token, getting three tokens. They can be used to access services, like delivery and repair.](purchase-without-shipment-token.jpeg)
+![Purchase with one token, getting three tokens. They can be used to access services, like delivery and repair.](purchase-without-shipment-token.jpg)
 
-正如我们通过使用token所观察到的那样，通常可以最终集成分散的业务流程和Web体验。 这与区块链的其他好处密切相关：完全市场。 在这个例子中：
+正如我们通过使用token所观察到的那样，通常可以最终集成分散的业务流程和Web体验。 这与区块链的其他好处密切相关：比如完全市场。 在这个例子中：
 As we can observe by the use of tokens, usually scattered business processes and web experiences can finally be integrated. This ties closely to the other benefit of the blockchain: a frictionless market. In this example:
 
 
@@ -747,7 +747,7 @@ If Alice owns a token that represents the right to use a room during a specific 
 Check-in - either produce a QR code to verify the booking to the landlord or use an NFC-enabled phone to open a smart-lock.
 
 ！[AirBnB token集成了物联网，允许token打开智能锁。]
-![AirBnB Token integrates IoT, allowing the token to open a smart-lock.](airbnb.jpeg)
+![AirBnB Token integrates IoT, allowing the token to open a smart-lock.](img/airbnb.jpeg)
 
 观察到理想化的集成，我们可以看到Tokenscript必须满足以下需求：
 
@@ -1051,7 +1051,7 @@ Attestations are like Tokens except that they are not transferable, in the case 
 
 Assets and attestations (tokens in general) can have financial value and utility value.
 
-##资产
+## 资产
 
 在Tokenscript术语中，资产是可以拥有并具有价值的东西。 这是一个广义的定义，并不像金融资产那样要求资产产生回报或预期回报。
 
