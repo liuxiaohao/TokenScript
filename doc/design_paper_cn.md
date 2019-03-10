@@ -36,7 +36,7 @@ Tokenscript是一种抽象出token信息，访问模式和UI呈现的方法，�
 Tokenscript is a method to abstract out the token information, access methods and UI rendering so that they can be efficiently marketized and used for integration.
 
 
-##加入游戏
+## 加入游戏
 
 请加入我们在xxx的工作。 一份指导实施者使用Tokenscript作为其tokens和dapps的黄皮书将花费数月时间来制作，但工作进程会一直在网上公开。现在参与以避免制定的语言规范草案没有考虑到您的token模型。
 
@@ -218,7 +218,7 @@ On the other hand, a car also has utility. A car's ownership token can convert a
 以下汽车token的屏幕截图代表了tokenisation的最后阶段。
 The following screenshot of a car token represents the final stage of tokenisation.
 
-[汽车token。 四个token：Rego，上限服务，保险和购买，要么是相关的，要么与汽车所有权token有关。
+[汽车token。 四个token：Rego，封顶保养，保险和购买，要么是依赖或者与汽车所有权token有关。
 ![A car token. Four tokens: Rego, Capped Service, Insurance and Purchase, either depeneds or relates to the car ownership token.](img/car-token.jpeg)
 
 咋一看，它只是一个便捷的能够做关于汽车所有事情的门户网站，包括市场功能和实用程序。然而传统的网络模型是不可行的。
