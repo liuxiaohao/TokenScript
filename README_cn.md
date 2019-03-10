@@ -57,8 +57,6 @@ lib/brower
 lib/web
 在dapp-browser环境下下，Dapps的库可以呈现token
 但不支持Tokenscript。 某些功能不可用需要底层（例如，切换节点或访问不同的链）的dapp浏览器支持。
-lib/web
-:    library for Dapps to render tokens in the case the dapp-browser does
-not support Tokenscript. Some features are not available
-(e.g. switching nodes or accessing multiple Plasma Chain) as they
-require underlying dapp browser support.
+lib/web : library for Dapps to render tokens in the case the dapp-browser does not support Tokenscript. Some features are not available (e.g. switching nodes or accessing multiple Plasma Chain) as they require underlying dapp browser support.
+
+
