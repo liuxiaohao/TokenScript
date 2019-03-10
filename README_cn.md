@@ -31,8 +31,8 @@ Tokenscript is a XML dialect. It describes the functions provided by the token (
 
 ## TokenScript 项目 介绍
 ## TokenScript Project introduction: 
-TokenScript Project是一个开源和NFP项目，旨在开发和帮助采用TokenScript，TokenScript是用于创建和使用加密token（例如区块链token）和DApps的标准标记语言。
-TokenScript Project is an opensource and NFP project, the goal to develop and help with adoption of TokenScript, the standard markup language for creating and using cryptographic tokens(e.g. blockchain tokens) and DApps.
+TokenScript Project，旨在开发和帮助大家更好的使用TokenScript，TokenScript是用于创建和使用加密token（例如区块链token）和DApps的标准标记语言。
+TokenScript Project is to develop and help with adoption of TokenScript, the standard markup language for creating and using cryptographic tokens(e.g. blockchain tokens) and DApps.
 在2017-2018区块链发生了非常引人注目的投机行为把我们的注意集中到了加密token上。当我们交易时，我们甚至忘记了它们真正的用途; 就像房地产泡沫，一昧的把房屋当作投机资产，忘记了这是居住的地方。为了让区块链提供实际的用途，我们必须了解他对世界经济和互联网的作用。这篇文章的作者是对金融机构和初创公司进行了长期的学习和探索的技术专家。凭借这些经验，我们逐步意识到区块链有两个主要的功能，提供完全市场和 集成网络
 The remarkable blockchain speculations that took place in 2017 - 2018 brought everyone's attention to crypto tokens. As we bought and sold them, we forgot their intended purpose was to be used; this is analogous to the housing bubble in which people forgot that houses were not merely speculative assets but rather a place to live. To provide a practical use of the blockchain, we must understand its utility to the world economy and the internet. The people behind this project are technical experts who went through years of study and experimentation into its applications both via financial institutions and startups. With this experience, we recognise the blockchain technology's utility in providing a frictionless market and integrating the web.
 
