@@ -280,7 +280,7 @@ We assert that a descriptive language (Tokenscript) is needed to allow blockchai
 由于Tokenscript是一个解决方案层，而不是像以太坊和等离子(译者注：一种以太坊的二层扩容框架)这样的基础层技术，我们选择通过实例介绍该技术，并为观众的观众提供丰富的商业环境讨论。
 By virtue of Tokenscript being a solution layer rather than base-layer technologies like Ethereum and Plasma, we choose to introduce the technology by example and provide rich business-context based discussion for a broader spectrum of audience.
 
-## 地址 完全市场的需求
+## 发表完全市场的需求
 ## Address "Frictionless Market" needs
 
 仔细研究“市场”，市场并不是一个拥有超载信息的嘈杂渠道; 更重要的是，这是一个交割与付款的地方。 由于区块链不依赖于中间商，即交易主机，我们的重点转变为交易的token，即 *可交付成果* 和 *支付* ，以及他们在市场中的角色。
