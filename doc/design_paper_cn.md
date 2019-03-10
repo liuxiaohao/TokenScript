@@ -26,7 +26,7 @@ Please join our work at tokenscript.org - when it is set-up of course. A Yellow 
 
 ## Abstract
 
-我们认识到区块链技术的真正应用是提供完全市场和集成网络方面的实用性。 这是通过标记化完成的。 被Tokenized的股权可以在市场上交易并集成到系统中，形成完全市场并允许自由集成。
+我们认识到区块链技术的真正应用是提供完全市场和集成网络方面的实用性。 这是通过Tokenisation完成的。 被Tokenized的股权可以在市场上交易并集成到系统中，形成完全市场并允许自由集成。
 We recognise the blockchain technology's utility in providing a frictionless market and integrating the web. This is done through tokenization. Tokenized rights can be traded on the market and integrated across systems, forming a frictionless market and allowing free integration.
 
 如今，访问、呈现和交易的token的方式分散在Dapps和智能合约中。 如果所有关于一个token的知识都在dapp中，那么dapp必须参与该token的市场和所有集成，重建数据并提供互操作性，安全性和可用性 - 同样的问题在区块链发明之前就已出现，并阻碍了tokenisation。
@@ -301,7 +301,7 @@ payment
 market
 :    Market is where delivery versus payment happens. *Market* is an concept, not a marketplace. A user who checks out on a website is accessing a market. She doesn't have to be in a marketplace (e.g. Amazon) to do so.
 
-向* market *提供*可交付*和*付款*方标记“插件”。
+Tokenscript 向* market *提供 *可交付* 和 *付款* 的token “插件”。
 Tokenscript provides both *the deliverable* and *the payment* side tokens to "plug-in" to the *market*. 
 这样的框架对于token的呈现，索引，交易，交易，拍卖，组合......以实现完全市场至关重要。
 Such a framework is essential for tokens to be presented, indexed, transacted, traded, auctioned, combined... to work towards a frictionless market.
