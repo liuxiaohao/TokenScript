@@ -297,19 +297,19 @@ payment
 :    Ether, DAI, Sovereign. Anything currency-like. Only programmable currencies are relevant to this paper.
 
 市场
-：市场是货款对付（交付与付款）发生的地方。 *市场*是一个概念，而不是一个实体市场。 在网站上结账的用户正在访问市场。 她不必在市场（例如亚马逊）这样做。
+：市场是货款对付（交付与付款）发生的地方。 *市场*是一个概念，而不是一个具体市场。 在网站上结账的用户正在访问市场。 她不必在一个具体市场（例如亚马逊）这样做。
 market
 :    Market is where delivery versus payment happens. *Market* is an concept, not a marketplace. A user who checks out on a website is accessing a market. She doesn't have to be in a marketplace (e.g. Amazon) to do so.
 
-Tokenscript 向* market *提供 *可交付* 和 *付款* 的token “插件”。
+Tokenscript同时为*市场*提供 *交付token* 和 *付款token*。
 Tokenscript provides both *the deliverable* and *the payment* side tokens to "plug-in" to the *market*. 
-这样的框架对于token的呈现，索引，交易，交易，拍卖，组合......以实现完全市场至关重要。
+这样的框架对于token的呈现，索引，转让，交易，拍卖，组合......以实现完全市场至关重要。
 Such a framework is essential for tokens to be presented, indexed, transacted, traded, auctioned, combined... to work towards a frictionless market.
 
-我们将通过每个 *可交付* 方面和 *付款* 方面的示例介绍Tokenscript。
+我们将通过一个示例介绍Tokenscript在 *交付token* 方面和 *付款token* 方面的应用。
 We will introduce Tokenscript through an example on each of the *deliverable* side and on *payment* side.
 
-## 可交付方面的示例 1% 房产token
+## 交付方面的示例 1% 房产token
 ### Deliverable side example: 1% property token
 
 让我们想象一下“1％房产”的市场。房产所有者可以发放许多token，每个token代表1％的房产所有权。他可以出售这些token以换取现金。
@@ -324,7 +324,7 @@ A buyer needs to know quite a bit of information. It's easy to understand that s
 2. 1％的房产代币所有者可以投票吗？例如，有关丛林火灾保险的购买决定？
 2. Can a 1% property token owner vote?  For example, on the purchase decision to insurance against a bush fire?
 
-3. 1％是否在房产销售时自动转换为货币，或者代币持有人是否可以选择继续持有？
+3. 1％房产Token是否在房产被售出时自动转换为货币，1％房产Token持有人是否可以选择继续持有？
 3. Is the 1% automatically converted into currency at the time of property sales, or can the token holder elect to continue holding it?
 
 4. 是否正确承保了token以防止双重抵押？
@@ -342,7 +342,7 @@ A buyer needs to know quite a bit of information. It's easy to understand that s
 8. 过去几年该地区类似物业的表现如何？
 8. What was the performance of similar properties in the region in the past years?
 
-9. 这家酒店的历史销售价格是多少？
+9. 这个房产的历史销售价格是多少？
 9. What was the historical sales price of this property?
 
 具体到区块链，我们还有：
@@ -354,7 +354,7 @@ Specific to blockchain, we also have:
 
 我们将这些贸易敏感信息分为四类：
 
-  产品说明 [^ pd]。 项目2,3,5,6在PD中
+- 产品说明 [^ pd]。 项目2,3,5,6在PD中
 - 证明信息。 项目1,4,6,7在Attestations中。
 - 参考信息。 项目8,9。
 - 行为信息（如何执行资产行动）。 项目10。
@@ -375,7 +375,7 @@ Understandablly, the buyers need to access all these for an informed decision.
 #### 产品描述
 #### Product description
 
-产品描述信息通常在智能合约中。 在以太坊的情况下，这些可以通过进行一些智能合约函数调用来获得，因此，唯一需要的工作是将它们转换为演示文稿 - 通常意味着转换成为用户语言并将“实际”值转换为精心打勾的复选框。 这有助于介绍Tokenscript的第一个功能：充当智能合约的表示层。
+产品描述信息通常在智能合约中。 在以太坊的情况下，这些可以通过进行一些智能合约函数调用来获得，因此，唯一需要的工作是将它们转换为演示文稿 - 通常意味着转换成为用户使用的语言并将“实际”值转换为精心打勾的复选框。 这有助于介绍Tokenscript的第一个功能：充当智能合约的表示层。
 Product description information is typically in the smart contract. In Ethereum cases, these can be obtained by making a few Smart Contract function calls, therefore, the only needed work is to convert them into presentation - usually it means translating to the language user speaks and converting "True" value into a nicely ticked checkbox. This serve to introduce the first functionality of Tokenscript: acting as a presentation layer for smart-contracts.
 
     <attribute-type id="voting-right">
@@ -411,7 +411,7 @@ This simplified `attribute-type` code snippet allows the value for Voting Right 
 #### 证明信息
 #### Attested information
 
-证明只是一条用来说明事实的经过签名的信息。通常使用证明来表示满足交易的条件，更多关于证明的信息如下
+Attestation只是一条用来说明事实的经过签名的信息。通常使用Attestation来表示满足交易的条件，更多关于Attestation的信息在Attestation章节
 Attestation is just a signed message stating a fact. Attestations are often used to satisfy the conditions of the transactions. More on that in the chapter Attestations.
 
 在1％财产token的示例中，涉及的证明是：
@@ -419,7 +419,7 @@ In the 1% property token example, the involved attestations are:
 
  - 通过身份管理机构和所有权契约办公室，以证明发行人对财产的所有权。
 - by identity authority and title deeds office, to attest the issuer's ownership of the property.
- - 通过抵押权限[^ set-operation]来防止双重抵押
+ - 通过抵押管理权威机构[^ set-operation]来防止双重抵押
 - by collateralization authority[^set-operation] to prevent double collateralization
  - 由买方提供投资此类资产的身份或能力
 - by buyers, for providing identity or capacity to invest in this type of asset
@@ -427,10 +427,10 @@ In the 1% property token example, the involved attestations are:
 [^ set-operation]：最终，这可能是一个加密集合操作，但即使发生这种情况，也需要在Tokenscript中描述指示上下文（用户代理）进行计算的元数据。
 [^set-operation]: Eventually, this could be a cryptographic set operation, but even if that happens, the metadata directing the context (user-agent) to proform the computation still needs to be described in Tokenscript.
 
-前两个证明并未存储在智能合约中，由于成本（交易的大小和数量）和隐私的原因。可以采用零知识证明来证明该证明适用于所述财产和所述所有者的通用证据，并且它尚未过期。 Tokenscript中还描述了预期和可验证的证据。
+由于成本（交易的大小和数量）和隐私的原因, 前两个Attestations并未存储在智能合约中。可以采用零知识证明来证明这个Attestation适用于所述财产和所述所有者，并且它尚未过期。 哪些证据可以被零知识证明需要验证也会通过Tokenscript来进行描述。
 The first two attestations are not stored in smart contract for cost (size and number of transactions) and privacy reasons. It's possible to utilise zero knowledge proof to provide a generic proof that the attestation is for the said property and said owner, and it has not expired. What proofs are expected and can be validated is also described in Tokenscript.
 
-此外，交易需要来自买方的身份证明或投资能力证明。 这些也在Tokenscript中描述，因此上下文（例如，用户代理）可以防止用户在没有限定证据的情况下提交交易或帮助用户为购买交易选择合适的证明。
+此外，交易需要来自买方的身份证明或投资能力证明。 这些也在Tokenscript中描述，因为有了这些上下文信息，（例如，用户代理）可以防止用户在没有相关该Attestation的情况下提交交易，或帮助用户为提交交易选择合适的该Attestation。
 Furthermore, the fact that the transaction requires an identity attestation or investment capacity attestation from the buyers. These are described in Tokenscript as well so the context (e.g. user-agent) can prevent the user to submit a transaction without qualifying proof or help the user to select suitable attestations for a purchase transaction.
 
 #### 参考信息
@@ -439,7 +439,7 @@ Furthermore, the fact that the transaction requires an identity attestation or i
 参考信息与token相关，由Web服务提供，通常通过RESTful API调用。[^ trusted-information]
 Reference information is what relevant to the token and provided by web services, typically through a RESTful API call.[^trusted-information]
 
-[^ trusted-information] 最初我们将其称为“可信信息”，这意味着以前的房产销售价格或区域性能数据等数据只是“提供”，没有区块链证明或证明，因此，必须由用户自己信任。 事实证明，这个用语是错误的，因为一些开发人员认为它意味着“经过验证的信息”，并且已经提供了可靠信息。 因此，我们使用了一个不太精确的用语“参考信息”，遗憾的是，它就像一个包罗万象的短语。
+[^ trusted-information] 最初我们将其称为“可信信息”，指的是类似于以前的房产销售价格或该地区市场表现数据等数据只能简单的被“提供”，没有区块链证明或该Attestations，因此，必须由用户自己选择是否信任。 事实证明，这个用语是容易产生歧义的，因为一些开发人员认为它指的是“经过验证的信息”，是可以被直接信任的。 因此，我们使用了一个不太精确的用语“参考信息”，遗憾的是，它就像一个包罗万象的短语。
 [^trusted-information]: Originally we call it "Trusted information", meaning data such as previous property sales price or regional property performance data is just "provided", without blockchain proofs or attestations, hence, it has to be explicitly trusted by the user. As it turned out, this term misfired as some developers think it means "proven information" and provided as trusted already. So we used a less precise term "Reference information", which, unfortunately, feels like a catch-all phrase.
 
 由于Tokenscript由token发行者签署（不是token所有者 - token发行者通常是部署智能合约的实体），因此假定来自Tokenscript中指定的web apis的参考信息是可信的。 安全章节将详细说明不同的信任级别。
@@ -457,18 +457,18 @@ Dictates the correct method to construct a blockchain transaction, like:
  - 需要哪些证明来证明买方的购买能力。
  - 购买需要哪些参数（例如1％的股份数量）。
  - 如何呈现购买表单并转换为用户的本地语言。
- - 是否满足条件（例如，在相关财产被清算后无法进行购买）。
+ - 是否满足全部条件（例如，如果相关财产被清算，那么应该无法进行购买）。
 - What attestations are needed to prove the buyer's capacity to purchase.
 - What parameters are needed for a purchase (e.g. number of 1% shares).
 - How to render the purchase form and translate to user's local language.
 - Is the condition all met (e.g. a purchase isn't possible after the underlying property is liquidated).
 
-这些信息是一套超级智能合约可编程接口（In Ethereum，称为ABI），附加部分是业务逻辑（例如财产必须仍然有效且卖方仍然拥有它）和表示逻辑（例如消息“该物业已被清算，不再出售“）。
+这些信息是一组智能合约可编程接口（In Ethereum，称为ABI）的超集，附加的部分是业务逻辑（例如财产必须仍然有效且卖方仍然拥有它）和表示逻辑（例如消息“该物业已被清算，不再出售“）。
 These information is a super-set of smart contract programmable interface (In Ethereum, called ABI), with the additional part being business logic (e.g. property must be still valid and seller still have it) and presentation logic (e.g. the message "The property is liquidated. Purchase no longer possible").
 
 总之，Tokenscript允许上下文（用户代理或交易引擎）：
 
- - 从持有智能合约，证明和参考资料中获取token相关信息。
+ - 从智能合约，attestations和参考信息中获取token相关信息。
  - 生成token的视觉或音频呈现
  - 生成可执行的操作列表以及如何构建交易。
 In conclusion, Tokenscript allows the context (user-agent or trading engine) to:
@@ -477,7 +477,7 @@ In conclusion, Tokenscript allows the context (user-agent or trading engine) to:
 - Produce a visual or audio rendering of the token
 - Produce a list of actions that can be performed and how to constrct the transactions.
 
-任何一方都能够使用Tokenscript渲染和应用函数到token，包括通用市场，用户代理和第三方应用等实体。 我们将这部分称为“上下文”。
+任何一方都能够渲染Tokenscript和通过Tokenscript调用token的相关功能，包括具体市场，用户代理和第三方应用等等。 我们将这些通称为称为“上下文”。
 Any party is able to render and apply functions to the token using Tokenscript, including entities like generic marketplaces, user-agents and 3rd party apps. We call these parties "context" in general.
 
 ### 为什么需要Tokenscript
