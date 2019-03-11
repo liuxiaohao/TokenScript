@@ -2,7 +2,7 @@
 
 ## 作者注
 ## Author's note
-在2017-2018区块链发生了非常引人注目的投机行为把我们的注意集中到了加密token上。当我们交易时，我们甚至忘记了它们真正的用途; 就像房地产泡沫，一味的把房屋当作投机资产，而忘记了这是居住的地方。
+在2017-2018区块链发生了非常引人注目的投机行为把我们的注意集中到了crypto tokens上。当我们交易时，我们甚至忘记了它们真正的用途; 就像房地产泡沫，一味的把房屋当作投机资产，而忘记了这是居住的地方。
 The remarkable blockchain speculations that took place in 2017 - 2018 brought everyone's attention to crypto tokens. As we bought and sold them, we forgot their intended purpose was to be used; this is analogous to the housing bubble in which people forgot that houses were not merely speculative assets but rather a place to live.
 
 为了让区块链提供实际的用途，我们必须了解它对世界经济和互联网的作用。这篇文章的作者是对金融机构和初创公司进行了长期的学习和探索的技术专家。凭借这些经验，我们逐步意识到区块链有**两个主要的功能**:
