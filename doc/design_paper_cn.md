@@ -249,7 +249,7 @@ This chapter serve to present the vision. We will have the opportunity to inspec
 #### Tokenisation的挑战
 #### The challenge of tokenisation
 
-Tokenisation需要构建一个token并且与其事务规则和行为模式捆绑在一起，将他们从最初生成的系统中取出，他们可以在不同的场景下进行交易和使用。
+Tokenisation需要构建一个token并且与其事务规则和行为模式捆绑在一起，将他们从最初生成的系统中取出，让他们可以在不同的场景下进行交易和使用。
 Tokenisation requires bundling a token with its transaction rules and behaviour patterns, taking them off the system where they initially grew in, free them to be traded or used in different context.
 
 允许用户通过token与不同系统进行交互：在汽车示例中，汽车token由制造商Holden发布，因为它包含与智能锁（*开锁*，*发动*，*锁住* 操作）和Holden自己的Web服务（ *定位* 行为）相互作用的代码，但它需要在其他环境中工作。例如 *拍卖* 动作由第三方拍卖网络服务提供。用户通过token访问拍卖服务，无需注册和证明所有权。*共享清单* 由第三方服务提供，该服务将汽车的使用Tokenisation为数小时或者数天，并逐个销售。所有者可以通过此token访问这个市场，买家将通过此token获得知晓汽车gps位置，开门和使用它的能力。
@@ -260,16 +260,16 @@ Allow users to interact with different systems through the tokens
 Rendering a token and associate it with the actions they can perform in the user's wallet
 :   In the car example, if the registration expired, the web component at work would paint the Registration Token red or display a warning. Actions like *List for sharing* will not be available with an expired car rego, and the integrated token interface should clearly pass that message to the user.
 
-允许在token上开发新协议：在汽车示例中，抵押可能是附加协议，也就是以太坊上下文中的ERC。 该协议可能有自己的实现，并且汽车token可能会预先约定它。 同样，有流媒体，通信，赌注或其他协议（参见“魔术”章节）。 框架必须允许它们存在并通过token使用。
+允许在token上开发新协议：在汽车示例中，抵押可能是附加协议，也就是以太坊环境中的ERC。 该协议可能有自己的实现，并且汽车token可能会预先约定它。 同样，有流媒体，通信，赌注或其他协议（参见“魔术”章节）。 框架必须允许它们存在并通过token使用。
 Allow new protocols to be developed on tokens
 :   In the car example, collateralization might be an additional protocol, an ERC in Ethereum context. The protocol might have its own implementation and the car token might pre-date it. Similarly, there are streaming, communication, staking or other protocols (See "Magic" chapter). The framework must allow them to exist and work with tokens.
 
-将信任关系和业务背景传递给第三方：在汽车示例中，保险token通过NRMA提供道路救援服务，NRMA是另一家未与驾驶员直接签约的公司。 然而，驾驶员可以通过保险token访问此功能，并立即被确定为有资格获得帮助。 在此示例中，*信任关系*表示用户间接信任NRMA以提供路边援助，以在紧急情况下获取用户的GPS位置和身份信息。 *业务背景* 是指客户对路边援助的资格，例如保险支付，服务范围内的位置和未达到的年度上限等。在这个故事中，*信任关系*和*业务背景* 都必须在token中，而不是 通过保险公司的网络服务集中，因为两者有不同的 a）可用性，b）隐私和c）集成要求[^ abc]。
+将信任关系和业务背景传递给第三方：在汽车示例中，保险token通过NRMA提供道路救援服务，NRMA是另一家未与驾驶员直接签约的公司。 然而，驾驶员可以通过保险token访问此功能，并立即被确定为有资格获得帮助。 在此示例中，*信任关系*表示用户间接信任NRMA以提供路边援助，以在紧急情况下获取用户的GPS位置和身份信息。 *业务背景* 是指客户对路边援助的资格，例如保险支付，服务范围内的位置和未达到的年度上限等。在这个故事中，*信任关系*和*业务背景* 都必须在token中，而不是通过中心化的方式由保险公司的网络服务提供，因为两者有不同的 a）可用性，b）隐私和c）集成要求[^ abc]。
 Carry trust relationship and business context to 3rd parties
 :   In the car example, the insurance token provides Roadside Assistance service through NRMA, another company not directly contracted by the driver. Yet the driver might access this function through the insurance token and immediately be identified as qualified for help. In this example, *Trust relationship* means that the user indirectly trusts NRMA to provide roadside assistance, to obtain the user's GPS location and identity information at the time of emergency. *Business context* means the customer's qualification for roadside assistance, like insurance paid, location in the range of service and annual cap not reached etc. In this story both *trust relationship* and *business context* has to be in the token, not centralised through the insurance company's web service since the two have different a) availability, b) privacy and c) integration requirements[^abc].
 
-[^abc]: 可用性：NRMA 7*24小时在线，但是澳航保险可以在公众假期或者晚上暂停服务。隐私：NRMA可以获取用户的GPR，但是澳航保险在法律上不允许。集成：大多数NRMA的客户不是通过Qantas Insurance 获得的，因此它将成为NRMA集成和额外安全问题的附加系统，以集成到Virgain Insurance的网络服务。在这三个小时中，可用性可能是最明显的。想象一下客户会有多生气，当他的汽车在澳大利亚贫瘠的内陆地区抛锚，这个时候发现无法或者道路援助，因为保险公司的网络服务器正在为了 ”更好的服务用户“ 升级。
-[^abc]: Availability: NRMA is online 24/7 but Qantas Insurance can suspend their services in public holidays or at night. Privacy: NRMA can learn user's GPS location but Qantas Insurance isn't legally allowed to learn it. Integration: Most of NRMA's customers are not obtained through Qantas Insurance, so it would be an additional system to integrate and extra security concern for NRMA to integrate to Virgain Insurance's web service. Of all three, availability might be the most visible. Just imagine how angry a customer will be, having his car breaking down in the middle of the barren Australian outback, and learn that the road-side assistance can't be authorised because the insurer's web service is upgrading "For a better user experience".
+[^abc]: 可用性：NRMA 7*24小时在线，但是澳航保险可以在公众假期或者晚上暂停服务。隐私：NRMA可以获取用户的GPR，但是澳航保险在法律上不允许。集成：大多数NRMA的客户不是通过Qantas Insurance获得的，NRMA需要一个额外附加系统来实现集成 Qantas Insurance的网络服务，这对NRMA来说会有很大的安全和投资顾虑。在这三个问题中，可用性可能是最明显的。想象一下客户会有多生气，当他的汽车在澳大利亚贫瘠的内陆地区抛锚，这个时候发现无法获得NRMA的道路援助，因为Qantas保险公司的网络服务器正在为了 ”更好的服务用户“ 升级。
+[^abc]: Availability: NRMA is online 24/7 but Qantas Insurance can suspend their services in public holidays or at night. Privacy: NRMA can learn user's GPS location but Qantas Insurance isn't legally allowed to learn it. Integration: Most of NRMA's customers are not obtained through Qantas Insurance, so it would be an additional system to integrate and extra security concern for NRMA to integrate to Qantas Insurance's web service. Of all three, availability might be the most visible. Just imagine how angry a customer will be, having his car breaking down in the middle of the barren Australian outback, and learn that the road-side assistance can't be authorised because the insurer's web service is upgrading "For a better user experience".
 
 # 设计需求
 # Design requirements
@@ -277,27 +277,27 @@ Carry trust relationship and business context to 3rd parties
 我们断言需要一种描述性语言（Tokenscript）来允许区块链技术实现“完全市场”和“集成网络”。 Tokenscript代表token行为标记语言。
 We assert that a descriptive language (Tokenscript) is needed to allow blockchain technology to enable "frictionless markets" and an "integrated web". Tokenscript stands for Token Behaviour Markup Language.
 
-由于Tokenscript是一个解决方案层，而不是像以太坊和等离子(译者注：一种以太坊的二层扩容框架)这样的基础层技术，我们选择通过实例介绍该技术，并为观众的观众提供丰富的商业环境讨论。
+由于Tokenscript是一个解决方案层技术，而不是像以太坊和Plasma(译者注：一种以太坊的二层扩容框架)这样的基础层技术，我们选择通过实例介绍该技术，并为更广泛的观众提供基于丰富的商用上下文的讨论。
 By virtue of Tokenscript being a solution layer rather than base-layer technologies like Ethereum and Plasma, we choose to introduce the technology by example and provide rich business-context based discussion for a broader spectrum of audience.
 
-## 发表完全市场的需求
+## 满足“完全市场”的需求
 ## Address "Frictionless Market" needs
 
-仔细研究“市场”，市场并不是一个拥有超载信息的嘈杂渠道; 更重要的是，这是一个交割与付款的地方。 由于区块链不依赖于中间商，即交易主机，我们的重点转变为交易的token，即 *可交付成果* 和 *支付* ，以及他们在市场中的角色。
+仔细研究“市场”，市场并不是一个拥有超载信息的嘈杂渠道; 更重要的是，这是一个承担货款对付（交付与付款）的地方。 由于区块链降低了对中间商（交易主持方）的依赖，和关于传统市场的讨论不同，这里市场的重点不再是如何构建主持维护一个市场，而是市场内的“货”和“款”本身，即 *可交付token* 和 *支付token* ，以及他们在市场中的角色。
 Taking a closer look at "market", a market is not a noisy channel overloaded with information; more importantly, it is a place where delivery versus payment happens. With blockchain relying less on the middlemen, the host of the trades, our focus is turned into the tokens being traded, that is, *deliverables* and *payments*, and their role in market.
 
-交付
+可交付Tokens
 ：金钱可以买到各种各样的东西：资产，商品和服务。
 deliverables
 :    All sorts of things money can buy: assets, goods and services.
 
-付款
+付款tokens
 ：Ether，DAI，Sovereign。 任何类似货币的东西。 只有可编程货币才与本文相关
 payment
 :    Ether, DAI, Sovereign. Anything currency-like. Only programmable currencies are relevant to this paper.
 
 市场
-：市场是交割与付款发生的地方。 *市场*是一个概念，而不是一个实体市场。 在网站上结账的用户正在访问市场。 她不必在市场（例如亚马逊）这样做。
+：市场是货款对付（交付与付款）发生的地方。 *市场*是一个概念，而不是一个实体市场。 在网站上结账的用户正在访问市场。 她不必在市场（例如亚马逊）这样做。
 market
 :    Market is where delivery versus payment happens. *Market* is an concept, not a marketplace. A user who checks out on a website is accessing a market. She doesn't have to be in a marketplace (e.g. Amazon) to do so.
 
