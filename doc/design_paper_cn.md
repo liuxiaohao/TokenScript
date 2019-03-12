@@ -492,10 +492,10 @@ With the first example demonstrated, we use the opportunity to articulate why To
 #### 互操作性：
 #### Interoperability:
 
-假设名为Peter的房产大亨希望创建一个名为“Peter's Pride Asset”的网站，在那里有市场上最好的房产。他可以创建这些房产的列表，其中包含当前价格，位置，建筑物年龄甚至照片的丰富信息，用户可以通过点击购买。但是他没有理由必须要这样做，因为token的数据在区块链上并且交易不需要中间人就能执行。但是，他需要获得如何在其网站上呈现token的本地知识，例如如何从其持有智能合约中获得token的到期。如果基础智能合约经历了变化，例如添加属性（例如议会费率），他的网站将需要升级。
+假设名为Peter的房产大亨希望创建一个名为“Peter's Pride Asset”的网站，在那里有市场上最好的房产。他可以创建这些房产的列表，其中包含当前价格、位置、建筑物年头甚至照片等丰富信息，用户可以点击购买。但是他没有理由必须要这样做，因为token的数据在区块链上并且交易不需要中间人就能执行。但是，他需要获得如何在其网站上呈现token的本地知识，例如如何从其持有智能合约中获得token的到期时间。如果基础智能合约经历了变化，例如添加属性（例如议会费率），他的网站将需要升级。
 Suppose a property guru named Peter wishes to create a website called "Peter's Pride Asset", where he selects the best properties available on the market. He can create a listing of those properties with rich information of the current price, location, age of the building and even photos, which the users can purchase with a click. There is no reason that he needs permission to do so because the data of those tokens are on the blockchain and the transaction of those tokens requires no middlemen. However, he would need to obtain the knowledge local to how to render the token on his website, like how to get the expiration of a token from its holding smart contract. If the underlying smart contract has gone through changes, like adding an attribute (e.g. council rate), his website would need to upgrade.
 
-同样，交易规则也可能会更新，要求买房提者供身份证明作为交易环节的一部分。如果没有快速升级，他的用户将提交不符合要求的交易，并且在接下来的区块中被拒绝。最终，他会将token的呈现和交易，交给与该token绑定的Dapp，这会恢复到中心化状态并限制该领域的创新和竞争。
+同样，交易规则也可能会更新，要求买房者提供身份证明作为交易环节的一部分。如果没有快速升级，他的用户将提交不符合要求的交易，并且在接下来的区块中被拒绝。最终，他会将token的呈现和交易，交给与该token绑定的Dapp，这就回到中心化状态，并限制该领域的创新和竞争。
 Similarly, the transaction rule might be updated to require the buyer to submit an identity attestation as part of a purchase. Without a speedy upgrade, his users would submit transactions not conforming and get rejected later in the blockchain. In the end, he would resort to passing the rendering and trading of the token to the Dapp tied to this token, returning to a centralised status and limit the innovation and competition in this space.
 
 类似的方式，假设一个投资者论坛允许成员使用他们的1%房产token登录，每个帖子下的token呈现都需要来自与token绑定的Dapp。这将会是一个非常大的工作量，为论坛提供token并且保持代码更新，并且这个将会和Dapp的可用性强耦合。
@@ -504,13 +504,13 @@ In a similar fashion, suppose an investors' forum where the members are allowed 
 #### 可扩展性
 #### Scalability
 
-水平情况，相同类型的资产可能在多个网络（如等离子链）上具有其token实例。买方可能只对澳大利亚的资产感兴趣，因此仅与澳大利亚1％房地产网络相关联。可能难以拥有一个全知的节点来为所有现有token提供呈现的token信息，尤其是在设计网络时考虑到隐私的情况。因此，为了扩展，必须从对token的访问中分离关于token（Tokenscript）的知识。
+横向来看，相同类型的资产可能在多个网络（如 Plasma 链）上具有其token实例。买方可能只对澳大利亚的资产感兴趣，因此仅与澳大利亚1％房地产网络相关联。可能难以拥有一个全知的节点来为所有现有token提供呈现的token信息，尤其是在设计网络时考虑到隐私的情况。因此，为了扩展，必须从对token的访问中分离关于token（Tokenscript）的知识。
 Horizontally, the same type of asset might have its token instances across multiple networks like Plasma Chains. A buyer is likely to be interested only in assets in Australia, and therefore only connected to the Australian 1% Property network. It can be difficult to have an all-knowing node to provided rendered token information for all existing tokens, especially if a network is designed with privacy in mind. Therefore, to scale, the knowledge about the token (Tokenscript) must be detached from the access to the token.
 
-垂直情况 - 通过说* vertical *，我们的意思是向上构建，使用token交易构建结构化的交易或在token之上创建结构化token。此类事务和token访问组件token。例如，如果我们想要一个token，其组成是来自100个全球城市的样本的1％资产token，对于中型投资者来分摊风险，必须使用关于成员的知识构建可以操纵此类token的系统token。它再次不能依赖于与该资产相关的原始Dapp的可用性，安全性和开放性。 Tokenscript可以在中间用于制作这样的token。
+纵向来看 - 通过说*垂直方向*，我们的意思是向上构建，在token之上使用token交易或创建结构化token的方式来构建结构化的交易。此类交易和token访问基础token(component token)。例如，如果我们想要一个token，其组成是来自全球100个城市的样本的1％资产token，对于中型投资者来分摊风险，一个可以操作这样token的系统必须以成员token的知识来构建。再次它不能依赖于与该资产相关的原始Dapp的可用性、安全性和开放性。 Tokenscript可以在中间用于制作这样的token。
 Vertically - by speaking *vertical*, we mean to build upward, to building structured transactions using a token transaction or creating structured tokens on top of a token. Such transaction and token access the component tokens. For example, if we desire a token whose make up is a 1% property token from a sample of 100 global cities, for mid-size investors to distribute the risk, a system that can manipulate such a token must be built with the knowledge about member tokens. It again cannot depend on the availability, security and openness of the original Dapp tied to that asset. Tokenscript would work in the middle for the making of such tokens.
 
-如果我们以Peter's Pride Property网站的例子作为Hello World示例，可能需要用户提交交易，不仅要购买token，还要提示彼得。如果只有token发行人的DAPP知道如何组装代币购买交易，这对彼得来说是不切实际的。
+如果我们以Peter's Pride Property网站的例子作为Hello World示例，可能需要用户提交交易，不仅要购买token，同时还要Peter付费（tips）。如果只有token发行者的DAPP知道如何组装token购买交易，这对Peter来说是不切实际的。
 If we follow the example of Peter's Pride Property website as a Hello World example, it might need the user to submit a transaction not only purchase a token, but also tips Peter in the meanwhile. If only the token's issuer's DAPP knows how to assemble a token purchase transaction, this will be impractical for Peter.
 
 即使在简单的场景中，垂直情况自然也会比这复杂得多。您将在本章“基础网络”部分的电子商务故事中看到一个例子。
