@@ -513,31 +513,31 @@ Vertically - by speaking *vertical*, we mean to build upward, to building struct
 如果我们以Peter's Pride Property网站的例子作为Hello World示例，可能需要用户提交交易，不仅要购买token，同时还要Peter付费（tips）。如果只有token发行者的DAPP知道如何组装token购买交易，这对Peter来说是不切实际的。
 If we follow the example of Peter's Pride Property website as a Hello World example, it might need the user to submit a transaction not only purchase a token, but also tips Peter in the meanwhile. If only the token's issuer's DAPP knows how to assemble a token purchase transaction, this will be impractical for Peter.
 
-即使在简单的场景中，垂直情况自然也会比这复杂得多。您将在本章“基础网络”部分的电子商务故事中看到一个例子。
+即使在简单的场景中，垂直情况自然也会比这复杂得多。您将在本章“集成网络”部分的电子商务故事中看到一个例子。
 The vertical stack naturally can be a lot more complicated than this, even in simple scenarios. You will see one revealed in an e-commerce story in the "Integrate the web" section of this chapter.
 
 #### 安全性
 #### Security
 
-即兴创建一种模型是不切实际的，其中用户可能签署的每个事务都以用户可读的格式呈现。使用事务可视化工具开始这样的工作很简单，向用户解释一个神秘的事务负载，类似于Linux的`identify（1）`命令，但最终系统集成和UX需求将超过字典样式事务可视化器能够完成的范围。
+即兴创建一种模型是不切实际的，其中用户可能签署的每个交易都以用户可读的格式呈现。使用交易可视化工具开始这样的工作很简单，向用户解释一个神秘的交易过程，类似于Linux的 `identify(1)` 命令，但最终系统集成和用户体验的需求，将超过字典样式交易可视化工具能够完成的范围。
 It is impractical to improvise a schema where every transaction the user might sign is rendered in a user-readable format. It's easy to start with such an effort with a transaction visualiser tool, interpreting an enigmatic transaction payload to the user, similar to Linux's `identify(1)` command, but ultimately the system integration and UX needs would surpass what a dictionary style transaction visualiser can do.
 
-以1％房产token为例; 确认信息可能会是这样的：您打算用45个Ethers购买1％的房产＃802820，您确定吗？
+以1％房产token为例; 确认信息可能会是这样的：您打算用45个以太币购买1％的房产＃802820，您确定吗？
 Take the 1% property token as an example; a confirmation might look like this: You are going to purchase 1% of property #802820 with 45 Ethers, are you sure?
 
 用户不确定他正在观看的玻璃天花板设计的两居室的房子是否是＃802820。
 The user will be unsure if the glass ceiling designer 2-bedroom house he is watching is #802820.
 
-基于字典的翻译可视化器不能做的更好，因为正确呈现属性标记需要的不仅仅是文字处理。这个限制很容易发现，即使没有在本章的“集成网络”部分中介绍集成方案。
+基于字典的翻译可视化工具不能做的更好，因为正确呈现属性标记需要的不仅仅是文字处理。这个限制很容易发现，即使没有在本章的“集成网络”部分中介绍集成方案。
 A dictionary based translation visualiser cannot go further because correctly rendering the property token requires more than word processing. This limit is easily hit even without introducing integration scenarios in the "Integrate the web" section of this chapter.
 
-最终，使用代码生成交易，用户必须将信任委托给代码。用用户的话说，我正在访问与此token绑定的网站，所以我相信我签署的这个交易是为了我在使用网站时的意图而生成的。这是一个破碎的信任模型，就像的TLS模型一样是对网站的信任而不是内容。
+最终，使用代码生成交易，用户必须将信任委托给代码。以用户的话说，我正在访问与此token绑定的网站，所以我相信我签署的这个交易是为了我在使用网站时的意图而生成的。这是一个破碎的信任模型，就像TLS模型一样是对网站的信任而不是对内容的信任。
 Eventually, a transaction is generated with code, and the user would have to delegate the trust to the code. In a user's words, I am accessing the website tied to this token, so I will trust that this transaction I am signing is generated for the intention I have while using the site. This is a broken trust model, a regression to the TLS model of trusting the site instead of the content.
 
 Tokenscript旨在分离token呈现代码和交易生成代码，并将它们打包到其容器中，由用户可能信任的一方签名（通常由用于部署智能合约的相同密钥签名）。有不同的信任级别，我们将在后面的章节中详细介绍。
 Tokenscript is designed to separate token rendering code, and transaction generating code and package them into its container, signed by a party that the user is likely to trust (often, signed by the same key used for deploying a smart contract). There are a few trust levels, which we will detail in later chapters.
 
-从Peter's Pride Property推荐网站购买1％房产token的用户可以获得一个渲染和交易包，由创建此类代币的持有合同的同一组人签名。因此，用户可以从具有类似信任级别的任何网站购买资产，或者从微信或Facebook私人消息购买资产，并且知道它是正在呈现和交易的真实token。
+从Peter's Pride Property推荐网站购买1％房产token的用户可以获得一个呈现和交易包，由创建此类代币的合约所有者的同一组人签名。因此，用户可以从具有类似信任级别的任何网站购买资产，或者从微信或Facebook私人消息购买资产，并且知道它是正在呈现和交易的真实token。
 A user who is purchasing a 1% property token from Peter's Pride Property recommendation website can be supplied with a rendering and transaction package, signed by the same group of people who created the holding contract of such tokens. Therefore the user can purchase assets from any website with a similar level of trust, or purchase it from a WeChat or Facebook private message and know it is the real token being rendered and transacted.
 
 ## 付款方示例：DAItoken
@@ -546,16 +546,16 @@ A user who is purchasing a 1% property token from Peter's Pride Property recomme
 DAI是一种用于支付的代币 - 购买加密货币，购买商品和服务等等。它锚定美元的价格。没有固定供应上限，它本身不是一个投资品。
 DAI is a token designed for payment - purchasing security token, purchasing goods and services and so like. It's intended to match USD in value. Not fixing the supply cap, it is not itself an investiment candidate.
 
-在许多方面，DAI的功能类似以太网，它是以太坊的基础货币。 但是，它不能成为Ether的替代品。
+在许多方面，DAI的功能类似以太币，它是以太坊的基础货币。 但是，它不能成为以太币的替代品。
 In many ways DAI functions like Ether, the base currency in Ethereum. However, it can't be a drop-in replacement for Ether.
 
-首先，为以太坊编写的Dapps可能不知道用户有DAI令牌，除非它明确支持DAI。 例如，接受以太币作为付款的比萨订购服务不能轻易地开始接受DAI令牌。 即使DAI提供DAI-to-Ether网关服务也是如此，该服务以原子方式在同一事务中将DAI转换为以太网，使用生成的Ether来购买Pizza。
+首先，为以太坊编写的Dapps可能不知道用户有DAI token，除非它明确支持DAI。 例如，接受以太币作为付款的比萨订购服务不能轻易地开始接受DAI token。 即使DAI提供DAI-to-Ether网关服务也是如此，该服务以原子方式在同一交易中将DAI转换为以太币，使用生成的以太币来购买Pizza。
 First, the Dapps written for Ethereum may not be aware that the user has DAI token, unless it explicitly support DAI. A Pizza ordering service that accepts Ether as payment, for example, cannot trivially start to accept DAI token. This is true even if DAI provides a DAI-to-Ether gateway service which, in an atomic fashion, converts DAI to Ether in the same transaction which uses the resulting Ether to purchasing Pizza.
 
-如果Pizza网站没有升级，用户必须首先将DAI转换为Ether，然后通过第二次交易购买Pizza。 这样的过程不仅不方便，而且缺乏原子性，这意味着用户需要通过努力将DAI转换为Ether，但是由于Pizza已经售罄而无法结账，用户必须处理他已经购买的eth
+如果Pizza网站没有升级，用户必须首先将DAI转换为以太币，然后通过第二次交易购买Pizza。 这样的过程不仅不方便，而且缺乏原子性，这意味着用户需要通过努力将DAI转换为以太币，但是由于Pizza已经售罄而无法结账，用户必须处理他已经购买的以太币
 If Pizza website doesn't upgrade, the user has to convert DAI to Ether first, then, purchase Pizza with a second transaction. Such a process is not only inconvenient, but lack atomicity, meaning that the user could have converted DAI to Ether trough the effort, only to fail the checkout since the Pizza is sold out, and ended up with additional Ethers that she has to deal with.
 
-值得注意的是，披萨网站无法升级到支持DAI，因为不知道如何获取用户的DAI余额[^ balance-is-privacy]（为了不浪费交易费结果只发现DAI余额不足），如何构建DAI撤销事务或DAI-Ether网关事务，并对DAI持有合同进行直接智能合约函数调用。
+值得注意的是，披萨网站无法升级到支持DAI，因为不知道如何获取用户的DAI余额[^balance-is-privacy] (to not to to waste a transaction fee just to find the DAI balance is insufficient)，如何构建DAI撤销交易或DAI-Ether网关交易，并对DAI持有合约进行直接智能合约函数调用。
 It's worth noticing that the Pizza website cannot upgrade to support DAI without knowing how to discover the user's DAI balance[^balance-is-privacy] (to not to to waste a transaction fee just to find the DAI balance is insufficient), how to construct a DAI withdraw transaction or DAI-Ether gateway transaction and make direct smart contract function calls to the DAI holding contract.
 
 [^balance-is-privacy]:最终，披萨网站不仅不需要检查余额，因为Tokenscript会处理它，也不需要知道余额。 这将需要底层区块链的支持，但如果我们继续当前的趋势，继续关注业务逻辑的网站也关心支付逻辑，这最终无法完成。
@@ -564,49 +564,49 @@ It's worth noticing that the Pizza website cannot upgrade to support DAI without
 当然，Pizza网站不是管理这些付款方详细信息的最佳位置。 Tokenscript通过以下方式解决了这个问题：
 Naturally, the Pizza website isn't in the best position to manage these payment-side details. Tokenscript addreses this problem by
 
-1.封装支持DAI所需的智能合约函数调用，以及用于在Tokenscript中构建所需事务的javascript，由DAI发行者签名。
+1.封装支持DAI所需的智能合约函数调用，以及用于在Tokenscript中构建所需交易的javascript，由DAI发行者签名。
 1. Encapsulating the smart contract function calls needed for supporting DAI, along with the javascript to construct needed transactions in Tokenscript, signed by DAI issuer.
-2.Tokenscript，兼容性提供浏览器端实现和基于javascript的实现，以便Pizza商店可以调用泛型操作来返回ETH（或任何可接受的货币）并使用Tokenscript中的支付逻辑来交易。
+2.为了Tokenscript的兼容性，提供浏览器端实现和基于javascript的实现，以便Pizza商店可以调用一般操作来返回以太币（或任何可接受的货币）并使用Tokenscript中的支付逻辑来交易。
 2. Providing a browser side implementation and a javascript based implementation for Tokenscript compatibility, so that the Pizza shop could just call a generic action to return Ether (or any acceptable currency) and let the payment logic in Tokenscript work at transaction.
 
-Tokenscript嵌入支付逻辑和表示的能力意味着它不仅可以用用户的语言显示消息（如余额或“余额不足”消息），而且可以执行预检余额等功能，暂停结账流程以便用户可以执行充值流程并返回结帐流程以完成结账。
+Tokenscript嵌入支付逻辑和呈现的能力意味着它不仅可以用用户的语言显示消息（如余额或“余额不足”消息），而且可以执行预检余额等功能，暂停结账流程以便用户可以执行充值流程并返回结帐流程以完成结账。
 Tokenscript's capacity to embed payment logic and presentation means that not only it can display messages in user's language (like balance or "insufficient balance" message), but it can perform functions like pre-checking the balance, pause the checkout flow so that the user can perform a top-up flow and return to the checkout flow to finalise the checkout.
 
 对于用户来说，该过程类似于结账过程引导用户到Paypal来完成交易，唯一的区别是该过程在更强大的本地用户代理中发生。
 To the user, the process resembles a bit like the checkout processs leads the user to Paypal to finalise the transaction, except the process happens locally in an enhanced user-agent.
 
-我们再次强调，目前的方法不适合创造完全市场，但是Tokenscript可以，通过提供*互操作性*，*可扩展性*和 *安全性* 来创造完全市场。
+我们再次强调，目前的方法不适合创造无摩擦市场，但是Tokenscript可以，通过提供*互操作性*、*可扩展性*和*安全性*来创造完全市场。
 We again argue that current prevailing method is not suitable for creati
 ng a frictionless market, while Tokenscript could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
 
-总之，Pizza网站没有必要自行处理支付方逻辑的所有事情。 传统方法是让Pizaa网站使用MakerDAO项目提供的javascript。 javascript可能使用也可能不使用MakerDAO提供的RESTful API
+总之，Pizza网站没有必要自行处理支付方逻辑的所有事情。传统方法是让Pizaa网站使用MakerDAO项目提供的javascript。 javascript可能用也可能不用MakerDAO提供的RESTful API
 As concluded, Pizza website would not have the necessary payment side logic to handle everything on its own. The traditional approach is to let the Pizza website use the javascript sourced by MakerDAO project. The javascript may or may not use a RESTful API provided by MakerDAO
 
-这种方法通过引入其他一些问题解决了一个问题。
+这种方法解决了一个问题，又引入其他一些问题。
 This approach solves one problem by introducing quite a few others.
 
 #### 安全性
 #### Security
-当用户尝试进行购买时时，使用本地javascript（Pizza shop javascript）和DAI提供的所谓安全javascript的组合来创建交易。 向用户呈现交易载荷，该交易的载荷包含访问DAI合同的参数，例如，支付金额，以及访问比萨网站合同的参数，例如购买比萨饼的数量和选择的浇头。 显然，这样的交易必须发送到DAI合同并通过（代理）到披萨店合同。
+当用户尝试进行购买时时，使用本地javascript（Pizza shop javascript）和DAI提供的所谓安全javascript的组合来创建交易。 向用户呈现交易载荷，该交易的载荷包含访问DAI合约的参数，例如，支付金额，以及访问比萨网站合约的参数，例如购买比萨饼的数量和选择的配料。 显然，这样的交易必须发送到DAI的合约，并传送（代理）到披萨店的合约。
 When the user makes the purchase attempt, the transaction is created with the combined effort of local javascript (Pizza shop javascript) and the supposedly secure javascript supplied by DAI. The user is presented with a transaction payload that contains both the parameters to access DAI contract, e.g. amount to pay, and the parameters to access the Pizza website contract, e.g. amount of pizzas to buy and the toppings of choice. Apparently such a transaction has to be sent to DAI contract and channeled (proxed) to the Pizza shop contract.
 
 
 存在两个直接[^minor-security-concerns]安全问题。 首先，网站没有正确使用MakerDAO javascript库，其中包含最终的交易构建器。 其次，它不是MakerDAO真正的的javascript，而是由黑客取代的版本。
 There are two immediate[^minor-security-concerns] security concerns. First is that the website didn't use the MakerDAO javascript library correctly, which has the final transaction builder in it. Second is that it is not MakerDAO's javascript at work, but a version replaced by a hacker.
 
-[^ minor-security-concerns]：当两个系统集成在网络上时，通常存在大量安全问题。 举一个例子，如果一方未更新代码以反映另一方的更改，则可能会生成格式错误的交易。 跟踪这些交易允许攻击者定位未更新的网站。
+[^minor-security-concerns]：当两个系统集成在网络上时，通常存在大量安全问题。 举一个例子，如果一方未更新代码以反映另一方的更改，则可能会生成格式错误的交易。 跟踪这些交易允许攻击者定位未更新的网站。
 [^minor-security-concerns]: When two systems plug on the web, usually there are a hoard of security concerns. To give one example, if a side didn't update the code to reflect the other side's change, the resulting malformed transaction might be rejected. Tracing these transactions allow an attacker to target websites not updated.
 
 这些问题通过Tokenscript中使用的封装方法解决。
 These issues are addressed by the encapsulation method used in Tokenscript.
 
-首先，交易生成代码由MakeDAO单独签名，并与用户代理方分开更新。 网站的代码不必签名，因为它只提供业务逻辑，而不是支付逻辑。 比如，如果发现错误，DAI可以通过更新这些签名的指令来暂停付款，而且Pizza网站的行为就像已经更新并解决问题一样。 如果发现该错误存在于DAI控股合同中，并且部署了替换合同，MakerDAO将更新Tokenscript并再次签署，而Pizza网站不需要任何事情。
+首先，交易生成代码由MakeDAO单独签名，并与用户代理方分开更新。 网站的代码不必签名，因为它只提供业务逻辑，而不是支付逻辑。 比如，如果发现错误，DAI可以通过更新这些签名的指令来暂停付款，而且Pizza网站的行为就像已经更新并解决问题一样。 如果发现该错误存在于DAI控制的合约中，并且部署了替换合约，MakerDAO将更新Tokenscript并再次签署，而Pizza网站不需要任何事情。
 First, the transaction forming code is signed by MakeDAO separately and updated separately from user-agent side. The website's code doesn't have to be signed because it just supplies the business logic, not payment logic. Say, if a bug is found, DAI can suspend the payment by updating these signed instructions, and the Pizza website would behave as if it has been updated to address the issue. If the bug is found to be in the DAI holding contract, and a replacement contract is deployed, MakerDAO would update Tokenscript and sign it again, without Pizza website having to do anything.
 
 其次，通过明确要求用户信任MakerDAO签署的Tokenscript，用户不需要信任Pizza网站对交易内容的呈现，因为它将由受信任的MakerDAO Tokenscript呈现
 Second, by explicitly asking the user to trust the Tokenscript signed by MakerDAO, the user would not need to trust Pizza website's rendering of the transaction content, since it would be rendered by the trusted MakerDAO Tokenscript.
 
-！[使用Tokenscript付款。 请注意，* Complete Order *按钮不在网站上，而是在Dapp浏览器生成的Tokenscript令牌区域中，其中呈现交易的代码已预先签名。](img/ayment-in-wallet.jpeg)
+![使用Tokenscript付款。 请注意，*Complete Order*按钮不在网站上，而是在Dapp浏览器生成的Tokenscript令牌区域中，其中呈现交易的代码已预先签名。](img/ayment-in-wallet.jpeg)
 ![A payment using Tokenscript. Notice that the *Complete Order* button is not on the website, but in the Tokenscript token area generated by Dapp browser, where the code to render the transaction is pre-signed.](img/payment-in-wallet.jpeg)
 
 第三，如果需要添加安全协议，例如，来自网站的证明（可以重新使用SSL证书）来证明接收智能合约的交易，或智能合约通过域名返回网站的明确信任， 额外的逻辑是升级dapp浏览器来提供对新的Tokenscript功能的支持和token发现者对新Tokenscript代码的更新，而无需触及网站。
@@ -615,20 +615,20 @@ Third, if secure protocols needs to be added, for example, an attestation from t
 #### 互操作性
 #### Interoperability
 
-添加对DAI本身的支持是很麻烦的，更不用说添加其他付款方token了。 在2017-2018年的狂热中，许多支付方token被发明并投入大量资金。就连是不安全的token，也在宣传他们的token可用于支付或共同支付某些商品和服务的某种方式。 例如，电力token被发明为未来象征化电力的货币。 他们中的大多数只是笑话，但如果他们开始工作呢？ 即使这些token中只有10％由自己的ICO团队完成，但所有这些token都会在将DAItoken集成到市场中时遇到类似的麻烦。
+添加对DAI本身的支持是很麻烦的，更不用说添加其他付款方token了。 在2017-2018年的狂热中，许多支付方token被发明并投入大量资金。就连是不安全的token，也在宣传他们的token可用于支付或共同支付某些商品和服务的某种方式。 例如，电力token被发明为未来象征化电力的货币。 他们中的大多数只是笑话，但如果他们开始工作呢？ 即使这些token中只有10％由自己的ICO团队完成，但所有这些token都会在将DAI token集成到市场中时遇到类似的麻烦。
 Adding support for DAI itself is trouble enough, not to mention adding other payment side tokens. In the 2017-2018 frenzy, a lot of payment side tokens are invented and heavily invested in. Pretty much anything advertised not as a security token outlines some way their token can be used to pay or co-pay some goods and services. Electricity tokens, for example, is invented as the currency of the future tokenised electricity. Most of them are jokes, but what if they are put to work? Even if only 10% of these tokens are done by sincerer ICO teams, all of them would forsee similiar trouble as the integration of DAI token into the market.
 
-每种付款方货币都有自己的付款方逻辑。以DAI为例，它具有以下支付方逻辑：
+每种付款方货币都有自己的付款方逻辑。以DAI为例，它具有以下支付方面的逻辑：
 And each payment side currency brings its own payment side logic. Take DAI for example, it has these payment side logic:
 
-1. DAI令牌的创建需要一个称为CDP的设置阶段。
+1. DAI token的创建需要一个称为CDP的设置阶段。
 2. CDP的风险等级发生变化。用户应收到其CDP处于清算风险的通知。我们将在下一章再次讨论这种情况。
 3. 如果余额不足，但用户在他/她的帐户上有相当多的Ethers，她可以暂停结账，然后返回结帐。
 1. The creation of DAI tokens requires a set-up phase, called CDP.
 2. The risk level of a CDP changes. Users should receive a notification of their CDP is at liquidation risk. We will cover such case again in the next chapter.
 3. If the balance runs low, but the user has quite a bit of Ethers on his/her account, she may pause the checkout to top up before returning to the checkout.
 
-当架构师读到这里的时候，他可能会绝的这些都可以在外部完成。如果发生任何这些情况，只需将用户踢回MakerDAO网站即可。这不是像Point + Pay这样的支付方创新，其中选择与支付在同一屏幕上选择。 事实上，您可以观察到中国支付方创新的大量例子，例如：
+当架构师读到这里的时候，他可能会觉得这些都可以在外部完成。如果发生任何这些情况，只需将用户踢回MakerDAO网站即可。这不是像Point + Pay这样的支付创新，其中选择与支付在同一屏幕上选择。 事实上，您可以观察到中国支付创新的大量例子，例如：
 An architect might read it here and decide these can all be done out of band. Just kick the user back to the MakerDAO website if any of these happens. This would not address payment side innovation like Point+Pay, where the points are selected at the same screen as payment. In fact, you can observe a proliferationDictionary of payment side innovations in China for examples:
 
 - 小额信贷和抵押贷款
@@ -657,15 +657,15 @@ Tokenscript intends to give room for payment side innovation as well as delivera
 #### 可扩展性
 #### Scalability
 
-付款和交付可能不在同一区块链上。
+付款和交付不可能在同一区块链上。
 The payment and delivery may not be on the same blockchain.
 
 在dapp网站中呈现用户的余额简要提到几页后的隐私问题，但作为区块链扩展，dapp的服务器端可能无法在某些数据（如余额）上同等访问客户端。 网站可能只会观察交易结果，并乐意按规则交付实物或象征性商品。
 Rendering user's balance in dapp website is briefly mentioned as a privacy issue a few pages back, but as blockchain scales, the dapp's server side may not have equal access to the client on some data like balance. It's possible that the website only observes the result of the transaction and happy to deliver physical or tokenised goods by rules.
 
-任何可扩展性计划都不太可能不涉及dapp浏览器和钱包的参与。 他们使得dapps使用他们可以提供的任何高级JavaScript来处理付款方面的情况。
+任何可扩展性计划都不太可能不涉及dapp浏览器和钱包的参与。他们使得dapps使用他们可以提供的任何高级JavaScript来处理付款方面的情况。
 It's unlikely any scalability plan will not involve the participation of dapp browsers and wallets. They results in situation that dapps could not take care of the payment side with whatever advanced javascript they can supply.
-需要解决“集成网络”
+## 解决“集成网络”的需求
 ## Address the "Integrate the web" need
 
 我们发现网络很难集成的原因是各个网站之间只有一个链接，即URL链接。 链接不包含业务流程，身份验证或信任关系。 链接上没有集成锚点。
