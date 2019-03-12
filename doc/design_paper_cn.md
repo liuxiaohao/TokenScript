@@ -263,15 +263,15 @@ Allow users to interact with different systems through the tokens
 Rendering a token and associate it with the actions they can perform in the user's wallet
 :   In the car example, if the registration expired, the web component at work would paint the Registration Token red or display a warning. Actions like *List for sharing* will not be available with an expired car rego, and the integrated token interface should clearly pass that message to the user.
 
-允许在token上开发新协议：在汽车示例中，抵押可能是附加协议，也就是以太坊上下文中的ERC。 该协议可能有自己的实现，并且汽车token可能会预先约定它。 同样，有流媒体，通信，赌注或其他协议（参见“魔术”章节）。 框架必须允许它们存在并通过token使用。
+允许在token上开发新协议：在汽车示例中，抵押可能是附加协议，也就是以太坊上下文中的ERC。 该协议可能有自己的实现，并且汽车token可能会预先约定它。 同样，有流媒体、通信、赌注或其他协议（参见“魔术”章节）。 框架必须允许它们存在并通过token使用。
 Allow new protocols to be developed on tokens
 :   In the car example, collateralization might be an additional protocol, an ERC in Ethereum context. The protocol might have its own implementation and the car token might pre-date it. Similarly, there are streaming, communication, staking or other protocols (See "Magic" chapter). The framework must allow them to exist and work with tokens.
 
-将信任关系和业务背景传递给第三方：在汽车示例中，保险token通过NRMA提供道路救援服务，NRMA是另一家未与驾驶员直接签约的公司。 然而，驾驶员可以通过保险token访问此功能，并立即被确定为有资格获得帮助。 在此示例中，*信任关系*表示用户间接信任NRMA以提供路边援助，以在紧急情况下获取用户的GPS位置和身份信息。 *业务背景* 是指客户对路边援助的资格，例如保险支付，服务范围内的位置和未达到的年度上限等。在这个故事中，*信任关系*和*业务背景* 都必须在token中，而不是 通过保险公司的网络服务集中，因为两者有不同的 a）可用性，b）隐私和c）集成要求[^ abc]。
+将信任关系和业务背景传递给第三方：在汽车示例中，保险token通过NRMA提供道路救援服务，NRMA是另一家未与驾驶员直接签约的公司。 然而，驾驶员可以通过保险token访问此功能，并立即被确定为有资格获得帮助。 在此示例中，*信任关系*表示用户间接信任NRMA以提供路边援助，以在紧急情况下获取用户的GPS位置和身份信息。 *业务背景* 是指客户对路边援助的资格，例如保险支付，服务范围内的位置和未达到的年度上限等。在这个故事中，*信任关系*和*业务背景* 都必须在token中，而不是通过中心化的保险公司的网络服务，因为两者有不同的 a）可用性、b）隐私和c）集成要求[^abc]。
 Carry trust relationship and business context to 3rd parties
 :   In the car example, the insurance token provides Roadside Assistance service through NRMA, another company not directly contracted by the driver. Yet the driver might access this function through the insurance token and immediately be identified as qualified for help. In this example, *Trust relationship* means that the user indirectly trusts NRMA to provide roadside assistance, to obtain the user's GPS location and identity information at the time of emergency. *Business context* means the customer's qualification for roadside assistance, like insurance paid, location in the range of service and annual cap not reached etc. In this story both *trust relationship* and *business context* has to be in the token, not centralised through the insurance company's web service since the two have different a) availability, b) privacy and c) integration requirements[^abc].
 
-[^abc]: 可用性：NRMA 7*24小时在线，但是澳航保险可以在公众假期或者晚上暂停服务。隐私：NRMA可以获取用户的GPR，但是澳航保险在法律上不允许。集成：大多数NRMA的客户不是通过Qantas Insurance 获得的，因此它将成为NRMA集成和额外安全问题的附加系统，以集成到Virgain Insurance的网络服务。在这三个小时中，可用性可能是最明显的。想象一下客户会有多生气，当他的汽车在澳大利亚贫瘠的内陆地区抛锚，这个时候发现无法或者道路援助，因为保险公司的网络服务器正在为了 ”更好的服务用户“ 升级。
+[^abc]: 可用性：NRMA 24/7小时在线，但是澳航保险可能在公众假期或者晚上暂停服务。隐私：NRMA可以获取用户的GPR，但是澳航保险在法律上不允许。集成：大多数NRMA的客户不是通过Qantas Insurance 获得的，因此它将成为NRMA集成和额外安全问题的附加系统，以集成到Virgain Insurance的网络服务。在这三个小时中，可用性可能是最明显的。想象一下客户会有多生气，当他的汽车在澳大利亚贫瘠的内陆地区抛锚，这个时候发现无法得到道路援助，因为保险公司的网络服务器正在为了“更好的用户体验”而升级。
 [^abc]: Availability: NRMA is online 24/7 but Qantas Insurance can suspend their services in public holidays or at night. Privacy: NRMA can learn user's GPS location but Qantas Insurance isn't legally allowed to learn it. Integration: Most of NRMA's customers are not obtained through Qantas Insurance, so it would be an additional system to integrate and extra security concern for NRMA to integrate to Virgain Insurance's web service. Of all three, availability might be the most visible. Just imagine how angry a customer will be, having his car breaking down in the middle of the barren Australian outback, and learn that the road-side assistance can't be authorised because the insurer's web service is upgrading "For a better user experience".
 
 # 设计需求
@@ -280,22 +280,22 @@ Carry trust relationship and business context to 3rd parties
 我们断言需要一种描述性语言（Tokenscript）来允许区块链技术实现“完全市场”和“集成网络”。 Tokenscript代表token行为标记语言。
 We assert that a descriptive language (Tokenscript) is needed to allow blockchain technology to enable "frictionless markets" and an "integrated web". Tokenscript stands for Token Behaviour Markup Language.
 
-由于Tokenscript是一个解决方案层，而不是像以太坊和等离子(译者注：一种以太坊的二层扩容框架)这样的基础层技术，我们选择通过实例介绍该技术，并为观众的观众提供丰富的商业环境讨论。
+由于Tokenscript是一个解决方案层，而不是像以太坊和Plasma(译者注：一种以太坊的二层Layer 2扩容框架)这样的基础层技术，我们选择通过实例介绍该技术，并为观众提供丰富的商业环境讨论。
 By virtue of Tokenscript being a solution layer rather than base-layer technologies like Ethereum and Plasma, we choose to introduce the technology by example and provide rich business-context based discussion for a broader spectrum of audience.
 
-## 发表完全市场的需求
+## 解决无摩擦市场的需求
 ## Address "Frictionless Market" needs
 
-仔细研究“市场”，市场并不是一个拥有超载信息的嘈杂渠道; 更重要的是，这是一个交割与付款的地方。 由于区块链不依赖于中间商，即交易主机，我们的重点转变为交易的token，即 *可交付成果* 和 *支付* ，以及他们在市场中的角色。
+仔细研究“市场”，市场并不是一个拥有大量信息的嘈杂渠道; 更重要的是，这是一个交割与付款的地方。 由于区块链不依赖于中间商，即交易主机，我们的重点转变为交易的token，即 *可交付成果* 和 *支付* ，以及它们在市场中的角色。
 Taking a closer look at "market", a market is not a noisy channel overloaded with information; more importantly, it is a place where delivery versus payment happens. With blockchain relying less on the middlemen, the host of the trades, our focus is turned into the tokens being traded, that is, *deliverables* and *payments*, and their role in market.
 
 交付
-：金钱可以买到各种各样的东西：资产，商品和服务。
+：金钱可以买到各种各样的东西：资产、商品和服务。
 deliverables
 :    All sorts of things money can buy: assets, goods and services.
 
 付款
-：Ether，DAI，Sovereign。 任何类似货币的东西。 只有可编程货币才与本文相关
+：Ether，DAI，Sovereign。 任何类似货币的东西。只有可编程货币才与本文相关
 payment
 :    Ether, DAI, Sovereign. Anything currency-like. Only programmable currencies are relevant to this paper.
 
@@ -304,15 +304,15 @@ payment
 market
 :    Market is where delivery versus payment happens. *Market* is an concept, not a marketplace. A user who checks out on a website is accessing a market. She doesn't have to be in a marketplace (e.g. Amazon) to do so.
 
-Tokenscript 向* market *提供 *可交付* 和 *付款* 的token “插件”。
+Tokenscript 向*市场*提供*可交付的*及*付款*方面token的“插件”。
 Tokenscript provides both *the deliverable* and *the payment* side tokens to "plug-in" to the *market*. 
-这样的框架对于token的呈现，索引，交易，交易，拍卖，组合......以实现完全市场至关重要。
+这样的框架对于token的呈现，索引，交易，贸易，拍卖，组合......以实现完全市场是至关重要的。
 Such a framework is essential for tokens to be presented, indexed, transacted, traded, auctioned, combined... to work towards a frictionless market.
 
-我们将通过每个 *可交付* 方面和 *付款* 方面的示例介绍Tokenscript。
+我们将通过每个*可交付*方面和*付款*方面的示例介绍Tokenscript。
 We will introduce Tokenscript through an example on each of the *deliverable* side and on *payment* side.
 
-## 可交付方面的示例 1% 房产token
+## 可交付方面的示例： 1% 房产token
 ### Deliverable side example: 1% property token
 
 让我们想象一下“1％房产”的市场。房产所有者可以发放许多token，每个token代表1％的房产所有权。他可以出售这些token以换取现金。
@@ -321,7 +321,7 @@ Let's imagine a market for "1% property". A property owner can issue many pieces
 买家需要了解相当多的信息。很容易理解，如果基础token被出售，这样的token将获得1％的销售收入，但这中间还有很多细节问题。
 A buyer needs to know quite a bit of information. It's easy to understand that such a token would fetch 1% of the sales revenue if the underlying property is sold, but a lot more details are needed:
 
-1.房产在哪里以及它的状态如何？
+1. 房产在哪里以及它的状态如何？
 1. Where is the property and what status is it in?
 
 2. 1％的房产代币所有者可以投票吗？例如，有关丛林火灾保险的购买决定？
@@ -345,22 +345,22 @@ A buyer needs to know quite a bit of information. It's easy to understand that s
 8. 过去几年该地区类似物业的表现如何？
 8. What was the performance of similar properties in the region in the past years?
 
-9. 这家酒店的历史销售价格是多少？
+9. 该房产的历史销售价格是多少？
 9. What was the historical sales price of this property?
 
 具体到区块链，我们还有：
 Specific to blockchain, we also have:
 
-10.如何正确安全地为资产建立交易（购买，投票等）
+10. 如何正确安全地为资产建立交易（购买，投票等）
 
 10. How to correctly and securely construct a transaction for the asset (purchase, voting etc)
 
 我们将这些贸易敏感信息分为四类：
 
-  产品说明 [^ pd]。 项目2,3,5,6在PD中
-- 证明信息。 项目1,4,6,7在Attestations中。
-- 参考信息。 项目8,9。
-- 行为信息（如何执行资产行动）。 项目10。
+- 产品说明 [^pd]。 在PD中的项目2,3,5,6
+- 证明信息。 在Attestations中的项目1,4,6,7
+- 参考信息。 项目8,9
+- 行为信息（如何执行资产行动）。项目10
 
 We categorise these trade-sensitive information into four categories:
 
@@ -372,13 +372,13 @@ We categorise these trade-sensitive information into four categories:
 可以理解的是，买家需要访问所有这些信息以做出明智的决定。
 Understandablly, the buyers need to access all these for an informed decision.
 
-[^ pd]这个词来自金融部门，通常用于描述包装的投资产品。 它基本上是指计算利润的公式和公式中的变量的当前值。
+[^pd]这个词来自金融部门，通常用于描述包装的投资产品。它基本上是指计算利润的公式和公式中的变量的当前值。
 [^pd] The word is loaned from the financial sector, usually used to describe packaged investment products. It basically means the formular which profit is calculated and the current values of the varibales in the formular.
 
 #### 产品描述
 #### Product description
 
-产品描述信息通常在智能合约中。 在以太坊的情况下，这些可以通过进行一些智能合约函数调用来获得，因此，唯一需要的工作是将它们转换为演示文稿 - 通常意味着转换成为用户语言并将“实际”值转换为精心打勾的复选框。 这有助于介绍Tokenscript的第一个功能：充当智能合约的表示层。
+产品描述信息通常在智能合约中。 在以太坊的情况下，这些可以通过进行一些智能合约函数调用来获得，因此，唯一需要的工作是将它们转换为演示文稿 - 通常意味着转换成为用户语言并将“实际”值转换为精心打勾的复选框。 这有助于介绍Tokenscript的第一个功能：充当智能合约的表现层。
 Product description information is typically in the smart contract. In Ethereum cases, these can be obtained by making a few Smart Contract function calls, therefore, the only needed work is to convert them into presentation - usually it means translating to the language user speaks and converting "True" value into a nicely ticked checkbox. This serve to introduce the first functionality of Tokenscript: acting as a presentation layer for smart-contracts.
 
     <attribute-type id="voting-right">
@@ -407,27 +407,27 @@ Product description information is typically in the smart contract. In Ethereum 
 	</origin>
     </attribute-type>
 
-这个简化的`attribute-type`代码片段允许从“holding-contract”获取投票权的值，这是一个在Tokenscript中其他地方定义的智能合约，并以几种语言之一呈现。
+这个简化的 `attribute-type` 代码片段允许从 `holding-contract` 获取投票权的值，这是一个在Tokenscript中其他地方定义的智能合约，并以几种语言之一呈现。
 
 This simplified `attribute-type` code snippet allows the value for Voting Right to be fetched from `holding-contract`, which is a smart contract defined somewhere else in the Tokenscript, and present it in one of a few languages.
 
 #### 证明信息
 #### Attested information
 
-证明只是一条用来说明事实的经过签名的信息。通常使用证明来表示满足交易的条件，更多关于证明的信息如下
+证明只是一条经过签名的用来说明事实的信息。通常使用证明来表示满足交易的条件，更多关于证明的信息如下。
 Attestation is just a signed message stating a fact. Attestations are often used to satisfy the conditions of the transactions. More on that in the chapter Attestations.
 
 在1％财产token的示例中，涉及的证明是：
 In the 1% property token example, the involved attestations are:
 
- - 通过身份管理机构和所有权契约办公室，以证明发行人对财产的所有权。
+- 通过身份管理机构和所有权契约办公室，以证明发行人对财产的所有权。
 - by identity authority and title deeds office, to attest the issuer's ownership of the property.
- - 通过抵押权限[^ set-operation]来防止双重抵押
+- 通过抵押权限[^set-operation]来防止双重抵押
 - by collateralization authority[^set-operation] to prevent double collateralization
- - 由买方提供投资此类资产的身份或能力
+- 由买方提供投资此类资产的身份或能力
 - by buyers, for providing identity or capacity to invest in this type of asset
 
-[^ set-operation]：最终，这可能是一个加密集合操作，但即使发生这种情况，也需要在Tokenscript中描述指示上下文（用户代理）进行计算的元数据。
+[^set-operation]：最终，这可能是一个加密集合操作，但即使发生这种情况，也需要在Tokenscript中描述指示上下文（用户代理）进行计算的元数据。
 [^set-operation]: Eventually, this could be a cryptographic set operation, but even if that happens, the metadata directing the context (user-agent) to proform the computation still needs to be described in Tokenscript.
 
 前两个证明并未存储在智能合约中，由于成本（交易的大小和数量）和隐私的原因。可以采用零知识证明来证明该证明适用于所述财产和所述所有者的通用证据，并且它尚未过期。 Tokenscript中还描述了预期和可验证的证据。
@@ -439,16 +439,16 @@ Furthermore, the fact that the transaction requires an identity attestation or i
 #### 参考信息
 #### Reference information
 
-参考信息与token相关，由Web服务提供，通常通过RESTful API调用。[^ trusted-information]
+参考信息与token相关，由Web服务提供，通常通过RESTful API调用。[^trusted-information]
 Reference information is what relevant to the token and provided by web services, typically through a RESTful API call.[^trusted-information]
 
-[^ trusted-information] 最初我们将其称为“可信信息”，这意味着以前的房产销售价格或区域性能数据等数据只是“提供”，没有区块链证明或证明，因此，必须由用户自己信任。 事实证明，这个用语是错误的，因为一些开发人员认为它意味着“经过验证的信息”，并且已经提供了可靠信息。 因此，我们使用了一个不太精确的用语“参考信息”，遗憾的是，它就像一个包罗万象的短语。
+[^trusted-information] 最初我们将其称为“可信信息”，这意味着以前的房产销售价格或区域性能数据等数据只是“提供”，没有区块链证据或证明，因此，必须由用户自己信任。 事实证明，这个用语是错误的，因为一些开发人员认为它意味着“经过验证的信息”，并且已经提供了可靠信息。 因此，我们使用了一个不太精确的用语“参考信息”，遗憾的是，它就像一个包罗万象的短语。
 [^trusted-information]: Originally we call it "Trusted information", meaning data such as previous property sales price or regional property performance data is just "provided", without blockchain proofs or attestations, hence, it has to be explicitly trusted by the user. As it turned out, this term misfired as some developers think it means "proven information" and provided as trusted already. So we used a less precise term "Reference information", which, unfortunately, feels like a catch-all phrase.
 
-由于Tokenscript由token发行者签署（不是token所有者 - token发行者通常是部署智能合约的实体），因此假定来自Tokenscript中指定的web apis的参考信息是可信的。 安全章节将详细说明不同的信任级别。
+由于Tokenscript由token发行者签署（不是token所有者 - token发行者通常是部署智能合约的实体），因此假定来自Tokenscript中指定的网络API的参考信息是可信的。 安全章节将详细说明不同的信任级别。
 Since Tokenscript is signed by the token issuer (not token owner - the token issuer is often entity that deployed the smart contrat), the reference information sourced from the web apis specified in Tokenscript is assumed trusted. The security chapter will detail different levels of trust.
 
-今天，与token相关的所有此类信息通常一起保存在由部署token的同一实体制作的DAPP网站上。 我们认为，要使token有效地市场化，需要将其抽象出来并置于token行为语言Tokenscript中。
+今天，与token相关的所有此类信息，通常一起保存在由部署token的同一实体制作的DAPP网站上。 我们认为，要使token有效地市场化，需要将其抽象出来并置于token行为语言Tokenscript中。
 Today, all such information related to a token is usually held together on a DAPP website made by the same entity that deployed the token. We argue that for tokens to be effectively marketized, It needs to be abstracted out and placed in the token behaviour language Tokenscript.
 
 #### 行为信息
@@ -457,23 +457,23 @@ Today, all such information related to a token is usually held together on a DAP
 规定构建区块链交易的正确方法，如：
 Dictates the correct method to construct a blockchain transaction, like:
 
- - 需要哪些证明来证明买方的购买能力。
- - 购买需要哪些参数（例如1％的股份数量）。
- - 如何呈现购买表单并转换为用户的本地语言。
- - 是否满足条件（例如，在相关财产被清算后无法进行购买）。
+- 需要哪些证明来证明买方的购买能力。
+- 购买需要哪些参数（例如1％的股份数量）。
+- 如何呈现购买表单并转换为用户的本地语言。
+- 是否满足条件（例如，在相关财产被清算后无法进行购买）。
 - What attestations are needed to prove the buyer's capacity to purchase.
 - What parameters are needed for a purchase (e.g. number of 1% shares).
 - How to render the purchase form and translate to user's local language.
 - Is the condition all met (e.g. a purchase isn't possible after the underlying property is liquidated).
 
-这些信息是一套超级智能合约可编程接口（In Ethereum，称为ABI），附加部分是业务逻辑（例如财产必须仍然有效且卖方仍然拥有它）和表示逻辑（例如消息“该物业已被清算，不再出售“）。
+这些信息是一套超级智能合约可编程接口（以太坊中称为ABI），附加部分是业务逻辑（例如财产必须仍然有效且卖方仍然拥有它）和表示逻辑（例如消息“该物业已被清算，不再出售“）。
 These information is a super-set of smart contract programmable interface (In Ethereum, called ABI), with the additional part being business logic (e.g. property must be still valid and seller still have it) and presentation logic (e.g. the message "The property is liquidated. Purchase no longer possible").
 
-总之，Tokenscript允许上下文（用户代理或交易引擎）：
+总之，Tokenscript允许以下的上下文（用户代理或交易引擎）：
 
- - 从持有智能合约，证明和参考资料中获取token相关信息。
- - 生成token的视觉或音频呈现
- - 生成可执行的操作列表以及如何构建交易。
+- 从持有智能合约、证明和参考资料中获取token相关信息。
+- 生成token的视觉或音频呈现
+- 生成可执行的操作列表以及如何构建交易。
 In conclusion, Tokenscript allows the context (user-agent or trading engine) to:
 
 - Fetch token related information from its holding smart contract, attestations and references.
@@ -486,7 +486,7 @@ Any party is able to render and apply functions to the token using Tokenscript, 
 ### 为什么需要Tokenscript
 ### Why Tokenscript
 
-通过演示的第一个示例，我们利用这个机会阐明了为什么需要Tokenscript，而不是目前通过DApp提供资产访问的主流方式。我们认为目前流行的方法不适合创建完全市场，而Tokenscript可以提供 *互操作性*，*可扩展性*和*安全*等保障。
+通过演示的第一个示例，我们利用这个机会阐明了为什么需要Tokenscript，而不是目前通过DApp提供资产访问的主流方式。我们认为目前流行的方法不适合创建完全市场，而Tokenscript可以提供*互操作性*、*可扩展性*和*安全*等保障。
 With the first example demonstrated, we use the opportunity to articulate why Tokenscript is needed, over the current prevailing way of providing asset access with a host DApp. We argue that the current prevailing method is not suitable for creating a frictionless market, while Tokenscript could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
 
 #### 互操作性：
