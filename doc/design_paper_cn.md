@@ -8,7 +8,7 @@ The remarkable blockchain speculations that took place in 2017 - 2018 brought ev
 为了让区块链提供实际的用途，我们必须了解他对世界经济和现有互联网的作用。这篇文章的作者是对区块链应用在金融机构和初创公司进行了长期的研究和探索的技术专家。凭借这些经验和知识，我们逐步意识到区块链有两个主要的功能
 To provide a practical use of the blockchain, we must understand its utility to the world economy and the internet. The authors of this paper are technical experts who went through years of study and exploration into its applications both via financial institutions and startups. With this experience, we came to realise that the blockchain has **two primary functions**：
 
- - 提供完全市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)
+ - 提供无摩擦市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)
  - 集成网络
 - providing a frictionless market; and
 
@@ -26,7 +26,7 @@ Please join our work at tokenscript.org - when it is set-up of course. A Yellow 
 
 ## Abstract
 
-我们认识到区块链技术的真正应用是提供完全市场和集成网络方面的实用性。 这是通过Tokenisation完成的。 被Tokenized的权益可以在市场上交易并作为系统集成点，形成完全市场并允许自由集成。
+我们认识到区块链技术的真正应用是提供无摩擦市场和集成网络方面的实用性。 这是通过Tokenisation完成的。 被Tokenized的权益可以在市场上交易并作为系统集成点，形成无摩擦市场并允许自由集成。
 We recognise the blockchain technology's utility in providing a frictionless market and integrating the web. This is done through tokenization. Tokenized rights can be traded on the market and integrated across systems, forming a frictionless market and allowing free integration.
 
 如今，访问、呈现和交易的token的方式分散在Dapps和智能合约中。 如果所有关于一个token的知识都在dapp中，那么dapp必须参与该token的市场和所有集成，这么做就重新造成了数据互操作性，安全性和可用性上的问题，这些问题阻碍了tokenisation - 同样的问题在区块链发明之前就已出现。
@@ -49,7 +49,7 @@ Please join our work at xxx. A Yellow Paper to guide implementors to use Tokensc
 # Introduction: What does blockchain *do*?
 
 区块链技术具有**两个主要功能**，为未来的经济和互联网提供基本功能：
- - 提供完全市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)
+ - 提供无摩擦市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)
  - 集成网络。
 Blockchain technology has **two primary functions** that serve essential purposes for the future economy and the future Internet:
 - providing a frictionless market; and
@@ -59,7 +59,7 @@ Blockchain technology has **two primary functions** that serve essential purpose
 This paper will address the vision of where we can be and follow up with the design and reasoning behind the architecture needed on top of the blockchain. We will then explain Tokenscript which is a critical missing layer and go over its design principles and how we are building it.
 
 
-## 区块链提供了一个完全市场
+## 区块链提供了一个无摩擦市场
 ## Blockchain provides a frictionless market
 
 上世纪80年代的“回到未来”描绘了一个拥有悬浮滑板和飞行汽车的强大机械世界。但是他们并没发生。正如彼得·泰尔曾经著名的哀叹，“我们曾经承诺飞行汽车，结果只得到140字符。但是我们所处时代的技术进步依旧超出了80年代科幻电影的想象，不是通过更强大的机器，而是有效利用互联网。
@@ -71,14 +71,14 @@ Ride-sharing transformed the way people get around, and AirBNB changed the way w
 然而，尽管进行了Web 2.0技术革命，大多数市场仍然是高成本和低效的。例如，股票市场由于依靠对于规章制度的信任来运作，开销非常大，它只适合价值数百万美元的商业。
 However, despite this web 2.0 revolution, the majority of markets still operate with high costs. The stock market, for example, has so much overhead that it is only justifiable for multi-million dollar businesses which rely on the trust of rules and regulations to operate.
 
-使用区块链，任何Tokenisation的资产都可以随时进行交易，只要遵循规则，没有中间商或中间人，给我们提供最高的市场效率-完全市场。除了不依赖中间商之外，在Tokenisation的市场模型中，买方和卖方不在需要”进入“市场。相反，token总是在市场上【*市场模型】，这样的模式当然比中间商更好。
+使用区块链，任何Tokenisation的资产都可以随时进行交易，只要遵循规则，没有中间商或中间人，给我们提供最高的市场效率-无摩擦市场。除了不依赖中间商之外，在Tokenisation的市场模型中，买方和卖方不在需要”进入“市场。相反，token总是在市场上【*市场模型】，这样的模式当然比中间商更好。
 With blockchain, any tokenised asset can be transacted any time, as long as it follows the rules, without middlemen or intermediary, gives us maximum market efficiency - the frictionless market. On top of the benefits of not relying on an intermediary, in a tokenised market model, the buyers and sellers do not need to "enter" the market; instead, tokens are *always on the market*[^market-model], making such a model better than intermediaries.
 
 【*市场模型】: 传统的中介操作市场模式，交易分为两个阶段：进入市场，达成交易。 区块链可以将其简化为协议; 因此，区块链token资产可以被视为始终在市场上。
 
 [^market-model]: With the traditional intermediary-operated market model, a trade is made in two stages: entering the market, making a deal. Blockchain can simplify that into a protocol; therefore the blockchain token assets can be considered always on the market.
 
-我们能够通过Tokenisation创造完全市场吗？
+我们能够通过Tokenisation创造无摩擦市场吗？
 ### Can we create a frictionless market through tokenisation?
 
 我们是否可以tokenise房产，举个例子，1％的房产，以便地产市场能够比传统的长达一个月的房地产购买 - 销售周期更快地做出反应？ 
@@ -115,7 +115,7 @@ If a token entitles the user to do specific actions online, how can the user log
 It's easy to see the need for a framework defining tokens and making them interoperable with different methods of trading, listing and rating. We did end up having hundreds of tokens in 2017-2018, but they are uniformly the currency-like, ERC20 tokens, filling up the payment side of the market[^payment]. There is nearly zero effort devoted to making tokens represent *goods and services* - the deliverable side of market and a fundamental need for a market to work.
 
 
-[^ payment]：在后面的章节中，我们将token分类为付款token和交付token。 带有*支付代币*标志的ERC20代币只是市场中的付款方一面，因此无法真的用到区块链的完全市场。
+[^ payment]：在后面的章节中，我们将token分类为付款token和交付token。 带有*支付代币*标志的ERC20代币只是市场中的付款方一面，因此无法真的用到区块链的无摩擦市场。
 [^payment]: In the later chapters we will categorise tokens as payment tokens and deliverable tokens. ERC20 tokens bearing the hallmarks of *payment tokens* only filles one side of market with tokens, therefore can't lift a market.
 
 举个例子，在2017年的投机泡沫期间，电力token的ICO不需要提供关于如何使用token的任何解释。 所有投机者仅仅只知道它们代表着“在未来的token化电力世界中占有一席之地”。 只要token可以满足投资者的想象力，这对ICO来说就足够了。 因此，除了ERC20接口之外，他们没有任何其他功能。 对于这样的投机电力token来说，它不依赖任何证据，如实际发电量的证明。也不需要任何描述类信息如电力提供的来源在哪，以及可用的时间长短。
@@ -275,13 +275,13 @@ Carry trust relationship and business context to 3rd parties
 # 设计需求
 # Design requirements
 
-我们断言需要一种描述性语言（Tokenscript）来允许区块链技术实现“完全市场”和“集成网络”。 Tokenscript代表token行为标记语言。
+我们断言需要一种描述性语言（Tokenscript）来允许区块链技术实现“无摩擦市场”和“集成网络”。 Tokenscript代表token行为标记语言。
 We assert that a descriptive language (Tokenscript) is needed to allow blockchain technology to enable "frictionless markets" and an "integrated web". Tokenscript stands for Token Behaviour Markup Language.
 
 由于Tokenscript是一个解决方案层技术，而不是像以太坊和Plasma(译者注：一种以太坊的二层扩容框架)这样的基础层技术，我们选择通过实例介绍该技术，并为更广泛的观众提供基于丰富的商用上下文的讨论。
 By virtue of Tokenscript being a solution layer rather than base-layer technologies like Ethereum and Plasma, we choose to introduce the technology by example and provide rich business-context based discussion for a broader spectrum of audience.
 
-## 满足“完全市场”的需求
+## 满足“无摩擦市场”的需求
 ## Address "Frictionless Market" needs
 
 仔细研究“市场”，市场并不是一个拥有超载信息的嘈杂渠道; 更重要的是，这是一个承担货款对付（交付与付款）的地方。 由于区块链降低了对中间商（交易主持方）的依赖，和关于传统市场的讨论不同，这里市场的重点不再是如何构建主持维护一个市场，而是市场内的“货”和“款”本身，即 *可交付token* 和 *支付token* ，以及他们在市场中的角色。
@@ -305,7 +305,7 @@ market
 
 Tokenscript同时为*市场*提供 *交付token* 和 *付款token*。
 Tokenscript provides both *the deliverable* and *the payment* side tokens to "plug-in" to the *market*. 
-这样的框架对于token的呈现，索引，转让，交易，拍卖，组合......以实现完全市场至关重要。
+这样的框架对于token的呈现，索引，转让，交易，拍卖，组合......以实现无摩擦市场至关重要。
 Such a framework is essential for tokens to be presented, indexed, transacted, traded, auctioned, combined... to work towards a frictionless market.
 
 我们将通过一个示例介绍Tokenscript在 *交付token* 方面和 *付款token* 方面的应用。
@@ -492,7 +492,7 @@ Any party is able to render and apply functions to the token using Tokenscript, 
 ### 为什么需要Tokenscript
 ### Why Tokenscript
 
-通过演示的第一个示例，我们利用这个机会阐明了为什么需要Tokenscript，而不是目前通过DApp提供资产访问的主流方式。我们认为目前流行的方法不适合创建完全市场，而Tokenscript可以提供*互操作性*、*可扩展性*和*安全*等保障。
+通过演示的第一个示例，我们利用这个机会阐明了为什么需要Tokenscript，而不是目前通过DApp提供资产访问的主流方式。我们认为目前流行的方法不适合创建无摩擦市场，而Tokenscript可以提供*互操作性*、*可扩展性*和*安全*等保障。
 With the first example demonstrated, we use the opportunity to articulate why Tokenscript is needed, over the current prevailing way of providing asset access with a host DApp. We argue that the current prevailing method is not suitable for creating a frictionless market, while Tokenscript could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
 
 #### 互操作性：
@@ -581,7 +581,7 @@ Tokenscript's capacity to embed payment logic and presentation means that not on
 对于用户来说，该过程类似于结账过程引导用户到Paypal来完成交易，唯一的区别是该过程在更强大的本地用户代理中发生。
 To the user, the process resembles a bit like the checkout processs leads the user to Paypal to finalise the transaction, except the process happens locally in an enhanced user-agent.
 
-我们再次强调，目前的方法不适合创造无摩擦市场，但是Tokenscript可以，通过提供*互操作性*、*可扩展性*和*安全性*来创造完全市场。
+我们再次强调，目前的方法不适合创造无摩擦市场，但是Tokenscript可以，通过提供*互操作性*、*可扩展性*和*安全性*来创造无摩擦市场。
 We again argue that current prevailing method is not suitable for creati
 ng a frictionless market, while Tokenscript could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
 
@@ -724,7 +724,7 @@ Despite such a token not being transferable or authorised, it is still useful fo
 ![购买一个token，获得三个token。 它们可用于访问服务，如交付和维修。](purchase-without-shipment-token.jpg)
 ![Purchase with one token, getting three tokens. They can be used to access services, like delivery and repair.](purchase-without-shipment-token.jpg)
 
-正如我们通过使用token所观察到的那样，通常可以最终集成分散的业务流程和Web体验。 这与区块链的其他好处密切相关：比如完全市场。 在这个例子中：
+正如我们通过使用token所观察到的那样，通常可以最终集成分散的业务流程和Web体验。 这与区块链的其他好处密切相关：比如无摩擦市场。 在这个例子中：
 As we can observe by the use of tokens, usually scattered business processes and web experiences can finally be integrated. This ties closely to the other benefit of the blockchain: a frictionless market. In this example:
 
 
@@ -846,7 +846,7 @@ This change illustrated that a new transaction rule would result in a change of 
 ### 业务流程不可能改变智能合约。但市场可能改变只能合约。
 ### Business processes may not change smart contract. Market condition may.
 
-总而言之，业务流程变更不应导致智能合约变更。以交易规则变化的形式改善自由市场自然应该导致智能合约的变化。 区块链用于提供完全市场，而不是优化业务流程。
+总而言之，业务流程变更不应导致智能合约变更。以交易规则变化的形式改善自由市场自然应该导致智能合约的变化。 区块链用于提供无摩擦市场，而不是优化业务流程。
 To recap, business process changes should not lead to a smart contract change. An improvement in a free market, in the form of a transaction rule change, should naturally lead to a smart contract change. Blockchain serves to provide a frictionless market, not to optimise business processes.
 
 通过Tokenscript实现这一愿景。没有它，就很难将集成需求和业务流程需求明确分开，结果将无法实现互操作。
