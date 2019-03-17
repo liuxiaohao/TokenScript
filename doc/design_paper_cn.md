@@ -1177,7 +1177,7 @@ Examples of assets: crypto kitties, FIFA tickets, right to a bottle of wine, 1% 
 Examples of attestations: crypto-kitten vouchers, FIFA ticket redeem coupons, American Express Centurion status, Friendship Tokens (a signed message from Michael Jackson saying that Victor Zhang is a friend) or proof of identity.
 
 
-# 加入游戏
+# 加入我们
 
 将Tokenscript定义为规范的工作正在进行中。 我们的目标是制作关键方法和考虑因素的黄皮书，并从那里开始扩展它。  正在进行的工作会在 http://www.tokenscript.org 讨论
 
