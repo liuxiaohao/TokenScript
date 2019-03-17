@@ -5,7 +5,7 @@ TokenScript builds the front end logic of a token dapp with the smart contract o
 TokenScript文件包含token的业务逻辑，token UI呈现和程序接口，由token的建模者签名
 A TokenScript file contains a token's business logic, token UI rendering and program interface, signed by the token's modeller.
 
-##难道我们还没有token的前端吗？
+## 难道我们还没有token的前端吗？
 ## Don't we already have a front-end for tokens?
 
 在以太坊中，大多数tokens都有一个Web应用程序，它提供与token相关的所有内容。 我们称之为token_的“Dapp”。
@@ -20,7 +20,7 @@ TokenScript of a token is like making _the dapp of the token_ portable and usabl
 这种区分和分离对于tokenisation很重要 - 这里是[the design paper]（https://github.com/AlphaWallet/TokenScript/releases）中提出的概念。 设计论文的作者认为，如果没有tokenisation，就没有使用区块链的好处。
 This distinction and separation is important for tokenisation - a concept addressed in [the design paper](https://github.com/AlphaWallet/TokenScript/releases). The authors of the design paper holds that there is no tangbile benifit of using blockchain without tokenisation.
 
-##如何创建和使用Tokenscript？
+## 如何创建和使用Tokenscript？
 ## How is a Tokenscript created and used?
 TokenScript通常由token的建模者创建，该建模者构建指示token交易规则的基础智能合约。
 A TokenScript is typically created by the token's modeler, the team which builds the underlying smart contracts dictating the token's transaction rules.
