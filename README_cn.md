@@ -1,46 +1,65 @@
 # Tokenscript
-Tokenscript是tokenisation的编程接口
-Tokenscript is a program interface for tokenisation.
+TokenScript使用后端的智能合约构建令牌dapp的前端逻辑。
+TokenScript builds the front end logic of a token dapp with the smart contract on the backend. 
 
-token的建模者，通常是智能合约的作者，制定token的交易规则，写入tokenscript并且签名
-A token's modeler, typically the author of smart contracts dictating
-the token's transaciton rules, writes tokenscript and signs it.
+TokenScript文件包含token的业务逻辑，token UI呈现和程序接口，由token的建模者签名
+A TokenScript file contains a token's business logic, token UI rendering and program interface, signed by the token's modeller.
 
-Dapp浏览器和Web应用程序（在以太坊中称为Dapp）
-利用这样一个签名的Tokenscript来直观地呈现token和提供有关token的可信交易
-Both a Dapp browser and a web application (called Dapp in Ethereum)
-make use of such a signed Tokenscript to visually render the token and
-provide trustworthy signed transactions about the token.
+##难道我们还没有token的前端吗？
+## Don't we already have a front-end for tokens?
+
+在以太坊中，大多数tokens都有一个Web应用程序，它提供与token相关的所有内容。 我们称之为token_的“Dapp”。
+In Ethereum, most tokens have a web application which serves all the content relevant to the token. Let's call it _the "Dapp" of the token_.
+
+如果用户想要在该网站上完成该token所需的一切，那么肯定已经有该token的前端。 但是该token作为区块链token并不是非常有用，因为它不能用于其他Dapps。
+If everything the user wanted to do with that token is done on that website, then yes there is already a front-end for that token. But that token isn't very useful as a blockchain token, since it can't be used on other Dapps.
+
+token的TokenScript就像使token的dapp可移植并可在多个dapps中使用。 在这个框架中，一个dapp可以提供与token相关的服务和上下文（例如，你在WoW dapp中有一把剑，还有一把突击步枪）。
+TokenScript of a token is like making _the dapp of the token_ portable and usable across multiple dapps. In this framework, a dapp can provide services and context related to the token (e.g. you have one sword in the WoW dapp and an assault rifle in call of duty).
+
+这种区分和分离对于tokenisation很重要 - 这里是[the design paper]（https://github.com/AlphaWallet/TokenScript/releases）中提出的概念。 设计论文的作者认为，如果没有tokenisation，就没有使用区块链的好处。
+This distinction and separation is important for tokenisation - a concept addressed in [the design paper](https://github.com/AlphaWallet/TokenScript/releases). The authors of the design paper holds that there is no tangbile benifit of using blockchain without tokenisation.
+
+##如何创建和使用Tokenscript？
+## How is a Tokenscript created and used?
+TokenScript通常由token的建模者创建，该建模者构建指示token交易规则的基础智能合约。
+A TokenScript is typically created by the token's modeler, the team which builds the underlying smart contracts dictating the token's transaction rules.
+
+当用户使用时（通过用户代理，例如Dapp浏览器），Tokenscript可视地呈现token并提供与token相关的交易的可靠组装。
+When used by a user (through user-agent, e.g. a Dapp browser) Tokenscript visually renders the token and provides trustworthy assembling of transactions related to the token.
+
+当dapp开发人员使用TokenScript时，TokenScript允许Dapp与其接口交互，而不是直接访问智能合约，因此可以独立于其支持的所有token升级Dapp。
+When used by a dapp developer, TokenScript allows a Dapp to interact with its interface instead of directly accessing smart contracts, so that the Dapp can be upgraded independently of all the tokens it supports.
+
+当市场或任何其他token相关服务（例如拍卖或抵押）使用时，它允许token被正确地呈现和签名以与这些服务一起使用。
+When used by a market or any other token related service (e.g. an auction or collateralisation), it allows the token to be correctly rendered and signed for use with these services.
+
+## TokenScript文件中有什么？
+## What's in a TokenScript file?
+
+Tokenscript是一种XML方言。 它描述了token提供的功能（通过智能合约与否），在用户界面上呈现它的方法，它使用的ERC toekn行为模板 以及javascrip来构造token所需的交易和呈现。它还定义了如何使用证明来修饰，转换或验证交易。
+TokenScript is an XML dialect. It describes the functions provided by the token (through smart contract or not), the method to render it on the user's interface, the ERCs token behaviour templates it uses and the javascript needed to construct transactions and render the token. It also defines how attestations are used to decorate, or convert to, or validate a transaction.
 
 ## 为什么是 Tokenscript
 ## Why Tokenscript?
-如今，访问、呈现和交易的token的方式分散在Dapps和智能合约中。 如果所有关于一个token的知识都在dapp中，那么dapp必须参与该token的市场和所有集成，重建数据并提供互操作性，安全性和可用性 - 同样的问题在区块链发明之前就已出现，并阻碍了tokenisation。
-Today, the way tokens are accessed, rendered and transacted are scattered across Dapps and Smart Contracts. All knowledge about rendering a token and constructing a transaction about the token, is in a "host" DApp. The "host" DApp becomes a center in the token's marketization and integration, recreating data interoperability, security and availability barrier - exactly the same set of issues that prevented tokenisation before blockchain was invented.
 
-Tokenscript 允许token逻辑和呈现从“主机”中分离出来，允许token轻松便携，并且可以轻松地为其创建市场。
-TokenScript allows token logic and rendering to be seperated out of the "host", allows token to be easily portable and market to be easily created for it.
+今天，访问，呈现和交易的令牌方式分散在Dapps和Smart Contracts中。 这限制了令牌的使用。
+Today, the way tokens are accessed, rendered and transacted are scattered across Dapps and Smart Contracts. This limited the use of Tokens.
 
-它允许不同的token提供者，不仅可以描述他们的token的特征，还能描述他们如何“行动”，例如，转让。 这个想法的关键在于，token发行者可以随时更新这种标记描述，并追溯已经发行的token的行为。 除了允许不同token提供者之间可以轻松的交互之外，这还消除了在特定类型的token的业务逻辑改变时，更新DApp或智能合约的必要。
-It allows different token providers to, not only describe the features of their tokens but also how they are allowed to “act”, e.g. transferability. The crux of the idea is that such a markup description can be updated at any time by the token issuer and retroactively reflect the behaviour of already issued tokens. Besides allowing easy interoperability between different token providers, this also eliminates the need to update the DApp or smart contract whenever the business logic of a particular type of token changes.
+通常 ，所有关于一个token的知识都在dapp中，那么dapp必须参与该token的市场和所有集成，重建数据并提供互操作性，安全性和可用性 - 同样的问题在区块链发明之前就已出现，并阻碍了tokenisation。
+Typically, all knowledge about rendering a token and constructing a transaction about the token is in a "host" web app. The "host" web app becomes a centre in the token's marketisation and integration, recreating data interoperability, security and availability barrier - precisely the same set of issues that prevented tokenisation before blockchain's invention.
 
-## 什么是token script
-## What's in a token script
+通过将包括智能合约接口在内的token知识输出并将其放入便携式Tokenscript中，我们允许token可访问且有用。
+By taking the knowledge of tokens including smart contract interfaces out and put them into a portable Tokenscript we allow tokens to be accessible and useful.
 
-Tokenscript是一种XML方言。 它描述了token提供的功能（通过智能合约与否），在用户界面上呈现它的方法，它使用的ERC toekn行为模板 以及javascrip来构造token所需的事务和呈现。
-Tokenscript is a XML dialect. It describes the functions provided by the token (through smart contract or not), the method to render it on the user's interface, the ERCs token behaviour templates it uses and the javascript needed to construct transactions and render the token.
+## TokenScript 项目介绍
+## TokenScript Project introduction
 
-## TokenScript 项目 介绍
-## TokenScript Project introduction: 
-TokenScript Project，旨在开发和帮助大家更好的使用TokenScript，TokenScript是用于创建和使用加密token（例如区块链token）和DApps的标准标记语言。
-TokenScript Project is to develop and help with adoption of TokenScript, the standard markup language for creating and using cryptographic tokens(e.g. blockchain tokens) and DApps.
-在2017-2018区块链发生了非常引人注目的投机行为把我们的注意集中到了加密token上。当我们交易时，我们甚至忘记了它们真正的用途; 就像房地产泡沫，一昧的把房屋当作投机资产，忘记了这是居住的地方。为了让区块链提供实际的用途，我们必须了解他对世界经济和互联网的作用。这篇文章的作者是对金融机构和初创公司进行了长期的学习和探索的技术专家。凭借这些经验，我们逐步意识到区块链有两个主要的功能，提供完全市场和 集成网络
-The remarkable blockchain speculations that took place in 2017 - 2018 brought everyone's attention to crypto tokens. As we bought and sold them, we forgot their intended purpose was to be used; this is analogous to the housing bubble in which people forgot that houses were not merely speculative assets but rather a place to live. To provide a practical use of the blockchain, we must understand its utility to the world economy and the internet. The people behind this project are technical experts who went through years of study and experimentation into its applications both via financial institutions and startups. With this experience, we recognise the blockchain technology's utility in providing a frictionless market and integrating the web.
+TokenScript项目是一项旨在设计，推进Tokenscript和培育Tokenscript使用的计划。
+The TokenScript project is an initiative to design, progress Tokenscript and nurture the use of Tokenscript.
 
-尽管2017-2018年发生了很多蠢事，但是这对于token获得一开始的关注并不是坏事。token，作者即将详细阐述的，将是两个主要功能的推动者。我们将定义并实现“token化”的技术。区块链行业共同的努力主要是集中在丰富技术能力上。这篇文章将集中在token化，并且介绍一个称作TBML(token行为标记语言)的标准化工作，它将使区块链技术具备完整的技术堆栈，为经济和互联网提供实用性。
-Despite the great folly in 2017-2018, it is not a bad thing to initially focus on tokens. Tokens are the enabler of the two primary functions. We define the technique to make it happen in "Tokenisation". Tokenized rights can be traded on the market and integrated across systems, forming a frictionless market and allowing free integration. Previous efforts in this industry primarily focused on enriching the capacity of the technology. This project will focus on tokenisation and introduce a standardisation effort known as Tokenscript (Token Behaviour Markup Language) which will make the blockchain technical stack complete, providing utility for the economy and the internet.
-
-## Git repo 
-## Git repo
+# Git repo
+# Git repo
 
 这个项目包括
 This project holds:
@@ -57,6 +76,8 @@ lib/brower
 lib/web
 在dapp-browser环境下下，Dapps的库可以呈现token
 但不支持Tokenscript。 某些功能不可用需要底层（例如，切换节点或访问不同的链）的dapp浏览器支持。
-lib/web : library for Dapps to render tokens in the case the dapp-browser does not support Tokenscript. Some features are not available (e.g. switching nodes or accessing multiple Plasma Chain) as they require underlying dapp browser support.
+lib/web 
+: library for Dapps to render tokens in the case the dapp-browser does not support Tokenscript. Some features are not available (e.g. switching nodes or accessing multiple Plasma Chain) as they require underlying dapp browser support.
+
 
 
