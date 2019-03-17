@@ -34,9 +34,10 @@ We recognise the blockchain technology's utility in providing a frictionless mar
 如今，访问、呈现和交易的token的方式分散在动态Dapps和区块链上的智能合约中。大多数token都有非常原始的业务逻辑（就像 支付 token），而有些则试图将复杂的业务逻辑放入合约中，创建一个特定的dapp（去中心化的应用程序）来满足与token的交互。这使DAO（去中心自治组织）成为可能，但几乎没有帮助创建无摩擦token经济并且集成网络。 当token的市场化和集成与dapp相关联时，它会重新造成数据互操作性，安全性和可用性上的问题-这些问题阻碍了tokenisation - 同样的问题在区块链发明之前就已出现。
 Today, the ways tokens are accessed, rendered and transacted are scattered across dynamic Dapps and immutable Smart Contracts on the blockchain. Most tokens either have a very primitive business logic (as payment token), while some try to put complex business logic into the contract, creating a specific dapp (decentralised application) to cater the interactions with the token. This enables DAOs (Decentralized Autonomous Organizations) but hardly helps to create a frictionless token economy and integrate the web. When marketisation and integration of a token is tied to a dapp, it recreates data interoperability, security and availability barrier - the same issues that prevented tokenisation before blockchain's invention.
 
-
+TokenScript允许token逻辑和渲染从“主机”中分离出来，允许token轻松移植并为其创建市场。
 TokenScript allows token logic and rendering to be separated out of the "host", allows token to be easily portable and market to be created for it.
 
+它允许不同的令牌提供者，不仅描述他们的token的特征，而且还允许他们如何“行动”，例如，转让。 这个想法的关键在于，token发行者可以随时更新这种token描述，并追溯反映已经发行的token的行为。 除了允许不同token提供者之间的轻松交互之外，这还消除了在特定类型的token的业务逻辑改变时更新DApp或智能合约的需要。
 It allows different token providers to, not only describe the features of their tokens but also how they are allowed to “act”, e.g. transferability. The crux of the idea is that such a markup description can be updated at any time by the token issuer and retroactively reflect the behaviour of already issued tokens. Besides allowing easy interoperability between different token providers, this also eliminates the need to update the DApp or smart contract whenever the business logic of a particular type of token changes.
 
 \pagebreak
