@@ -289,7 +289,7 @@ The following screenshot of a car token represents the final stage of tokenisati
 咋一看，它只是一个便捷的能够做关于汽车所有事情的门户网站，包括市场功能和实用程序。然而这在传统的网络模型下是做不到。在Web 2.0模型中，您只能自己处理每个元素：
 At first glance, it is just a handy portal to do everything about the car, including market functions and utility. However, it's not possible with the traditional web model. In the web 2.0 model, you are restricted to handling every element on its own:
 
-* 要注册汽车，有一个单独的过程，需要创建一个交管所的账户，并且在没有密码学的帮助下手动证明所有权。
+* 要注册汽车，有一个单独的过程，需要创建一个車船局的账户，并且在没有密码学的帮助下手动证明所有权。
 * 当您想为汽车提供保险时，您必须创建另一个帐户并手动向保险服务证明车辆注册信息。（也许你发现现在有时也不需要这样做，这仅仅是将风险隐藏在保险费用内了，把风险转化为了市场成本）
 
 * 同样，如果您想让汽车能通过优步或基于小时的汽车租赁来参与分享经济，那么显然，担保交易结算付款和保险等额外成本会给市场带来摩擦。
