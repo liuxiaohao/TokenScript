@@ -6,22 +6,22 @@
 The remarkable blockchain speculations that took place in 2017 - 2018 brought everyone's attention to crypto tokens. As we bought and sold them, we forgot their intended purpose was to be used; this is analogous to the housing bubble in which people forgot that houses were not merely speculative assets but rather a place to live.
 
 为了让区块链提供实际的用途，我们必须了解他对世界经济和现有互联网的作用。这篇文章的作者是对区块链应用在金融机构和初创公司进行了长期的研究和探索的技术专家。凭借这些经验和知识，我们逐步意识到区块链有两个主要的功能
-To provide a practical use of the blockchain, we must understand its utility to the world economy and the internet. The authors of this paper are technical experts who went through years of study and exploration into its applications both via financial institutions and startups. With this experience, we came to realise that the blockchain has **two primary functions**：
+To provide a practical use of the blockchain, we must understand its utility to the world economy and the internet. The authors of this paper are technical experts who went through years of study and exploration into its applications both via financial institutions and startups. With this experience, we came to realise that the blockchain has  two primary functions:
 
- - 提供无摩擦市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)
- - 集成网络
-- providing a frictionless market; and
+ - 它能够提供无摩擦市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)
+ - 它能够集成网络，我们定义了一种技术能够在Tokenisation中实现集成网络。
+1. It provides a frictionless market. 
 
-- integrating the web
+2. It integrates the web. We define the technique to make it happen in "Tokenisation". 
 
 尽管2017-2018年发生了很多蠢事，但是这对于tokens获得一开始的关注并不是坏事。Tokens，作者即将详细阐述的，将是区块链的两个主要功能的推动者。我们将实现这些的技术叫做“Tokenisation”。
-Despite the great folly in 2017-2018, it is not a bad thing to initially focus on tokens. Tokens, as the authors will elaborate, are the enabler of the two primary functions. We define the technique to make it happen in "Tokenisation".
+Despite the great folly in 2017-2018, it is not a bad thing to initially focus on tokens. Tokens are the enabler of the two primary functions. We define the technique to make it happen in "Tokenisation". Tokenised rights can be traded on the market and integrated across systems, forming a frictionless market and allowing free integration. Previous efforts in this industry primarily focused on enriching the capacity of the technology. This project will focus on tokenisation and introduce a standardisation effort known as Tokenscript (Token Behaviour Markup Language) which will make the blockchain technical stack complete, providing utility for the economy and the internet.
 
-区块链行业之前的努力主要是集中在提升技术容量上。这篇文章将集中在Tokenisation，并且介绍一个称作Tokenscript(token行为标记语言)的标准化工作，它将使区块链技术具备完整的技术栈，为经济和互联网提供实用性。
-Previous efforts in this industry primarily focused on enriching the capacity of the technology. This paper will focus on tokenisation and introduce a standardisation effort known as Tokenscript (Token Behaviour Markup Language) which will make the blockchain technical stack complete, providing utility for the economy and the internet.
+区块链行业之前的努力主要是集中在提升技术容量上。这篇文章将集中在Tokenisation，并且介绍一个称作Tokenscript(token行为标记语言)的标准化工作，它将使区块链技术具备完整的技术栈，为经济和互联网提供实用性。Tokenscript将释放Tokenisation的全部潜力。
+Previous efforts in this industry primarily focused on enriching the capacity of the technology. This paper focuses on tokenisation and introduces a standardisation effort we call Tokenscript (Token Behaviour Markup Language), which will make the blockchain technical stack complete and provide utility for the economy and the internet. Tokenscript will unleash the full potential of Tokenisation. 
 
-等tokenscript.org搭建好时，欢迎加入我们的工作。 一本指导操作者使用Tokenscript作为其tokens和dapps的黄皮书将花费数月时间。 但是，我们一直保持流程开放。 现在参与可避免我们制定的语言规范草案没有考虑到你的token模型。
-Please join our work at tokenscript.org - when it is set-up of course. A Yellow Paper to guide implementors to use Tokenscript for their tokens and dapps will take months to make. However, we keep the process open. Participate now to avoid the draft language specification being made without consideration your token model.
+请在tokenscript.org中加入我们的工作。 一本指导操作者使用Tokenscript作为其tokens和dapps的黄皮书将花费数月时间。 但是，我们一直保持流程开放。 现在参与可避免我们制定的语言规范草案没有考虑到你的token模型。
+Please join our work at tokenscript.org. A Yellow Paper to guide implementors to use Tokenscript for their tokens and dapps will take months to make, but a work in progress is always available online. Participate now to prevent the draft specification derail from a valueable use case in your knowledge.
 
 
 ## Abstract
@@ -29,20 +29,17 @@ Please join our work at tokenscript.org - when it is set-up of course. A Yellow 
 我们认识到区块链技术的真正应用是提供无摩擦市场和集成网络方面的实用性。 这是通过Tokenisation完成的。 被Tokenized的权益可以在市场上交易并作为系统集成点，形成无摩擦市场并允许自由集成。
 We recognise the blockchain technology's utility in providing a frictionless market and integrating the web. This is done through tokenization. Tokenized rights can be traded on the market and integrated across systems, forming a frictionless market and allowing free integration.
 
-如今，访问、呈现和交易的token的方式分散在Dapps和智能合约中。 如果所有关于一个token的知识都在dapp中，那么dapp必须参与该token的市场和所有集成，这么做就重新造成了数据互操作性，安全性和可用性上的问题，这些问题阻碍了tokenisation - 同样的问题在区块链发明之前就已出现。
-Today, the way tokens are accessed, rendered and transacted are scattered across Dapps and Smart Contracts. If all knowledge about a token is in a dapp, the dapp has to participate in the marketization and all integrations of that token, recreating data interoperability, security and availability barrier - exactly the same set of issues that prevented tokenisation before blockchain was invented.exactly the same set of issues that prevented tokenisation before blockchain was invented.
-
-Tokenscript是一种抽象出token信息，访问模式和UI呈现的方法，以便它们可以有效地进行市场化并用于集成。
-Tokenscript is a method to abstract out the token information, access methods and UI rendering so that they can be efficiently marketized and used for integration.
 
 
-## 加入游戏
+如今，访问、呈现和交易的token的方式分散在动态Dapps和区块链上的智能合约中。大多数token都有非常原始的业务逻辑（就像 payment token），而有些则试图将复杂的业务逻辑放入合约中，创建一个特定的dapp（去中心化的应用程序）来满足与token的交互。这使DAO（去中心自治组织）成为可能，但几乎没有帮助创建无摩擦token经济并且集成网络。 当token的市场化和集成与dapp相关联时，它会重新造成数据互操作性，安全性和可用性上的问题-这些问题阻碍了tokenisation - 同样的问题在区块链发明之前就已出现。
+Today, the ways tokens are accessed, rendered and transacted are scattered across dynamic Dapps and immutable Smart Contracts on the blockchain. Most tokens either have a very primitive business logic (as payment token), while some try to put complex business logic into the contract, creating a specific dapp (decentralised application) to cater the interactions with the token. This enables DAOs (Decentralized Autonomous Organizations) but hardly helps to create a frictionless token economy and integrate the web. When marketisation and integration of a token is tied to a dapp, it recreates data interoperability, security and availability barrier - the same issues that prevented tokenisation before blockchain's invention.
 
-请加入我们在xxx的工作。 一份指导实施者使用Tokenscript作为其tokens和dapps的黄皮书将花费数月时间来制作，但工作进程会一直在网上公开。现在参与以避免制定的语言规范草案没有考虑到您的token模型。
 
-## Join the game
-Please join our work at xxx. A Yellow Paper to guide implementors to use Tokenscript for their tokens and dapps will take months to make, but a work in progress is always available online. Participate now to avoid the draft language specification being made without consideration your token model.
+TokenScript allows token logic and rendering to be separated out of the "host", allows token to be easily portable and market to be created for it.
 
+It allows different token providers to, not only describe the features of their tokens but also how they are allowed to “act”, e.g. transferability. The crux of the idea is that such a markup description can be updated at any time by the token issuer and retroactively reflect the behaviour of already issued tokens. Besides allowing easy interoperability between different token providers, this also eliminates the need to update the DApp or smart contract whenever the business logic of a particular type of token changes.
+
+\pagebreak
 
 
 # 简介：区块链 *能做什么*?
@@ -51,12 +48,13 @@ Please join our work at xxx. A Yellow Paper to guide implementors to use Tokensc
 区块链技术具有**两个主要功能**，为未来的经济和互联网提供基本功能：
  - 提供无摩擦市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)
  - 集成网络。
-Blockchain technology has **two primary functions** that serve essential purposes for the future economy and the future Internet:
+Blockchain technology has two primary functions that serve essential purposes for the future economy and the future Internet:
 - providing a frictionless market; and
 - integrating the web.
 
 本文将从愿景开始，然后解释设计，和然后解释这种基于区块链的构架原因,随后我们将解释Tokenscript，这是一个关键的缺失层，并回顾其设计原则以及我们是如何构建它的。
 This paper will address the vision of where we can be and follow up with the design and reasoning behind the architecture needed on top of the blockchain. We will then explain Tokenscript which is a critical missing layer and go over its design principles and how we are building it.
+
 
 
 ## 区块链提供了一个无摩擦市场
@@ -160,14 +158,16 @@ It's easy to see the cause of the inconvenience; the web is poorly integrated. T
 集成网络的答案需要一些不在现有网络蓝图中的模块：身份验证，所有权，价值转移和交易。
 The answer to integrating the web requires a few building blocks that weren't in the Web's blueprint: authentication, ownership, transfer of value and trading.
 
+“帐户身份验证”不能取代Web集成
+### "Account authentication" is not a substitute for web integration.
+
 Web没有内置的身份验证机制。 像“使用Facebook登录”这样的附加组件仅仅试图通过受信任的第三方提供身份验证【^tls】，就算不考虑隐私和可用性的问题，这种模式也仅适用于帐户身份验证，而不适用于业务逻辑。
 The web doesn't have a built-in authentication mechanism[^tls]. The add-on "Sign in with Facebook" merely tried to provide authentication through a trusted 3rd party, which, despite privacy and availability concerns, is only good for account authentication and not for integration.
 
 尽管在TLS中对客户端/服务器证书做出了巨大努力，但这些身份验证方法不适用于进程，仅适用于站点。这其实是一个委托模型。想象一下，买方不检查所有权契约是否真实，但只检查卖方的名称是否与契约上的名称相匹配。 这就是TLS中使用的委托模型。 事实上，TLS无法保证网站上的任何内容是真实的，只能保证网站是真实的.Facebook使用TLS，但人们在上面投放了很多假新闻。 毫无疑问，这里的信任单位不足以让网络提供集成体验。
 [^tls]: Despite the excellent efforts on client/server certificates in TLS, these authentication methods are not for processes, but only for sites. It's a delegation model. Imagine a buyer not checking if a title deed is real, but only checks if the seller's name matches the one on the deed. That would be the delegation model used in TLS. In this model, TLS can't guarantee anything on the website is real; only that the website itself is. Facebook uses TLS, but people put much fake news on it. The unit of trust here is undoubtedly not granular enough for the web to deliver an integrated experience.
 
-“帐户身份验证”不能取代Web集成
-### "Account authentication" is not a substitute for web integration.
+
 
 例如，简单的业务逻辑：“汽车的所有者可以检查其服务历史记录”，这并不需要帐户。 如果您强行使用“帐户身份验证”模型，就会出现很糟糕的情况：
 For example, the simple business logic: "the owner of a car can check its service history", doesn't require an account. If you force the "Account authentication" model, bad things happen:
@@ -180,13 +180,17 @@ For example, the simple business logic: "the owner of a car can check its servic
 
 更多此类示例很容易在医疗保健，零售和网络上几乎其他所有业务中找到。 今天，我们不断添加越来越多的帐户来满足这种集成需求。这就像是你手里有一把锤子，看什么都是钉子。以下章节将演示通过token集成而非帐户，是一个可靠的解决方案。
 
-Such integration needs, poorly addressed by adding accounts, are easily found in healthcare, retail and almost every web-based business. Today, we are still adding more and more accounts to address the growing integration needs. It's a case of hammering every problem down as if it is a nail. The following chapters will demonstrate that integration through token, not account, is the solution.
+Such integration needs, poorly addressed by adding accounts, are easily found in healthcare, retail and almost every web-based business. Today, we are still adding more and more accounts to address the growing integration needs. It's a case of hammering every problem down as if it is a nail. Most people do not feel well with this model but don't see an alternative to integrating the web. An internet without accounts is beyond most people's imagination.
+
+### The lack of an ownership mechanism 
+
+The web doesn't have a built-in mechanism for ownership, transfer of value and trading.
 
 同样，网络没有内置的所有权，价值转移和交易机制。
-Similarly, the web doesn't have a built-in mechanism for ownership, transfer of value and trading.
+We  demonstrate that integration through token is a superior solution to integrate the internet. A vital element of this process is ownership.
 
 来看看汽车故事的未来发展，汽车销售商需要在网站上发布汽车信息，在过程中创建另一个帐户。 买方不能点击“购买”并一次性获得所有权证明，交强险，未使用的保养配额等，并进行付款处理。 所有这些操作都必须单独完成，并且使用易于篡改的基于纸张和表格证明方式。 该过程从Web开始，在其他地方结束。
-Taking the car story further, a car seller would need to post the car information on a website, creating yet another account on the way. The buyer cannot click "buy" and acquire the ownership proof, compulsory insurance, unused service quota and so like in one go, and have payment processed. All these actions have to be done separately, using easily-tampered paper proofs and forms. The process starts at the web and ends somewhere else.
+To demonstrate,Taking the car story further, a car seller would need to post the car information on a website, creating yet another account on the way. The buyer cannot click "buy" and acquire the ownership proof, compulsory insurance, unused service quota and so like in one go, and have payment processed. All these actions have to be done separately, using easily-tampered paper proofs and forms. The process starts at the web and ends somewhere else.
 相反，同样的过程在区块链上是自动的，防欺诈的[^attestations]和原子化的。
 In contrast, the same process on blockchain would be automatic, fraud-proof[^attestations] and atomic[^atomic].
 
