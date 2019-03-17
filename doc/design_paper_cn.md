@@ -327,12 +327,16 @@ __Self-Uber:__ Taking this even further, the owner can skip Uber all together an
 __销售:__ 如果车主希望出售汽车，她只需要在任何网站上列出价格。 所有权token和付款可以原子方式交换（确保买方或卖方都不会受到欺骗），新的所有者可以驾车离开，甚至无需面对面地与原始所有者会面。 新买家事先知道汽车是否已经注册，并且通过简单的验证卖家钱包中的所有权token就能直到汽车是否正常在交管所注册，是否是卖家合法拥有。 一旦发生交换，卖家的token就会失效，她无法再操作汽车。 一旦交换发生，也可以自动取消保险单，并为卖家提供提前取消的退款。
 __Selling:__ If the owner wishes to sell the car, she only has to list it on any website with a price. The ownership token and payment can be swapped atomically (ensuring neither the buyer or seller is cheated) and the new owner can drive away with the car without even meeting the original owner face to face. The new buyer knows in advance whether the car has been registered and is legally owned by merely validating the original owner's ownership token in their wallet. The original owner's token is invalidated once the swap occurs and she can no longer operate the car. It is also possible to automatically void the insurance policy once the exchange has occurred and provide the original owner with a rebate for premature cancellation.
 
+
 本章旨在介绍愿景。 token使汽车所有权和实用程序自动发生并且是防欺诈和原子化的。 这消除了大量摩擦，并允许更加灵活地个性化经济交易。
+
 This chapter serves to present the vision. Token enable the whole ownership and utility processes around car trading and sharing to happen automatically, fraud-proof and atomic. This eliminates a lot of friction and allows much more flexibility to individualize the economic transactions.
-、
+
 我们将在后面的章节中再次从技术层面回顾这种良好集成tokenised的汽车token。
 We will have the opportunity to inspect the technical aspect of this well-integrated well-tokenised car token in later chapters again.
+
 --
+
 #### Tokenisation的挑战
 #### The challenge of tokenisation
 
