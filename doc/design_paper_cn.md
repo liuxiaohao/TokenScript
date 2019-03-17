@@ -31,7 +31,7 @@ We recognise the blockchain technology's utility in providing a frictionless mar
 
 
 
-如今，访问、呈现和交易的token的方式分散在动态Dapps和区块链上的智能合约中。大多数token都有非常原始的业务逻辑（就像 payment token），而有些则试图将复杂的业务逻辑放入合约中，创建一个特定的dapp（去中心化的应用程序）来满足与token的交互。这使DAO（去中心自治组织）成为可能，但几乎没有帮助创建无摩擦token经济并且集成网络。 当token的市场化和集成与dapp相关联时，它会重新造成数据互操作性，安全性和可用性上的问题-这些问题阻碍了tokenisation - 同样的问题在区块链发明之前就已出现。
+如今，访问、呈现和交易的token的方式分散在动态Dapps和区块链上的智能合约中。大多数token都有非常原始的业务逻辑（就像 支付 token），而有些则试图将复杂的业务逻辑放入合约中，创建一个特定的dapp（去中心化的应用程序）来满足与token的交互。这使DAO（去中心自治组织）成为可能，但几乎没有帮助创建无摩擦token经济并且集成网络。 当token的市场化和集成与dapp相关联时，它会重新造成数据互操作性，安全性和可用性上的问题-这些问题阻碍了tokenisation - 同样的问题在区块链发明之前就已出现。
 Today, the ways tokens are accessed, rendered and transacted are scattered across dynamic Dapps and immutable Smart Contracts on the blockchain. Most tokens either have a very primitive business logic (as payment token), while some try to put complex business logic into the contract, creating a specific dapp (decentralised application) to cater the interactions with the token. This enables DAOs (Decentralized Autonomous Organizations) but hardly helps to create a frictionless token economy and integrate the web. When marketisation and integration of a token is tied to a dapp, it recreates data interoperability, security and availability barrier - the same issues that prevented tokenisation before blockchain's invention.
 
 
@@ -52,8 +52,8 @@ Blockchain technology has two primary functions that serve essential purposes fo
 - providing a frictionless market; and
 - integrating the web.
 
-本文将从愿景开始，然后解释设计，和然后解释这种基于区块链的构架原因,随后我们将解释Tokenscript，这是一个关键的缺失层，并回顾其设计原则以及我们是如何构建它的。
-This paper will address the vision of where we can be and follow up with the design and reasoning behind the architecture needed on top of the blockchain. We will then explain Tokenscript which is a critical missing layer and go over its design principles and how we are building it.
+本文从愿景开始，然后解释设计，和然后解释这种基于区块链的构架原因,随后我们会解释Tokenscript，这是一个关键的缺失层，并回顾其设计原则以及我们是如何构建它的。
+This paper addresses the vision of where we can be and follow up with the design and reasoning behind the architecture needed on top of the blockchain. We explain Tokenscript which is a critical missing layer and go over its design principles and how we are building it.
 
 
 
@@ -63,24 +63,28 @@ This paper will address the vision of where we can be and follow up with the des
 上世纪80年代的“回到未来”描绘了一个拥有悬浮滑板和飞行汽车的强大机械世界。但是他们并没发生。正如彼得·泰尔曾经著名的哀叹，“我们曾经承诺飞行汽车，结果只得到140字符。但是我们所处时代的技术进步依旧超出了80年代科幻电影的想象，不是通过更强大的机器，而是有效利用互联网。
 The 80s' "Back to the Future" featured a world of powerful machines filled with hovering boards and flying cars. It didn't happen. As Peter Thiel once famously lamented, "we were promised flying cars; instead, we got 140 characters". The technological advancement of our time is beyond the imagination of the 80s science fiction movies, albeit not through more powerful machinery, but efficient use of the Internet.
 
-优步彻底改变了我们的日常出行的方式，airbnb改变了我们旅行的方式。这个是一个全新的，更完全的市场，它们的运营成本更低，更易于使用，并且拥有精细的运行单位。
-Ride-sharing transformed the way people get around, and AirBNB changed the way we travel. These are the new, less frictional markets. They incur less cost to operate, are more accessible and have finer operational units.
+骑乘共享彻底改变了我们的日常生活的方式，airbnb改变了我们旅行的方式。这个是一个全新的，更完全的市场，它们的运营成本更低，更易于使用，并且拥有精细的运行单位。
+Ride-sharing revolutionised the way we organise our daily lives, and AirBNB changed the way we travel. These are the new, less frictional markets. They incur less cost to operate, are more accessible and have finer operational units.
 
 然而，尽管进行了Web 2.0技术革命，大多数市场仍然是高成本和低效的。例如，股票市场由于依靠对于规章制度的信任来运作，开销非常大，它只适合价值数百万美元的商业。
 However, despite this web 2.0 revolution, the majority of markets still operate with high costs. The stock market, for example, has so much overhead that it is only justifiable for multi-million dollar businesses which rely on the trust of rules and regulations to operate.
 
-使用区块链，任何Tokenisation的资产都可以随时进行交易，只要遵循规则，没有中间商或中间人，给我们提供最高的市场效率-无摩擦市场。除了不依赖中间商之外，在Tokenisation的市场模型中，买方和卖方不在需要”进入“市场。相反，token总是在市场上【*市场模型】，这样的模式当然比中间商更好。
-With blockchain, any tokenised asset can be transacted any time, as long as it follows the rules, without middlemen or intermediary, gives us maximum market efficiency - the frictionless market. On top of the benefits of not relying on an intermediary, in a tokenised market model, the buyers and sellers do not need to "enter" the market; instead, tokens are *always on the market*[^market-model], making such a model better than intermediaries.
+使用区块链，任何Tokenisation的资产都可以随时进行交易，只要遵循规则，没有中间商赚差价，消除摩擦并给我们提供最高的市场效率。买方和卖方不在需要”进入“市场。相反，token总是在市场上【*市场模型】。
+With blockchain, any tokenised asset can be fastly transacted any time, as long as it follows the rules, without an intermediary, eliminating frictions and enabling maximum market efficiency. The buyers and sellers do not need to "enter" the market; instead, tokens are *always on the market*.
 
-【*市场模型】: 传统的中介操作市场模式，交易分为两个阶段：进入市场，达成交易。 区块链可以将其简化为协议; 因此，区块链token资产可以被视为始终在市场上。
+传统的中介操作市场模式，交易分为两个阶段：进入市场，达成交易。 区块链可以将其简化为协议; 因此，区块链token资产可以被视为始终在市场上。
+With the traditional intermediary-operated market model, a trade is made in two stages: entering the market, making a deal. Blockchain can simplify that into a protocol; therefore the blockchain token assets can be considered *always on the market*.
 
-[^market-model]: With the traditional intermediary-operated market model, a trade is made in two stages: entering the market, making a deal. Blockchain can simplify that into a protocol; therefore the blockchain token assets can be considered always on the market.
 
-我们能够通过Tokenisation创造无摩擦市场吗？
-### Can we create a frictionless market through tokenisation?
+### Tokenised 资产
+### Tokenised Assets
 
 我们是否可以tokenise房产，举个例子，1％的房产，以便地产市场能够比传统的长达一个月的房地产购买 - 销售周期更快地做出反应？ 
 Can we tokenise, for example, 1% of a property, so that the property market can react faster than the typical month-long property purchase-sales cycle?
+
+我们是否能够将1％的房产tokenise，以便我们拥有一个更低的进入门槛和更精细的房地产市场，其反应速度比典型的长达一个月的房地产购买 - 销售周期更快。token能否在各种资源中创建更细粒度的投资市场？
+
+Can we tokenise 1% of a property, so that we have a finer property market with lower entry thresholds, which react faster than the typical month-long property purchase-sales cycle? Can token create a market of granular investments in all kind of resources?
 
 我们是否可以tokenise电力，让电力用户能够从更精细的安排中受益，家庭从收集剩余太阳能中受益。
 Can we tokenise electricity, allowing power users to benefit from finer scheduling of the use of resources, and households to benefit from collecting surplus sun energy?
@@ -88,39 +92,57 @@ Can we tokenise electricity, allowing power users to benefit from finer scheduli
 我们是否可以tokenise Airbnb的预订，以便房屋主人可以从市场上获得有保证的现金流，而市场投机者可以通过预测旅行需求获利。
 Can we tokenise AirBNB bookings, so that hosts can purchase a guaranteed cash flow from the market, while speculators profit from predicting the travel needs?
 
-我们是否能够tokenise国际贸易中的风险和回报，让没有足够规模的小型进口商和出口商，能够在国际市场上参与竞争，也许能够向Airbnb一样“自下而上”的颠覆传统供应链金融服务。
-Can we tokenise the risk and reward of international trades, so that small importers and exports, not significant enough to obtain letters of credit, can compete in global markets and perhaps eventually outcompete the traditional model like AirBNB outcompetes hotels?
+我们是否能够tokenise国际贸易中的风险和回报，让没有足够规模的小型进口商和出口商，能够在国际市场上参与竞争？
+Can we tokenise the risk and reward of international trades, so that small importers and exports, not significant enough to obtain letters of credit, can compete in global markets?
 
-我们是否可以创建一个依赖于加密证据的保险token，以便保险公司可以从其定价中删除欺诈性文件所产生的费用？ 我们可以完全去中心化保险公司吗？
-Can we create an insurance token that depends on cryptographic proofs, so that the insurer can remove from their pricing, the costs incurred by fraudulent documents? Can we decentralise the insurers altogether?
+我们能否能够tokenise书籍，内容和知识产权，为他们创造流动的市场？
+Can we tokenise books, content and intellectual property, creating liquid markets for them?
+
+我们是否可以创建一个依赖于加密证据的保险token，以便保险公司可以从其定价中删除欺诈性文件所产生的成本？ 我们可以完全去中心化保险公司吗？
+Can we create an insurance token that depends on cryptographic proofs, so that the insurer can remove the costs incurred by fraudulent documents from the pricing? Can we decentralise the insurers altogether?
+
+
 
 区块链可以提供基础层来实现这些。虽然区块链的可扩展性和隐私性有待提高，但一个有效的，无摩擦的市场也依赖于有质量的方法来定义如何使用和交易token - 这是我们Tokenscript工作的重点。
 Blockchain can provide the foundational layer to achieve these. While blockchain scalability and privacy will improve, a working, frictionless market also depends on quality methods to define how tokens should be used and transacted - the focus of our work on Tokenscript.
 
-token具有不同的属性。token是否会过期？ AirBNB预订token当然会，但1％的房产token可能不会。token所有者是否应收到有关特定事件的通知？电力token肯定需要，因为电力是不断变化的。token是否流通？
-Tokens have different properties. Do tokens expire? AirBNB booking tokens certainly do, but 1% ownership of property tokens probably don't. Should the token owner receive a notification on a specific event? Power tokens certainly need that, for the change in the power supply is dynamic. Is a token stream-able?
+区块链可以提供基础层来实现这些，它提供了一个有效的，无摩擦市场和和 *始终在市场上的tokenised* 资产.但是，只有在有一个可靠而精确的方法来定义如何使用和交易token时，这才会成为现实。 这是我们在Tokenscript上工作的重点。 但首先，我们来看一下token当前令牌的运作方式。
+Blockchain can provide the foundational layer to achieve these. It enables a working, frictionless market with tokenised assets *always on the market*. However, this can only become true when there is a reliable and precise method to define how tokens should be used and transacted. This the focus of our work on Tokenscript. But first, we look at what tokens are how token operate currently.
 
-它如何在用户的手机上显示，用户如何使用？
-How does it look on the user's mobile, and how is it called in a users language?
-
-如果买家想要从卖家那里采购被Tokenisation的乡村庄园，他们如何进行有效的沟通？
-If a buyer wants to purchase a tokenised country estate from a seller, how do they establish a trusted method of communication?
-
-如果token允许用户在线执行特定操作，用户如何使用token登录特定web服务？
-If a token entitles the user to do specific actions online, how can the user login to the web services with that token?
-
-所以我们很容易知道需要一个定义token的框架，让他们适应不同的交易场景，上市以及评级。我们确实在2017-2018期间拥有数百种token，但它们统一是类似货币的 ERC20 token，填补了市场的付款方[付款]。但几乎没有让token在代表 *商品和服务*（交付方）上做任何努力，付款方和交付方是一个市场运作的基本需求。
-It's easy to see the need for a framework defining tokens and making them interoperable with different methods of trading, listing and rating. We did end up having hundreds of tokens in 2017-2018, but they are uniformly the currency-like, ERC20 tokens, filling up the payment side of the market[^payment]. There is nearly zero effort devoted to making tokens represent *goods and services* - the deliverable side of market and a fundamental need for a market to work.
+### 支付 token和 可交付token
+### Payment Token and deliverable Token
 
 
-[^ payment]：在后面的章节中，我们将token分类为付款token和交付token。 带有*支付代币*标志的ERC20代币只是市场中的付款方一面，因此无法真的用到区块链的无摩擦市场。
-[^payment]: In the later chapters we will categorise tokens as payment tokens and deliverable tokens. ERC20 tokens bearing the hallmarks of *payment tokens* only filles one side of market with tokens, therefore can't lift a market.
+在2017-2018期间在我们确实拥有数百种通证， 但是，它们统一属于一类令牌：使用ERC20标准创建，它们是类似货币的，全都都是市场的*支付方*。 几乎没有让token 在代表*商品和服务*上做任何努力，这个是一个让市场运作的基本需求。
+In 2017-2018 we did end up having hundreds of tokens. However, they uniformly fall into one category of token: created with the ERC20 standard they are currency-like, filling up the *payment side* of the market. There is nearly zero effort devoted to making tokens *goods and services* - which is the *deliverable side* of the market and a fundamental need for a market to work.
 
-举个例子，在2017年的投机泡沫期间，电力token的ICO不需要提供关于如何使用token的任何解释。 所有投机者仅仅只知道它们代表着“在未来的token化电力世界中占有一席之地”。 只要token可以满足投资者的想象力，这对ICO来说就足够了。 因此，除了ERC20接口之外，他们没有任何其他功能。 对于这样的投机电力token来说，它不依赖任何证据，如实际发电量的证明。也不需要任何描述类信息如电力提供的来源在哪，以及可用的时间长短。
-During the speculative bubble of 2017, a power token ICO does not need to provide any explanation of how the tokens can be used. All speculators need to know is that they represent a "stake in the future world of tokenised electricity". As long as the token can inspire investors with imagination, it's good enough for an ICO. There is, no more functionality needed other than an ERC20 interface. Such a speculative token doesn't depend on attestations - the proof of actual power production - nor does it need properties like where the energy is provided or for how long it is available.
+我们将代币分类为支付token和可交付token。 带有 *支付token* 标志的ERC20代币只能用代币填补市场的一面。 他们无法提升市场，因为他们只是在支付方面与其他支付token（如比特币或以太币）竞争。 它们代表货物，但它们实际上并没有实现, 它们是礼品卡。
+We categorise tokens as payment tokens and deliverable tokens. ERC20 tokens bearing the hallmarks of *payment tokens* only fills one side of the market with tokens. They can't lift the market, as they merely compete with other payment-token - like Bitcoin or Ether - on the payment side. They represent a good, but they do not actually deliver. They are rather gift cards.
+
+
+举个例子，在2017年的投机泡沫期间，电力token的ICO不需要提供关于如何使用token的任何解释。 所有投机者仅仅只知道它们代表着“在未来的token化电力世界中占有一席之地”。 只要token可以满足投资者的想象力，这对ICO来说就足够了。 因此，除了ERC20接口之外，他们没有任何其他功能。
+During the speculative bubble of 2017, a power token ICO does not need to provide any explanation of how the tokens can be used. All speculators need to know is that they represent a "stake in the future world of tokenised electricity". As long as the token can inspire investors with imagination, it's good enough for an ICO. There is, no more functionality needed other than an ERC20 interface.
+
+对于这样的投机电力token来说，它不依赖任何证据，如实际发电量的证明。也不需要任何描述类信息如电力提供的来源在哪，以及可用的时间长短。
+Such a speculative token doesn't depend on attestations - the proof of actual power production - nor does it need properties like where the energy is provided or for how long it is available.
 
 现在疯狂已经结束，是时候提出技术框架来使市场发挥作用。
 Now that the madness is over, it's time to present the technical framework to make the market work.
+
+
+### Token properties
+
+
+Tokens 可以是产品 但是他需要具有不同的属性。token是否会过期？ AirBNB预订token当然会，但1％的房产token可能不会。token所有者是否应收到有关特定事件的通知？电力token肯定需要，因为电力是不断变化的。token是否流通？
+Tokens can be products. Therefore they need to have different propertiesDo tokens expire? AirBNB booking tokens certainly do, but 1% ownership of property tokens probably don't. Should the token owner receive a notification on a specific event? Power tokens certainly need that, for the change in the power supply is dynamic. Is a token stream-able?
+
+它如何在用户的手机上显示，用户如何使用？如果买家想要从卖家那里采购被Tokenisation的乡村庄园，他们如何进行有效的沟通？如果token允许用户在线执行特定操作，用户如何使用token登录特定web服务？
+How does it look on the user's mobile, and how is it called in a users language? If a buyer wants to purchase a tokenised country estate from a seller, how do they establish a trusted method of communication? If a token entitles the user to do specific actions online, how can the user login to the web services with that token?
+
+所以我们很容易知道需要一个定义token的框架，让他们适应不同的交易场景，上市以及评级。Tokenscript提供了这样一个框架。 但是，要用心设计它，我们需要考虑Blockchains可以做的第二部分：集成网络。
+It's easy to see the need for an open framework defining tokens and making them interoperable with different methods of trading, listing and rating. Tokenscript provides such a framework. However, to diligently design it we need to consider the second part of what Blockchains can do: Integrate the web.
+
+
 
 区块链集成网络
 ## Blockchain integrates the web
@@ -135,20 +157,29 @@ In the library model, information is freely available, indexed and cross-referen
 In the computer-human interaction model, two players are having a conversation - the human asks and the machine answers. A computer has limited knowledge, but it can help the user to reach the right computer.
 
 因此，网络被构建为一个巨大的图书馆，每本书都是一台可以与之交谈的计算机。 这可能是Facebook获得同名灵感的地方 - 一个网站就是一本书。
-Therefore the web was built as a giant library where each book is a computer with whom one can have a conversation. The analogy probably is where Facebook got its namesake inspiration - a website is a book after all.
+Therefore the web was built as a giant library where each book is a computer with whom one can have a conversation.
 
-正是这种设计造成了许多现代的不便。用户有一天会通过电子邮件收到她的月结账单，但她无法识别出一些条目，它问:"亚马逊"，这个是一个鞋子的订单吗？她必须复制订单号并在亚马逊中查找。在另一种情况下，同一个用户可能会在预订两张歌剧门票过程中暂停，切换到她的常旅客应用程序，复制该号码并将其粘贴到订单中以收集积分。 她需要会在一开始就安装那个常旅客应用程序。
-This design has caused a lot of modern inconveniences. A user would one day receive an email on her monthly statement, yet she couldn't recognise a few entries on them. It says "Amazon". Was it about ordering a pair of shoes? She has to copy the order number and look it up in Amazon. In another occasion, the same user might pause as she books two tickets for an opera, switch to her frequent flyer app, copy that number over and paste it into the order to collect the points. She might struggle a bit installing that frequent flyer app at the outset.
+正是这种设计造成了许多现代的不便。用户有一天会通过电子邮件收到她的月结账单，但她无法识别出一些条目，它问:"亚马逊"，这个是一个鞋子的订单吗？她必须复制订单号并在亚马逊中查找。同一个用户可能会在预订两张歌剧门票过程中暂停，切换到她的常旅客应用程序，复制该号码并将其粘贴到订单中以收集积分。 她需要会在一开始就安装那个常旅客应用程序。 当她在另一家网店购买时，她需要下载另一个应用程序或创建另一个帐户。
+This design has caused a lot of modern inconveniences. A user would one day receive an email on her monthly statement, yet she couldn't recognise a few entries on them. It says "Amazon". Was it about ordering a pair of shoes? She has to copy the order number and look it up in Amazon. The same user might pause as she books two tickets for an opera, switch to her frequent flyer app, copy that number over and paste it into the order to collect the points. She might struggle a bit installing that frequent flyer app at the outset. When she buys on another webshop, she needs to download another app or create another account.
 
-我们为什么要做这么多的复制和粘贴，这些明明机器就能做好的事情？这是因为网络就像一个巨大的图书馆，我们就像读者一样在自己的袖子上面记录索引号。他并没有像我们期待的那样被设计得像一个私人助理。
-Why are we doing so much copy and pasting when machines are exceptionally good at doing this? It's because the web is like a giant library by design, and we are like readers keeping notes of the index numbers under our sleeves. It's not, as we would hope to have, designed like a personal assistant..[^pda]
 
-[^pda]：令人惊讶的是，即使是为满足创建私人助理的角色而发明的技术仍然失败了，就像智能手机。原因同样如此：单靠客户端的努力无法集成本来就非集成的网络，基础设施必须支持集成。智能手机的模型类似于拨号互联网连接，每个应用程序代表一个网站。 在进入对话之前，用户仍然需要找出要与之通话的计算机（app），并且在他交换应用程序时仍然可以复制信息。 例如，要求您的智能手机通过在线银行的app汇总你所有的资金是不可能的。
-[^smart-phone]: Surprisingly, even the technology that was created to fill the role of a personal assistant, the Smart Phone, still failed, for the same reason: the efforts from client side alone can't integrate a Web that is not designed to integrate. The infrastructure has to support integration. A smartphone is modelled like a dial-up Internet connection, with each app representing a website. The users still need to figure out which computer (app) to talk to before entering the conversation, and still copies information around as he swaps apps around. It's not possible, for example, to ask your smartphone to sum up all the money one may access by his online banking apps.
+
+
+我们为什么要做这么多的复制和粘贴，这些明明机器就能做好的事情？这是因为网络就像一个巨大的图书馆，我们就像读者一样在自己的袖子上面记录索引号。 我们希望在未来** 网络不再像图书馆，而更像是个人助理。
+Why are we doing so much copy and pasting when machines are exceptionally good at doing this? Owning to the design, the web is like a giant library, and we are like readers keeping notes of the index numbers under our sleeves. We hope that in the future** the Web resembles no longer of a library, but more like a personal assistant. 
+
+###客户端无法集成没有被设计能够集成的网络
+### The client side can't integrate a web that is not designed to integrate
+
+令人惊讶的是，即使是为满足创建私人助理的角色而发明的技术仍然失败了，就像智能手机。原因同样如此：单靠客户端的努力无法集成没有被设计能够集成的网络，使问题更加严重，因为使用智能手机时复制粘贴变得更加麻烦。
+Surprisingly, even the technology that was created to fill the role of a personal assistant, the Smart Phone, still failed for the same reasons: the efforts from client side alone can't integrate a Web that is not designed to integrate. It made the problem even worse, as copy-pasting becomes bigger trouble when using a Smart Phone.
+
+事实是：不仅仅是客户端并且基础设施也必须支持集成。智能手机的模型类似于拨号互联网连接，每个应用程序代表一个网站。 在进入对话之前，用户仍然需要找出要与之通话的计算机（app），并且在他交换应用程序时仍然可以复制信息。 例如，要求您的智能手机通过在线银行的app汇总你所有的资金是不可能的。
+The truth is: Not only the client but the infrastructure has to support integration. A smartphone is modelled after a dial-up Internet connection, with each app representing a website. The users still need to figure out which computer (app) to talk to before entering the conversation, and still copies information around as he swaps apps around. It's therefore not possible, for example, to ask your smartphone to sum up all the money one may access by his online banking apps.
 
 很容易就能看出造成不便的原因：不同的服务之间没有好的集成方法，互联网没有提供集成层。继续举几个不好的例子；
 
-It's easy to see the cause of the inconvenience; the web is poorly integrated. The bad examples go on and on:
+It's easy to see the cause of the inconvenience: the web is poorly integrated. The bad examples go on and on:
 
 - 当用户在网站上结账时，她不确定她的卡上是否有足够的余额，因为银行未与购物系统集成。
 - When a user checks out on the web, she isn't sure if she has enough balance on her card, since the bank is not integrated with the shopping system.
@@ -158,19 +189,31 @@ It's easy to see the cause of the inconvenience; the web is poorly integrated. T
 集成网络的答案需要一些不在现有网络蓝图中的模块：身份验证，所有权，价值转移和交易。
 The answer to integrating the web requires a few building blocks that weren't in the Web's blueprint: authentication, ownership, transfer of value and trading.
 
+这种集成可以通过在两个服务提供商之间建立后端连接来解决，但通常不会这样做，因为它需要各方协作并协商利于分配。协作取决于安全性（通过系统B使系统A单机），可用性（一个脱机而另一个服务客户），可扩展性（𝑛² - 集成𝑛方所要做的事情）。此外，这种整合以两种方式限制了自由市场。 首先，竞争将会发生着集成网络上，而不是商品和服务。 一家保险公司将其系统集成到更多的诊所来与新的保险公司竞争，而非保险覆盖范围和保费。 其次，它不允许竞争方之间的集成，这个需要来自集成的双方的许可才能工作。
+Such integrations can be addressed by having a backend connection between the two service providers, but it is not often done, because it requires the parties to collaborate and negotiate a value distribution. The collaboration depends on the security (takedown system A through system B), availability (one went offline while the other serving customers), scalability (𝑛²-𝑛 integrations needed for 𝑛 parties). Furthermore, such integration restraining the free market in two ways. First, the competition will be on integration, not goods and services. An insurance company which integrated their systems to more clinique competes against a new insurance company on the ground of integration, not coverage and premium. Second, it doesn't allow integration between contending parties, and it requires permission from both side of the integration to work.
+
+集成Web的挑战需要一些没有在Web蓝图中的模块：身份验证，所有权，价值转移和交易。
+The challenge to integrating the web requires a few building blocks that weren't in the Web's blueprint: authentication, ownership, transfer of value and trading.
+
 “帐户身份验证”不能取代Web集成
 ### "Account authentication" is not a substitute for web integration.
 
-Web没有内置的身份验证机制。 像“使用Facebook登录”这样的附加组件仅仅试图通过受信任的第三方提供身份验证【^tls】，就算不考虑隐私和可用性的问题，这种模式也仅适用于帐户身份验证，而不适用于业务逻辑。
-The web doesn't have a built-in authentication mechanism[^tls]. The add-on "Sign in with Facebook" merely tried to provide authentication through a trusted 3rd party, which, despite privacy and availability concerns, is only good for account authentication and not for integration.
+
+Web没有内置的身份验证机制[^ tls]。 为了解决这个问题，许多用户使用“登录Facebook”等附加组件。 这些仅仅试图通过受信任的第三方提供身份验证，这不仅会导致隐私和可用性问题，而且它还仅仅只能用于帐户身份验证，不能用于集成。
+The web doesn't have a built-in authentication mechanism[^tls]. To route around this gab, many users use add-ons like "Sign in with Facebook". Those merely try to provide authentication through a trusted 3rd party, which does not only cause privacy and availability concerns but also only serves for account authentication and can't be used for integration.
 
 尽管在TLS中对客户端/服务器证书做出了巨大努力，但这些身份验证方法不适用于进程，仅适用于站点。这其实是一个委托模型。想象一下，买方不检查所有权契约是否真实，但只检查卖方的名称是否与契约上的名称相匹配。 这就是TLS中使用的委托模型。 事实上，TLS无法保证网站上的任何内容是真实的，只能保证网站是真实的.Facebook使用TLS，但人们在上面投放了很多假新闻。 毫无疑问，这里的信任单位不足以让网络提供集成体验。
 [^tls]: Despite the excellent efforts on client/server certificates in TLS, these authentication methods are not for processes, but only for sites. It's a delegation model. Imagine a buyer not checking if a title deed is real, but only checks if the seller's name matches the one on the deed. That would be the delegation model used in TLS. In this model, TLS can't guarantee anything on the website is real; only that the website itself is. Facebook uses TLS, but people put much fake news on it. The unit of trust here is undoubtedly not granular enough for the web to deliver an integrated experience.
 
 
 
-例如，简单的业务逻辑：“汽车的所有者可以检查其服务历史记录”，这并不需要帐户。 如果您强行使用“帐户身份验证”模型，就会出现很糟糕的情况：
-For example, the simple business logic: "the owner of a car can check its service history", doesn't require an account. If you force the "Account authentication" model, bad things happen:
+最重要的是，基于帐户的身份验证模型是导致进一步问题的原因。 大多数简单的商业案例 - 例如，“汽车的所有者检查其服务历史记录” - 不需要帐户。 说实话，正如我们所知道的，帐户是因特定互联网结构所造成的问题的权宜之计。
+
+On top of it, the model of account based authentification is the cause of further problems. Most simple business cases - for example, "the owner of a car checks its service history" - don't require an account. Truthfully, accounts are stopgaps to problems created by the specific structure of the Internet as we know it.
+
+
+如果您强制要求涉及的各方拥有一个账户去验证，糟糕的事情就会发生：
+If you enforce parties involved having an account to authenticate, bad things happen:
 
  - 当汽车售出时，新车主现在需要在服务网站上创建一个新帐户，并且加密它，用来证明自己的所有权。这是繁重且不可靠的。
 - When the car is sold, the new car owner would now need to create a new account at the service website and secure it with the proof of ownership to the car. This is onerous and unreliable.
@@ -182,17 +225,27 @@ For example, the simple business logic: "the owner of a car can check its servic
 
 Such integration needs, poorly addressed by adding accounts, are easily found in healthcare, retail and almost every web-based business. Today, we are still adding more and more accounts to address the growing integration needs. It's a case of hammering every problem down as if it is a nail. Most people do not feel well with this model but don't see an alternative to integrating the web. An internet without accounts is beyond most people's imagination.
 
-### The lack of an ownership mechanism 
-
-The web doesn't have a built-in mechanism for ownership, transfer of value and trading.
-
-同样，网络没有内置的所有权，价值转移和交易机制。
+我们证明通过token集成是集成互联网的卓越解决方案。 这个过程的一个重要因素是所有权。
 We  demonstrate that integration through token is a superior solution to integrate the internet. A vital element of this process is ownership.
 
-来看看汽车故事的未来发展，汽车销售商需要在网站上发布汽车信息，在过程中创建另一个帐户。 买方不能点击“购买”并一次性获得所有权证明，交强险，未使用的保养配额等，并进行付款处理。 所有这些操作都必须单独完成，并且使用易于篡改的基于纸张和表格证明方式。 该过程从Web开始，在其他地方结束。
-To demonstrate,Taking the car story further, a car seller would need to post the car information on a website, creating yet another account on the way. The buyer cannot click "buy" and acquire the ownership proof, compulsory insurance, unused service quota and so like in one go, and have payment processed. All these actions have to be done separately, using easily-tampered paper proofs and forms. The process starts at the web and ends somewhere else.
+### 缺乏所有权机制
+### The lack of an ownership mechanism 
+
+网络没有内置的所有权，价值转移和交易机制。
+The web doesn't have a built-in mechanism for ownership, transfer of value and trading.
+
+
+为了演示，我们继续看看汽车故事的未来发展：当您想要出售汽车时，您需要在网站上发布汽车信息。 为此，您必须在途中创建一个帐户。 当有人想购买您的汽车时，您和买家必须经历一系列流程：保险，未使用的服务配额，车辆登记，文件移交，付款等。  所有这些操作都必须单独完成，并且使用易于篡改的基于纸张和表格证明方式。 该流程从网络开始，在其他地方结束，而不是在买家点击“购买”后自动完成。
+To demonstrate, we take the car story a bit further: When you want to sell your car, you need to post the car information on a website. To do so, you must create an account on the way. When someone wants to buy your car, you and the buyer have to go through a chain of processes: Insurance, unused service quota, vehicle registrations, documentation handover, payment and so on. All these actions have to be done separately, using easily-tampered paper proofs and forms and accounts. The process starts at the web and ends somewhere else instead of being automatically done after the buyer clicked "buy".
+
+是否有可能实现这一点，整个官僚的程序自动在后端安全地发生，而你只需按下“购买”按钮？ 如果使用网络帐户，您需要将许多帐户和受信任的第三方联系在一起，这会隐藏用户的流程，同时他们会像以前一样需要完成相同的纸质跟踪。*
+Is it possible to make it happen, that the entire chain of bureaucratic procedures happens securely in the backend, while you just push the "buy" button? With the web of accounts, you'd need to knot together a lot of accounts and trusted third parties, which hide the process from the user, while they fulfil the same paper trail as before.*
+
 相反，同样的过程在区块链上是自动的，防欺诈的[^attestations]和原子化的。
 In contrast, the same process on blockchain would be automatic, fraud-proof[^attestations] and atomic[^atomic].
+
+相反，当你在区块链和token上发生相同的过程时，它将是自动的，防欺诈的[^attestations]和原子[^atomic]。 您可以通过安全的方式一键完成汽车销售，而无需帐户和纸张跟踪。
+In contrast, when you base the same process on a blockchain and on tokens, it would be automatic, fraud-proof[^attestations] and atomic[^atomic]. You could finish a car sell with one click in a secure way without the need for accounts and paper trails.
 
 [^attestations]：提供加密签名的证明作为交易条件的方法将在后面的“证明”章节中讨论。
 [^attestations]: the method to provide cryptographically signed attestations as a condition for a transaction is discussed later in the "Attestation" chapter.
@@ -200,11 +253,11 @@ In contrast, the same process on blockchain would be automatic, fraud-proof[^att
 [^ 原子性]：在区块链术语中，原子交易可以发生或者不发生。 如果定义明确，买方不可能成功支付汽车而没有获得所有权token，或者只是转让了汽车的所有权而没有强制性保险。
 [^atomic]: In blockchain terms, an atomic transaction either happens or not. If well defined, it's not impossible for a buyer to have successfully paid for a car yet not getting the ownership token, or only have transferred the car's ownership but not the compulsory insurance on it.
 
-网络的这些缺失特征是区块链众所周知的功能。 这对完美契合夫妇的虚拟婚礼需要token作为介质，或者本文称之为“tokenisation”。
-These missing features of the web are the well-known functions of the blockchain. The virtual wedding of this perfect fit couple requires a virtual exchange of tokens, or what this paper called "tokenisation".
+网络的这些缺失特征是区块链的众所周知的功能。 区块链是一种不可变的，分散的所有权记录，有时称为“三重记账”系统。 这对完美契合夫妇的虚拟婚礼需要虚拟交换token，或者本文称之为“tokenisation”。
+These missing features of the web are the well-known functions of the blockchain. A blockchain is an immutable, decentralized record of ownership, sometimes called a "triple-entry bookkeeping" system. The virtual wedding of this perfect fit couple requires a virtual exchange of tokens, or what this paper called "tokenisation".
 
-token可以无缝地跨越系统，同时token自身承载其交易规则，用户界面以及使用场景。
-Tokens seamlessly go across systems, carries their trading rules and user interfaces and business context.
+要做到这一点，token可以无缝地跨越系统，同时token自身承载其交易规则，用户界面以及使用场景。
+To do so, Token must seamlessly go across systems, carry their trading rules and user interfaces and business context.
 
 ## 例子：汽车所有权token
 ## Example: Car Ownership Token
@@ -213,11 +266,18 @@ Tokens seamlessly go across systems, carries their trading rules and user interf
 
 We will comine the two concepts: frictionless market, achieved by tokenising assets; integrate the web, by using token as integration point for web services. We will demonstrate an example that encompasses both concepts: car token.
 
-一方面，汽车是一种被Token化的资产，可以通过区块链来购买，出售，转让，拍卖，抵押和投保。
+我们将这两个概念结合起来：通过tokenising资产实现的无摩擦市场; 通过使用toekn作为Web服务的集成点来集成Web。 我们用一个包含两个概念的例子进行演示：汽车token。 这只是众多例子中的一个。 您可转换概念到几乎所有其他地方，包括房地产市场，任何类型的b2b和资源转移 - 任何涉及数字商品或物理商品的数字表示的交易。
+We combine the two concepts: a frictionless market, achieved by tokenising assets; and the integration of the web, by using the token as an integration point for web services. We demonstrate with an example that encompasses both concepts: car token. This is just one of many examples. You can transfer the concepts on nearly everything, including real estate markets, any kind of b2b and resource transfer - every transaction which involves digital goods or a digital representation of physical good.
+
+汽车示例旨在帮助理解这些概念。 一方面，汽车是一种被Token化的资产，可以通过区块链来购买，出售，转让，拍卖，抵押和投保。
 On the one hand, a car is a tokenised asset, that can be bought, sold, transferred, auctioned, collateralized and insured, all enabled by blockchain.
 
 另一方面，汽车也有实用性。 汽车的所有权token可以将区块链钱包转化为汽车钥匙，其他功能如图形化表示汽车的当前位置。 授权某人访问您的汽车或出租它以获取利润，可以通过签署区块链交易或使用attestations来无缝完成，而无需传递车钥匙。
 On the other hand, a car also has utility. A car's ownership token can convert a blockchain wallet into a car key, with additional functions like graphically representing the car's current location. Authorising someone to access your car, or renting it for profit, would be seamlessly done by signing blockchain transactions or attestations, without passing car keys around.
+
+在这两种情况下，token代表事物的交付方：它们是产品。 这些token可以与非token类型的付款互动，但是对付款进行tokenising将使整个过程更加流畅。
+
+In both cases, the token represents the delivery side of things: They *are* the product. Those token can interact with a non-token kind of payment, but tokenising the payments would make the whole process much more fluent.
 
 以下汽车token的屏幕截图代表了tokenisation的最后阶段。
 The following screenshot of a car token represents the final stage of tokenisation.
@@ -225,53 +285,79 @@ The following screenshot of a car token represents the final stage of tokenisati
 [汽车token。 四个token：汽车注册信息，封顶保养，保险和购买，要么是依赖或者与汽车所有权token有关。
 ![A car token. Four tokens: Rego, Capped Service, Insurance and Purchase, either depeneds or relates to the car ownership token.](img/car-token.jpeg)
 
-咋一看，它只是一个便捷的能够做关于汽车所有事情的门户网站，包括市场功能和实用程序。然而这在传统的网络模型下是做不到。
-At first glance, it is just a handy portal to do everything about the car, including market functions and utility. However, it's not possible with the traditional web model.
+咋一看，它只是一个便捷的能够做关于汽车所有事情的门户网站，包括市场功能和实用程序。然而这在传统的网络模型下是做不到。在Web 2.0模型中，您只能自己处理每个元素：
+At first glance, it is just a handy portal to do everything about the car, including market functions and utility. However, it's not possible with the traditional web model. In the web 2.0 model, you are restricted to handling every element on its own:
 
-在web2.0模型中，你只能自己处理每个元素。要注册汽车，有一个单独的过程，需要创建一个交管所的账户，并且在没有密码学的帮助下手动证明所有权。当您想为汽车提供保险时，您必须创建另一个帐户并手动向保险服务证明车辆注册信息。（也许你发现现在有时也不需要这样做，这仅仅是将风险隐藏在保险费用内了，把风险转化为了市场成本）同样，如果您想让汽车能通过优步或基于小时的汽车租赁来参与分享经济，那么显然，担保交易结算付款和保险等额外成本会给市场带来摩擦。
-In the web 2.0 model, you are restricted to handling every element on its own. To register the car, there is a separate process which involves creating an account with the Road and Maritime Services and proving ownership manually without the aid of cryptography. When you want to provide insurance to the car, you have to create another account and manually offer proof of its registration to that new service. (If you find not needing to do so, the cost of unpayable insurance merely is hidden and borne by the market.) Likewise, if you want to make the car available to share economy through Uber or hour-based car rental, the work of proving and settling payments and insurance cost adds friction to the market.
+* 要注册汽车，有一个单独的过程，需要创建一个交管所的账户，并且在没有密码学的帮助下手动证明所有权。
+* 当您想为汽车提供保险时，您必须创建另一个帐户并手动向保险服务证明车辆注册信息。（也许你发现现在有时也不需要这样做，这仅仅是将风险隐藏在保险费用内了，把风险转化为了市场成本）
 
-现在让我们在web3的世界中构想这一点，这些元素能够被token化。供应商（在这个例子里面是holden）向新的拥有者提供汽车所有权token，这个token结合钱包可以操控汽车，同时被用来向交管所证明所有权获取注册token。车子内置的物联网模块允许用户通过Token来证明所有权以便操控汽车。
-Now let's reimagine this in the web3 world whereby such elements can be tokenised. Vendor (in this case Holden) provides an ownership token to the new owner which can be used to operate the car. The token, transferred to the owner at the time of purchase, is in turn used to acquire the registration token. An inbuilt IoT device allows the car to be operated with proof of ownership via a token.
+* 同样，如果您想让汽车能通过优步或基于小时的汽车租赁来参与分享经济，那么显然，担保交易结算付款和保险等额外成本会给市场带来摩擦。
+* To register the car, there is a separate process which involves creating an account with the Road and Maritime Services and proving ownership manually without the aid of cryptography. 
+* When you want to provide insurance to the car, you have to create another account and manually offer proof of its registration to that new service. (If you find not needing to do so, the cost of unpayable insurance merely is hidden and borne by the market.) * Likewise, if you want to make the car available to share economy through Uber or hour-based car rental, the work of proving and settling payments and insurance cost adds friction to the market.
 
-希望购买保险的汽车所有者只需提供所有权token和注册token即可满足保险公司的要求。通过将tokens与保险要求相匹配来自动满足保险公司标准，并且一旦经过验证，保险公司可以向所有者发送保险token以换取用户付款。 保险token具有自己的功能和服务。
-The owner, wishing to purchase insurance, only needs to provide the proof of ownership and registration token to be qualified to fulfil the requirements with the insurance company. The insurance companies standards are met automatically by matching the tokens to their requirements and once validated, the insurance company can send the owner an insurance token in exchange for payment. The insurance token carries its own functions and services.
+预期的门户网站本身并不提供这些功能，而只是作为一个网关来合并许多不同的帐户，就像我们从今天的互联网上所知道的那样。 这只是另一个权宜之计，它隐藏了用户的纸质跟踪流程，而没有解决潜在的问题。
+The intended portal does not enable those functions by itself but merely serves as a gateway to merge a lot of different accounts as we know it from the internet of today. It's just another stopgap, which hides paper trail processes from the user, without solving the underlying problem.
 
-如果车主希望成为优步司机，她可以通过提供所有权token，保险token和注册token轻松证明她的车辆足够优步的要求。 然后优步自动向她提供一个Ubertoken，根据所有者的需要，可以用来让自己成为Uber司机或允许第三方司机这样做。 这些流程都不需要手动验证或帐户创建。
-If the owner would like to become an Uber driver, she can easily prove her vehicle is good enough by providing proof of ownership, insurance and registration with her tokens. Uber then automatically provides her with an Uber token which, depends on the owner's need, can be used to get himself started as an Uber driver or allow a 3rd party driver to do so. None of these processes requires manual verification or account creation.
 
-更进一步，车主可以跳过优步，直接将车租给陌生人。 她如果不想让她的汽车被一些随意的陌生人破坏。她可以将她的租车者限制在那些拥有“优良司机组织”颁发attestation token的人身上。 承租人证明他们有这个token，向所有者支付一笔款项，预测同时原子性的获得一个临时token，允许他们解锁并使用汽车一段时间。 这是在没有创建帐户的情况下完成的，也不需要提交大量文档由车主手动验证完成。
-Taking this even further, the owner can skip Uber all together and rent her car directly to strangers. Not wanting her car to be trashed by some random stranger, she can restrict her renters to those who have an attestation token issued by the 'better drivers bureau'. The renter proves they have this token, pays a sum to the owner and is atomically issued with a temporary token that allows them to unlock and use the car for a certain period of time. This is done without the creation of an account or need to submit tons of documents to be validated manually by the owner.
+现在让一步一步来我们在web3的世界中构想这一点，如果这些元素能够被token化， 
+Now let's reimagine this in the web3 world whereby such elements can be tokenised, step by step: 
 
-如果车主希望出售汽车，她只需要在任何网站上列出价格。 所有权token和付款可以原子方式交换（确保买方或卖方都不会受到欺骗），新的所有者可以驾车离开，甚至无需面对面地与原始所有者会面。 新买家事先知道汽车是否已经注册，并且通过简单的验证卖家钱包中的所有权token就能直到汽车是否正常在交管所注册，是否是卖家合法拥有。 一旦发生交换，卖家的token就会失效，她无法再操作汽车。 一旦交换发生，也可以自动取消保险单，并为卖家提供提前取消的退款。
-If the owner wishes to sell the car, she only has to list it on any website with a price. The ownership token and payment can be swapped atomically (ensuring neither the buyer or seller is cheated) and the new owner can drive away with the car without even meeting the original owner face to face. The new buyer knows in advance whether the car has been registered and is legally owned by merely validating the original owner's ownership token in their wallet. The original owner's token is invalidated once the swap occurs and she can no longer operate the car. It is also possible to automatically void the insurance policy once the exchange has occurred and provide the original owner with a rebate for premature cancellation.
+__购买和注册__:供应商（在这个例子里面是holden）向新的拥有者提供汽车所有权token，这个token结合钱包可以操控汽车，同时被用来向交管所证明所有权获取注册token。车子内置的物联网模块允许用户通过Token来证明所有权以便操控汽车。
 
-本章用于展示愿景。我们将在后面的章节中再次核查这种良好集成的tokenised汽车token的技术层面。
-This chapter serve to present the vision. We will have the opportunity to inspect the technical aspect of this well-integrated well-tokenised car token in later chapters again.
+__Buying and registration__: The Vendor (in this case Holden) provides an ownership token to the new owner which can be used to operate the car. The token, transferred to the owner at the time of purchase, is in turn used to acquire the registration token. An inbuilt IoT device allows the car to be operated with proof of ownership via a token.
 
+__保险：__ 拥有者，希望购买保险的汽车所有者只需提供所有权token和注册token即可满足保险公司的要求。通过将tokens与保险要求相匹配来自动满足保险公司标准，并且一旦经过验证，保险公司可以向所有者发送保险token以换取用户付款。 保险token具有自己的功能和服务。
+__Insurance:__ The owner, wishing to purchase insurance, only needs to provide the proof of ownership and registration token to be qualified to fulfil the requirements with the insurance company. The insurance companies standards are met automatically by matching the tokens to their requirements and once validated, the insurance company can send the owner an insurance token in exchange for payment. The insurance token carries its own functions and services.
+
+Token构建不同提供者和服务之间的连接，这些提供者和服务之前用于通过帐户，信任和证件构建。
+Token build the join between different providers and services, which are used to be built by accounts, trust and paperwork.
+
+__Uber:__ 如果车主希望成为优步司机，她可以通过提供所有权token，保险token和注册token轻松证明她的车辆足够优步的要求。 然后优步自动向她提供一个Ubertoken，根据所有者的需要，可以用来让自己成为Uber司机或允许第三方司机这样做。 这些流程都不需要手动验证或帐户创建。
+__Uber:__ If the owner would like to become an Uber driver, she can easily prove her vehicle is good enough by providing proof of ownership, insurance and registration with her tokens. Uber then automatically provides her with an Uber token which, depends on the owner's need, can be used to get himself started as an Uber driver or allow a 3rd party driver to do so. None of these processes requires manual verification or account creation.
+
+token可以提供更灵活，甚至可编程的所有权及其交互使用，因为集中的，基于帐户的服务可以提供。
+Token enable a more flexible, even programmable, use of ownership rights and their interaction, as centralised, account-based services can provide.
+
+__Self-Uber:__ 更进一步，车主可以跳过优步，直接将车租给陌生人。 她如果不想让她的汽车被一些随意的陌生人破坏。她可以将她的租车者限制在那些拥有“优良司机组织”颁发attestation token的人身上。 承租人证明他们有这个token，向所有者支付一笔款项，预测同时原子性的获得一个临时token，允许他们解锁并使用汽车一段时间。 这是在没有创建帐户的情况下完成的，也不需要提交大量文档由车主手动验证完成。
+__Self-Uber:__ Taking this even further, the owner can skip Uber all together and rent her car directly to strangers. Not wanting her car to be trashed by some random stranger, she can restrict her renters to those who have an attestation token issued by the 'better drivers bureau'. The renter proves they have this token, pays a sum to the owner and is atomically issued with a temporary token that allows them to unlock and use the car for a certain period of time. This is done without the creation of an account or need to submit tons of documents to be validated manually by the owner.
+
+__销售:__ 如果车主希望出售汽车，她只需要在任何网站上列出价格。 所有权token和付款可以原子方式交换（确保买方或卖方都不会受到欺骗），新的所有者可以驾车离开，甚至无需面对面地与原始所有者会面。 新买家事先知道汽车是否已经注册，并且通过简单的验证卖家钱包中的所有权token就能直到汽车是否正常在交管所注册，是否是卖家合法拥有。 一旦发生交换，卖家的token就会失效，她无法再操作汽车。 一旦交换发生，也可以自动取消保险单，并为卖家提供提前取消的退款。
+__Selling:__ If the owner wishes to sell the car, she only has to list it on any website with a price. The ownership token and payment can be swapped atomically (ensuring neither the buyer or seller is cheated) and the new owner can drive away with the car without even meeting the original owner face to face. The new buyer knows in advance whether the car has been registered and is legally owned by merely validating the original owner's ownership token in their wallet. The original owner's token is invalidated once the swap occurs and she can no longer operate the car. It is also possible to automatically void the insurance policy once the exchange has occurred and provide the original owner with a rebate for premature cancellation.
+
+本章旨在介绍愿景。 token使汽车所有权和实用程序自动发生并且是防欺诈和原子化的。 这消除了大量摩擦，并允许更加灵活地个性化经济交易。
+This chapter serves to present the vision. Token enable the whole ownership and utility processes around car trading and sharing to happen automatically, fraud-proof and atomic. This eliminates a lot of friction and allows much more flexibility to individualize the economic transactions.
+、
+我们将在后面的章节中再次从技术层面回顾这种良好集成tokenised的汽车token。
+We will have the opportunity to inspect the technical aspect of this well-integrated well-tokenised car token in later chapters again.
 --
 #### Tokenisation的挑战
 #### The challenge of tokenisation
 
-Tokenisation需要构建一个token并且与其事务规则和行为模式捆绑在一起，将他们从最初生成的系统中取出，让他们可以在不同的场景下进行交易和使用。
-Tokenisation requires bundling a token with its transaction rules and behaviour patterns, taking them off the system where they initially grew in, free them to be traded or used in different context.
+汽车所有权只是token如何改变所有类型的数字化经济互动的一个例子。 2017年ICO炒作略微瞥见了这一潜力，创造了大量（不良）投资，但产品并不多。 大多数token仅用于支付，实际上是某些服务的礼品卡，这些服务已被出售，期望这些服务在某个时间提供有价值的产品。
+The car ownership was just one example of how token can transform all kind of digitalized economic interactions. The 2017 ICO Hype was a slight glimpse of this potential, creating a lot of (bad) investments, but not many products. Most tokens have been just used for payments, effectively being gift cards for certain services, which have been sold in the expectation that those services will provide valuable products at some time.
 
-允许用户通过token与不同系统进行交互：在汽车示例中，汽车token由制造商Holden发布，因为它包含与智能锁（*开锁*，*发动*，*锁住* 操作）和Holden自己的Web服务（ *定位* 行为）相互作用的代码，但它需要在其他环境中工作。例如 *拍卖* 动作由第三方拍卖网络服务提供。用户通过token访问拍卖服务，无需注册和证明所有权。*共享清单* 由第三方服务提供，该服务将汽车的使用Tokenisation为数小时或者数天，并逐个销售。所有者可以通过此token访问这个市场，买家将通过此token获得知晓汽车gps位置，开门和使用它的能力。
-Allow users to interact with different systems through the tokens
-:   In the car example, the car token is issued by Holden, the maker, and necessarily so because it contains code to interact with a smart lock (the *Open*, *Start*, *Lock* actions) and Holden's own web service (the *Locate* action), yet it needs to work in other environments. The *Auction* action, for example, is provided by a third party auction web service. The user access auction service through the token without the need of signing up and proving ownership. The *List for sharing* is provided by a third party service which tokenises the usage of the car by hours or days and sells them piecemeal. The owner can access such a market through this Token. The buyers will have information about the car's GPS location, the capacity to unlock the door and use it, through this token as well.
+为了释放他们的潜力，token需要变得更加复杂，并从支付方切换到交付方。 必须满足几个要求：
+To unleash their potential, token needs to become a lot more sophisticated and switch from the payment side to the delivery side. Several requirements must be fulfilled:
 
-渲染token并将其与可在用户钱包中执行的操作相关联：在汽车的示例中，如果注册过期，工作中的web组件会将注册token绘制为红色或显示警告。过期的汽车将无法使用 *共享清单* 等操作，并且汽车的token页面应该明确的将消息传递给用户。
-Rendering a token and associate it with the actions they can perform in the user's wallet
+__1.Tokenisation意味着将所有类型的资产表示为区块链上的标记.__ 这需要构建一个token并且与其事务规则和行为模式捆绑在一起，将他们从最初生成的系统中取出，让他们可以在不同的场景下进行交易和使用。
+__1. Tokenisation means representing all kind of assets as a token on a blockchain.__ This requires bundling a token with its transactions rules and behaviour patterns. It takes them off the system where they initially grew in and frees them to be traded or used in different context.
+__2. Tokenisatoins必须允许用户通过token与不同系统进行交互：__ 允许用户通过token与不同系统进行交互：在汽车示例中，汽车token由制造商Holden发布，因为它包含与智能锁（*开锁*，*发动*，*锁住* 操作）和Holden自己的Web服务（ *定位* 行为）相互作用的代码，但它需要在其他环境中工作。例如 *拍卖* 动作由第三方拍卖网络服务提供。用户通过token访问拍卖服务，无需注册和证明所有权。*共享清单* 由第三方服务提供，该服务将汽车的使用Tokenisation为数小时或者数天，并逐个销售。所有者可以通过此token访问这个市场，买家将通过此token获得知晓汽车gps位置，开门和使用它的能力。
+__2. Tokenisatoins must allow users to interact with different systems through the tokens:__ In the car example, the car token is issued by the maker, and necessarily so because it contains code to interact with a smart lock (the *Open*, *Start*, *Lock* actions) and the maker's own web service (the *Locate* action), yet it needs to work in other environments. The *Auction* action, for example, is provided by a third party auction web service. The user accesses auction services through the token without the need of signing up and proving ownership. The *List for sharing* is provided by another third party service which tokenises the usage of the car by hours or days and sells them piecemeal. And so on.
+
+所有者必须能够通过此token访问所有这些市场。 token成为经济互动的基础和原子基础。
+The owner must be able to access all those markets solely through this Token. The token becomes the fundamental and atomic base for economic interactions.  
+
+__3.同样的，token必须能够展示并且与其可在用户钱包中执行的操作相关联:__ 在汽车的示例中，如果注册过期，工作中的web组件会将注册token绘制为红色或显示警告。过期的汽车将无法使用 *共享清单* 等操作，并且汽车的token页面应该明确的将消息传递给用户。
+__3. Also, a token must be renderable and associate with the actions it can perform in the user's wallet:__ I
 :   In the car example, if the registration expired, the web component at work would paint the Registration Token red or display a warning. Actions like *List for sharing* will not be available with an expired car rego, and the integrated token interface should clearly pass that message to the user.
 
+__4. 必须允许在token上开发新协议:__ ：在汽车示例中，抵押可能是附加协议，也就是以太坊环境中的ERC。 该协议可能有自己的实现，并且汽车token可能会预先约定它。 同样，有流媒体，通信，赌注或其他协议（参见“魔术”章节）。 框架必须允许它们存在并通过token使用。
 
-允许在token上开发新协议：在汽车示例中，抵押可能是附加协议，也就是以太坊环境中的ERC。 该协议可能有自己的实现，并且汽车token可能会预先约定它。 同样，有流媒体，通信，赌注或其他协议（参见“魔术”章节）。 框架必须允许它们存在并通过token使用。
-Allow new protocols to be developed on tokens
-:   In the car example, collateralization might be an additional protocol, an ERC in Ethereum context. The protocol might have its own implementation and the car token might pre-date it. Similarly, there are streaming, communication, staking or other protocols (See "Magic" chapter). The framework must allow them to exist and work with tokens.
+__4. It must allow new protocols to be developed on tokens:__ In the car example, collateralization might be an additional protocol, an ERC in Ethereum context. The protocol might have its own implementation and the car token might pre-date it. Similarly, there are streaming, communication, staking or other protocols (See "Magic" chapter). The framework must allow them to exist and work with tokens.
 
-将信任关系和业务背景传递给第三方：在汽车示例中，保险token通过NRMA提供道路救援服务，NRMA是另一家未与驾驶员直接签约的公司。 然而，驾驶员可以通过保险token访问此功能，并立即被确定为有资格获得帮助。 在此示例中，*信任关系*表示用户间接信任NRMA以提供路边援助，以在紧急情况下获取用户的GPS位置和身份信息。 *业务背景* 是指客户对路边援助的资格，例如保险支付，服务范围内的位置和未达到的年度上限等。在这个故事中，*信任关系*和*业务背景* 都必须在token中，而不是通过中心化的方式由保险公司的网络服务提供，因为两者有不同的 a）可用性，b）隐私和c）集成要求[^ abc]。
-Carry trust relationship and business context to 3rd parties
-:   In the car example, the insurance token provides Roadside Assistance service through NRMA, another company not directly contracted by the driver. Yet the driver might access this function through the insurance token and immediately be identified as qualified for help. In this example, *Trust relationship* means that the user indirectly trusts NRMA to provide roadside assistance, to obtain the user's GPS location and identity information at the time of emergency. *Business context* means the customer's qualification for roadside assistance, like insurance paid, location in the range of service and annual cap not reached etc. In this story both *trust relationship* and *business context* has to be in the token, not centralised through the insurance company's web service since the two have different a) availability, b) privacy and c) integration requirements[^abc].
+__5. token必须能够将信任关系和业务背景传递给第三方:__
+：在汽车示例中，保险token通过NRMA提供道路救援服务，NRMA是另一家未与驾驶员直接签约的公司。 然而，驾驶员可以通过保险token访问此功能，并立即被确定为有资格获得帮助。 在此示例中，*信任关系*表示用户间接信任NRMA以提供路边援助，以在紧急情况下获取用户的GPS位置和身份信息。 *业务背景* 是指客户对路边援助的资格，例如保险支付，服务范围内的位置和未达到的年度上限等。在这个故事中，*信任关系*和*业务背景* 都必须在token中，而不是通过中心化的方式由保险公司的网络服务提供，因为两者有不同的 a）可用性，b）隐私和c）集成要求[^ abc]。
+__5. A token must carry trust relationship and business context to 3rd parties:__ In the car example, the insurance token provides Roadside Assistance service through NRMA, another company not directly contracted by the driver. Yet the driver might access this function through the insurance token and immediately be identified as qualified for help. In this example, *Trust relationship* means that the user indirectly trusts NRMA to provide roadside assistance, to obtain the user's GPS location and identity information at the time of emergency. *Business context* means the customer's qualification for roadside assistance, like insurance paid, location in the range of service and annual cap not reached etc. In this story both *trust relationship* and *business context* has to be in the token, not centralised through the insurance company's web service since the two have different a) availability, b) privacy and c) integration requirements[^abc].
 
 [^abc]: 可用性：NRMA 7*24小时在线，但是澳航保险可以在公众假期或者晚上暂停服务。隐私：NRMA可以获取用户的GPR，但是澳航保险在法律上不允许。集成：大多数NRMA的客户不是通过Qantas Insurance获得的，NRMA需要一个额外附加系统来实现集成 Qantas Insurance的网络服务，这对NRMA来说会有很大的安全和投资顾虑。在这三个问题中，可用性可能是最明显的。想象一下客户会有多生气，当他的汽车在澳大利亚贫瘠的内陆地区抛锚，这个时候发现无法获得NRMA的道路援助，因为Qantas保险公司的网络服务器正在为了 ”更好的服务用户“ 升级。
 [^abc]: Availability: NRMA is online 24/7 but Qantas Insurance can suspend their services in public holidays or at night. Privacy: NRMA can learn user's GPS location but Qantas Insurance isn't legally allowed to learn it. Integration: Most of NRMA's customers are not obtained through Qantas Insurance, so it would be an additional system to integrate and extra security concern for NRMA to integrate to Qantas Insurance's web service. Of all three, availability might be the most visible. Just imagine how angry a customer will be, having his car breaking down in the middle of the barren Australian outback, and learn that the road-side assistance can't be authorised because the insurer's web service is upgrading "For a better user experience".
@@ -289,7 +375,7 @@ By virtue of Tokenscript being a solution layer rather than base-layer technolog
 ## Address "Frictionless Market" needs
 
 仔细研究“市场”，市场并不是一个拥有超载信息的嘈杂渠道; 更重要的是，这是一个承担货款对付（交付与付款）的地方。 由于区块链降低了对中间商（交易主持方）的依赖，和关于传统市场的讨论不同，这里市场的重点不再是如何构建主持维护一个市场，而是市场内的“货”和“款”本身，即 *可交付token* 和 *支付token* ，以及他们在市场中的角色。
-Taking a closer look at "market", a market is not a noisy channel overloaded with information; more importantly, it is a place where delivery versus payment happens. With blockchain relying less on the middlemen, the host of the trades, our focus is turned into the tokens being traded, that is, *deliverables* and *payments*, and their role in market.
+Taking a closer look at "market", a market is not a noisy channel overloaded with information; more importantly, it is a place where delivery versus payment happens. With blockchain relying less on the middlemen, the host of the trades, our focus is turned into the tokens being traded, that is, *deliverables* and *payments*, and their role in the market.
 
 可交付Tokens
 ：金钱可以买到各种各样的东西：资产，商品和服务。
@@ -385,7 +471,7 @@ Understandablly, the buyers need to access all these for an informed decision.
 
 
 产品描述信息通常在智能合约中。 在以太坊的情况下，这些可以通过进行一些智能合约函数调用来获得，因此，唯一需要的工作是将它们转换为演示文稿 - 通常意味着转换成为用户使用的语言并将“实际”值转换为精心打勾的复选框。 这有助于介绍Tokenscript的第一个功能：充当智能合约的表示层。
-Product description information is typically in the smart contract. In Ethereum cases, these can be obtained by making a few Smart Contract function calls, therefore, the only needed work is to convert them into presentation - usually it means translating to the language user speaks and converting "True" value into a nicely ticked checkbox. This serve to introduce the first functionality of Tokenscript: acting as a presentation layer for smart-contracts.
+Product description information is typically in the smart contract. In Ethereum cases, these can be obtained by making a few Smart Contract function calls, therefore, the only needed work is to convert them into a presentation - usually, it means translating to the language user speaks and converting "True" value into a nicely ticked checkbox. This serves to introduce the first functionality of Tokenscript: acting as a presentation layer for smart-contracts.
 
     <attribute-type id="voting-right">
        <name xml:lang="en">Voting right</name>
@@ -422,7 +508,7 @@ This simplified `attribute-type` code snippet allows the value for Voting Right 
 
 
 Attestation只是一条用来说明事实的经过签名的信息。通常使用Attestation来表示满足交易的条件，更多关于Attestation的信息在Attestation章节
-Attestation is just a signed message stating a fact. Attestations are often used to satisfy the conditions of the transactions. More on that in the chapter Attestations.
+Attestation is just a signed message stating a fact. Attestations are often used to satisfy the conditions of the transactions — more on that in chapter Attestations.
 
 在1％财产token的示例中，涉及的证明是：
 In the 1% property token example, the involved attestations are:
@@ -438,10 +524,10 @@ In the 1% property token example, the involved attestations are:
 [^set-operation]: Eventually, this could be a cryptographic set operation, but even if that happens, the metadata directing the context (user-agent) to proform the computation still needs to be described in Tokenscript.
 
 由于成本（交易的大小和数量）和隐私的原因, 前两个Attestations并未存储在智能合约中。可以采用零知识证明来证明这个Attestation适用于所述财产和所述所有者，并且它尚未过期。 哪些证据可以被零知识证明需要验证也会通过Tokenscript来进行描述。
-The first two attestations are not stored in smart contract for cost (size and number of transactions) and privacy reasons. It's possible to utilise zero knowledge proof to provide a generic proof that the attestation is for the said property and said owner, and it has not expired. What proofs are expected and can be validated is also described in Tokenscript.
+The first two attestations are not stored in a smart contract for privacy and cost (size and number of transactions) reasons. It's possible to utilise zero-knowledge proof to provide anonymous proof that the attestation is for the said property and said owner, and it has not expired. What proofs are expected and can be validated is also described in Tokenscript.
 
 此外，交易需要来自买方的身份证明或投资能力证明。 这些也在Tokenscript中描述，因为有了这些上下文信息，（例如，用户代理）可以防止用户在没有相关该Attestation的情况下提交交易，或帮助用户为提交交易选择合适的该Attestation。
-Furthermore, the fact that the transaction requires an identity attestation or investment capacity attestation from the buyers. These are described in Tokenscript as well so the context (e.g. user-agent) can prevent the user to submit a transaction without qualifying proof or help the user to select suitable attestations for a purchase transaction.
+Furthermore, the fact that the transaction requires an identity attestation or investment capacity attestation from the buyers. These are described in Tokenscript as well so the context (e.g. user-agent) can prevent the user from submitting a transaction without qualifying proof or help the user to select suitable attestations for a purchase transaction.
 
 #### 参考信息
 #### Reference information
@@ -454,7 +540,7 @@ Reference information is what relevant to the token and provided by web services
 [^trusted-information]: Originally we call it "Trusted information", meaning data such as previous property sales price or regional property performance data is just "provided", without blockchain proofs or attestations, hence, it has to be explicitly trusted by the user. As it turned out, this term misfired as some developers think it means "proven information" and provided as trusted already. So we used a less precise term "Reference information", which, unfortunately, feels like a catch-all phrase.
 
 由于Tokenscript由token发行者签署（不是token所有者 - token发行者通常是部署智能合约的实体），因此假定来自Tokenscript中指定的网络API的参考信息是可信的。 安全章节将详细说明不同的信任级别。
-Since Tokenscript is signed by the token issuer (not token owner - the token issuer is often entity that deployed the smart contrat), the reference information sourced from the web apis specified in Tokenscript is assumed trusted. The security chapter will detail different levels of trust.
+Since Tokenscript is signed by the token issuer (not token owner - the token issuer is often entity that deployed the smart contract), the reference information sourced from the web APIs specified in Tokenscript is assumed trusted. The security chapter will detail different levels of trust.
 
 今天，与token相关的所有此类信息，通常一起保存在由部署token的同一实体制作的DAPP网站上。 我们认为，要使token有效地市场化，需要将其抽象出来并置于token行为语言Tokenscript中。
 Today, all such information related to a token is usually held together on a DAPP website made by the same entity that deployed the token. We argue that for tokens to be effectively marketized, It needs to be abstracted out and placed in the token behaviour language Tokenscript.
@@ -469,14 +555,14 @@ Dictates the correct method to construct a blockchain transaction, like:
  - 购买需要哪些参数（例如1％的股份数量）。
  - 如何呈现购买表单并转换为用户的本地语言。
  - 是否满足全部条件（例如，如果相关财产被清算，那么应该无法进行购买）。
-- What attestations are needed to prove the buyer's capacity to purchase.
-- What parameters are needed for a purchase (e.g. number of 1% shares).
-- How to render the purchase form and translate to user's local language.
-- Is the condition all met (e.g. a purchase isn't possible after the underlying property is liquidated).
+- What attestations are needed to prove the buyer's capacity to purchase?
+- What parameters are needed for a purchase (e.g. number of 1% shares)?
+- How to render the purchase form and translate to the user's local language.
+- Is the condition all met (e.g. a purchase isn't possible after the underlying property is liquidated)?
 
 
 这些信息是一组智能合约可编程接口（In Ethereum，称为ABI）的超集，附加的部分是业务逻辑（例如财产必须仍然有效且卖方仍然拥有它）和表示逻辑（例如消息“该物业已被清算，不再出售“）。
-These information is a super-set of smart contract programmable interface (In Ethereum, called ABI), with the additional part being business logic (e.g. property must be still valid and seller still have it) and presentation logic (e.g. the message "The property is liquidated. Purchase no longer possible").
+This information is a super-set of smart contract programmable interface (In Ethereum, called ABI), with the additional part being business logic (e.g. property must be still valid and owned by the seller) and presentation logic (e.g. the message "The property is liquidated. Purchase no longer possible").
 
 总之，Tokenscript允许以下的上下文（用户代理或交易引擎）：
 
@@ -497,7 +583,7 @@ Any party is able to render and apply functions to the token using Tokenscript, 
 ### Why Tokenscript
 
 通过演示的第一个示例，我们利用这个机会阐明了为什么需要Tokenscript，而不是目前通过DApp提供资产访问的主流方式。我们认为目前流行的方法不适合创建无摩擦市场，而Tokenscript可以提供*互操作性*、*可扩展性*和*安全*等保障。
-With the first example demonstrated, we use the opportunity to articulate why Tokenscript is needed, over the current prevailing way of providing asset access with a host DApp. We argue that the current prevailing method is not suitable for creating a frictionless market, while Tokenscript could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
+With the first example demonstrated, we use the opportunity to articulate why Tokenscript is needed, over the current prevailing way of providing asset access with a host DApp. We argue that the currently prevailing method is not suitable for creating a frictionless market, while Tokenscript could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
 
 #### 互操作性：
 #### Interoperability:
@@ -517,8 +603,9 @@ In a similar fashion, suppose an investors' forum where the members are allowed 
 横向来看，相同类型的资产可能在多个网络（如 Plasma 链）上具有其token实例。买方可能只对澳大利亚的资产感兴趣，因此仅与澳大利亚1％房地产网络相关联。可能难以拥有一个全知的节点来为所有现有token提供呈现的token信息，尤其是在设计网络时考虑到隐私的情况。因此，为了扩展，必须从对token的访问中分离关于token（Tokenscript）的知识。
 Horizontally, the same type of asset might have its token instances across multiple networks like Plasma Chains. A buyer is likely to be interested only in assets in Australia, and therefore only connected to the Australian 1% Property network. It can be difficult to have an all-knowing node to provided rendered token information for all existing tokens, especially if a network is designed with privacy in mind. Therefore, to scale, the knowledge about the token (Tokenscript) must be detached from the access to the token.
 
-纵向来看 - 通过说*垂直方向*，我们的意思是向上构建，在token之上使用token交易或创建结构化token的方式来构建结构化的交易。此类交易和token访问基础token(component token)。例如，如果我们想要一个token，其组成是来自全球100个城市的样本的1％资产token，对于中型投资者来分摊风险，一个可以操作这样token的系统必须以成员token的知识来构建。再次它不能依赖于与该资产相关的原始Dapp的可用性、安全性和开放性。 Tokenscript可以在中间用于制作这样的token。
-Vertically - by speaking *vertical*, we mean to build upward, to building structured transactions using a token transaction or creating structured tokens on top of a token. Such transaction and token access the component tokens. For example, if we desire a token whose make up is a 1% property token from a sample of 100 global cities, for mid-size investors to distribute the risk, a system that can manipulate such a token must be built with the knowledge about member tokens. It again cannot depend on the availability, security and openness of the original Dapp tied to that asset. Tokenscript would work in the middle for the making of such tokens.
+纵向来看 - 通过说*垂直方向*，我们的意思是向上构建，在token之上使用token交易或创建结构化token的方式来构建结构化的交易。此类交易和token访问基础token(component token)。例如，如果我们想要一个token，1％房产token平均风险分布在100个全球城市的样本上，那么必须使用有关成员token的知识构建一个可以操纵这样一个token的系统。再次说明，它不能依赖于与该资产相关的原始Dapp的可用性、安全性和开放性。 Tokenscript可以在中间用于制作这样的token。
+Vertically - by speaking *vertical*, we mean to build upward, to building structured transactions using a token transaction or creating structured tokens on top of a token. Such transaction and token access the component tokens. For example, if we desire a token which is made up from 1% property tokens risk-distributed over a sample of 100 global cities, a system that can manipulate such a token must be built with the knowledge about member tokens. It again cannot depend on the availability, security and openness of the original Dapp tied to that asset. Tokenscript would work in the middle for the making of such tokens.
+
 
 如果我们以Peter's Pride Property网站的例子作为Hello World示例，可能需要用户提交交易，不仅要购买token，同时还要Peter付费（tips）。如果只有token发行者的DAPP知道如何组装token购买交易，这对Peter来说是不切实际的。
 If we follow the example of Peter's Pride Property website as a Hello World example, it might need the user to submit a transaction not only purchase a token, but also tips Peter in the meanwhile. If only the token's issuer's DAPP knows how to assemble a token purchase transaction, this will be impractical for Peter.
@@ -554,16 +641,16 @@ A user who is purchasing a 1% property token from Peter's Pride Property recomme
 ## Payment side example: DAI token
 
 DAI是一种用于支付的代币 - 购买加密货币，购买商品和服务等等。它锚定美元的价格。没有固定供应上限，它本身不是一个投资品。
-DAI is a token designed for payment - purchasing security token, purchasing goods and services and so like. It's intended to match USD in value. Not fixing the supply cap, it is not itself an investiment candidate.
+DAI is a token designed for payment - purchasing security token, purchasing goods and services and so like. It's intended to match USD in value. Not fixing the supply cap, it is not itself an investment candidate.
 
 在许多方面，DAI的功能类似以太币，它是以太坊的基础货币。 但是，它不能成为以太币的替代品。
-In many ways DAI functions like Ether, the base currency in Ethereum. However, it can't be a drop-in replacement for Ether.
+In many ways, DAI functions like Ether, the base currency in Ethereum. However, it can't be a drop-in replacement for Ether.
 
 首先，为以太坊编写的Dapps可能不知道用户有DAI token，除非它明确支持DAI。 例如，接受以太币作为付款的比萨订购服务不能轻易地开始接受DAI token。 即使DAI提供DAI-to-Ether网关服务也是如此，该服务以原子方式在同一交易中将DAI转换为以太币，使用生成的以太币来购买Pizza。
-First, the Dapps written for Ethereum may not be aware that the user has DAI token, unless it explicitly support DAI. A Pizza ordering service that accepts Ether as payment, for example, cannot trivially start to accept DAI token. This is true even if DAI provides a DAI-to-Ether gateway service which, in an atomic fashion, converts DAI to Ether in the same transaction which uses the resulting Ether to purchasing Pizza.
+First, the Dapps written for Ethereum may not be aware that the user has DAI token unless it explicitly supports DAI. A Pizza ordering service that accepts Ether as payment, for example, cannot trivially start to accept DAI token. This is true even if DAI provides a DAI-to-Ether gateway service which, in an atomic fashion, converts DAI to Ether in the same transaction which uses the resulting Ether to purchasing Pizza.
 
 如果Pizza网站没有升级，用户必须首先将DAI转换为以太币，然后通过第二次交易购买Pizza。 这样的过程不仅不方便，而且缺乏原子性，这意味着用户需要通过努力将DAI转换为以太币，但是由于Pizza已经售罄而无法结账，用户必须处理他已经购买的以太币
-If Pizza website doesn't upgrade, the user has to convert DAI to Ether first, then, purchase Pizza with a second transaction. Such a process is not only inconvenient, but lack atomicity, meaning that the user could have converted DAI to Ether trough the effort, only to fail the checkout since the Pizza is sold out, and ended up with additional Ethers that she has to deal with.
+If Pizza website doesn't upgrade, the user has to convert DAI to Ether first, then, purchase Pizza with a second transaction. Such a process is not only inconvenient, but lack atomicity, meaning that the user could have converted DAI to Ether through the effort, only to fail the checkout since the Pizza is sold out, and ended up with additional Ethers with which she has to deal.
 
 值得注意的是，披萨网站无法升级到支持DAI，因为不知道如何获取用户的DAI余额[^balance-is-privacy] (to not to to waste a transaction fee just to find the DAI balance is insufficient)，如何构建DAI撤销交易或DAI-Ether网关交易，并对DAI持有合约进行直接智能合约函数调用。
 It's worth noticing that the Pizza website cannot upgrade to support DAI without knowing how to discover the user's DAI balance[^balance-is-privacy] (to not to to waste a transaction fee just to find the DAI balance is insufficient), how to construct a DAI withdraw transaction or DAI-Ether gateway transaction and make direct smart contract function calls to the DAI holding contract.
@@ -572,7 +659,7 @@ It's worth noticing that the Pizza website cannot upgrade to support DAI without
 [^balance-is-privacy]: Eventually, the Pizza website would not only be oblivious about how to check balance, since Tokenscript handles it, but also not possible to know the balance. This would require underlying blockchain's support, but ultimately cannot be done if we continue the current trend where website, who should care about business logic, also care about payment logic.
 
 当然，Pizza网站不是管理这些付款方详细信息的最佳位置。 Tokenscript通过以下方式解决了这个问题：
-Naturally, the Pizza website isn't in the best position to manage these payment-side details. Tokenscript addreses this problem by
+Naturally, the Pizza website isn't in the best position to manage these payment-side details. Tokenscript addresses this problem by
 
 1.封装支持DAI所需的智能合约函数调用，以及用于在Tokenscript中构建所需交易的javascript，由DAI发行者签名。
 1. Encapsulating the smart contract function calls needed for supporting DAI, along with the javascript to construct needed transactions in Tokenscript, signed by DAI issuer.
@@ -583,14 +670,14 @@ Tokenscript嵌入支付逻辑和呈现的能力意味着它不仅可以用用户
 Tokenscript's capacity to embed payment logic and presentation means that not only it can display messages in user's language (like balance or "insufficient balance" message), but it can perform functions like pre-checking the balance, pause the checkout flow so that the user can perform a top-up flow and return to the checkout flow to finalise the checkout.
 
 对于用户来说，该过程类似于结账过程引导用户到Paypal来完成交易，唯一的区别是该过程在更强大的本地用户代理中发生。
-To the user, the process resembles a bit like the checkout processs leads the user to Paypal to finalise the transaction, except the process happens locally in an enhanced user-agent.
+To the user, the process resembles a bit like the checkout process leads the user to Paypal to finalise the transaction, except the process, happens locally in an enhanced user-agent.
 
 我们再次强调，目前的方法不适合创造无摩擦市场，但是Tokenscript可以，通过提供*互操作性*、*可扩展性*和*安全性*来创造无摩擦市场。
-We again argue that current prevailing method is not suitable for creati
-ng a frictionless market, while Tokenscript could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
+We again argue that current prevailing method is not suitable for creating a frictionless market, while Tokenscript could, by providing reasons in the areas of *interoperability*, *scalability* and *security*.
+
 
 总之，Pizza网站没有必要自行处理支付方逻辑的所有事情。传统方法是让Pizaa网站使用MakerDAO项目提供的javascript。 javascript可能用也可能不用MakerDAO提供的RESTful API
-As concluded, Pizza website would not have the necessary payment side logic to handle everything on its own. The traditional approach is to let the Pizza website use the javascript sourced by MakerDAO project. The javascript may or may not use a RESTful API provided by MakerDAO
+As concluded, Pizza website would not have the necessary payment side logic to handle everything on its own. The traditional approach is to let the Pizza website use the javascript sourced by MakerDAO project. The javascript may or may not use a RESTful API provided by MakerDAO.
 
 这种方法解决了一个问题，又引入其他一些问题。
 This approach solves one problem by introducing quite a few others.
@@ -598,20 +685,20 @@ This approach solves one problem by introducing quite a few others.
 #### 安全性
 #### Security
 当用户尝试进行购买时时，使用本地javascript（Pizza shop javascript）和DAI提供的所谓安全javascript的组合来创建交易。 向用户呈现交易载荷，该交易的载荷包含访问DAI合约的参数，例如，支付金额，以及访问比萨网站合约的参数，例如购买比萨饼的数量和选择的配料。 显然，这样的交易必须发送到DAI的合约，并传送（代理）到披萨店的合约。
-When the user makes the purchase attempt, the transaction is created with the combined effort of local javascript (Pizza shop javascript) and the supposedly secure javascript supplied by DAI. The user is presented with a transaction payload that contains both the parameters to access DAI contract, e.g. amount to pay, and the parameters to access the Pizza website contract, e.g. amount of pizzas to buy and the toppings of choice. Apparently such a transaction has to be sent to DAI contract and channeled (proxed) to the Pizza shop contract.
+When the user makes the purchase attempt, the transaction is created with the combined effort of local javascript (Pizza shop javascript) and the supposedly secure javascript supplied by DAI. The user is presented with a transaction payload that contains both the parameters to access DAI contract, e.g. amount to pay, and the parameters to access the Pizza website contract, e.g. amount of pizzas to buy and the toppings of choice. Apparently, such a transaction has to be sent to DAI contract and channelled (proxied) to the Pizza shop contract.
 
 
 存在两个直接[^minor-security-concerns]安全问题。 首先，网站没有正确使用MakerDAO javascript库，其中包含最终的交易构建器。 其次，它不是MakerDAO真正的的javascript，而是由黑客取代的版本。
 There are two immediate[^minor-security-concerns] security concerns. First is that the website didn't use the MakerDAO javascript library correctly, which has the final transaction builder in it. Second is that it is not MakerDAO's javascript at work, but a version replaced by a hacker.
 
 [^minor-security-concerns]：当两个系统集成在网络上时，通常存在大量安全问题。 举一个例子，如果一方未更新代码以反映另一方的更改，则可能会生成格式错误的交易。 跟踪这些交易允许攻击者定位未更新的网站。
-[^minor-security-concerns]: When two systems plug on the web, usually there are a hoard of security concerns. To give one example, if a side didn't update the code to reflect the other side's change, the resulting malformed transaction might be rejected. Tracing these transactions allow an attacker to target websites not updated.
+[^minor-security-concerns]: When two systems plug on the web, usually there is a hoard of security concerns. To give one example, if a side didn't update the code to reflect the other side's change, the resulting malformed transaction might be rejected. Tracing these transactions allow an attacker to target websites not updated.
 
 这些问题通过Tokenscript中使用的封装方法解决。
 These issues are addressed by the encapsulation method used in Tokenscript.
 
 首先，交易生成代码由MakeDAO单独签名，并与用户代理方分开更新。 网站的代码不必签名，因为它只提供业务逻辑，而不是支付逻辑。 比如，如果发现错误，DAI可以通过更新这些签名的指令来暂停付款，而且Pizza网站的行为就像已经更新并解决问题一样。 如果发现该错误存在于DAI控制的合约中，并且部署了替换合约，MakerDAO将更新Tokenscript并再次签署，而Pizza网站不需要任何事情。
-First, the transaction forming code is signed by MakeDAO separately and updated separately from user-agent side. The website's code doesn't have to be signed because it just supplies the business logic, not payment logic. Say, if a bug is found, DAI can suspend the payment by updating these signed instructions, and the Pizza website would behave as if it has been updated to address the issue. If the bug is found to be in the DAI holding contract, and a replacement contract is deployed, MakerDAO would update Tokenscript and sign it again, without Pizza website having to do anything.
+First, the transaction forming code is signed by MakeDAO separately and updated separately from the user-agent side. The website's code doesn't have to be signed because it just supplies the business logic, not payment logic. Say, if a bug is found, DAI can suspend the payment by updating these signed instructions, and the Pizza website would behave as if it has been updated to address the issue. If the bug is found to be in the DAI holding contract, and a replacement contract is deployed, MakerDAO would update Tokenscript and sign it again, without Pizza website having to do anything.
 
 其次，通过明确要求用户信任MakerDAO签署的Tokenscript，用户不需要信任Pizza网站对交易内容的呈现，因为它将由受信任的MakerDAO Tokenscript呈现
 Second, by explicitly asking the user to trust the Tokenscript signed by MakerDAO, the user would not need to trust Pizza website's rendering of the transaction content, since it would be rendered by the trusted MakerDAO Tokenscript.
@@ -626,20 +713,20 @@ Third, if secure protocols needs to be added, for example, an attestation from t
 #### Interoperability
 
 添加对DAI本身的支持是很麻烦的，更不用说添加其他付款方token了。 在2017-2018年的狂热中，许多支付方token被发明并投入大量资金。就连是不安全的token，也在宣传他们的token可用于支付或共同支付某些商品和服务的某种方式。 例如，电力token被发明为未来象征化电力的货币。 他们中的大多数只是笑话，但如果他们开始工作呢？ 即使这些token中只有10％由自己的ICO团队完成，但所有这些token都会在将DAI token集成到市场中时遇到类似的麻烦。
-Adding support for DAI itself is trouble enough, not to mention adding other payment side tokens. In the 2017-2018 frenzy, a lot of payment side tokens are invented and heavily invested in. Pretty much anything advertised not as a security token outlines some way their token can be used to pay or co-pay some goods and services. Electricity tokens, for example, is invented as the currency of the future tokenised electricity. Most of them are jokes, but what if they are put to work? Even if only 10% of these tokens are done by sincerer ICO teams, all of them would forsee similiar trouble as the integration of DAI token into the market.
+Adding support for DAI itself is trouble enough, not to mention adding other payment side tokens. In the 2017-2018 frenzy, a lot of payment side tokens are invented and heavily invested in. Pretty much anything advertised not as a security token outlines some way their token can be used to pay or co-pay some goods and services. Electricity tokens, for example, is invented as the currency of the future tokenised electricity. Most of them are jokes, but what if they are put to work? Even if only 10% of these tokens are done by sincerer ICO teams, all of them would forsee similar trouble as the integration of DAI token into the market.
 
 每种付款方货币都有自己的付款方逻辑。以DAI为例，它具有以下支付方面的逻辑：
-And each payment side currency brings its own payment side logic. Take DAI for example, it has these payment side logic:
+And each payment side currency brings its own payment side logic. Take DAI, for example. It has these payment side logic:
 
 1. DAI token的创建需要一个称为CDP的设置阶段。
 2. CDP的风险等级发生变化。用户应收到其CDP处于清算风险的通知。我们将在下一章再次讨论这种情况。
 3. 如果余额不足，但用户在他/她的帐户上有相当多的Ethers，她可以暂停结账，然后返回结帐。
 1. The creation of DAI tokens requires a set-up phase, called CDP.
-2. The risk level of a CDP changes. Users should receive a notification of their CDP is at liquidation risk. We will cover such case again in the next chapter.
+2. The risk level of a CDP changes. Users should receive a notification of their CDP is at liquidation risk. We will cover such a case again in the next chapter.
 3. If the balance runs low, but the user has quite a bit of Ethers on his/her account, she may pause the checkout to top up before returning to the checkout.
 
 当架构师读到这里的时候，他可能会觉得这些都可以在外部完成。如果发生任何这些情况，只需将用户踢回MakerDAO网站即可。这不是像Point + Pay这样的支付创新，其中选择与支付在同一屏幕上选择。 事实上，您可以观察到中国支付创新的大量例子，例如：
-An architect might read it here and decide these can all be done out of band. Just kick the user back to the MakerDAO website if any of these happens. This would not address payment side innovation like Point+Pay, where the points are selected at the same screen as payment. In fact, you can observe a proliferationDictionary of payment side innovations in China for examples:
+An architect might read it here and decide these can all be done out-of-band. Just kick the user back to the MakerDAO website if any of these happens. This would not address payment side innovation like Point+Pay, where the points are selected at the same screen as payment. In fact, you can observe a proliferationDictionary of payment side innovations in China for examples:
 
 - 小额信贷和抵押贷款
 - Micro-credit (e.g. 花唄) and collatoralised credit
@@ -662,7 +749,7 @@ An architect might read it here and decide these can all be done out of band. Ju
 - Prepaid online shopping payment cards, like the Alipay cards sold in Australia Post.
 
 Tokenscript打算为支付方创新和可交付方提供空间。 传统上，合作伙伴支持抑制了支付方创新。 美国运通实施了支付API的积分，但在过去几年中，只有不到5％的合作伙伴电子商务网站将此作为结账选项提供。
-Tokenscript intends to give room for payment side innovation as well as deliverable side. Traditionally, partner support used to curb payment side innovation. American Express implemented points to pay API but after years only less than 5% of partner e-commerce websites provided this as a checkout option.
+Tokenscript intends to give room for payment side innovation as well as the deliverable side. Traditionally, partner support used to curb payment side innovation. American Express implemented points to pay API, but after years only less than 5% of partner e-commerce websites provided this as a checkout option.
 
 #### 可扩展性
 #### Scalability
@@ -732,10 +819,10 @@ Despite such a token not being transferable or authorised, it is still useful fo
 As we can observe by the use of tokens, usually scattered business processes and web experiences can finally be integrated. This ties closely to the other benefit of the blockchain: a frictionless market. In this example:
 
 
- - 当手机进行二手交易的时候，很容易通过token转账将保修转给下一位用户，进一步打开市场。
- - When the phone traded is second hand, it would be easy to pass the warranty to the next user through a token transfer, opening the market further.
+- 当手机进行二手交易的时候，很容易通过token转账将保修转给下一位用户，进一步打开市场。
+- When the phone traded is second hand, it would be easy to pass the warranty to the next user through a token transfer, opening the market further.
 
- - 由于运输能够被Tokenisation，买方很容易选择他最喜欢的运输公司，而无需手动提供商业信息（地址，产品，重量，日期），这将会进一步打开竞争市场。
+- 由于运输能够被Tokenisation，买方很容易选择他最喜欢的运输公司，而无需手动提供商业信息（地址，产品，重量，日期），这将会进一步打开竞争市场。
 - Since shipping can be tokenised, it would be easy for the buyer to choose his favourite shipping company without having to supply it with business context (address, product, weight, dates) manually, further opening the market for competition.
 
 可以进一步扩展此示例以解决复杂和创新的业务案例。 假设购买不是使用法定货币，而是使用美国运通积分。 iPhone具有屏幕损坏保险，因此，交易将输出第四个保险token。
@@ -833,7 +920,7 @@ This change illustrated that the business process should decouple from the token
 生意持续了一段时间，伴随区块链市场有一项创新，一些用户从从运输公司批量购买了一年的运输服务，以享受AmazonPrime般的免费送货特权而无需使用亚马逊（最后一公里）。让我们看一下这个机会，一家信用卡公司甚至为他们的卡用户提供这样一项用token来代表的特权（注：上述的免费送货特权）。
 Business went on for a while; then, there is an innovation from the blockchain market. Some users bulk-purchased a year's shipping from a delivery company, to enjoy the AmazonPrime-like free shipping privileges without using Amazon[^last-mile-market]. Seeing an opportunity, a credit card company even went so far as to provide such a privilege to the subscribers of their card, which is also represented by a toke.
 [^last-mile-market]：这种创新的市场是可能存在的，因为只有买方最熟悉最后一英里的交付体验。通常，在线零售商通过谈判获得比买家更高的批量交付折扣，但它们只是买家体验的代表。 他们的关注点并不完全与买家保持一致。一个买主开车30分钟去取包裹这个折扣和她的时间并不匹配。送货公司还可以比在线零售商更好的优化工程，例如，通过请求访问买家的日历，在线零售商并不能安全做这件事。最终，通过买方和交付公司之间的协作，可以创造更多价值。
-[^last-mile-market]: The market condition for such an innovation might exist, because only the buyer is most familiar with the last-mile delivery experience. Usually, an online retailer negotiates a higher bulk delivery discount than their buyers could, but they are just a proxy of the buyers' experience. Their interest is not perfectly aligned with the buyers. A buyer driving 30 minutes to pick up a parcel knows that the discount is no match for her time. The delivery company can also optimise the process better than the online retailer, for example, by requesting access to the buyer's calendar, which the online retailer couldn't do safely. Ultimately, more value can be created with the collaboration between buyer and the delivery company.
+[^last-mile-market]: The market condition for such an innovation might exist because only the buyer is most familiar with the last-mile delivery experience. Usually, an online retailer negotiates a higher bulk delivery discount than their buyers could, but they are just a proxy of the buyers' experience. Their interest is not perfectly aligned with the buyers. A buyer driving 30 minutes to pick up a parcel knows that the discount is no match for her time. The delivery company can also optimise the process better than the online retailer, for example, by requesting access to the buyer's calendar, which the online retailer couldn't do safely. Ultimately, more value can be created with the collaboration between the buyer and the delivery company.
 
 在线零售商决定加入其中以保持竞争力。这一次，他需要修改他的智能合约，更改交易规则，即在购买时可以接受交货token。 在这种情况下，交易的输出将没有交货token，因为已经提供了一个这样的token。[^fungible-shipping-token]
 The online retailer decided to join the game to stay competitive. This time, he would need to modify his smart contract, changing the transaction rule that a shipping token can be accepted at the time of purchase. In such a case, the output of the transaction will not have a shipping token, since one is already provided.[^fungible-shipping-token]
@@ -857,7 +944,7 @@ To recap, business process changes should not lead to a smart contract change. A
 This vision is made possible through Tokenscript. Without which the clear separation of integration needs and business process needs would be difficult and the result would be not interoperable.
 
 在第一种情况下，Tokenscript描述了能够接收消息的物流服务兑换token。 在简化形式中，将消息委托并呈现给用户界面
-In the first case, Tokenscript described a shipping token to be able to receive messages. In the simplist form, the message is entrusted and rendered to the user interface
+In the first case, Tokenscript described a shipping token to be able to receive messages. In the simplest form, the message is entrusted and rendered to the user interface
 
 我们将演示与消息传递相关的Tokenscript部分。
 We will demonstrate the portion of Tokenscript related to messaging.
@@ -1082,11 +1169,8 @@ Examples of attestations: crypto-kitten vouchers, FIFA ticket redeem coupons, Am
 
 # 加入游戏
 
-将Tokenscript定义为规范的工作正在进行中。 我们的目标是制作关键方法和考虑因素的黄皮书，并从那里开始扩展它。 当您阅读本草案时，更多的协作方法正在付诸实施。 目前，联系人是：
+将Tokenscript定义为规范的工作正在进行中。 我们的目标是制作关键方法和考虑因素的黄皮书，并从那里开始扩展它。  正在进行的工作会在 http://www.tokenscript.org 讨论
 
 # Join the game
-The work to define Tokenscript as a specification is a work in progress. We aim to produce a yellow paper of the key methods and considerations and extend it from there. More methods of collaborations are being put to work as you read this draft. For now, the contact points are:
+The work to define Tokenscript as a specification is a work in progress. We aim to produce a yellow paper of the key methods and considerations and extend it from there. The work in progress is coordinated with Discourse on http://www.tokenscript.org
 
-weiwu.zhang@alphawallet.com
-james.sangalli@alphawallet.com
-victor.zhang@alphawallet.com
