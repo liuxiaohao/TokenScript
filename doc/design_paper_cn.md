@@ -21,7 +21,7 @@ To provide a practical use of the blockchain, we must understand its utility to 
 
 2. It integrates the web. We define the technique to make it happen in "Tokenisation". 
 
-尽管2017-2018年发生了很多蠢事，但是这对于tokens来说获得一开始的关注并不是坏事。Tokens，作者即将详细阐述的，将是区块链的这两个主要功能的推动者。我们将实现这些的技术叫做“Tokenisation”。Tokenised 的权益可以在市场中交易并且在不同的系统中整合，形成一个自由整合的无摩擦市场。
+尽管2017-2018年发生了很多蠢事，但是这对于tokens来说获得一开始的关注并不是坏事。Tokens，作者即将详细阐述的，将是区块链的这两个主要功能的推动者。我们将实现这些的技术叫做“Tokenisation”。Tokenised 的权益可以在市场中交易并且在不同的系统中集成，形成一个能够自由集成的无摩擦市场。
 
 Despite the great folly in 2017-2018, it is not a bad thing to initially focus on tokens. Tokens are the enabler of the two primary functions. We define the technique to make it happen in "Tokenisation". Tokenised rights can be traded on the market and integrated across systems, forming a frictionless market and allowing free integration.
 
@@ -206,7 +206,7 @@ Why are we doing so much copy and pasting when machines are exceptionally good a
 
 Surprisingly, even the technology that was created to fill the role of a personal assistant, the Smart Phone, still failed for the same reasons: the efforts from client side alone can't integrate a Web that is not designed to integrate. It made the problem even worse, as copy-pasting becomes bigger trouble when using a Smart Phone.
 
-事实是：不仅仅是客户端，基础设施也必须支持集成。智能手机的模型类似于拨号互联网连接，每个应用程序代表一个网站。在进入对话之前，用户仍然需要找出要与之通话的计算机（app），并且在他切换应用程序时仍然可以复制信息。因此诸如要求您的智能手机通过在线银行的app汇总你所有的资金是不可能的。
+事实是：不仅仅是客户端，基础设施也必须支持集成。智能手机的模型类似于拨号互联网连接，每个应用程序代表一个网站。在进入对话之前，用户仍然需要找出要与之通话的计算机（app），并且在他切换应用程序时仍然可以复制信息。因此诸如要求您的智能手机通过在线银行的 app 汇总你所有的资金是不可能的。
 
 The truth is: Not only the client but the infrastructure has to support integration. A smartphone is modelled after a dial-up Internet connection, with each app representing a website. The users still need to figure out which computer (app) to talk to before entering the conversation, and still copies information around as he swaps apps around. It's therefore not possible, for example, to ask your smartphone to sum up all the money one may access by his online banking apps.
 
@@ -231,70 +231,78 @@ The answer to integrating the web requires a few building blocks that weren't in
 Such integrations can be addressed by having a backend connection between the two service providers, but it is not often done, because it requires the parties to collaborate and negotiate a value distribution. The collaboration depends on the security (takedown system A through system B), availability (one went offline while the other serving customers), scalability (𝑛²-𝑛 integrations needed for 𝑛 parties). Furthermore, such integration restraining the free market in two ways. First, the competition will be on integration, not goods and services. An insurance company which integrated their systems to more clinique competes against a new insurance company on the ground of integration, not coverage and premium. Second, it doesn't allow integration between contending parties, and it requires permission from both side of the integration to work.
 
 集成Web的挑战需要一些没有在Web蓝图中的模块：身份验证，所有权，价值转移和交易。
+
 The challenge to integrating the web requires a few building blocks that weren't in the Web's blueprint: authentication, ownership, transfer of value and trading.
 
 ### “帐户身份验证”不能取代Web集成
 ### "Account authentication" is not a substitute for web integration.
 
 
-Web没有内置的身份验证机制[^ tls]。 为了解决这个问题，许多用户使用“登录Facebook”等附加组件。 这些仅仅试图通过受信任的第三方提供身份验证，这不仅会导致隐私和可用性问题，而且它还仅仅只能用于帐户身份验证，不能用于集成。
+现在的 Web 没有内置的身份验证机制[^ tls]。为了解决这个问题，许多用户使用“登录 Facebook”等附加组件。这些仅仅试图通过受信任的第三方提供身份验证，这不仅会导致隐私和可用性问题，而且它还仅仅只能用于帐户身份验证，不能用于集成。
+
 The web doesn't have a built-in authentication mechanism[^tls]. To route around this gab, many users use add-ons like "Sign in with Facebook". Those merely try to provide authentication through a trusted 3rd party, which does not only cause privacy and availability concerns but also only serves for account authentication and can't be used for integration.
 
-尽管在TLS中对客户端/服务器证书做出了巨大努力，但这些身份验证方法不适用于进程，仅适用于站点。这其实是一个委托模型。想象一下，买方不检查所有权契约是否真实，但只检查卖方的名称是否与契约上的名称相匹配。 这就是TLS中使用的委托模型。 事实上，TLS无法保证网站上的任何内容是真实的，只能保证网站是真实的.Facebook使用TLS，但人们在上面投放了很多假新闻。 毫无疑问，这里的信任单位不足以让网络提供集成体验。
+尽管在 TLS 中对客户端/服务器证书做出了巨大努力，但这些身份验证方法不适用于进程，仅适用于站点。这其实是一个委托模型：想象一下，买方不检查所有权契约是否真实，但只检查卖方的名称是否与契约上的名称相匹配。 这就是 TLS 中使用的委托模型。事实上，TLS 无法保证网站上的任何内容是真实的，只能保证网站是真实的。Facebook 使用 TLS，但人们在上面投放了很多假新闻。毫无疑问，这里的信任单位不足以让网络提供集成性的体验。
+
 [^tls]: Despite the excellent efforts on client/server certificates in TLS, these authentication methods are not for processes, but only for sites. It's a delegation model. Imagine a buyer not checking if a title deed is real, but only checks if the seller's name matches the one on the deed. That would be the delegation model used in TLS. In this model, TLS can't guarantee anything on the website is real; only that the website itself is. Facebook uses TLS, but people put much fake news on it. The unit of trust here is undoubtedly not granular enough for the web to deliver an integrated experience.
 
-
-
-最重要的是，基于帐户的身份验证模型是导致进一步问题的原因。 大多数简单的商业案例 - 例如，“汽车的所有者检查其服务历史记录” - 不需要帐户。 说实话，正如我们所知道的，帐户是因特定互联网结构所造成的问题的权宜之计。
+最重要的是，基于帐户的身份验证模型是导致进一步问题的原因。大多数简单的商业案例不需要账户，如“汽车的所有者检查其服务历史记录” 。说实话，正如我们所知道的，帐户是因特定互联网结构所造成的问题的权宜之计。
 
 On top of it, the model of account based authentification is the cause of further problems. Most simple business cases - for example, "the owner of a car checks its service history" - don't require an account. Truthfully, accounts are stopgaps to problems created by the specific structure of the Internet as we know it.
 
-
 如果您强制要求涉及的各方拥有一个账户去验证，糟糕的事情就会发生：
+
 If you enforce parties involved having an account to authenticate, bad things happen:
 
- - 当汽车售出时，新车主现在需要在服务网站上创建一个新帐户，并且加密它，用来证明自己的所有权。这是繁重且不可靠的。
+- 当汽车售出时，新车主现在需要在服务网站上创建一个新帐户，并且加密它，用来证明自己的所有权。这是繁重且不可靠的。
+ 
 - When the car is sold, the new car owner would now need to create a new account at the service website and secure it with the proof of ownership to the car. This is onerous and unreliable.
 
- - 当车辆改装车间或保险公司等第三方需要访问维修历史记录时，没有简单的方法可以在不泄露帐户的情况下对其进行授权。这是不灵活的。
+- 当车辆改装车间或保险公司等第三方需要访问维修历史记录时，没有任何简单可行的方法可以在不泄露帐户的情况下对其进行授权。显然这非常不灵活的。
+ 
 - When a 3rd party like a Vehicle Modification workshop or an insurer needs to access the repair history, there is no easy way to authorise them without giving away the account. This is inflexible.
 
-更多此类示例很容易在医疗保健，零售和网络上几乎其他所有业务中找到。 今天，我们不断添加越来越多的帐户来满足这种集成需求。这就像是你手里有一把锤子，看什么都是钉子。以下章节将演示通过token集成而非帐户，是一个可靠的解决方案。
+更多此类示例很容易在医疗保健，零售和网络上几乎其他所有业务中找到。今天，我们简单地通过不断添加越来越多的帐户来满足这种集成需求。这就像是你手里有一把锤子，看什么都是钉子。以下章节将演示通过token集成而非帐户，是一个可靠的解决方案。
 
 Such integration needs, poorly addressed by adding accounts, are easily found in healthcare, retail and almost every web-based business. Today, we are still adding more and more accounts to address the growing integration needs. It's a case of hammering every problem down as if it is a nail. Most people do not feel well with this model but don't see an alternative to integrating the web. An internet without accounts is beyond most people's imagination.
 
-我们证明通过token集成是集成互联网的卓越解决方案。 这个过程的一个重要因素是所有权。
-We  demonstrate that integration through token is a superior solution to integrate the internet. A vital element of this process is ownership.
+我们证明通过 token 的集成是整合互联网的卓越解决方案。这个过程的一个重要因素是所有权。
+
+We demonstrate that integration through token is a superior solution to integrate the internet. A vital element of this process is ownership.
 
 ### 缺乏所有权机制
 ### The lack of an ownership mechanism 
 
 网络没有内置的所有权，价值转移和交易机制。
+
 The web doesn't have a built-in mechanism for ownership, transfer of value and trading.
 
+为了更好地解释，我们继续看看汽车故事的未来发展：当您想要出售汽车时，您需要在网站上发布汽车信息。为此，您必须在途中创建一个帐户。当有人想购买您的汽车时，您和买家必须经历一系列流程：保险，未使用的服务配额，车辆登记，文件移交，付款等。所有这些操作都必须独立完成，并且使用易于篡改的基于纸张和表格证明方式。该流程从网络开始，在其他地方结束，而不是在买家点击“购买”后自动完成。
 
-为了演示，我们继续看看汽车故事的未来发展：当您想要出售汽车时，您需要在网站上发布汽车信息。 为此，您必须在途中创建一个帐户。 当有人想购买您的汽车时，您和买家必须经历一系列流程：保险，未使用的服务配额，车辆登记，文件移交，付款等。  所有这些操作都必须单独完成，并且使用易于篡改的基于纸张和表格证明方式。 该流程从网络开始，在其他地方结束，而不是在买家点击“购买”后自动完成。
 To demonstrate, we take the car story a bit further: When you want to sell your car, you need to post the car information on a website. To do so, you must create an account on the way. When someone wants to buy your car, you and the buyer have to go through a chain of processes: Insurance, unused service quota, vehicle registrations, documentation handover, payment and so on. All these actions have to be done separately, using easily-tampered paper proofs and forms and accounts. The process starts at the web and ends somewhere else instead of being automatically done after the buyer clicked "buy".
 
-是否有可能实现这一点，整个官僚的程序自动在后端安全地发生，而你只需按下“购买”按钮？ 如果使用网络帐户，您需要将许多帐户和受信任的第三方联系在一起，这会隐藏用户的流程，同时他们会像以前一样需要完成相同的纸质跟踪。*
+是否有可能实现这一点，整个官僚的程序自动在后端安全地发生，而你只需按下“购买”按钮？如果使用网络帐户，您需要将许多帐户和受信任的第三方联系在一起，这会隐藏用户的流程，同时他们会像以前一样需要完成相同的纸质记录。*
+
 Is it possible to make it happen, that the entire chain of bureaucratic procedures happens securely in the backend, while you just push the "buy" button? With the web of accounts, you'd need to knot together a lot of accounts and trusted third parties, which hide the process from the user, while they fulfil the same paper trail as before.*
 
-相反，同样的过程在区块链上是自动的，防欺诈的[^attestations]和原子化的。
-In contrast, the same process on blockchain would be automatic, fraud-proof[^attestations] and atomic[^atomic].
-
 相反，当你在区块链和token上发生相同的过程时，它将是自动的，防欺诈的[^attestations]和原子[^atomic]。 您可以通过安全的方式一键完成汽车销售，而无需帐户和纸张跟踪。
+
 In contrast, when you base the same process on a blockchain and on tokens, it would be automatic, fraud-proof[^attestations] and atomic[^atomic]. You could finish a car sell with one click in a secure way without the need for accounts and paper trails.
 
-[^attestations]：提供加密签名的证明作为交易条件的方法将在后面的“证明”章节中讨论。
+[^attestations]：提供加密签名的证明作为交易条件的方法将在后面的“Attestation”章节中讨论。
+
 [^attestations]: the method to provide cryptographically signed attestations as a condition for a transaction is discussed later in the "Attestation" chapter.
 
-[^ 原子性]：在区块链术语中，原子交易可以发生或者不发生。 如果定义明确，买方不可能成功支付汽车而没有获得所有权token，或者只是转让了汽车的所有权而没有强制性保险。
+[^ 原子性]：在区块链术语中，原子交易可以发生或者不发生。如果定义明确，买方不可能成功支付汽车而没有获得所有权 token，或者只是转让了汽车的所有权而没有强制性保险。
+
 [^atomic]: In blockchain terms, an atomic transaction either happens or not. If well defined, it's not impossible for a buyer to have successfully paid for a car yet not getting the ownership token, or only have transferred the car's ownership but not the compulsory insurance on it.
 
-网络的这些缺失特征是区块链的众所周知的功能。 区块链是一种不可变的，分散的所有权记录，有时称为“三重记账”系统。 这对完美契合夫妇的虚拟婚礼需要虚拟交换token，或者本文称之为“tokenisation”。
+网络的这些缺失特征刚好是区块链众所周知的功能。区块链是一种不可变的，分散的所有权记录，有时称为“三重记账”系统。这对完美契合的功能虚拟的组合需要 token 的虚拟交换，或者本文称之为“tokenisation“。
+
 These missing features of the web are the well-known functions of the blockchain. A blockchain is an immutable, decentralized record of ownership, sometimes called a "triple-entry bookkeeping" system. The virtual wedding of this perfect fit couple requires a virtual exchange of tokens, or what this paper called "tokenisation".
 
-要做到这一点，token可以无缝地跨越系统，同时token自身承载其交易规则，用户界面以及使用场景。
+要做到这一点，token 可以无缝地跨越系统，同时 token 自身承载其交易规则，用户界面以及使用场景。
+
 To do so, Token must seamlessly go across systems, carry their trading rules and user interfaces and business context.
 
 ## 例子：汽车所有权token
