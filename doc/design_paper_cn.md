@@ -2,42 +2,54 @@
 
 ## 作者注
 ## Author's note
-在2017-2018区块链发生了非常引人注目的投机行为把我们的注意集中到了crypto tokens上。当我们交易这些tokens时，我们忽视了它们真正的用途; 就像房地产泡沫，一味的把房屋当作投机资产，忘记了这是居住的地方。
+在2017-2018区块链发生了非常引人注目的投机行为把我们的注意集中到了crypto tokens上。当我们交易这些tokens时，我们忽视了它们真正的用途; 就像房地产泡沫，一味的把房屋当作投机资产，忘记了房子应该是居住的地方。
+
 The remarkable blockchain speculations that took place in 2017 - 2018 brought everyone's attention to crypto tokens. As we bought and sold them, we forgot their intended purpose was to be used; this is analogous to the housing bubble in which people forgot that houses were not merely speculative assets but rather a place to live.
 
-为了让区块链提供实际的用途，我们必须了解他对世界经济和现有互联网的作用。这篇文章的作者是对区块链应用在金融机构和初创公司进行了长期的研究和探索的技术专家。凭借这些经验和知识，我们逐步意识到区块链有两个主要的功能
-To provide a practical use of the blockchain, we must understand its utility to the world economy and the internet. The authors of this paper are technical experts who went through years of study and exploration into its applications both via financial institutions and startups. With this experience, we came to realise that the blockchain has  two primary functions:
+为了让区块链提供实际的用途，我们必须了解它对世界经济和现有互联网的作用。这篇文章的作者是对区块链应用在金融机构和初创公司进行了长期的研究和探索的技术专家。
+
+To provide a practical use of the blockchain, we must understand its utility to the world economy and the internet. The authors of this paper are technical experts who went through years of study and exploration into its applications both via financial institutions and startups. 
+
+凭借这些经验和知识，我们逐步意识到区块链有两个主要的功能：
 
  - 它能够提供无摩擦市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)
  - 它能够集成网络，我们定义了一种技术能够在Tokenisation中实现集成网络。
+ 
+ With this experience, we came to realise that the blockchain has two primary functions:
+ 
 1. It provides a frictionless market. 
 
 2. It integrates the web. We define the technique to make it happen in "Tokenisation". 
 
-尽管2017-2018年发生了很多蠢事，但是这对于tokens获得一开始的关注并不是坏事。Tokens，作者即将详细阐述的，将是区块链的两个主要功能的推动者。我们将实现这些的技术叫做“Tokenisation”。
-Despite the great folly in 2017-2018, it is not a bad thing to initially focus on tokens. Tokens are the enabler of the two primary functions. We define the technique to make it happen in "Tokenisation". Tokenised rights can be traded on the market and integrated across systems, forming a frictionless market and allowing free integration. Previous efforts in this industry primarily focused on enriching the capacity of the technology. This project will focus on tokenisation and introduce a standardisation effort known as Tokenscript (Token Behaviour Markup Language) which will make the blockchain technical stack complete, providing utility for the economy and the internet.
+尽管2017-2018年发生了很多蠢事，但是这对于tokens来说获得一开始的关注并不是坏事。Tokens，作者即将详细阐述的，将是区块链的这两个主要功能的推动者。我们将实现这些的技术叫做“Tokenisation”。Tokenised 的权益可以在市场中交易并且在不同的系统中整合，形成一个自由整合的无摩擦市场。
 
-区块链行业之前的努力主要是集中在提升技术容量上。这篇文章将集中在Tokenisation，并且介绍一个称作Tokenscript(token行为标记语言)的标准化工作，它将使区块链技术具备完整的技术栈，为经济和互联网提供实用性。Tokenscript将释放Tokenisation的全部潜力。
+Despite the great folly in 2017-2018, it is not a bad thing to initially focus on tokens. Tokens are the enabler of the two primary functions. We define the technique to make it happen in "Tokenisation". Tokenised rights can be traded on the market and integrated across systems, forming a frictionless market and allowing free integration.
+
+区块链行业之前的努力主要是集中在提升技术容量上。这篇文章将集中在 Tokenisation，并且介绍一个称作 Tokenscript(Token Behaviour Markup Language，token行为标记语言)的标准化工作，它将使区块链技术具备完整的技术栈，为经济和互联网提供实用性。Tokenscript 将释放Tokenisation 的全部潜力。
+
 Previous efforts in this industry primarily focused on enriching the capacity of the technology. This paper focuses on tokenisation and introduces a standardisation effort we call Tokenscript (Token Behaviour Markup Language), which will make the blockchain technical stack complete and provide utility for the economy and the internet. Tokenscript will unleash the full potential of Tokenisation. 
 
-请在tokenscript.org中加入我们的工作。 一本指导操作者使用Tokenscript作为其tokens和dapps的黄皮书将花费数月时间。 但是，我们一直保持流程开放。 现在参与可避免我们制定的语言规范草案没有考虑到你的token模型。
+请在 tokenscript.org 中加入我们的工作。 一本指导操作者在 Tokens 和 Dapp 中使用 Tokenscript 黄皮书将花费数个月的时间，但是，我们会一直保持工作流程的开放。现在参与可避免我们制定的语言规范草案没有考虑到你的 token 模型。
+
 Please join our work at tokenscript.org. A Yellow Paper to guide implementors to use Tokenscript for their tokens and dapps will take months to make, but a work in progress is always available online. Participate now to prevent the draft specification derail from a valueable use case in your knowledge.
 
-
+## 摘要
 ## Abstract
 
-我们认识到区块链技术的真正应用是提供无摩擦市场和集成网络方面的实用性。 这是通过Tokenisation完成的。 被Tokenized的权益可以在市场上交易并作为系统集成点，形成无摩擦市场并允许自由集成。
+我们认识到区块链技术的真正应用是提供无摩擦市场和整合整个互联网。这可以通过 Tokenisation 完成。被 Tokenized 的权益可以在市场上交易并能在不同的系统间整合，形成无摩擦市场并允许自由集成。
+
 We recognise the blockchain technology's utility in providing a frictionless market and integrating the web. This is done through tokenization. Tokenized rights can be traded on the market and integrated across systems, forming a frictionless market and allowing free integration.
 
+如今，访问、呈现和交易 token 的方式分散在动态 Dapps 和区块链上的智能合约中。大多数 token 都只有非常原始的业务逻辑（作为支付 token），而有些则试图将复杂的业务逻辑放入合约中，创建一个特定的 dapp（去中心化的应用程序）来满足与token的交互。这使 DAO（去中心自治组织）成为可能，但几乎没有帮助创建无摩擦 token 经济并且整合互联网。当 token 的市场化和集成与dapp相关联时，它会重新造成数据互操作性，安全性和可用性上的问题 - 这些问题阻碍了 tokenisation - 同样的问题在区块链发明之前就已出现。
 
-
-如今，访问、呈现和交易的token的方式分散在动态Dapps和区块链上的智能合约中。大多数token都有非常原始的业务逻辑（就像 支付 token），而有些则试图将复杂的业务逻辑放入合约中，创建一个特定的dapp（去中心化的应用程序）来满足与token的交互。这使DAO（去中心自治组织）成为可能，但几乎没有帮助创建无摩擦token经济并且集成网络。 当token的市场化和集成与dapp相关联时，它会重新造成数据互操作性，安全性和可用性上的问题-这些问题阻碍了tokenisation - 同样的问题在区块链发明之前就已出现。
 Today, the ways tokens are accessed, rendered and transacted are scattered across dynamic Dapps and immutable Smart Contracts on the blockchain. Most tokens either have a very primitive business logic (as payment token), while some try to put complex business logic into the contract, creating a specific dapp (decentralised application) to cater the interactions with the token. This enables DAOs (Decentralized Autonomous Organizations) but hardly helps to create a frictionless token economy and integrate the web. When marketisation and integration of a token is tied to a dapp, it recreates data interoperability, security and availability barrier - the same issues that prevented tokenisation before blockchain's invention.
 
 TokenScript允许token逻辑和渲染从“主机”中分离出来，允许token轻松移植并为其创建市场。
+
 TokenScript allows token logic and rendering to be separated out of the "host", allows token to be easily portable and market to be created for it.
 
-它允许不同的令牌提供者，不仅描述他们的token的特征，而且还允许他们如何“行动”，例如，转让。 这个想法的关键在于，token发行者可以随时更新这种token描述，并追溯反映已经发行的token的行为。 除了允许不同token提供者之间的轻松交互之外，这还消除了在特定类型的token的业务逻辑改变时更新DApp或智能合约的需要。
+它允许不同的 token 提供者，不仅描述他们的 token 的特征，而且还允许他们如何“行动”，例如转让。这个想法的关键在于，token 的发行者可以随时更新这种 token 描述，并追溯、反映已经发行的 token 的行为。 除了允许不同token提供者之间的轻松交互之外，这还消除了在特定类型的 token 的业务逻辑改变时更新DApp或智能合约的需要。
+
 It allows different token providers to, not only describe the features of their tokens but also how they are allowed to “act”, e.g. transferability. The crux of the idea is that such a markup description can be updated at any time by the token issuer and retroactively reflect the behaviour of already issued tokens. Besides allowing easy interoperability between different token providers, this also eliminates the need to update the DApp or smart contract whenever the business logic of a particular type of token changes.
 
 \pagebreak
@@ -47,13 +59,16 @@ It allows different token providers to, not only describe the features of their 
 # Introduction: What does blockchain *do*?
 
 区块链技术具有**两个主要功能**，为未来的经济和互联网提供基本功能：
+
  - 提供无摩擦市场(译者注:”完全资本市场又称无摩擦资本市场(Frictionless Capital Markets)是金融经济学家所假想出来的一种资本市场环境，旨在简化或深化理论分析，促进理论的发展。完全资本市场，是指在这个资本市场中，任何投资人都无法拥有通过自身交易行为而影响或操纵市场上的证券价格的力量；投资者可以平等地免费获得影响股票价格的全部信息；证券发行不存在发行成本、交易费用等)
  - 集成网络。
+ 
 Blockchain technology has two primary functions that serve essential purposes for the future economy and the future Internet:
 - providing a frictionless market; and
 - integrating the web.
 
 本文从愿景开始，然后解释设计，和然后解释这种基于区块链的构架原因,随后我们会解释Tokenscript，这是一个关键的缺失层，并回顾其设计原则以及我们是如何构建它的。
+
 This paper addresses the vision of where we can be and follow up with the design and reasoning behind the architecture needed on top of the blockchain. We explain Tokenscript which is a critical missing layer and go over its design principles and how we are building it.
 
 
@@ -61,121 +76,138 @@ This paper addresses the vision of where we can be and follow up with the design
 ## 区块链提供了一个无摩擦市场
 ## Blockchain provides a frictionless market
 
-上世纪80年代的“回到未来”描绘了一个拥有悬浮滑板和飞行汽车的强大机械世界。但是他们并没发生。正如彼得·泰尔曾经著名的哀叹，“我们曾经承诺飞行汽车，结果只得到140字符。但是我们所处时代的技术进步依旧超出了80年代科幻电影的想象，不是通过更强大的机器，而是有效利用互联网。
+上世纪80年代的“回到未来”描绘了一个拥有悬浮滑板和飞行汽车的强大机械世界。但是他们并没发生。正如彼得·泰尔曾经著名的哀叹，“我们曾经承诺了飞行汽车，结果只得到 140 字符。“但是我们所处时代的技术进步依旧超出了80年代科幻电影的想象，不是通过更强大的机器，而是通过有效利用互联网。
+
 The 80s' "Back to the Future" featured a world of powerful machines filled with hovering boards and flying cars. It didn't happen. As Peter Thiel once famously lamented, "we were promised flying cars; instead, we got 140 characters". The technological advancement of our time is beyond the imagination of the 80s science fiction movies, albeit not through more powerful machinery, but efficient use of the Internet.
 
-骑乘共享彻底改变了我们的日常生活的方式，airbnb改变了我们旅行的方式。这个是一个全新的，更完全的市场，它们的运营成本更低，更易于使用，并且拥有精细的运行单位。
+骑乘共享彻底改变了我们的日常生活的方式，AirBNB 改变了我们旅行的方式。这个是一个全新的，更完全的市场，它们的运营成本更低，更易于使用，并且拥有精细的运行单位。
+
 Ride-sharing revolutionised the way we organise our daily lives, and AirBNB changed the way we travel. These are the new, less frictional markets. They incur less cost to operate, are more accessible and have finer operational units.
 
 然而，尽管进行了Web 2.0技术革命，大多数市场仍然是高成本和低效的。例如，股票市场由于依靠对于规章制度的信任来运作，开销非常大，它只适合价值数百万美元的商业。
 However, despite this web 2.0 revolution, the majority of markets still operate with high costs. The stock market, for example, has so much overhead that it is only justifiable for multi-million dollar businesses which rely on the trust of rules and regulations to operate.
 
-使用区块链，任何Tokenisation的资产都可以随时进行交易，只要遵循规则，没有中间商赚差价，消除摩擦并给我们提供最高的市场效率。买方和卖方不在需要”进入“市场。相反，token总是在市场上【*市场模型】。
+使用区块链技术，任何 Tokenisation 的资产都可以随时进行交易，只要遵循规则，就没有中间商赚差价，并且能够消除交易摩擦从而为我们提供最高的市场效率。买方和卖方不再需要”进入“市场；相反，token总是在 *市场上*。
+
 With blockchain, any tokenised asset can be fastly transacted any time, as long as it follows the rules, without an intermediary, eliminating frictions and enabling maximum market efficiency. The buyers and sellers do not need to "enter" the market; instead, tokens are *always on the market*.
 
-传统的中介操作市场模式，交易分为两个阶段：进入市场，达成交易。 区块链可以将其简化为协议; 因此，区块链token资产可以被视为始终在市场上。
-With the traditional intermediary-operated market model, a trade is made in two stages: entering the market, making a deal. Blockchain can simplify that into a protocol; therefore the blockchain token assets can be considered *always on the market*.
+传统的中介操作市场模式，交易分为两个阶段：进入市场，达成交易。区块链可以将其简化为协议; 因此，区块链token资产可以被视为*始终在市场上。*
 
+With the traditional intermediary-operated market model, a trade is made in two stages: entering the market, making a deal. Blockchain can simplify that into a protocol; therefore the blockchain token assets can be considered *always on the market*.
 
 ### Tokenised 资产
 ### Tokenised Assets
 
-我们是否可以tokenise房产，举个例子，1％的房产，以便地产市场能够比传统的长达一个月的房地产购买 - 销售周期更快地做出反应？ 
+我们是否可以tokenise房产，举个例子，1％的房产，以便地产市场能够比传统的长达数个月的房地产购买 - 销售周期更快地做出反应？ 
+
 Can we tokenise, for example, 1% of a property, so that the property market can react faster than the typical month-long property purchase-sales cycle?
 
 我们是否能够将1％的房产tokenise，以便我们拥有一个更低的进入门槛和更精细的房地产市场，其反应速度比典型的长达一个月的房地产购买 - 销售周期更快。token能否在各种资源中创建更细粒度的投资市场？
 
 Can we tokenise 1% of a property, so that we have a finer property market with lower entry thresholds, which react faster than the typical month-long property purchase-sales cycle? Can token create a market of granular investments in all kind of resources?
 
-我们是否可以tokenise电力，让电力用户能够从更精细的安排中受益，家庭从收集剩余太阳能中受益。
+我们是否可以 tokenise 电力，让用户能够从更精细的安排中受益，家庭从收集剩余太阳能中受益。
+
 Can we tokenise electricity, allowing power users to benefit from finer scheduling of the use of resources, and households to benefit from collecting surplus sun energy?
 
-我们是否可以tokenise Airbnb的预订，以便房屋主人可以从市场上获得有保证的现金流，而市场投机者可以通过预测旅行需求获利。
+我们是否可以tokenise Airbnb的预订，以便房屋主人可以从市场上获得有保障的现金流，而市场投机者可以通过预测旅行需求获利。
+
 Can we tokenise AirBNB bookings, so that hosts can purchase a guaranteed cash flow from the market, while speculators profit from predicting the travel needs?
 
-我们是否能够tokenise国际贸易中的风险和回报，让没有足够规模的小型进口商和出口商，能够在国际市场上参与竞争？
+我们是否能够 tokenise 国际贸易中的风险和回报，让没有足够规模来获得信用凭证的小型进口商和出口商，能够在国际市场上参与竞争？
+
 Can we tokenise the risk and reward of international trades, so that small importers and exports, not significant enough to obtain letters of credit, can compete in global markets?
 
-我们能否能够tokenise书籍，内容和知识产权，为他们创造流动的市场？
+我们能否能够将书籍、内容和知识产权 tokenise，为它们创造流动的市场？
+
 Can we tokenise books, content and intellectual property, creating liquid markets for them?
 
-我们是否可以创建一个依赖于加密证据的保险token，以便保险公司可以从其定价中删除欺诈性文件所产生的成本？ 我们可以完全去中心化保险公司吗？
+我们是否可以创建一个依赖于加密证据的保险 token，以便保险公司可以减少由于定价中删除欺诈性文件所产生的成本？ 我们可以完全去中心化保险公司吗？
+
 Can we create an insurance token that depends on cryptographic proofs, so that the insurer can remove the costs incurred by fraudulent documents from the pricing? Can we decentralise the insurers altogether?
 
+区块链可以提供基础层来实现这些。虽然区块链的可扩展性和隐私性有待提高，但一个有效的，无摩擦的市场也依赖于有质量的方法来定义如何使用和交易token - 这是我们 Tokenscript 工作的重点。
 
-
-区块链可以提供基础层来实现这些。虽然区块链的可扩展性和隐私性有待提高，但一个有效的，无摩擦的市场也依赖于有质量的方法来定义如何使用和交易token - 这是我们Tokenscript工作的重点。
 Blockchain can provide the foundational layer to achieve these. While blockchain scalability and privacy will improve, a working, frictionless market also depends on quality methods to define how tokens should be used and transacted - the focus of our work on Tokenscript.
 
-区块链可以提供基础层来实现这些，它提供了一个有效的，无摩擦市场和和 *始终在市场上的tokenised* 资产.但是，只有在有一个可靠而精确的方法来定义如何使用和交易token时，这才会成为现实。 这是我们在Tokenscript上工作的重点。 但首先，我们来看一下token当前令牌的运作方式。
+区块链可以提供基础层来实现这些，它提供了一个有效的，无摩擦市场和 *始终在市场上的tokenised* 资产。但是，只有当存在有一个可靠而精确的方法来定义如何使用和交易 token 时，这才会成为现实。这是我们在 Tokenscript 上工作的重点。但首先，我们来看一下目前的 token 是什么以及它们是如何运作的。
+
 Blockchain can provide the foundational layer to achieve these. It enables a working, frictionless market with tokenised assets *always on the market*. However, this can only become true when there is a reliable and precise method to define how tokens should be used and transacted. This the focus of our work on Tokenscript. But first, we look at what tokens are how token operate currently.
 
-### 支付 token和 可交付token
+### 支付类 token 和可交付类 token
 ### Payment Token and deliverable Token
 
+在2017-2018期间在我们确实拥有数百种 token，但是，它们统一属于一类 token：使用类似货币的 ERC20 标准创建，全都是市场的*支付方*。几乎没有让 token 在作为*商品和服务*方面做任何努力，而这是一个让市场运作的基本需求。
 
-在2017-2018期间在我们确实拥有数百种通证， 但是，它们统一属于一类令牌：使用ERC20标准创建，它们是类似货币的，全都都是市场的*支付方*。 几乎没有让token 在代表*商品和服务*上做任何努力，这个是一个让市场运作的基本需求。
 In 2017-2018 we did end up having hundreds of tokens. However, they uniformly fall into one category of token: created with the ERC20 standard they are currency-like, filling up the *payment side* of the market. There is nearly zero effort devoted to making tokens *goods and services* - which is the *deliverable side* of the market and a fundamental need for a market to work.
 
-我们将代币分类为支付token和可交付token。 带有 *支付token* 标志的ERC20代币只能用代币填补市场的一面。 他们无法提升市场，因为他们只是在支付方面与其他支付token（如比特币或以太币）竞争。 它们代表货物，但它们实际上并没有实现, 它们是礼品卡。
+我们将代币分类为支付类 token （Payment Token）和可交付类 token（Deliverable Token）。带有 *支付类 token* 标志的ERC20代币只能用代币填补市场的一面。 他们无法提升市场，因为他们只是在支付方面与其他支付 token（如比特币或以太币）竞争。它们代表一种货物，但它们实际上并没有完成实现, 或者说它们只是一张礼品卡。
+
 We categorise tokens as payment tokens and deliverable tokens. ERC20 tokens bearing the hallmarks of *payment tokens* only fills one side of the market with tokens. They can't lift the market, as they merely compete with other payment-token - like Bitcoin or Ether - on the payment side. They represent a good, but they do not actually deliver. They are rather gift cards.
 
+举个例子，在 2017 年的投机泡沫期间，电力 token 的ICO不需要提供关于如何使用 token 的任何解释。所有投机者仅仅只知道它们代表着“在未来的 token 化电力世界中占有一席之地”。只要token可以满足投资者的想象力，这对ICO来说就足够了。因此，除了 ERC20 接口之外，他们没有任何其他功能。
 
-举个例子，在2017年的投机泡沫期间，电力token的ICO不需要提供关于如何使用token的任何解释。 所有投机者仅仅只知道它们代表着“在未来的token化电力世界中占有一席之地”。 只要token可以满足投资者的想象力，这对ICO来说就足够了。 因此，除了ERC20接口之外，他们没有任何其他功能。
 During the speculative bubble of 2017, a power token ICO does not need to provide any explanation of how the tokens can be used. All speculators need to know is that they represent a "stake in the future world of tokenised electricity". As long as the token can inspire investors with imagination, it's good enough for an ICO. There is, no more functionality needed other than an ERC20 interface.
 
-对于这样的投机电力token来说，它不依赖任何证据，如实际发电量的证明。也不需要任何描述类信息如电力提供的来源在哪，以及可用的时间长短。
+对于这样的投机电力 token 来说，它不依赖任何证据，如实际发电量的证明。也不需要任何描述类信息如电力提供的来源在哪，以及可用的时间长短。
+
 Such a speculative token doesn't depend on attestations - the proof of actual power production - nor does it need properties like where the energy is provided or for how long it is available.
 
 现在疯狂已经结束，是时候提出技术框架来使市场发挥作用。
+
 Now that the madness is over, it's time to present the technical framework to make the market work.
 
 
 ### Token properties
 
+Tokens 可以是产品 但是他需要具有不同的属性。token 是否会过期？ AirBNB预订 token 当然会，但代表 1％ 的房产 token 可能不会。token 所有者是否应收到有关特定事件的通知？电力 token 肯定需要，因为电力是不断变化的。token 是否流通？
 
-Tokens 可以是产品 但是他需要具有不同的属性。token是否会过期？ AirBNB预订token当然会，但1％的房产token可能不会。token所有者是否应收到有关特定事件的通知？电力token肯定需要，因为电力是不断变化的。token是否流通？
-Tokens can be products. Therefore they need to have different propertiesDo tokens expire? AirBNB booking tokens certainly do, but 1% ownership of property tokens probably don't. Should the token owner receive a notification on a specific event? Power tokens certainly need that, for the change in the power supply is dynamic. Is a token stream-able?
+Tokens can be products. Therefore they need to have different properties. Do tokens expire? AirBNB booking tokens certainly do, but 1% ownership of property tokens probably don't. Should the token owner receive a notification on a specific event? Power tokens certainly need that, for the change in the power supply is dynamic. Is a token stream-able?
 
-它如何在用户的手机上显示，用户如何使用？如果买家想要从卖家那里采购被Tokenisation的乡村庄园，他们如何进行有效的沟通？如果token允许用户在线执行特定操作，用户如何使用token登录特定web服务？
+它如何在用户的手机上显示，用户如何使用？如果买家想要从卖家那里采购被 Tokenisation 的乡村庄园，他们如何进行有效的沟通？如果 token 允许用户在线执行特定操作，用户如何使用 token 登录特定 web 服务？
+
 How does it look on the user's mobile, and how is it called in a users language? If a buyer wants to purchase a tokenised country estate from a seller, how do they establish a trusted method of communication? If a token entitles the user to do specific actions online, how can the user login to the web services with that token?
 
-所以我们很容易知道需要一个定义token的框架，让他们适应不同的交易场景，上市以及评级。Tokenscript提供了这样一个框架。 但是，要用心设计它，我们需要考虑Blockchains可以做的第二部分：集成网络。
+综上我们很容易得出结论：需要一个定义 token 的框架，让他们适应不同的交易场景，上市以及评级。Tokenscript 提供了这样一个框架。 但是，要用心设计它，我们需要考虑区块链技术可以做的第二部分：集成网络。
+
 It's easy to see the need for an open framework defining tokens and making them interoperable with different methods of trading, listing and rating. Tokenscript provides such a framework. However, to diligently design it we need to consider the second part of what Blockchains can do: Integrate the web.
 
-
-
-区块链集成网络
+### 区块链整合互联网
 ## Blockchain integrates the web
 
 Tim Berners-Lee和万维网的创新者主要以公共图书馆模型和计算机人机交互模型为网络建模。
+
 Tim Berners-Lee and the innovators of the world wide web modelled the web primarily on a public library model and computer-human interaction model.
 
-在图书馆模型中，信息可以免费获得，并通过URI进行索引和交叉引用。 它的化身，既URL就是数据所在的位置，它对你能够访问的地方没有限制。
+在图书馆模型中，信息可以免费获得，并通过URI进行索引和交叉引用。它的化身，既URL就是数据所在的位置，你能够访问任何地方而不会有限制。
+
 In the library model, information is freely available, indexed and cross-referenced by a URI. Its incarnation, the URL, is where the data is, and there is no restriction on where you can go.
 
-在人机交互模型中，两个玩家进行对话，人问，机器回答。虽然单个计算机知识有限，但它可以帮助用户访问正确的计算机。
+在人机交互模型中，两个玩家进行对话：人问，机器回答。虽然单个计算机知识有限，但它可以帮助用户访问正确的计算机。
+
 In the computer-human interaction model, two players are having a conversation - the human asks and the machine answers. A computer has limited knowledge, but it can help the user to reach the right computer.
 
-因此，网络被构建为一个巨大的图书馆，每本书都是一台可以与之交谈的计算机。 这可能是Facebook获得同名灵感的地方 - 一个网站就是一本书。
+因此，网络被构建为一个巨大的图书馆，每本书都是一台可以与之交谈的计算机。这可能是Facebook获得同名灵感的地方 - 一个网站就是一本书。
+
 Therefore the web was built as a giant library where each book is a computer with whom one can have a conversation.
 
-正是这种设计造成了许多现代的不便。用户有一天会通过电子邮件收到她的月结账单，但她无法识别出一些条目，它问:"亚马逊"，这个是一个鞋子的订单吗？她必须复制订单号并在亚马逊中查找。同一个用户可能会在预订两张歌剧门票过程中暂停，切换到她的常旅客应用程序，复制该号码并将其粘贴到订单中以收集积分。 她需要会在一开始就安装那个常旅客应用程序。 当她在另一家网店购买时，她需要下载另一个应用程序或创建另一个帐户。
+正是这种设计造成了许多现代的不便。用户有一天会通过电子邮件收到她的月结账单，但她无法识别出一些条目，比如上面标注着"亚马逊"。这个是一个鞋子的订单吗？她必须复制订单号并在亚马逊中查找。同一个用户可能会在预订两张歌剧门票过程中暂停，切换到她的常旅客应用程序，复制该号码并将其粘贴到订单中以收集积分。她需要会在一开始就安装那个常旅客应用程序。当她在另一家网店购买时，她需要下载另一个应用程序或创建另一个帐户。
+
 This design has caused a lot of modern inconveniences. A user would one day receive an email on her monthly statement, yet she couldn't recognise a few entries on them. It says "Amazon". Was it about ordering a pair of shoes? She has to copy the order number and look it up in Amazon. The same user might pause as she books two tickets for an opera, switch to her frequent flyer app, copy that number over and paste it into the order to collect the points. She might struggle a bit installing that frequent flyer app at the outset. When she buys on another webshop, she needs to download another app or create another account.
 
+我们为什么要做这么多的复制和粘贴，这些明明机器就能做好的事情？这是因为网络就像一个巨大的图书馆，我们就像读者一样在自己的袖子上面记录索引号。 我们希望在未来*网络不再像图书馆，而更像是个人助理。*
 
-
-
-我们为什么要做这么多的复制和粘贴，这些明明机器就能做好的事情？这是因为网络就像一个巨大的图书馆，我们就像读者一样在自己的袖子上面记录索引号。 我们希望在未来** 网络不再像图书馆，而更像是个人助理。
 Why are we doing so much copy and pasting when machines are exceptionally good at doing this? Owning to the design, the web is like a giant library, and we are like readers keeping notes of the index numbers under our sleeves. We hope that in the future** the Web resembles no longer of a library, but more like a personal assistant. 
 
-###客户端无法集成没有被设计能够集成的网络
+### 客户端无法集成没有被设计能够集成的网络
 ### The client side can't integrate a web that is not designed to integrate
 
-令人惊讶的是，即使是为满足创建私人助理的角色而发明的技术仍然失败了，就像智能手机。原因同样如此：单靠客户端的努力无法集成没有被设计能够集成的网络，使问题更加严重，因为使用智能手机时复制粘贴变得更加麻烦。
+令人惊讶的是，即使是智能手机这样的为满足创建私人助理的角色而发明的技术仍然失败了。原因同样如此：单靠客户端的努力无法集成没有被设计能够集成的网络。反而智能手机的出现使问题更加严重，因为使用智能手机时复制粘贴变得更加麻烦。
+
 Surprisingly, even the technology that was created to fill the role of a personal assistant, the Smart Phone, still failed for the same reasons: the efforts from client side alone can't integrate a Web that is not designed to integrate. It made the problem even worse, as copy-pasting becomes bigger trouble when using a Smart Phone.
 
-事实是：不仅仅是客户端并且基础设施也必须支持集成。智能手机的模型类似于拨号互联网连接，每个应用程序代表一个网站。 在进入对话之前，用户仍然需要找出要与之通话的计算机（app），并且在他交换应用程序时仍然可以复制信息。 例如，要求您的智能手机通过在线银行的app汇总你所有的资金是不可能的。
+事实是：不仅仅是客户端，基础设施也必须支持集成。智能手机的模型类似于拨号互联网连接，每个应用程序代表一个网站。在进入对话之前，用户仍然需要找出要与之通话的计算机（app），并且在他切换应用程序时仍然可以复制信息。因此诸如要求您的智能手机通过在线银行的app汇总你所有的资金是不可能的。
+
 The truth is: Not only the client but the infrastructure has to support integration. A smartphone is modelled after a dial-up Internet connection, with each app representing a website. The users still need to figure out which computer (app) to talk to before entering the conversation, and still copies information around as he swaps apps around. It's therefore not possible, for example, to ask your smartphone to sum up all the money one may access by his online banking apps.
 
 很容易就能看出造成不便的原因：不同的服务之间没有好的集成方法，互联网没有提供集成层。继续举几个不好的例子；
@@ -183,20 +215,25 @@ The truth is: Not only the client but the infrastructure has to support integrat
 It's easy to see the cause of the inconvenience: the web is poorly integrated. The bad examples go on and on:
 
 - 当用户在网站上结账时，她不确定她的卡上是否有足够的余额，因为银行未与购物系统集成。
+
 - When a user checks out on the web, she isn't sure if she has enough balance on her card, since the bank is not integrated with the shopping system.
+
 - 当患者订购服务时，在账单结算之前，她无法看到保险可以支付多少费用，也不知道她是否达到年度上限，因为诊所没有与保险公司集成。
+
 - When a patient orders a service, she can't see how much the insurance can cover until the bill settles, nor can she know whether she has reached the annual cap since the clinic is not integrated with the health insurance company.
 
-集成网络的答案需要一些不在现有网络蓝图中的模块：身份验证，所有权，价值转移和交易。
+整合互联网需要一些不在现有网络蓝图中的模块：身份验证，所有权，价值转移和交易。
+
 The answer to integrating the web requires a few building blocks that weren't in the Web's blueprint: authentication, ownership, transfer of value and trading.
 
-这种集成可以通过在两个服务提供商之间建立后端连接来解决，但通常不会这样做，因为它需要各方协作并协商利于分配。协作取决于安全性（通过系统B使系统A单机），可用性（一个脱机而另一个服务客户），可扩展性（𝑛² - 集成𝑛方所要做的事情）。此外，这种整合以两种方式限制了自由市场。 首先，竞争将会发生着集成网络上，而不是商品和服务。 一家保险公司将其系统集成到更多的诊所来与新的保险公司竞争，而非保险覆盖范围和保费。 其次，它不允许竞争方之间的集成，这个需要来自集成的双方的许可才能工作。
+这种集成可以通过在两个服务提供商之间建立后端连接来解决，但通常不会这样做，因为它需要各方协作并协商利益分配。协作取决于安全性（通过系统 B 使用系统 A），可用性（一个脱机而另一个服务客户），可扩展性（𝑛² - 𝑛 集成 𝑛 方所要做的事情）。此外，这种整合以两种方式限制了自由市场。 首先，竞争将会发生着集成网络上，而不是商品和服务。 一家保险公司将其系统集成到更多的诊所来与新的保险公司竞争，而非保险覆盖范围和保费。 其次，它不允许竞争方之间的集成，这个需要来自集成的双方的许可才能工作。
+
 Such integrations can be addressed by having a backend connection between the two service providers, but it is not often done, because it requires the parties to collaborate and negotiate a value distribution. The collaboration depends on the security (takedown system A through system B), availability (one went offline while the other serving customers), scalability (𝑛²-𝑛 integrations needed for 𝑛 parties). Furthermore, such integration restraining the free market in two ways. First, the competition will be on integration, not goods and services. An insurance company which integrated their systems to more clinique competes against a new insurance company on the ground of integration, not coverage and premium. Second, it doesn't allow integration between contending parties, and it requires permission from both side of the integration to work.
 
 集成Web的挑战需要一些没有在Web蓝图中的模块：身份验证，所有权，价值转移和交易。
 The challenge to integrating the web requires a few building blocks that weren't in the Web's blueprint: authentication, ownership, transfer of value and trading.
 
-“帐户身份验证”不能取代Web集成
+### “帐户身份验证”不能取代Web集成
 ### "Account authentication" is not a substitute for web integration.
 
 
