@@ -14,7 +14,7 @@ To provide a practical use of the blockchain, we must understand its utility to 
 
 2. It integrates the web. We define the technique to make it happen in "Tokenisation". 
 
-尽管2017-2018年发生了很多蠢事，但是这对于tokens获得一开始的关注并不是坏事。Tokens，作者即将详细阐述的，将是区块链的两个主要功能的推动者。我们将实现这些的技术叫做“Tokenisation”。
+尽管2017-2018年发生了很多蠢事，但是这对于tokens获得一开始的关注并不是坏事。Tokens，作者即将详细阐述的，将是区块链的两个主要功能的推动者。我们定义一种发生在“Tokenisation”上的技术。
 Despite the great folly in 2017-2018, it is not a bad thing to initially focus on tokens. Tokens are the enabler of the two primary functions. We define the technique to make it happen in "Tokenisation". Tokenised rights can be traded on the market and integrated across systems, forming a frictionless market and allowing free integration. Previous efforts in this industry primarily focused on enriching the capacity of the technology. This project will focus on tokenisation and introduce a standardisation effort known as Tokenscript (Token Behaviour Markup Language) which will make the blockchain technical stack complete, providing utility for the economy and the internet.
 
 区块链行业之前的努力主要是集中在提升技术容量上。这篇文章将集中在Tokenisation，并且介绍一个称作Tokenscript(token行为标记语言)的标准化工作，它将使区块链技术具备完整的技术栈，为经济和互联网提供实用性。Tokenscript将释放Tokenisation的全部潜力。
@@ -1126,8 +1126,9 @@ Check-in
 Pay
 :   By including the Holden Capped Service token in a transaction, the service cost is capped, either on the web through pre-pay or on the POS.
 
-并非所有操作都由token提供。典型：
-Not all actions are provided by the token. Typically:
+并非所有操作都由token提供。
+例如：
+Not all actions are provided by the token.Typically:
 
 转移
 由通用token的Tokenscript提供。你可以想象，例如ERC721的Tokenscript文件允许传输任何符合标记的token，并且汽车token可能是其中之一。 实际上很难出现这种情况，因为汽车代币的交易规则通常需要证明，例如买方是进行此类交易的法定年龄，但即使在这种情况下，规则也可能由规范汽车贸易的Tokenscript提供。。
