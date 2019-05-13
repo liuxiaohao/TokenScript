@@ -305,56 +305,62 @@ These missing features of the web are the well-known functions of the blockchain
 
 To do so, Token must seamlessly go across systems, carry their trading rules and user interfaces and business context.
 
-## 例子：汽车所有权token
+## 举例：汽车所有权token
 ## Example: Car Ownership Token
 
-我们将概括这两个概念：通过token化资产进入无摩擦市场; 通过使用token作为Web服务的集成点来集成Web。 我们将演示一个包含这两个概念的示例：汽车token。
+我们将继续阐述这两个概念：1、通过将资产 Token 化建立无摩擦市场; 通过使用 token 作为Web服务的集成点，构建集成网络。我们可以通过一个例子来展示这两个概念的应用：汽车 token。这仅仅是众多案例中的其中一个，你可以将这个概念迁移到几乎所有地方，包括任何类型的 B2B 业务和涉及到资源转移的业务，如房地产市场等等 - 任何涉及数字资产或者数字化物理商品的交易。
 
-We will comine the two concepts: frictionless market, achieved by tokenising assets; integrate the web, by using token as integration point for web services. We will demonstrate an example that encompasses both concepts: car token.
-
-我们将这两个概念结合起来：通过tokenising资产实现的无摩擦市场; 通过使用toekn作为Web服务的集成点来集成Web。 我们用一个包含两个概念的例子进行演示：汽车token。 这只是众多例子中的一个。 您可转换概念到几乎所有其他地方，包括房地产市场，任何类型的b2b和资源转移 - 任何涉及数字商品或物理商品的数字表示的交易。
 We combine the two concepts: a frictionless market, achieved by tokenising assets; and the integration of the web, by using the token as an integration point for web services. We demonstrate with an example that encompasses both concepts: car token. This is just one of many examples. You can transfer the concepts on nearly everything, including real estate markets, any kind of b2b and resource transfer - every transaction which involves digital goods or a digital representation of physical good.
 
-汽车示例旨在帮助理解这些概念。 一方面，汽车是一种被Token化的资产，可以通过区块链来购买，出售，转让，拍卖，抵押和投保。
+以汽车 token 作为例子旨在帮助理解这些概念。 一方面，汽车作为一种被 Token 化的资产，可以通过区块链技术来完成购买，出售，转让，拍卖，抵押和投保等行为。
+
 On the one hand, a car is a tokenised asset, that can be bought, sold, transferred, auctioned, collateralized and insured, all enabled by blockchain.
 
-另一方面，汽车也有实用性。 汽车的所有权token可以将区块链钱包转化为汽车钥匙，其他功能如图形化表示汽车的当前位置。 授权某人访问您的汽车或出租它以获取利润，可以通过签署区块链交易或使用attestations来无缝完成，而无需传递车钥匙。
+另一方面，汽车也具有实用性。汽车的所有权 token 可以将区块链钱包转化为汽车钥匙，带有如图形化表示的汽车当前位置等其他功能。授权某人访问您的汽车或出租它以获取利润。若需要授权其他人使用你的汽车或出租汽车来获得收益，则可以通过签署区块链交易或使用 attestations 来无缝完成，而无需传递车钥匙。
+
 On the other hand, a car also has utility. A car's ownership token can convert a blockchain wallet into a car key, with additional functions like graphically representing the car's current location. Authorising someone to access your car, or renting it for profit, would be seamlessly done by signing blockchain transactions or attestations, without passing car keys around.
 
-在这两种情况下，token代表事物的交付方：它们是产品。 这些token可以与非token类型的付款互动，但是对付款进行tokenising将使整个过程更加流畅。
+在这两种情况下，token 代表事物的交付方：Token 即是产品。 这些 token 可以与非 token 类型的支付方式进行互动，但若能够对支付方式进行 tokenising 将使整个过程更加流畅。
 
 In both cases, the token represents the delivery side of things: They *are* the product. Those token can interact with a non-token kind of payment, but tokenising the payments would make the whole process much more fluent.
 
 以下汽车token的屏幕截图代表了tokenisation的最后阶段。
+
 The following screenshot of a car token represents the final stage of tokenisation.
 
-汽车token。 四个token：汽车注册信息，封顶保养，保险和购买，要么是依赖或者与汽车所有权token有关。
+汽车token。 四个token分别代表：汽车注册信息，封顶保养服务，保险和购买，这些要么是依赖代表汽车所有权的 Token，或者与之有关。
 ![](img/car-token.jpeg)
 
 ![A car token. Four tokens: Rego, Capped Service, Insurance and Purchase, either depeneds or relates to the car ownership token.]
 
 咋一看，它只是一个便捷的能够做关于汽车所有事情的门户网站，包括市场功能和实用程序。然而这在传统的网络模型下是做不到。在Web 2.0模型中，您只能自己处理每个元素：
+
 At first glance, it is just a handy portal to do everything about the car, including market functions and utility. However, it's not possible with the traditional web model. In the web 2.0 model, you are restricted to handling every element on its own:
 
-* 要注册汽车，有一个单独的过程，需要创建一个車船局的账户，并且在没有密码学的帮助下手动证明所有权。
+* 要注册汽车，有一个独立的过程就是需要创建一个車船局的账户，并且在没有密码学的帮助下手动证明所有权。
+
 * 当您想为汽车提供保险时，您必须创建另一个帐户并手动向保险服务证明车辆注册信息。（也许你发现现在有时也不需要这样做，这仅仅是将风险隐藏在保险费用内了，把风险转化为了市场成本）
 
-* 同样，如果您想让汽车能通过优步或基于小时的汽车租赁来参与分享经济，那么显然，担保交易结算付款和保险等额外成本会给市场带来摩擦。
+* 同样，如果您想让汽车能通过优步或分时租赁来参与分享经济，那么显然，担保交易、结算付款和保险等额外成本会给市场带来摩擦。
+
 * To register the car, there is a separate process which involves creating an account with the Road and Maritime Services and proving ownership manually without the aid of cryptography. 
-* When you want to provide insurance to the car, you have to create another account and manually offer proof of its registration to that new service. (If you find not needing to do so, the cost of unpayable insurance merely is hidden and borne by the market.) * Likewise, if you want to make the car available to share economy through Uber or hour-based car rental, the work of proving and settling payments and insurance cost adds friction to the market.
+* When you want to provide insurance to the car, you have to create another account and manually offer proof of its registration to that new service. (If you find not needing to do so, the cost of unpayable insurance merely is hidden and borne by the market.)
+* Likewise, if you want to make the car available to share economy through Uber or hour-based car rental, the work of proving and settling payments and insurance cost adds friction to the market.
 
 预期的门户网站本身并不提供这些功能，而只是作为一个网关来合并许多不同的帐户，就像我们从今天的互联网上所知道的那样。 这只是另一个权宜之计，它隐藏了用户的纸质跟踪流程，而没有解决潜在的问题。
 The intended portal does not enable those functions by itself but merely serves as a gateway to merge a lot of different accounts as we know it from the internet of today. It's just another stopgap, which hides paper trail processes from the user, without solving the underlying problem.
 
 
-现在让一步一步来我们在web3的世界中构想这一点，如果这些元素能够被token化， 
+现在让一步一步来我们在 Web3 的世界中重新构想这一件事，如果这些元素能够被token化， 
+
 Now let's reimagine this in the web3 world whereby such elements can be tokenised, step by step: 
 
-__购买和注册__:供应商（在这个例子里面是holden）向新的拥有者提供汽车所有权token，这个token结合钱包可以操控汽车，同时被用来向交管所证明所有权获取注册token。车子内置的物联网模块允许用户通过Token来证明所有权以便操控汽车。
+__购买和注册__:供应商（在这个例子里面是 Holden）向新的拥有者提供汽车所有权 token，这个 token 结合钱包可以操控汽车，同时被用来向交管所证明所有权获取注册 token。车子内置的物联网模块允许用户通过 Token 来证明所有权以便操控汽车。
 
 __Buying and registration__: The Vendor (in this case Holden) provides an ownership token to the new owner which can be used to operate the car. The token, transferred to the owner at the time of purchase, is in turn used to acquire the registration token. An inbuilt IoT device allows the car to be operated with proof of ownership via a token.
 
 __保险：__ 拥有者，希望购买保险的汽车所有者只需提供所有权token和注册token即可满足保险公司的要求。通过将tokens与保险要求相匹配来自动满足保险公司标准，并且一旦经过验证，保险公司可以向所有者发送保险token以换取用户付款。 保险token具有自己的功能和服务。
+
 __Insurance:__ The owner, wishing to purchase insurance, only needs to provide the proof of ownership and registration token to be qualified to fulfil the requirements with the insurance company. The insurance companies standards are met automatically by matching the tokens to their requirements and once validated, the insurance company can send the owner an insurance token in exchange for payment. The insurance token carries its own functions and services.
 
 Token构建不同提供者和服务之间的连接，这些提供者和服务之前用于通过帐户，信任和证件构建。
